@@ -240,3 +240,4 @@ C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\Debug\net9.0\refint\Cargon.dl
 C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\Debug\net9.0\Cargon.pdb
 C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\Debug\net9.0\Cargon.genruntimeconfig.cache
 C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\Debug\net9.0\ref\Cargon.dll
+C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\Debug\net9.0\Cargon.sourcelink.json
