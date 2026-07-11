@@ -1,8 +1,7 @@
 ﻿services:
   - type: web
     name: travlink
-    env: dotnet
+    env: docker
     plan: free
-    buildCommand: dotnet publish Cargon.csproj -c Release -o out
-    startCommand: dotnet out/Cargon.dll
     autoDeploy: true
+    dockerfilePath: ./Dockerfile
