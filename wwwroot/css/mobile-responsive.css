@@ -78,12 +78,17 @@ img { max-width: 100%; height: auto; }
     .travlink-footer__bottom { grid-template-columns: 1fr; gap: 9px; margin-top: 4px; padding: 18px 0 24px; }
     .travlink-footer__note { justify-self: start; text-align: left; }
 }
+
 @media (max-width: 575px) {
     .container { width: min(100% - 32px, 1280px); }
     .travlink-whatsapp-float { right: 20px; bottom: 20px; }
 }
 /* Premium transparent mobile header over image heroes. */
 @media (max-width: 767px) {
+    #topBtn3 {
+        display: none !important;
+    }
+
     .travlink-home .header-area-3.stiky:not(.scroll-header),
     .travlink-travel-page-body .header-area-3.stiky:not(.scroll-header),
     .travlink-trade-page-body .header-area-3.stiky:not(.scroll-header),

@@ -3581,6 +3581,17 @@ flex: 2;
     color: #0e47a1;
 }
 
+.travlink-process__header .ca-section-title em {
+    color: #0e47a1;
+    font-weight: 400;
+}
+
+#travlink-about-title em,
+.contact-3-area .ca-section-title em {
+    color: #0e47a1;
+    font-weight: 400;
+}
+
 .travlink-process__header p {
     max-width: 700px;
     margin: 24px auto 0;

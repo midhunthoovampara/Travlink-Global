@@ -1,4 +1,10 @@
 /* Consistent shared navigation placement on light inner pages. */
+.travlink-faq-page-body .ca-sec-content-3 > .ca-section-title em {
+    color: #0e47a1;
+    font-weight: 400;
+    font-style: italic;
+}
+
 body:is(.travlink-about-page-body, .travlink-faq-page-body, .travlink-team-page-body, .travlink-contact-page-body) header.header-area-3.stiky {
     position: absolute;
     top: 24px;

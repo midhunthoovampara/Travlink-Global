@@ -272,6 +272,7 @@
 <main>
     <!-- hero start -->
     <section class="travlink-hero">
+        <div class="travlink-hero__media" aria-hidden="true"></div>
         <div class="travlink-hero__inner">
             <div class="container">
                 <div class="row justify-content-center">
@@ -312,9 +313,9 @@
                 
                 <span class="travlink-service-intro__eyebrow">Our Services</span>
                 <h2 class="travlink-service-intro__title">One world. <em>Three ways forward.</em></h2>
-                <p class="travlink-service-intro__copy">Travlink Global brings together international travel, business sourcing,
+                @* <p class="travlink-service-intro__copy">Travlink Global brings together international travel, business sourcing,
                 and shipping under one trusted brand.
-        </p>
+        </p> *@
             </div>
         </div>
         <div class="container">
@@ -428,7 +429,7 @@
         <div class="container">
             <div class="travlink-process__header ca-sec-content-3 text-center" data-aos="fade-up" data-aos-duration="700">
                 <h5 class="ca-section-subtitle p-relative" ">Our Process</h5>
-                <h5 class="ca-section-title fnw-600" id="travlink-process-title">A Simple Process, Built Around You</h5>
+                <h5 class="ca-section-title fnw-600" id="travlink-process-title">A Simple Process, <em>Built Around You</em></h5>
                  @* <p>From your first enquiry to final delivery, we keep every step clear, personal, and well managed.</p> *@
             </div> 
 
@@ -483,13 +484,13 @@
                         </figure>
                         <figure class="travlink-about-editorial__image travlink-about-editorial__image--large">
                             <img src="~/img/service/tt.jpg" alt="Modern warehouse and global supply chain operation">
-                            <figcaption>Global Supply Chain</figcaption>
+                            <figcaption>Travel packages</figcaption>
                         </figure>
                     </div>
                 </div>
                 <div class="travlink-about-editorial__content">
                     <span class="travlink-about-editorial__eyebrow">About Us</span>
-                    <h2 id="travlink-about-title">Built for journeys, trade, and movement across borders.</h2>
+                    <h2 id="travlink-about-title">Built for journeys, trade, <em>and movement across borders.</em></h2>
                     <div class="travlink-about-editorial__copy">
                         <p>Travlink Global is a travel, trade, and shipping company built on founder-led experience &mdash; in visa facilitation, sourcing, and travel planning. We bring that experience together under one platform, built for people and businesses who want things handled properly, without the noise.</p>
                         <p>We focus on creating seamless global experiences while staying professional, transparent, and genuinely useful to the people we work with.</p>
@@ -708,7 +709,7 @@
         <div class="container">
             <div class="ca-blog-content-3 ca-sec-content-3 text-center mb-60 aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
                 <h5 class="ca-section-subtitle subtitle-bg-6 p-relative theme-color-3 br-50">Contact Us</h5>
-                <h2 class="ca-section-title theme-black-3 fnw-600 pt-16 ca-text-cap">Tell us what you need &mdash; we'll take it from there.</h2>
+                <h2 class="ca-section-title theme-black-3 fnw-600 pt-16 ca-text-cap">Tell us what you need &mdash; <em>we'll take it from there.</em></h2>
                 @* <p class="pt-16">Gain insights into effective warehouse management strategies that<br> maximize space, improve accuracy, and boost productivity. </p> *@
             </div>
             <div class="row align-items-center">
@@ -935,6 +936,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             const cards = Array.from(document.querySelectorAll('.travlink-service-card'));
             const usesTap = window.matchMedia('(hover: none)').matches;
+            const usesDesktopCards = window.matchMedia('(min-width: 992px)');
 
             function setCardState(card, active) {
                 card.classList.toggle('is-active', active);
@@ -943,6 +945,12 @@
 
             cards.forEach(function (card) {
                 card.addEventListener('click', function (event) {
+                    if (usesDesktopCards.matches && !event.target.closest('a')) {
+                        const serviceLink = card.querySelector('.travlink-service-card__cta');
+                        if (serviceLink) window.location.assign(serviceLink.href);
+                        return;
+                    }
+
                     if (!usesTap || event.target.closest('a')) return;
 
                     const shouldOpen = !card.classList.contains('is-active');
@@ -955,6 +963,12 @@
                     if (event.target.closest('a')) return;
 
                     event.preventDefault();
+                    if (usesDesktopCards.matches) {
+                        const serviceLink = card.querySelector('.travlink-service-card__cta');
+                        if (serviceLink) window.location.assign(serviceLink.href);
+                        return;
+                    }
+
                     const shouldOpen = !card.classList.contains('is-active');
                     cards.forEach(function (item) { setCardState(item, false); });
                     setCardState(card, shouldOpen);
@@ -968,5 +982,3 @@
         });
     </script>
 }
-
-
