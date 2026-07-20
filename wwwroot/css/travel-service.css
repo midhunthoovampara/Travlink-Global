@@ -1,0 +1,145 @@
+﻿.travlink-travel-page { color: #111827; background: #fff; }
+.travlink-travel-hero { position: relative; min-height: clamp(700px, 78vh, 820px); display: flex; align-items: flex-end; overflow: hidden; padding: 175px 0 82px; background: url("../img/service/travelservice.png") center/cover no-repeat; isolation: isolate; }
+.travlink-travel-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(5,12,22,.02) 20%, rgba(5,12,22,.18) 55%, rgba(5,12,22,.78) 100%); }
+.travlink-travel-hero__content { width: 100%; }
+.travlink-travel-hero__label, .travlink-travel-eyebrow { display: inline-block; color: #0e47a1; font: 700 13px/1.2 Inter,Outfit,sans-serif; letter-spacing: .27em; text-transform: uppercase; }
+.travlink-travel-hero__label { margin-bottom: 20px; color: #d5eaff; }
+.travlink-travel-hero h1 { max-width: 950px; margin: 0; color: #f8f5ee; font: 500 clamp(64px,5.7vw,78px)/.98 "Cormorant Garamond",Georgia,serif; letter-spacing: -.035em; }
+.travlink-travel-hero h1 span { color: #77b7ef; }
+.travlink-travel-packages { padding: 112px 0; background: #fff; }
+.travlink-travel-packages__layout { display: grid; grid-template-columns: minmax(260px,.82fr) minmax(0,1.18fr); gap: 80px; }
+.travlink-travel-section-intro h2, .travlink-visa__heading h2, .travlink-travel-faq__heading h2 { margin: 19px 0 0; color: #111827; font: 500 clamp(43px,4.2vw,60px)/1.03 "Cormorant Garamond",Georgia,serif; letter-spacing: -.03em; }
+.travlink-package-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border-top: 1px solid #e5e9ee; border-left: 1px solid #e5e9ee; }
+.travlink-package-item { min-height: 126px; display: flex; align-items: center; gap: 17px; padding: 27px 24px; border-right: 1px solid #e5e9ee; border-bottom: 1px solid #e5e9ee; transition: border-color .3s ease, transform .3s ease; }
+.travlink-package-item i, .travlink-visa-card i { width: 24px; color: #0e47a1; font-size: 20px; text-align: center; transition: color .3s ease, transform .3s ease; }
+.travlink-package-item h3, .travlink-visa-card h3 { margin: 0; color: #111827; font: 600 21px/1.15 "Cormorant Garamond",Georgia,serif; letter-spacing: -.015em; transition: transform .3s ease, color .3s ease; }
+.travlink-package-item:hover { border-color: #9dcef0; }.travlink-package-item:hover i { color: #2f9fe6; transform: translateY(-3px); }.travlink-package-item:hover h3 { color: #0e47a1; transform: translateY(-3px); }
+.travlink-visa { padding: 108px 0 100px; background: #f3f7fb; }
+.travlink-visa__heading { max-width: 760px; margin: 0 auto; text-align: center; }.travlink-visa__heading h2 { margin-right: auto; margin-left: auto; }
+.travlink-visa__types { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 56px; }
+.travlink-visa-card { min-height: 166px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; border: 1px solid #dce5ed; background: rgba(255,255,255,.68); border-radius: 4px; text-align: center; transition: border-color .3s ease, transform .3s ease; }.travlink-visa-card:hover { border-color: #2f9fe6; transform: translateY(-4px); }.travlink-visa-card:hover i { transform: translateY(-4px); }.travlink-visa-card h3 { font-size: 25px; }
+.travlink-visa__countries { margin: 39px 0 0; color: #586475; font-size: 15px; text-align: center; }.travlink-visa__countries strong { color: #111827; font-weight: 600; }.travlink-visa__countries span { padding: 0 6px; color: #2f9fe6; }
+.travlink-travel-faq { padding: 110px 0 90px; background: #fff; }.travlink-travel-faq__heading { max-width: 760px; margin: 0 auto 52px; text-align: center; }.travlink-travel-faq__heading h2 { margin-right: auto; margin-left: auto; }.travlink-travel-faq__accordion { max-width: 900px; margin: 0 auto; }
+@media (max-width: 991px) { .travlink-travel-hero { min-height: 700px; padding-bottom: 70px; }.travlink-travel-packages__layout { gap: 48px; }.travlink-travel-packages { padding: 88px 0; } }
+@media (max-width: 767px) { .travlink-travel-hero { min-height: 650px; padding: 130px 0 58px; background-position: 58% center; }.travlink-travel-hero h1 { font-size: clamp(39px,10vw,46px); line-height: 1.04; }.travlink-travel-packages, .travlink-visa, .travlink-travel-faq { padding: 72px 0; }.travlink-travel-packages__layout, .travlink-package-list { grid-template-columns: 1fr; }.travlink-travel-packages__layout { gap: 38px; }.travlink-package-item { min-height: 94px; }.travlink-visa__types { grid-template-columns: 1fr; margin-top: 38px; }.travlink-visa-card { min-height: 135px; }.travlink-travel-faq__heading { margin-bottom: 38px; }.travlink-visa__countries { line-height: 1.9; } }
+.travlink-travel-support { padding: 110px 0 90px; background: #fff; }
+.travlink-travel-support__grid { display: grid; grid-template-columns: minmax(300px,.82fr) minmax(0,1.18fr); gap: 72px; align-items: start; }
+.travlink-travel-contact { padding: 38px; border: 1px solid #dce5ed; background: #f3f7fb; border-radius: 4px; }
+.travlink-travel-contact h2 { margin: 17px 0 28px; color: #111827; font: 500 clamp(34px,3vw,43px)/1.04 "Cormorant Garamond",Georgia,serif; letter-spacing: -.025em; }
+.travlink-travel-contact__form { display: grid; gap: 12px; }
+.travlink-travel-contact__form input, .travlink-travel-contact__form textarea { width: 100%; border: 1px solid #d8e0e8; border-radius: 2px; background: #fff; color: #111827; font: 400 14px Outfit,sans-serif; outline: none; padding: 14px 15px; transition: border-color .25s ease; }
+.travlink-travel-contact__form textarea { resize: vertical; }
+.travlink-travel-contact__form input:focus, .travlink-travel-contact__form textarea:focus { border-color: #2f9fe6; }
+.travlink-travel-contact__form button { width: max-content; margin-top: 8px; border: 0; font: 600 14px Outfit,sans-serif; }
+.travlink-travel-contact__socials { display: flex; gap: 9px; margin-top: 28px; }
+.travlink-travel-contact__socials a { display: inline-flex; align-items: center; justify-content: center; width: 35px; height: 35px; border: 1px solid #d8e0e8; border-radius: 50%; color: #0e47a1; text-decoration: none; transition: color .25s ease, background-color .25s ease, border-color .25s ease; }
+.travlink-travel-contact__socials a:hover { border-color: #0e47a1; background: #0e47a1; color: #fff; }
+.travlink-travel-support .travlink-travel-faq { padding: 0; background: transparent; }
+.travlink-travel-support .travlink-travel-faq__heading { max-width: none; margin: 0 0 40px; text-align: left; }
+.travlink-travel-support .travlink-travel-faq__heading h2 { margin-left: 0; }
+.travlink-travel-support .travlink-travel-faq__accordion { max-width: none; }
+@media (max-width: 991px) { .travlink-travel-support__grid { gap: 42px; } }
+@media (max-width: 767px) { .travlink-travel-support { padding: 72px 0; }.travlink-travel-support__grid { grid-template-columns: 1fr; gap: 46px; }.travlink-travel-contact { padding: 28px; } }
+/* Place the shared navigation directly over the Travel hero. */
+.travlink-travel-page-body .header-area-3 { position: absolute; top: 0; left: 0; width: 100%; z-index: 1000; }
+.travlink-travel-page-body .header-area-3 .ca-logo h3 { color: #fff; }
+.travlink-travel-page-body .ca-main-menu-3 ul li > a { color: rgba(255,255,255,.92); }
+.travlink-travel-page-body .ca-main-menu-3 ul li:hover > a { color: #fff; }
+.travlink-travel-page-body .header-area-3 .ca-offcanvas-toogle { color: #fff; }
+.travlink-travel-page-body .header-area-3.stiky.scroll-header .ca-logo h3,
+.travlink-travel-page-body .header-area-3.stiky.scroll-header .ca-main-menu-3 ul li > a,
+.travlink-travel-page-body .header-area-3.stiky.scroll-header .ca-offcanvas-toogle { color: #252424; }
+
+/* Clear, compact service information at a glance. */
+.travlink-package-item { min-height: 142px; }
+.travlink-package-item p { margin: 6px 0 0; color: #697586; font-size: 13px; line-height: 1.45; }
+.travlink-package-item:hover p { color: #42536b; }
+.travlink-visa-card { padding: 24px 18px; }
+.travlink-visa-card p { max-width: 190px; margin: -8px 0 0; color: #697586; font-size: 13px; line-height: 1.45; }
+@media (max-width: 767px) {
+    .travlink-travel-page-body .header-area-3 { padding: 14px 0; }
+    .travlink-package-item { min-height: 108px; }
+}
+/* Compact the Travel service overview while preserving clear service hierarchy. */
+.travlink-travel-page-body .header-area-3 { top: 24px; }
+.travlink-travel-page-body .header-area-3.stiky.scroll-header { top: 0; }
+.travlink-travel-packages { padding: 82px 0; }
+.travlink-travel-packages__layout { gap: 58px; }
+.travlink-travel-section-intro h2,
+.travlink-visa__heading h2 { font-size: clamp(40px, 3.6vw, 52px); }
+.travlink-package-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.travlink-package-item { min-height: 116px; gap: 14px; padding: 21px 20px; }
+.travlink-package-item h3 { font-size: 20px; }
+.travlink-package-item p { margin-top: 4px; font-size: 12.5px; line-height: 1.35; }
+.travlink-visa { padding: 78px 0 74px; }
+.travlink-visa__types { gap: 14px; margin-top: 40px; }
+.travlink-visa-card { min-height: 138px; gap: 13px; padding: 18px 14px; }
+.travlink-visa-card h3 { font-size: 23px; }
+.travlink-visa-card p { margin-top: -5px; font-size: 12.5px; line-height: 1.35; }
+.travlink-visa__countries { margin-top: 28px; }
+@media (max-width: 991px) {
+    .travlink-travel-page-body .header-area-3 { top: 16px; }
+    .travlink-travel-packages { padding: 70px 0; }
+    .travlink-visa { padding: 68px 0; }
+}
+@media (max-width: 767px) {
+    .travlink-travel-page-body .header-area-3 { top: 14px; }
+    .travlink-travel-packages, .travlink-visa { padding: 60px 0; }
+    .travlink-travel-packages__layout { gap: 32px; }
+    .travlink-package-list { grid-template-columns: 1fr; }
+    .travlink-package-item { min-height: 96px; padding: 18px; }
+    .travlink-visa__types { margin-top: 30px; }
+}
+
+/* Distinct Travel Packages and Visa Assistance service features. */
+.travlink-travel-features { padding: 104px 0; background: #fff; }
+.travlink-travel-feature { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: clamp(38px, 5vw, 76px); align-items: center; padding: clamp(26px, 3.2vw, 46px); border: 1px solid #e7ebf0; border-radius: 28px; background: #fff; }
+.travlink-travel-feature + .travlink-travel-feature { margin-top: 64px; }
+.travlink-travel-feature--visa { grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); background: #f1f5fb; border-color: #e1e8f1; }
+.travlink-travel-feature__image { min-height: 520px; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 24px; background: #dfe7ef; }
+.travlink-travel-feature__image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.travlink-travel-feature--packages .travlink-travel-feature__image img { object-position: center; }
+.travlink-travel-feature--visa .travlink-travel-feature__image img { object-position: center; }
+.travlink-travel-feature:hover .travlink-travel-feature__image img { transform: scale(1.03); }
+.travlink-travel-feature__content { min-width: 0; }
+.travlink-travel-feature__tag { display: block; width: max-content; margin-top: 15px; padding: 7px 10px; border: 1px solid #d8e2ec; border-radius: 999px; color: #506175; font: 700 10px/1 Inter, Outfit, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
+.travlink-travel-feature h2 { max-width: 620px; margin: 20px 0 0; color: #111827; font: 500 clamp(42px, 4vw, 58px)/1.03 "Cormorant Garamond", Georgia, serif; letter-spacing: -.03em; }
+.travlink-travel-feature .travlink-package-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 35px; border-top: 1px solid #dfe6ed; border-left: 0; }
+.travlink-travel-feature .travlink-package-item { position: relative; min-height: 92px; gap: 13px; padding: 20px 14px 20px 0; border: 0; border-bottom: 1px solid #dfe6ed; }
+.travlink-travel-feature .travlink-package-item:nth-child(odd) { margin-right: 22px; }
+.travlink-travel-feature .travlink-package-item i { width: 21px; font-size: 17px; }
+.travlink-travel-feature .travlink-package-item h3 { font-family: Outfit, Inter, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0; line-height: 1.35; }
+.travlink-travel-feature .travlink-package-item::after { position: absolute; right: 0; bottom: -1px; width: 0; height: 1px; background: #2f9fe6; content: ""; transition: width .35s ease; }
+.travlink-travel-feature .travlink-package-item:hover { transform: translateX(4px); }
+.travlink-travel-feature .travlink-package-item:hover::after { width: 100%; }
+.travlink-travel-feature .travlink-visa__types { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 35px; }
+.travlink-travel-feature .travlink-visa-card { min-height: 128px; gap: 12px; padding: 16px 10px; border: 1px solid #dbe4ed; border-radius: 14px; background: rgba(255,255,255,.64); }
+.travlink-travel-feature .travlink-visa-card i { font-size: 19px; }
+.travlink-travel-feature .travlink-visa-card h3 { font-family: Outfit, Inter, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0; }
+.travlink-travel-feature .travlink-visa__countries { margin: 24px 0 0; text-align: left; font-size: 14px; line-height: 1.8; }
+@media (max-width: 991px) {
+    .travlink-travel-features { padding: 80px 0; }
+    .travlink-travel-feature, .travlink-travel-feature--visa { grid-template-columns: 1fr; gap: 34px; }
+    .travlink-travel-feature--visa .travlink-travel-feature__image { order: -1; }
+    .travlink-travel-feature__image { min-height: 300px; max-height: 430px; aspect-ratio: auto; }
+}
+@media (max-width: 767px) {
+    .travlink-travel-features { padding: 60px 0; }
+    .travlink-travel-feature { gap: 27px; padding: 20px; border-radius: 21px; }
+    .travlink-travel-feature__content { order: 1; }
+    .travlink-travel-feature__image,
+    .travlink-travel-feature--visa .travlink-travel-feature__image { order: 2; }
+    .travlink-travel-feature + .travlink-travel-feature { margin-top: 38px; }
+    .travlink-travel-feature__image { min-height: 260px; border-radius: 17px; }
+    .travlink-travel-feature h2 { margin-top: 17px; font-size: clamp(35px, 9vw, 43px); }
+    .travlink-travel-feature .travlink-package-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 15px; margin: 27px 0 0; padding: 0; overflow: visible; border-left: 0; }
+    .travlink-travel-feature .travlink-package-item, .travlink-travel-feature .travlink-package-item:nth-child(odd) { width: auto; min-width: 0; min-height: 84px !important; margin: 0; padding: 16px 0; border: 0; border-bottom: 1px solid #dfe6ed !important; }
+    .travlink-travel-feature .travlink-package-item h3 { font-size: 13px; }
+    .travlink-travel-feature .travlink-visa__types { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 27px 0 0; padding: 0; overflow: visible; }
+    .travlink-travel-feature .travlink-visa-card { width: auto; min-width: 0; min-height: 112px !important; padding: 13px 7px !important; border: 1px solid #dbe4ed !important; }
+    .travlink-travel-feature .travlink-visa-card h3 { font-size: 12px; }
+}
+@media (max-width: 420px) {
+    .travlink-travel-feature__image { min-height: 240px; }
+    .travlink-travel-feature .travlink-package-list { grid-template-columns: 1fr; }
+}

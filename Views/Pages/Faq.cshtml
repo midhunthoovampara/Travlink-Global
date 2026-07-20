@@ -2,16 +2,17 @@
 
 @{
     ViewBag.Title = "Faq";
+    ViewBag.BodyClass = "travlink-faq-page-body";
 }
 
 @section styles
 {
-
+    <link rel="stylesheet" href="~/css/inner-page-refinements.css" asp-append-version="true" />
 }
 
 <main>
     <!-- breadcrumb area start -->
-    <section class="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
+    @* <section class="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
         <div class="ca-breadcrumb-shape p-absolute bre-sh-1">
             <img src="~/img/shape/breadcrumn-shape.png" alt="">
         </div>
@@ -20,14 +21,14 @@
         </div>
         <div class="container">
             <div class="ca-breadcrumb-content text-center">
-                <h2 class="ca-breadcrumb-title fnw-600">FAQ’s</h2>
+                <h2 class="ca-breadcrumb-title fnw-600">FAQ&rsquo;s</h2>
                 <div class="it-breadcum-link">
                     <a href=@Url.Action("Index", "Landings")>Home</a>
                     <span><i class="fa-solid fa-angle-right"></i></span>
-                    <a class="active" href="#">FAQ’s</a>
+                    <a class="active" href="#">FAQ&rsquo;s</a>
                 </div>
             </div>
-        </div>
+        </div> *@
     </section>
     <!-- breadcrumb area end -->
 

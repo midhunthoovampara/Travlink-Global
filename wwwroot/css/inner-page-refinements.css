@@ -1,0 +1,179 @@
+/* Consistent shared navigation placement on light inner pages. */
+body:is(.travlink-about-page-body, .travlink-faq-page-body, .travlink-team-page-body, .travlink-contact-page-body) header.header-area-3.stiky {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+}
+
+body:is(.travlink-about-page-body, .travlink-faq-page-body, .travlink-team-page-body, .travlink-contact-page-body) header.header-area-3.stiky > .container.fluid-header-3 {
+    width: 100%;
+    max-width: 1320px;
+    margin-inline: auto;
+}
+
+body:is(.travlink-about-page-body, .travlink-faq-page-body, .travlink-team-page-body, .travlink-contact-page-body) header.header-area-3.stiky > .container > .row {
+    min-height: 48px;
+}
+
+body:is(.travlink-about-page-body, .travlink-faq-page-body, .travlink-team-page-body, .travlink-contact-page-body) header.header-area-3.stiky.scroll-header {
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, .96);
+}
+
+/* Scoped editorial headings for Team and Testimonial. */
+.travlink-team-page-body .travlink-inner-intro,
+.travlink-testimonial-page-body .travlink-inner-intro {
+    max-width: 900px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.travlink-inner-intro__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    color: #1d63b8;
+    font: 700 11px/1 Inter, Outfit, sans-serif;
+    letter-spacing: .27em;
+    text-transform: uppercase;
+}
+
+.travlink-inner-intro__eyebrow::before,
+.travlink-inner-intro__eyebrow::after {
+    width: 30px;
+    height: 1px;
+    background: rgba(29, 99, 184, .48);
+    content: "";
+}
+
+.travlink-inner-intro h1 {
+    max-width: 880px;
+    margin: 20px auto 0;
+    color: #101827;
+    font: 500 clamp(52px, 5.7vw, 80px)/.98 "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -.052em;
+}
+
+.travlink-inner-intro h1 em {
+    color: #1d63b8;
+    font-weight: 400;
+}
+
+@media (max-width: 991px) {
+    body:is(.travlink-about-page-body, .travlink-faq-page-body, .travlink-team-page-body, .travlink-contact-page-body) header.header-area-3.stiky {
+        top: 16px;
+    }
+
+    body:is(.travlink-about-page-body, .travlink-faq-page-body, .travlink-team-page-body, .travlink-contact-page-body) header.header-area-3.stiky.scroll-header {
+        top: 0;
+    }
+
+    .travlink-team-page-body .travlink-inner-intro,
+    .travlink-testimonial-page-body .travlink-inner-intro {
+        margin-bottom: 54px;
+    }
+}
+
+@media (max-width: 767px) {
+    body:is(.travlink-about-page-body, .travlink-faq-page-body, .travlink-team-page-body, .travlink-contact-page-body) header.header-area-3.stiky {
+        top: 14px;
+        padding: 0;
+    }
+
+    body:is(.travlink-about-page-body, .travlink-faq-page-body, .travlink-team-page-body, .travlink-contact-page-body) header.header-area-3.stiky.scroll-header {
+        top: 0;
+        padding: 13px 0;
+    }
+
+    .travlink-team-page-body .travlink-inner-intro,
+    .travlink-testimonial-page-body .travlink-inner-intro {
+        margin-bottom: 40px;
+        padding-inline: 8px;
+    }
+
+    .travlink-inner-intro__eyebrow {
+        gap: 10px;
+        font-size: 10px;
+        letter-spacing: .22em;
+    }
+
+    .travlink-inner-intro__eyebrow::before,
+    .travlink-inner-intro__eyebrow::after {
+        width: 22px;
+    }
+
+    .travlink-inner-intro h1 {
+        margin-top: 16px;
+        font-size: clamp(40px, 12vw, 56px);
+        line-height: 1;
+    }
+
+    /* FAQ content first, supporting imagery last on phones. */
+    .travlink-faq-page-body .ca-faq-inner > .container > .row {
+        flex-direction: column;
+        row-gap: 26px;
+    }
+
+    .travlink-faq-page-body .ca-faq-inner > .container > .row > :first-child {
+        order: 2;
+        margin-bottom: 0 !important;
+    }
+
+    .travlink-faq-page-body .ca-faq-inner > .container > .row > :last-child {
+        order: 1;
+        margin-bottom: 0 !important;
+    }
+
+    .travlink-faq-page-body .ca-faq-iner-thumb {
+        margin-right: 0 !important;
+        padding-top: 24px;
+    }
+
+    .travlink-faq-page-body .ca-faq-iner-thumb > img {
+        height: 360px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .travlink-faq-page-body .ca-fa-sm-thumb {
+        top: 0;
+        right: 14px;
+    }
+
+    .travlink-faq-page-body .ca-fa-sm-thumb img {
+        width: 128px;
+        height: 146px;
+        border-width: 5px;
+        border-radius: 16px;
+        object-fit: cover;
+    }
+
+    .travlink-faq-page-body .ca-faq-iner-review {
+        right: 14px;
+        bottom: 14px;
+        left: 14px;
+        padding: 16px !important;
+    }
+
+    .travlink-faq-page-body .ca-faq-iner-review .ca-counter-title {
+        font-size: 42px;
+        line-height: 1;
+    }
+
+    .travlink-faq-page-body .accordion-body br {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .travlink-faq-page-body .ca-faq-iner-thumb > img {
+        height: 320px;
+    }
+}

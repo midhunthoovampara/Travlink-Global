@@ -1,343 +1,90 @@
-
-
 @{
-    ViewBag.Title = "Service Right";
+    ViewBag.Title = "Trade";
+    ViewBag.BodyClass = "travlink-trade-page-body";
 }
 
 @section styles
 {
-
+    <link rel="stylesheet" href="~/css/trade-service.css" asp-append-version="true" />
 }
 
-<main>
-    <!-- breadcrumb area start -->
-    <section class="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
-        <div class="ca-breadcrumb-shape p-absolute bre-sh-1">
-            <img src="~/img/shape/breadcrumn-shape.png" alt="">
+<main class="travlink-trade-page">
+    <section class="travlink-trade-hero" aria-labelledby="trade-hero-title">
+        <div class="travlink-trade-hero__content container">
+            <span class="travlink-trade-hero__label">Trade</span>
+            <h1 id="trade-hero-title">Sourcing done right <span>&mdash;</span><br>from factory floor to final delivery.</h1>
         </div>
-        <div class="ca-breadcrumb-shape p-absolute bre-sh-2">
-            <img src="~/img/shape/ca-line-shape.png" alt="">
-        </div>
+    </section>
+
+    <section class="travlink-trade-services" aria-labelledby="trade-services-title">
         <div class="container">
-            <div class="ca-breadcrumb-content text-center">
-                <h2 class="ca-breadcrumb-title fnw-600">Trade</h2>
-                <div class="it-breadcum-link">
-                    <a href="#">Home</a>
-                    <span><i class="fa-solid fa-angle-right"></i></span>
-                    <a href="#">Service</a>
-                    <span><i class="fa-solid fa-angle-right"></i></span>
-                    <a class="active" href="#">Trade</a>
+            <div class="travlink-trade-services__layout">
+                <div class="travlink-trade-services__intro">
+                    <span class="travlink-trade-eyebrow">Trade Services</span>
+                    <h2 id="trade-services-title">From the right supplier to the final delivery.</h2>
+                    <img src="~/img/service/ca-service-bg-2.1.png" alt="International trade and sourcing coordination">
+                </div>
+                <div class="travlink-trade-services__list">
+                    <article><i class="fa-solid fa-box-open" aria-hidden="true"></i><h3>Product Sourcing</h3><span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></article>
+                    <article><i class="fa-solid fa-handshake" aria-hidden="true"></i><h3>Supplier Identification</h3><span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></article>
+                    <article><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><h3>Supplier Verification</h3><span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></article>
+                    <article><i class="fa-solid fa-industry" aria-hidden="true"></i><h3>Factory Coordination</h3><span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></article>
+                    <article><i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i><h3>Import Consultation</h3><span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></article>
+                    <article><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i><h3>Export Consultation</h3><span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></article>
+                    <article><i class="fa-solid fa-users" aria-hidden="true"></i><h3>Business Networking</h3><span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></article>
+                    <article><i class="fa-solid fa-globe" aria-hidden="true"></i><h3>International Procurement</h3><span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></article>
                 </div>
             </div>
         </div>
     </section>
-    <!-- breadcrumb area end -->
-    <!-- service left -->
-    <div class="ca-service-lft-area pt-100 pb-70">
+
+    <section class="travlink-trade-support" aria-label="Trade consultation and frequently asked questions">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mb-30">
-                    <div class="ca-service-content-area">
-                        <div class="ca-servic-thumb br-7 mb-40">
-                            <img class="w-100" src="~/img/service/service3.jpg.jpeg" alt="">
-                        </div>
-                        <div class="ca-servic-thumb-content">
-                            <h2 class="ca-service-thumb-title theme-black-3 fnw-600">International Trade Solutions</h2>
-<p class="pt-16">
-Travlink Global helps businesses expand into international markets by connecting
-them with trusted manufacturers, suppliers, and business partners across Asia.
-Whether you are importing products, exploring new suppliers, or planning a
-factory visit, we provide professional guidance throughout the entire process.
-</p>                          
-<p class="pt-16">
-Our trade solutions simplify global sourcing by combining local market knowledge,
-reliable business networks, and personalized support. We help businesses reduce
-risk, save time, and build long-term partnerships with confidence.
-</p>                            <h3 class="ca-thumb-title-2 theme-black-3 fnw-600 pt-40">Our Trade Services</h3>
-<p class="pt-16 pb-40">
-Our services include supplier sourcing, factory visits, business matchmaking,
-product sourcing, import-export consulting, procurement assistance, market
-research, and trade delegation support. We work closely with businesses to
-identify reliable partners and create opportunities for sustainable growth.
-</p>                            <div class="ca-acordion-area">
-                                <div class="accordion" id="accordionExample">
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                How do you help businesses find suppliers?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>We identify trusted manufacturers and suppliers based on your product requirements,
-verify their credibility, and help you establish reliable business relationships.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                              Can you arrange factory visits?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>Yes. We organize factory visits, supplier meetings, and business appointments,
-allowing you to inspect production facilities and meet potential partners in person.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                               Do you provide import and export guidance?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>Absolutely. We provide consulting on international trade procedures,
-documentation, sourcing strategies, and market entry to simplify your
-cross-border business operations.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingFour">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                               Which countries do you currently support?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>Our growing network includes India, China, Vietnam, Thailand,
-Malaysia, Kazakhstan, Uzbekistan, and Sri Lanka, with plans to
-expand into additional Asian markets.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="ca-thumb-title-2 theme-black-3 fnw-600 pt-16">Building Strong Business Partnerships/h3>
-<p class="pt-16 pb-40">
-We believe successful trade is built on trust, transparency, and long-term
-relationships. Our team works closely with clients to understand their
-business objectives and connect them with reliable suppliers and
-opportunities across Asia.
-</p>                           <h3 class="ca-thumb-title-2 theme-black-3 fnw-600">
-Our Specialized Trade Solutions
-</h3>
-
-<p class="pt-16 pb-40">
-From supplier identification and factory audits to procurement support,
-business matchmaking, and market expansion strategies, Travlink Global
-provides practical solutions that help businesses grow confidently in
-international markets.
-</p>
-                            <h4 class="ca-thumb-title-4 theme-black-3 fnw-600 pb-16">Detailed Service Offerings Service Highlights</h4>
-                            <div class="ca-ab-item-check ca-ab-item-check-2">
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Service Breakdown<h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Factory Visits & Inspections</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">
-Business Matchmaking</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Import & Export Consulting</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Market Research</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Procurement Support</h4>
-                                    </div>
-                                </div>
-                            </div>
-                           <h3 class="ca-thumb-title-2 theme-black-3 fnw-600 pt-30">
-Connecting Businesses Across Asia
-</h3>
-
-<p class="pt-16">
-Whether you're launching a new product, sourcing reliable manufacturers,
-or expanding into international markets, Travlink Global is your trusted
-partner for building successful business connections across Asia.
-</p>
-                        </div>
+            <div class="travlink-trade-support__grid">
+                <aside class="travlink-trade-contact">
+                    <span class="travlink-trade-eyebrow">Contact Us</span>
+                    <h2>Request Trade Consultation</h2>
+                    <form class="travlink-trade-contact__form" action="#">
+                        <input type="text" placeholder="Your Name" aria-label="Your Name">
+                        <input type="email" placeholder="Email Address" aria-label="Email Address">
+                        <input type="tel" placeholder="Phone Number" aria-label="Phone Number">
+                        <textarea rows="5" placeholder="Your Message" aria-label="Your Message"></textarea>
+                        <button class="ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit">Send Inquiry <span><i class="fa-solid fa-angle-right"></i></span></button>
+                    </form>
+                    <div class="travlink-trade-contact__socials" aria-label="Social media links">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
-                </div>
-                <div class="col-lg-4 mb-30">
-                    <!-- sidebar area -->
-                    <div class="ca-sidebar-area ml-50">
-                        <!-- search -->
-                        <div class="ca-search ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-16">Search</h4>
-                            <div class="ca-search-box p-relative z-index-1">
-                                <input type="text" placeholder="Search..">
-                                <div class="ca-sea-icon">
-                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                                </div>
+                </aside>
+                <div class="travlink-trade-faq">
+                    <div class="travlink-trade-faq__heading">
+                        <span class="travlink-trade-eyebrow">Trade FAQs</span>
+                        <h2>Questions, answered clearly.</h2>
+                    </div>
+                    <div class="ca-acordion-area travlink-trade-faq__accordion">
+                        <div class="accordion" id="tradeFaqAccordion">
+                            <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                                <h3 class="ca-accordion-header" id="tradeFaqOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tradeFaqOneContent" aria-expanded="true" aria-controls="tradeFaqOneContent">Which countries do you source from?</button></h3>
+                                <div id="tradeFaqOneContent" class="accordion-collapse collapse show" aria-labelledby="tradeFaqOne" data-bs-parent="#tradeFaqAccordion"><div class="ca-accordion-body"><p>Primarily China and Vietnam, with a growing network across Asia.</p></div></div>
                             </div>
-                        </div>
-                        <!-- service list -->
-                        <div class="ca-servic-list ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-24">Our Services</h4>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Travel Services
-<span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Trade Solutions <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Logistics Support<span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Business Delegation Tours <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Visa Assistance <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                        </div>
-                        <!-- phone us -->
-                        <div class="ca-servic-list ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title ca-servic-list-title fnw-600 theme-black-3 pb-24">If You Need Any Help <br> Contact With Us</h4>
-                            <div class="ca-ph-content">
-                                <div class="ca-ph-ic">
-                                    <span><img src="~/img/icon/ca-ser-phone.svg" alt=""></span>
-                                </div>
-                                <div class="ca-ph-title">
-                                    <h4 class="ph-title"><a href="tel:1234567890">+123 456 7890</a></h4>
-                                </div>
+                            <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                                <h3 class="ca-accordion-header" id="tradeFaqTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tradeFaqTwoContent" aria-expanded="false" aria-controls="tradeFaqTwoContent">Can you verify a supplier before I commit?</button></h3>
+                                <div id="tradeFaqTwoContent" class="accordion-collapse collapse" aria-labelledby="tradeFaqTwo" data-bs-parent="#tradeFaqAccordion"><div class="ca-accordion-body"><p>Yes &mdash; supplier verification is part of our process.</p></div></div>
                             </div>
-                        </div>
-                        <!-- sidebar contact -->
-                        <div class="ca-search ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-24">Request Trade Consultation</h4>
-                            <div class="ca-sidebar-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Your Name">
-                                    <input type="email" placeholder="Email Address">
-                                    <input type="tel" placeholder="Phone Number">
-                                    <textarea name="message" id="message" rows="10" cols="4" placeholder="Your Message"></textarea>
-                                </form>
-                                <div class="ca-sidebar-form-btn text-end">
-                                    <a href="#" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Send Inquiry<span><i class="fa-solid fa-angle-right"></i></span></a>
-                                </div>
+                            <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                                <h3 class="ca-accordion-header" id="tradeFaqThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tradeFaqThreeContent" aria-expanded="false" aria-controls="tradeFaqThreeContent">Do you help with factory visits?</button></h3>
+                                <div id="tradeFaqThreeContent" class="accordion-collapse collapse" aria-labelledby="tradeFaqThree" data-bs-parent="#tradeFaqAccordion"><div class="ca-accordion-body"><p>Yes, we coordinate visits and communication on the ground.</p></div></div>
                             </div>
-                        </div>
-                        <!-- Follow Us -->
-                        <div class="ca-search ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-24">Follow Us</h4>
-                            <div class="ca-footer-social ca-footer-social-3">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                </ul>
+                            <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                                <h3 class="ca-accordion-header" id="tradeFaqFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tradeFaqFourContent" aria-expanded="false" aria-controls="tradeFaqFourContent">Is there a minimum order size?</button></h3>
+                                <div id="tradeFaqFourContent" class="accordion-collapse collapse" aria-labelledby="tradeFaqFour" data-bs-parent="#tradeFaqAccordion"><div class="ca-accordion-body"><p>It depends on the supplier &mdash; we'll help you understand what's realistic.</p></div></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="ca-more-section pb-70">
-        <div class="container">
-            <h2 class="ca-more-title theme-black-3 fnw-600 text-center mb-60">More Services</h2>
-            <div class="row">
-                <!-- single service box -->
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="ca-ser-icon-box ca-ser-icon-box-2 fix p-relative cream-bg-3 z-index-1 p-32 br-7">
-                        <div class="ca-about-icon">
-                            <div class="ca-about-ic ca-ser-ic">
-                                <img src="~/img/icon/ca-iner-ser1.1.svg" alt="">
-                            </div>
-                            <div class="ca-num">
-                                <h4 class="overly-num overly-num2">01</h4>
-                            </div>
-                        </div>
-                        <div class="ca-service-content ca-service-content-iner">
-                            <h4 class="ca-title fnw-700 pb-16 pt-32"><a href=@Url.Action("Single", "Service")>Express Delivery Services</a></h4>
-                            <p class="pb-24">We provide a comprehensive suite logistics services designed to streamline your supply <br> chain &amp; meet your unique business needs.</p>
-                            <a href=@Url.Action("Single", "Service") class="read-more">Read More <span><i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- single service box -->
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="ca-ser-icon-box ca-ser-icon-box-2 fix p-relative cream-bg-3 z-index-1 p-32 br-7">
-                        <div class="ca-about-icon">
-                            <div class="ca-about-ic ca-ser-ic">
-                                <img src="~/img/icon/ca-iner-ser1.2.svg" alt="">
-                            </div>
-                            <div class="ca-num">
-                                <h4 class="overly-num overly-num2">02</h4>
-                            </div>
-                        </div>
-                        <div class="ca-service-content ca-service-content-iner">
-                            <h4 class="ca-title fnw-700 pb-16 pt-32"><a href=@Url.Action("Single", "Service")>Supply Chain Management</a></h4>
-                            <p class="pb-24">We offer state-of-the-art warehousing <br>solutions, ensuring your inventory is<br> managed with precision and care.</p>
-                            <a href=@Url.Action("Single", "Service") class="read-more">Read More <span><i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- single service box -->
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="ca-ser-icon-box ca-ser-icon-box-2 fix p-relative cream-bg-3 z-index-1 p-32 br-7">
-                        <div class="ca-about-icon">
-                            <div class="ca-about-ic ca-ser-ic">
-                                <img src="~/img/icon/ca-iner-ser1.3.svg" alt="">
-                            </div>
-                            <div class="ca-num">
-                                <h4 class="overly-num overly-num2">03</h4>
-                            </div>
-                        </div>
-                        <div class="ca-service-content ca-service-content-iner">
-                            <h4 class="ca-title fnw-700 pb-16 pt-32"><a href=@Url.Action("Single", "Service")>Project Cargo Handling</a></h4>
-                            <p class="pb-24">Our freight forwarding services ensure<br> smooth and efficient transportation of<br> goods across borders, while our customs</p>
-                            <a href=@Url.Action("Single", "Service") class="read-more">Read More <span><i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
 </main>
-
-@section scripts
-{
-
-}

@@ -1,0 +1,108 @@
+﻿/* Shared luxury editorial typography for major section headings. */
+:root {
+    --travlink-editorial-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --travlink-label-sans: "Inter", "Outfit", sans-serif;
+    --travlink-editorial-ink: #111827;
+    --travlink-primary-accent: #0e47a1;
+}
+
+:is(
+    .ca-section-title:not(.cta-title-1),
+    .ca-about-title,
+    .ca-breadcrumb-title,
+    .travlink-why__heading
+) {
+    font-family: var(--travlink-editorial-serif);
+    font-size: 68px;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    text-align: center;
+}
+
+:is(
+    .ca-section-title:not(.cta-title-1),
+    .ca-about-title,
+    .ca-breadcrumb-title,
+    .travlink-why__heading
+):not(.text-white) {
+    color: var(--travlink-editorial-ink);
+}
+
+.ca-section-subtitle:has(+ .ca-section-title),
+.ca-section-subtitle:has(+ .ca-about-title),
+.travlink-why__eyebrow {
+    width: fit-content;
+    display: block;
+    margin: 0 auto 18px;
+    padding: 0;
+    background: transparent;
+    color: var(--travlink-primary-accent);
+    font-family: var(--travlink-label-sans);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: .35em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ca-section-subtitle:has(+ .ca-section-title)::before,
+.ca-section-subtitle:has(+ .ca-section-title)::after,
+.ca-section-subtitle:has(+ .ca-about-title)::before,
+.ca-section-subtitle:has(+ .ca-about-title)::after,
+.travlink-why__eyebrow::before,
+.travlink-why__eyebrow::after {
+    display: none;
+}
+
+.ca-section-subtitle + .ca-section-title,
+.ca-section-subtitle + .ca-about-title {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.travlink-service-intro .travlink-service-intro__copy {
+    margin-top: 24px;
+}
+
+@media (max-width: 991.98px) {
+    :is(
+        .ca-section-title:not(.cta-title-1),
+        .ca-about-title,
+        .ca-breadcrumb-title,
+        .travlink-why__heading
+    ) {
+        font-size: 52px;
+        line-height: 1.06;
+        letter-spacing: -1.25px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    :is(
+        .ca-section-title:not(.cta-title-1),
+        .ca-about-title,
+        .ca-breadcrumb-title,
+        .travlink-why__heading
+    ) {
+        font-size: 40px;
+        line-height: 1.08;
+        letter-spacing: -1px;
+    }
+
+    .ca-section-subtitle:has(+ .ca-section-title),
+    .ca-section-subtitle:has(+ .ca-about-title),
+    .travlink-why__eyebrow {
+        margin-bottom: 16px;
+        font-size: 13px;
+    }
+}
+
+/* Match the service names to the site's editorial heading system. */
+.travlink-service-card__title {
+    font-family: var(--travlink-editorial-serif);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+

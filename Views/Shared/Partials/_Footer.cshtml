@@ -1,108 +1,60 @@
-﻿<footer class="theme-bg-3 pt-30 p-relative z-index-1">
-    <div class="ca-ft-shape p-absolute ft-shape-2"><img src="~/img/shape/ca-footer-shape3.1.png" alt=""></div>
-    <div class="ca-cta-area p-relative z-index-1">
-        <div class="container">
-            <div class="ca-cta-shape3 p-absolute d-none d-lg-block">
-                <img src="~/img/shape/cta-shape-3.1.png" alt="">
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-30">
-                    <div class="ca-cta-content">
-                        <h2 class="ca-section-title cta-title-1 text-white fnw-700">Join Us Today And let Us Help You To Grow Your Business.</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-30">
-                    <div class="ca-btn-cta-3 text-end">
-                        <a href=@Url.Action("Contact", "Pages") class="ca-btn-primary-3 w-bg">Get Started <span><i class="fa-solid fa-angle-right"></i></span></a>
-                    </div>
+<footer class="travlink-footer">
+    <div class="container">
+        <div class="travlink-footer__top">
+            <div class="travlink-footer__brand">
+                <a class="travlink-footer__logo" href="@Url.Action("Index", "Landings")" aria-label="Travlink Global home">
+                    <span class="travlink-footer__logo-mark" aria-hidden="true"><i class="fa-solid fa-globe"></i></span>
+                    <span>Travlink Global</span>
+                </a>
+                <p class="travlink-footer__description">Connecting people and businesses across borders through trusted travel, trade, and shipping solutions.</p>
+                <div class="travlink-footer__socials" aria-label="Social media links">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
-            <div class="b-bottom pt-48"></div>
+
+            <nav class="travlink-footer__column" aria-label="Footer quick links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="@Url.Action("Index", "Landings")">Home</a></li>
+                    <li><a href="@Url.Action("About", "Pages")">About</a></li>
+                    <li><a href="@Url.Action("Left", "Service")">Travel</a></li>
+                    <li><a href="@Url.Action("Right", "Service")">Trade</a></li>
+                    <li><a href="@Url.Action("Single", "Service")">Shipping</a></li>
+                    <li><a href="@Url.Action("Contact", "Pages")">Contact</a></li>
+                </ul>
+            </nav>
+
+            <nav class="travlink-footer__column" aria-label="Footer services">
+                <h2>Services</h2>
+                <ul>
+                    <li><a href="@Url.Action("Left", "Service")">Travel</a></li>
+                    <li><a href="@Url.Action("Right", "Service")">Trade</a></li>
+                    <li><a href="@Url.Action("Single", "Service")">Shipping</a></li>
+                </ul>
+            </nav>
+
+            <div class="travlink-footer__column travlink-footer__contact">
+                <h2>Contact &amp; Legal</h2>
+                <ul>
+                    <li><a href="https://wa.me/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</a></li>
+                    <li><a href="mailto:infotravlinkglobal@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i>Travlinkglobal@gmail.com </a></li>
+                    @* <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li> *@
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="ca-footer-area">
-        <div class="container">
-            <div class="ca-ft-area w-bg">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 mb-30">
-                        <div class="ca-footer widget-1">
-                            <div class="ca-ft-logo">
-                                @* <a href=@Url.Action("Index3", "Landings")><img src="~/img/logo/ca-logo3.1.png" alt=""></a> *@
-                                <h1>LOGO</h1>
-                            </div>
-                            <div class="ca-ft-content ca-ft-content-3 mb-24">
-                                <p class="pt-16">Our global reach, combined with local <br> expertise, ensures that your goods are <br>transported safely, on time.</p>
-                            </div>
-                            <div class="ca-footer-social ca-footer-social-3">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl col-md-6 mb-30">
-                        <div class="ca-footer widget-2">
-                            <h4 class="ca-title fnw-700 theme-black-3 pb-24">Quick Links</h4>
-                            <div class="ca-footer-menu ca-footer-menu-3">
-                                <ul>
-                                    <li><a href=@Url.Action("Index", "Landings")>Home</a></li>
-                                    <li><a href=@Url.Action("Index", "Service")>Service</a></li>
-                                    <li><a href=@Url.Action("About", "Pages")>About Us</a></li>
-                                    <li><a href=@Url.Action("Index", "Blog")>Latest News</a></li>
-                                    <li><a href=@Url.Action("Contact", "Pages")>Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl col-md-6 mb-30">
-                        <div class="ca-footer widget-3">
-                            <h4 class="ca-title fnw-700 theme-black-3 pb-24">Other Links</h4>
-                            <div class="ca-footer-menu ca-footer-menu-3">
-                                <ul>
-                                    <li><a href="#">Maintenance</a></li>
-                                    <li><a href="#">Our Team</a></li>
-                                    <li><a href="#">Reviews & Awards</a></li>
-                                    <li><a href="#">Personal</a></li>
-                                    <li><a href="#">Certifications</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 mb-30">
-                        <div class="ca-footer widget-4">
-                            <h4 class="ca-title fnw-700 theme-black-3 pb-24">Other Links</h4>
-                            <div class="ca-ft-content">
-                                <p class="pb-32">Subscribe us & receive our latest news & articles</p>
-                            </div>
-                            <div class="ca-footer-email-sub ca-footer-email-sub-3">
-                                <form action="#">
-                                    <input type="email" placeholder="Email Address..">
-                                </form>
-                                <button class="ca-btn-primary ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit" value="submit">Subscribe Now <span><i class="fa-solid fa-angle-right"></i></span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copy-right-border border-1"></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="copry-right-text pt-24">Copyright &COPY;2024 Travlink. All Rights Reserved</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="copy-right-menu pt-24">
-                            <ul>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+        <div class="travlink-footer__bottom">
+            <p class="travlink-footer__copyright">&copy; @DateTime.Now.Year Travlink Global. All rights reserved.</p>
+            <nav class="travlink-footer__legal" aria-label="Legal links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </nav>
+            <p class="travlink-footer__note">Travlink Global is a brand operated by Deacon Trading Company.</p>
         </div>
     </div>
 </footer>
+

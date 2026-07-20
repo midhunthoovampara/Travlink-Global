@@ -1,0 +1,124 @@
+/* Keep support content in a consistent order on larger screens. */
+.travlink-travel-support__grid, .travlink-trade-support__grid, .travlink-shipping-support__grid { grid-template-areas: "faq contact"; }
+.travlink-travel-faq, .travlink-trade-faq, .travlink-shipping-faq { grid-area: faq; }
+.travlink-travel-contact, .travlink-trade-contact, .travlink-shipping-contact { grid-area: contact; }
+/* Global responsive safeguards */
+html, body { max-width: 100%; overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+@media (max-width: 767px) {
+    .container { width: min(100% - 40px, 1280px); margin-inline: auto; }
+    main > section, main > div { overflow: clip; }
+    .ca-breadcrumb-area { padding-top: 130px; padding-bottom: 64px; }
+    .ca-breadcrumb-title { font-size: clamp(38px, 10vw, 46px); line-height: 1.05; }
+
+    /* Compact shared mobile dropdown navigation. */
+    .header-area-3.stiky { min-height: 70px; padding: 15px 0; }
+    .header-area-3 .ca-logo h3 { font-size: 19px; }
+    .ca-offcanvas {
+        top: 76px;
+        right: 12px;
+        left: 12px;
+        width: auto;
+        height: auto;
+        max-height: calc(100vh - 92px);
+        padding: 20px;
+        overflow-y: auto;
+        border: 1px solid rgba(77, 163, 255, .34);
+        border-radius: 8px;
+        background: #0f1c2e !important;
+        box-shadow: 0 18px 42px rgba(4, 12, 25, .24);
+        transform: translateY(-14px);
+    }
+    .ca-offcanvas.ca-offcanvas-open { transform: translateY(0); }
+    .ca-offcanvas-overlay { display: none; }
+    .ca-offcanvas-header { margin-bottom: 16px !important; }
+    .ca-offcanvas-close-toggle { color: #fff; font-size: 23px; }
+    .ca-offcanvas-contact, .ca-offcanvas-contact-info, .ca-offcanvas-social { display: none; }
+    .ca-offcanvas-menu-3 { margin-bottom: 0 !important; }
+    .ca-offcanvas-menu-3 ul li:not(:last-child) a { border-color: rgba(255,255,255,.12); }
+    .ca-offcanvas-menu-3 ul li > a { color: rgba(255,255,255,.86); padding: 12px 0; font: 500 15px Outfit, sans-serif; }
+    .ca-offcanvas-menu-3 ul .active > a, .ca-offcanvas-menu-3 ul li > a:hover { color: #4da3ff; }
+    .ca-offcanvas-menu-3 ul li .sub-menu { padding-left: 14px; }
+    .ca-offcanvas-menu-3 ul li .sub-menu a { color: rgba(255,255,255,.72); }
+    .ca-menu-close3 { border-color: rgba(255,255,255,.25); color: #fff; }
+
+    /* Home service cards: compact horizontal touch rail. */
+    .ca-service-3-cards { display: flex; flex-wrap: nowrap; gap: 16px; margin-right: -20px; margin-left: -20px; padding: 8px 20px 22px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 20px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .ca-service-3-cards::-webkit-scrollbar, .travlink-trade-services__list::-webkit-scrollbar, .travlink-shipping-services__list::-webkit-scrollbar { display: none; }
+    .ca-service-3-cards > [class*="col-"] { flex: 0 0 auto; width: min(86vw, 360px); padding: 0; scroll-snap-align: start; }
+    .travlink-service-card, .travlink-service-card__content { min-height: 570px !important; height: 570px; }
+    .travlink-service-card__content { padding: 26px 24px; }
+    .travlink-service-card__title { font-size: 42px; }
+    .travlink-service-card__description { font-size: 14px; line-height: 1.55; }
+
+    /* Trade and Shipping services: two compact cards per row on phones. */
+    .travlink-trade-services__list, .travlink-shipping-services__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; overflow: visible; border: 0; scroll-snap-type: none; }
+    .travlink-trade-services__list > *, .travlink-shipping-services__list > * { width: 100%; min-width: 0; min-height: 132px !important; border: 1px solid #e1e8ee !important; scroll-snap-align: none; }
+    .travlink-trade-services__list article, .travlink-shipping-services__list article { grid-template-columns: 1fr; align-content: center; justify-items: start; gap: 11px; padding: 16px; }
+    .travlink-trade-services__list h3, .travlink-shipping-services__list h3 { font-size: 17px; line-height: 1.2; }
+    .travlink-trade-services__list article > span, .travlink-shipping-services__list article > span { display: none; }
+
+    /* FAQ first, contact second on all service pages. */
+    .travlink-travel-support__grid, .travlink-trade-support__grid, .travlink-shipping-support__grid { grid-template-columns: 1fr; grid-template-areas: "faq" "contact"; gap: 42px; }
+    .travlink-travel-faq, .travlink-trade-faq, .travlink-shipping-faq { grid-area: faq; }
+    .travlink-travel-contact, .travlink-trade-contact, .travlink-shipping-contact { grid-area: contact; padding: 24px 18px; }
+    .travlink-travel-contact__form input, .travlink-trade-contact__form input, .travlink-shipping-contact__form input { min-height: 48px; }
+
+    /* Keep the footer compact and horizontally browsable. */
+    .travlink-footer { padding: 42px 0 0; }
+    .travlink-footer__top { display: flex; flex-wrap: nowrap; gap: 28px; margin-right: -20px; margin-left: -20px; padding: 0 20px 20px; overflow-x: auto; scrollbar-width: none; }
+    .travlink-footer__top::-webkit-scrollbar { display: none; }
+    .travlink-footer__top > * { flex: 0 0 130px; min-width: 130px; }
+    .travlink-footer__brand { flex-basis: 210px; min-width: 210px; }
+    .travlink-footer__description { font-size: 13px; line-height: 1.55; }
+    .travlink-footer__socials { margin-top: 14px; }
+    .travlink-footer__column h2 { font-size: 11px; letter-spacing: .14em; }
+    .travlink-footer__column li + li { margin-top: 7px; }
+    .travlink-footer__column a { font-size: 13px; line-height: 1.55; }
+    .travlink-footer__bottom { grid-template-columns: 1fr; gap: 9px; margin-top: 4px; padding: 18px 0 24px; }
+    .travlink-footer__note { justify-self: start; text-align: left; }
+}
+@media (max-width: 575px) {
+    .container { width: min(100% - 32px, 1280px); }
+    .travlink-whatsapp-float { right: 20px; bottom: 20px; }
+}
+/* Premium transparent mobile header over image heroes. */
+@media (max-width: 767px) {
+    .travlink-home .header-area-3.stiky:not(.scroll-header),
+    .travlink-travel-page-body .header-area-3.stiky:not(.scroll-header),
+    .travlink-trade-page-body .header-area-3.stiky:not(.scroll-header),
+    .travlink-shipping-page-body .header-area-3.stiky:not(.scroll-header) {
+        position: absolute;
+        top: 0;
+        padding: 14px 0;
+        background: transparent;
+        box-shadow: none;
+    }
+    .travlink-home .header-area-3.stiky:not(.scroll-header) .ca-logo h3,
+    .travlink-home .header-area-3.stiky:not(.scroll-header) .ca-offcanvas-toogle {
+        color: #10243d;
+    }
+    .travlink-travel-page-body .header-area-3.stiky:not(.scroll-header) .ca-logo h3,
+    .travlink-travel-page-body .header-area-3.stiky:not(.scroll-header) .ca-offcanvas-toogle,
+    .travlink-trade-page-body .header-area-3.stiky:not(.scroll-header) .ca-logo h3,
+    .travlink-trade-page-body .header-area-3.stiky:not(.scroll-header) .ca-offcanvas-toogle,
+    .travlink-shipping-page-body .header-area-3.stiky:not(.scroll-header) .ca-logo h3,
+    .travlink-shipping-page-body .header-area-3.stiky:not(.scroll-header) .ca-offcanvas-toogle {
+        color: #f8f5ee;
+    }
+    .header-area-3.stiky:not(.scroll-header) .ca-offcanvas-toogle {
+        padding: 6px 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+    .header-area-3.stiky:not(.scroll-header) .ca-offcanvas-toogle svg {
+        width: 28px;
+        height: 16px;
+    }
+    .header-area-3.stiky.scroll-header {
+        min-height: 68px;
+        padding: 13px 0;
+    }
+}

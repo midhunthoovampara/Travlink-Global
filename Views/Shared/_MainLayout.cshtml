@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 @{
     var html_attributes = ViewBag.HTMLAttributes != null ? ViewBag.HTMLAttributes : "";
     var body_class = ViewBag.BodyClass != null ? ViewBag.BodyClass : "";
@@ -18,6 +18,7 @@
     @RenderBody()
     @await Html.PartialAsync("~/Views/Shared/Partials/_Footer.cshtml")
     @await Html.PartialAsync("~/Views/Shared/Partials/_BackToTop.cshtml")
+    @await Html.PartialAsync("~/Views/Shared/Partials/_WhatsAppFloat.cshtml")
     @await Html.PartialAsync("~/Views/Shared/Partials/_FooterScripts.cshtml")
     @RenderSection("scripts", required: false)
 

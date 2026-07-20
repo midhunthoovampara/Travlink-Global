@@ -1,635 +1,111 @@
-
 @{
-    ViewBag.Title = "Service Right";
+    ViewBag.Title = "Travel";
+    ViewBag.BodyClass = "travlink-travel-page-body";
+    var showYachtExperiences = true;
 }
 
 @section styles
 {
-
+    <link rel="stylesheet" href="~/css/travel-service.css" asp-append-version="true" />
 }
 
-<main>
-    <!-- breadcrumb area start -->
-    <section class="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
-        <div class="ca-breadcrumb-shape p-absolute bre-sh-1">
-            <img src="~/img/shape/breadcrumn-shape.png" alt="">
+<main class="travlink-travel-page">
+    <section class="travlink-travel-hero" aria-labelledby="travel-hero-title">
+        <div class="travlink-travel-hero__content container">
+            <span class="travlink-travel-hero__label">Travel</span>
+            <h1 id="travel-hero-title">Travel, planned around you <span>&mdash;</span><br>from your first visa to your next holiday.</h1>
         </div>
-        <div class="ca-breadcrumb-shape p-absolute bre-sh-2">
-            <img src="~/img/shape/ca-line-shape.png" alt="">
-        </div>
+    </section>
+
+    <section class="travlink-travel-features" aria-label="Travel packages and visa assistance">
         <div class="container">
-            <div class="ca-breadcrumb-content text-center">
-                <h2 class="ca-breadcrumb-title fnw-600">Travel</h2>
-                <div class="it-breadcum-link">
-                    <a href="#">Home</a>
-                    <span><i class="fa-solid fa-angle-right"></i></span>
-                    <a href="#">Service</a>
-                    <span><i class="fa-solid fa-angle-right"></i></span>
-                    <a class="active" href="#">Travel</a>
+            <article class="travlink-travel-feature travlink-travel-feature--packages" aria-labelledby="travel-packages-title">
+                <div class="travlink-travel-feature__image">
+                    <img src="~/img/service/travell.jpg" alt="Airplane wing above a city skyline, representing international travel" />
+                </div>
+                <div class="travlink-travel-feature__content">
+                    <span class="travlink-travel-eyebrow">Travel Packages</span>
+                    @* <span class="travlink-travel-feature__tag">Travel Service 01</span> *@
+                    <h2 id="travel-packages-title">Holidays, business trips, and everything in between.</h2>
+                    <div class="travlink-package-list">
+                        <article class="travlink-package-item"><i class="fa-regular fa-map" aria-hidden="true"></i><div><h3>International Tour Packages</h3></div></article>
+                        <article class="travlink-package-item"><i class="fa-solid fa-bed" aria-hidden="true"></i><div><h3>Hotel Bookings</h3></div></article>
+                        <article class="travlink-package-item"><i class="fa-solid fa-car-side" aria-hidden="true"></i><div><h3>Airport Transfers</h3></div></article>
+                        @if (showYachtExperiences)
+                        {
+                            <article class="travlink-package-item"><i class="fa-solid fa-anchor" aria-hidden="true"></i><div><h3>Yacht Experiences</h3></div></article>
+                        }
+                        <article class="travlink-package-item"><i class="fa-regular fa-calendar" aria-hidden="true"></i><div><h3>Holiday Planning</h3></div></article>
+                        <article class="travlink-package-item"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><div><h3>Business Travel</h3></div></article>
+                        <article class="travlink-package-item"><i class="fa-solid fa-route" aria-hidden="true"></i><div><h3>Customized Itineraries</h3></div></article>
+                    </div>
+                </div>
+            </article>
+
+            <article class="travlink-travel-feature travlink-travel-feature--visa" aria-labelledby="visa-title">
+                <div class="travlink-travel-feature__content">
+                    <span class="travlink-travel-eyebrow">Visa Assistance</span>
+                    @* <span class="travlink-travel-feature__tag">Travel Service 02</span> *@
+                    <h2 id="visa-title">Getting the paperwork right, the first time.</h2>
+                    <div class="travlink-visa__types">
+                        <article class="travlink-visa-card"><i class="fa-solid fa-passport" aria-hidden="true"></i><h3>Tourist Visa</h3></article>
+                        <article class="travlink-visa-card"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><h3>Business Visa</h3></article>
+                        <article class="travlink-visa-card"><i class="fa-solid fa-plane-departure" aria-hidden="true"></i><h3>Transit Visa</h3></article>
+                    </div>
+                    <p class="travlink-visa__countries"><strong>Example countries:</strong> Qatar <span>&bull;</span> Kuwait <span>&bull;</span> China <span>&bull;</span> Uzbekistan <span>&bull;</span> Kazakhstan <span>&bull;</span> and more.</p>
+                </div>
+                <div class="travlink-travel-feature__image">
+                    <img src="~/img/about/abtus2.png" alt="Passport and boarding pass prepared for international travel" />
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="travlink-travel-support" aria-label="Travel consultation and frequently asked questions">
+        <div class="container">
+            <div class="travlink-travel-support__grid">
+                <aside class="travlink-travel-contact">
+                    <span class="travlink-travel-eyebrow">Contact Us</span>
+                    <h2>Request Travel Consultation</h2>
+                    <form class="travlink-travel-contact__form" action="#">
+                        <input type="text" placeholder="Your Name" aria-label="Your Name">
+                        <input type="email" placeholder="Email Address" aria-label="Email Address">
+                        <input type="tel" placeholder="Phone Number" aria-label="Phone Number">
+                        <textarea rows="5" placeholder="Your Message" aria-label="Your Message"></textarea>
+                        <button class="ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit">Send Inquiry <span><i class="fa-solid fa-angle-right"></i></span></button>
+                    </form>
+                    <div class="travlink-travel-contact__socials" aria-label="Social media links">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </aside>
+                <div class="travlink-travel-faq">
+                    <div class="travlink-travel-faq__heading">
+                        <span class="travlink-travel-eyebrow">Travel FAQs</span>
+                        <h2 id="travel-faq-title">Questions, answered clearly.</h2>
+                    </div>
+                    <div class="ca-acordion-area travlink-travel-faq__accordion">                <div class="accordion" id="travelFaqAccordion">
+                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                        <h3 class="ca-accordion-header" id="travelFaqOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#travelFaqOneContent" aria-expanded="true" aria-controls="travelFaqOneContent">How long does visa processing take?</button></h3>
+                        <div id="travelFaqOneContent" class="accordion-collapse collapse show" aria-labelledby="travelFaqOne" data-bs-parent="#travelFaqAccordion"><div class="ca-accordion-body"><p>It depends on the country and visa type &mdash; we'll give you a clear timeline before you apply.</p></div></div>
+                    </div>
+                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                        <h3 class="ca-accordion-header" id="travelFaqTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#travelFaqTwoContent" aria-expanded="false" aria-controls="travelFaqTwoContent">Do you book flights and hotels together?</button></h3>
+                        <div id="travelFaqTwoContent" class="accordion-collapse collapse" aria-labelledby="travelFaqTwo" data-bs-parent="#travelFaqAccordion"><div class="ca-accordion-body"><p>Yes, we can handle your full itinerary in one place.</p></div></div>
+                    </div>
+                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                        <h3 class="ca-accordion-header" id="travelFaqThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#travelFaqThreeContent" aria-expanded="false" aria-controls="travelFaqThreeContent">Can you help with last-minute business travel?</button></h3>
+                        <div id="travelFaqThreeContent" class="accordion-collapse collapse" aria-labelledby="travelFaqThree" data-bs-parent="#travelFaqAccordion"><div class="ca-accordion-body"><p>Yes &mdash; reach out and we'll move quickly.</p></div></div>
+                    </div>
+                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                        <h3 class="ca-accordion-header" id="travelFaqFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#travelFaqFourContent" aria-expanded="false" aria-controls="travelFaqFourContent">Do you offer group travel packages?</button></h3>
+                        <div id="travelFaqFourContent" class="accordion-collapse collapse" aria-labelledby="travelFaqFour" data-bs-parent="#travelFaqAccordion"><div class="ca-accordion-body"><p>Yes, for families, corporate teams, and small groups.</p></div></div>
+                    </div>
+                </div>                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- breadcrumb area end -->
-    <!-- service left -->
-    <div class="ca-service-lft-area pt-100 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mb-30">
-                    <div class="ca-service-content-area">
-                        <div class="ca-servic-thumb br-7 mb-40">
-                            <img class="w-100" src="~/img/service/service1.jpg.jpeg" alt="">
-                        </div>
-                        <div class="ca-servic-thumb-content">
-<h2 class="ca-service-thumb-title theme-black-3 fnw-600">
-    International Travel Services
-</h2>                           <p class="pt-16">
-Travlink Global offers reliable and personalized travel solutions for individuals,
-families, corporate clients, and business travelers. Whether you are planning a
-holiday, attending an international exhibition, or visiting overseas suppliers,
-our experienced team ensures a smooth and hassle-free journey from start to finish.
-</p>
-
-<p class="pt-16">
-From visa assistance and hotel reservations to airport transfers and customized
-travel itineraries, we provide end-to-end support so you can focus on enjoying
-your journey while we handle the details.
-</p>
-                            <div class="ca-acordion-area">
-                                <div class="accordion" id="accordionExample">
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                What travel services do you provide?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>We provide international tour packages, business travel planning,
-visa assistance, hotel reservations, airport transfers, and
-customized travel experiences.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                Can you assist with visa applications?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>Yes. We guide you through the visa application process by helping
-an services, need information on tracking your shipment, or want to understand.prepare the required documentation and coordinating the application
-based on the destination country's requirements.                                       </div>
-                                        </div>
-                                    </div>
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                Do you organize business travel?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>Absolutely. We arrange flights, hotels, airport transfers,
-meeting schedules, and complete travel planning for business
-professionals and corporate clients.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingFour">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-Can you create customized tour packages?                                            </button>
-                                        </h2>
-                                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>Yes. Every traveler is different. We design personalized
-itineraries based on your budget, destination, interests,
-and travel duration.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="ca-thumb-title-2 theme-black-3 fnw-600 pt-16">Why Travel With Travlink Global?</h3>
-                            @* <p class="pt-16 pb-40">Our Freight Forwarding Services are designed to handle complex international shipments, ensuring your <br>goods reach their destination safely & on time. Our Warehousing Solutions offer state-of-the-art facilities <br>equipped with advanced security & inventory management systems, allowing for efficient storage.</p> *@
-                            @* <h3 class="ca-thumb-title-2 theme-black-3 fnw-600">Your Gateway to Asia</h3> *@
-                            <p class="pt-16 pb-40">Our goal is to make international travel simple, reliable,
-and stress-free. With strong regional knowledge and trusted
-partners across Asia, we provide professional support before,
-during, and after your journey.</p>
-                            <h4 class="ca-thumb-title-4 theme-black-3 fnw-600 pb-16">Detailed Service Offerings Service Highlights</h4>
-                            <div class="ca-ab-item-check ca-ab-item-check-2">
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">International Tour Packages</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Business Travel Solutions</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Visa Assistance
-</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Hotel Reservations</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Airport Transfers</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Customized Travel Plans</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="ca-thumb-title-2 theme-black-3 fnw-600 pt-30">Your Gateway to Asia</h3>
-<p class="pt-16">
-Whether you're exploring new destinations, attending business
-meetings, or expanding your international network, Travlink Global
-is committed to providing dependable travel solutions that connect
-you with opportunities across Asia.
-</p>                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-30">
-                    <!-- sidebar area -->
-                    <div class="ca-sidebar-area ml-50">
-                        <!-- search -->
-                        <div class="ca-search ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-16">Search</h4>
-                            <div class="ca-search-box p-relative z-index-1">
-                                <input type="text" placeholder="Search..">
-                                <div class="ca-sea-icon">
-                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- service list -->
-                        <div class="ca-servic-list ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-24">Our Services</h4>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Travel Services <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Trade Solutions <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Logistics Support <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Business Delegation Tours <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Visa Assistance <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                        </div>
-                        <!-- phone us -->
-                        <div class="ca-servic-list ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title ca-servic-list-title fnw-600 theme-black-3 pb-24">Need Travel Assistance?<br> Contact With Us</h4>
-                            <div class="ca-ph-content">
-                                <div class="ca-ph-ic">
-                                    <span><img src="~/img/icon/ca-ser-phone.svg" alt=""></span>
-                                </div>
-                                <div class="ca-ph-title">
-                                    <h4 class="ph-title"><a href="tel:1234567890">+123 456 7890</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- sidebar contact -->
-                        <div class="ca-search ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-24">Request Travel Consultation</h4>
-                            <div class="ca-sidebar-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Your Name">
-                                    <input type="email" placeholder="Email Address">
-                                    <input type="tel" placeholder="Phone Number">
-                                    <textarea name="message" id="message" rows="10" cols="4" placeholder="Your Message"></textarea>
-                                </form>
-                                <div class="ca-sidebar-form-btn text-end">
-                                    <a href="#" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Send Inquiry <span><i class="fa-solid fa-angle-right"></i></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Follow Us -->
-                        <div class="ca-search ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-24">Follow Us</h4>
-                            <div class="ca-footer-social ca-footer-social-3">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    @* <div class="ca-more-section pb-70">
-        <div class="container">
-            <h2 class="ca-more-title theme-black-3 fnw-600 text-center mb-60">More Services</h2>
-            <div class="row">
-                <!-- single service box -->
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="ca-ser-icon-box ca-ser-icon-box-2 fix p-relative cream-bg-3 z-index-1 p-32 br-7">
-                        <div class="ca-about-icon">
-                            <div class="ca-about-ic ca-ser-ic">
-                                <img src="~/img/icon/ca-iner-ser1.1.svg" alt="">
-                            </div>
-                            <div class="ca-num">
-                                <h4 class="overly-num overly-num2">01</h4>
-                            </div>
-                        </div>
-                        <div class="ca-service-content ca-service-content-iner">
-                            <h4 class="ca-title fnw-700 pb-16 pt-32"><a href=@Url.Action("Single", "Service")>Express Delivery Services</a></h4>
-                            <p class="pb-24">We provide a comprehensive suite logistics services designed to streamline your supply <br> chain &amp; meet your unique business needs.</p>
-                            <a href=@Url.Action("Single", "Service") class="read-more">Read More <span><i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- single service box -->
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="ca-ser-icon-box ca-ser-icon-box-2 fix p-relative cream-bg-3 z-index-1 p-32 br-7">
-                        <div class="ca-about-icon">
-                            <div class="ca-about-ic ca-ser-ic">
-                                <img src="~/img/icon/ca-iner-ser1.2.svg" alt="">
-                            </div>
-                            <div class="ca-num">
-                                <h4 class="overly-num overly-num2">02</h4>
-                            </div>
-                        </div>
-                        <div class="ca-service-content ca-service-content-iner">
-                            <h4 class="ca-title fnw-700 pb-16 pt-32"><a href=@Url.Action("Single", "Service")>Supply Chain Management</a></h4>
-                            <p class="pb-24">We offer state-of-the-art warehousing <br>solutions, ensuring your inventory is<br> managed with precision and care.</p>
-                            <a href=@Url.Action("Single", "Service") class="read-more">Read More <span><i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- single service box -->
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="ca-ser-icon-box ca-ser-icon-box-2 fix p-relative cream-bg-3 z-index-1 p-32 br-7">
-                        <div class="ca-about-icon">
-                            <div class="ca-about-ic ca-ser-ic">
-                                <img src="~/img/icon/ca-iner-ser1.3.svg" alt="">
-                            </div>
-                            <div class="ca-num">
-                                <h4 class="overly-num overly-num2">03</h4>
-                            </div>
-                        </div>
-                        <div class="ca-service-content ca-service-content-iner">
-                            <h4 class="ca-title fnw-700 pb-16 pt-32"><a href=@Url.Action("Single", "Service")>Project Cargo Handling</a></h4>
-                            <p class="pb-24">Our freight forwarding services ensure<br> smooth and efficient transportation of<br> goods across borders, while our customs</p>
-                            <a href=@Url.Action("Single", "Service") class="read-more">Read More <span><i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> *@
 </main>
-
-@section scripts
-{
-
-}
-
-
-
-
-@* 
-
-@{
-    ViewBag.Title = "Service Left";
-}
-
-@section styles
-{
-
-}
-
-<main>
-    <!-- breadcrumb area start -->
-    <section class="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
-        <div class="ca-breadcrumb-shape p-absolute bre-sh-1">
-            <img src="~/img/shape/breadcrumn-shape.png" alt="">
-        </div>
-        <div class="ca-breadcrumb-shape p-absolute bre-sh-2">
-            <img src="~/img/shape/ca-line-shape.png" alt="">
-        </div>
-        <div class="container">
-            <div class="ca-breadcrumb-content text-center">
-                <h2 class="ca-breadcrumb-title fnw-600">Supply Chain Management</h2>
-                <div class="it-breadcum-link">
-                    <a href=@Url.Action("Index", "Landings")>Home</a>
-                    <span><i class="fa-solid fa-angle-right"></i></span>
-                    <a href=@Url.Action("Index", "Service")>Service</a>
-                    <span><i class="fa-solid fa-angle-right"></i></span>
-                    <a class="active" href="#">Supply Chain Management</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- breadcrumb area end -->
-    <!-- service left -->
-    <div class="ca-service-lft-area pt-100 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-30">
-                    <!-- sidebar area -->
-                    <div class="ca-sidebar-area mr-50">
-                        <!-- search -->
-                        <div class="ca-search ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-16">Search</h4>
-                            <div class="ca-search-box p-relative z-index-1">
-                                <input type="text" placeholder="Search..">
-                                <div class="ca-sea-icon">
-                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- service list -->
-                        <div class="ca-servic-list ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-24">Our Services</h4>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Supply Chain Management <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Domestic Freight Transport <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Heavy Lift and Project Cargo <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">Inventory Optimization <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                            <h3 class="ca-ser-list-title"><a href="#" class="d-flex justify-content-between align-items-center">E-commerce Fulfillment <span><i class="fa-solid fa-angle-down"></i></span></a></h3>
-                        </div>
-                        <!-- phone us -->
-                        <div class="ca-servic-list ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title ca-servic-list-title fnw-600 theme-black-3 pb-24">If You Need Any Help <br> Contact With Us</h4>
-                            <div class="ca-ph-content">
-                                <div class="ca-ph-ic">
-                                    <span><img src="~/img/icon/ca-ser-phone.svg" alt=""></span>
-                                </div>
-                                <div class="ca-ph-title">
-                                    <h4 class="ph-title"><a href="tel:1234567890">+123 456 7890</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- sidebar contact -->
-                        <div class="ca-search ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-24">Get A Free Quote</h4>
-                            <div class="ca-sidebar-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Your Name">
-                                    <input type="email" placeholder="Email Address">
-                                    <input type="tel" placeholder="Phone Number">
-                                    <textarea name="message" id="message" rows="10" cols="4" placeholder="Your Message"></textarea>
-                                </form>
-                                <div class="ca-sidebar-form-btn text-end">
-                                    <a href="#" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Contact Now <span><i class="fa-solid fa-angle-right"></i></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Follow Us -->
-                        <div class="ca-search ca-padding cream-bg-3 br-7 mb-30">
-                            <h4 class="ca-title fnw-600 theme-black-3 pb-24">Follow Us</h4>
-                            <div class="ca-footer-social ca-footer-social-3">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 mb-30">
-                    <div class="ca-service-content-area">
-                        <div class="ca-servic-thumb br-7 mb-40">
-                            <img class="w-100" src="~/img/service/ca-servic-larg.png" alt="">
-                        </div>
-                        <div class="ca-servic-thumb-content">
-                            <h2 class="ca-service-thumb-title theme-black-3 fnw-600 ca-text-cap">Supply Chain Management</h2>
-                            <p class="pt-16">We pride ourselves on offering a comprehensive suite of logistics and transport services tailored to meet <br>the diverse needs of our clients. Our Freight Forwarding Services ensure your goods are transported <br> efficiently and safely across international borders, leveraging our extensive network and expertise.</p>
-                            <p class="pt-16">Our Warehousing Solutions provide secure storage with advanced inventory management systems to keep <br>your products organized and easily accessible. We specialize in Customs Clearance, navigating the<br> complexities of international trade regulations to ensure smooth and timely shipments.</p>
-                            <h3 class="ca-thumb-title-2 theme-black-3 fnw-600 pt-40 ca-text-cap">Comprehensive Service Overview</h3>
-                            <p class="pt-16 pb-40">Our Global Shipping Services connect you to markets worldwide, offering reliable & cost-effective solutions<br> for your business. For domestic needs, our Domestic Transport Solutions guarantee fast and dependable <br>delivery across the country. Our Supply Chain Management services optimize every step of your logistics</p>
-                            <div class="ca-acordion-area">
-                                <div class="accordion" id="accordionExample">
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                What is your policy on damaged or lost goods?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>That's why we've compiled a list of frequently asked questions to help you get the <br> answers you need quickly and easily. Whether you're curious about our range of<br> services, need information on tracking your shipment, or want to understand.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                What should I do if my shipment is delayed?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>That's why we've compiled a list of frequently asked questions to help you get the <br> answers you need quickly and easily. Whether you're curious about our range of<br> services, need information on tracking your shipment, or want to understand.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                Can you handle oversized or special cargo?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>That's why we've compiled a list of frequently asked questions to help you get the <br> answers you need quickly and easily. Whether you're curious about our range of<br> services, need information on tracking your shipment, or want to understand.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single accordion item -->
-                                    <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                        <h2 class="ca-accordion-header" id="headingFour">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                What types of goods can you transport?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                            <div class="ca-accordion-body">
-                                                <p>That's why we've compiled a list of frequently asked questions to help you get the <br> answers you need quickly and easily. Whether you're curious about our range of<br> services, need information on tracking your shipment, or want to understand.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="ca-thumb-title-2 theme-black-3 fnw-600 pt-16 ca-text-cap">In-Depth Service Information</h3>
-                            <p class="pt-16 pb-40">Our Freight Forwarding Services are designed to handle complex international shipments, ensuring your <br>goods reach their destination safely & on time. Our Warehousing Solutions offer state-of-the-art facilities <br>equipped with advanced security & inventory management systems, allowing for efficient storage.</p>
-                            <h3 class="ca-thumb-title-2 theme-black-3 fnw-600 ca-text-cap">Our Specialized Services</h3>
-                            <p class="pt-16 pb-40">With our Customs Clearance Expertise, we simplify process of navigating international trade regulations, <br>ensuring compliance and minimizing delays. Our Global Shipping Services provide comprehensive solutions <br>for transporting goods worldwide, backed by a network of reliable carriers and partners.</p>
-                            <h4 class="ca-thumb-title-4 theme-black-3 fnw-600 pb-16">Detailed Service Offerings Service Highlights</h4>
-                            <div class="ca-ab-item-check ca-ab-item-check-2">
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Service Breakdown</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Our Specialized Services</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Service Highlights</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Our Services in Detail</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">What We Provide</h4>
-                                    </div>
-                                </div>
-                                <!-- single-item -->
-                                <div class="ca-ab-sngle-item">
-                                    <div class="ca-ab-sngle-item-ic">
-                                        <span><i class="fa-solid fa-check"></i></span>
-                                    </div>
-                                    <div class="ca-ab-sngle-item-content">
-                                        <h4 class="ca-item-ch-title">Extensive Service</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="ca-thumb-title-2 theme-black-3 fnw-600 pt-30">Our Services in Detail</h3>
-                            <p class="pt-16">For businesses requiring domestic transportation, our Domestic Transport Solutions offer fast, flexible, and<br> cost-effective delivery options. Our Supply Chain Management services are tailored to optimize every <br>aspect of your logistics process, from procurement to final delivery.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ca-more-section pb-70">
-        <div class="container">
-            <h2 class="ca-more-title theme-black-3 fnw-600 text-center mb-60">More Services</h2>
-            <div class="row">
-                <!-- single service box -->
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="ca-ser-icon-box ca-ser-icon-box-2 fix p-relative cream-bg-3 z-index-1 p-32 br-7">
-                        <div class="ca-about-icon">
-                            <div class="ca-about-ic ca-ser-ic">
-                                <img src="~/img/icon/ca-iner-ser1.1.svg" alt="">
-                            </div>
-                            <div class="ca-num">
-                                <h4 class="overly-num overly-num2">01</h4>
-                            </div>
-                        </div>
-                        <div class="ca-service-content ca-service-content-iner">
-                            <h4 class="ca-title fnw-700 pb-16 pt-32"><a href=@Url.Action("Single", "Service")>Express Delivery Services</a></h4>
-                            <p class="pb-24">We provide a comprehensive suite logistics services designed to streamline your supply <br> chain &amp; meet your unique business needs.</p>
-                            <a href=@Url.Action("Single", "Service") class="read-more">Read More <span><i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- single service box -->
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="ca-ser-icon-box ca-ser-icon-box-2 fix p-relative cream-bg-3 z-index-1 p-32 br-7">
-                        <div class="ca-about-icon">
-                            <div class="ca-about-ic ca-ser-ic">
-                                <img src="~/img/icon/ca-iner-ser1.2.svg" alt="">
-                            </div>
-                            <div class="ca-num">
-                                <h4 class="overly-num overly-num2">02</h4>
-                            </div>
-                        </div>
-                        <div class="ca-service-content ca-service-content-iner">
-                            <h4 class="ca-title fnw-700 pb-16 pt-32"><a href=@Url.Action("Single", "Service")>Supply Chain Management</a></h4>
-                            <p class="pb-24">We offer state-of-the-art warehousing <br>solutions, ensuring your inventory is<br> managed with precision and care.</p>
-                            <a href=@Url.Action("Single", "Service") class="read-more">Read More <span><i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- single service box -->
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="ca-ser-icon-box ca-ser-icon-box-2 fix p-relative cream-bg-3 z-index-1 p-32 br-7">
-                        <div class="ca-about-icon">
-                            <div class="ca-about-ic ca-ser-ic">
-                                <img src="~/img/icon/ca-iner-ser1.3.svg" alt="">
-                            </div>
-                            <div class="ca-num">
-                                <h4 class="overly-num overly-num2">03</h4>
-                            </div>
-                        </div>
-                        <div class="ca-service-content ca-service-content-iner">
-                            <h4 class="ca-title fnw-700 pb-16 pt-32"><a href=@Url.Action("Single", "Service")>Project Cargo Handling</a></h4>
-                            <p class="pb-24">Our freight forwarding services ensure<br> smooth and efficient transportation of<br> goods across borders, while our customs</p>
-                            <a href=@Url.Action("Single", "Service") class="read-more">Read More <span><i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-@section scripts
-{
-
-} *@
 

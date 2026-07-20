@@ -1,6 +1,6 @@
-﻿ <!-- Header Area Start-->
+ <!-- Header Area Start-->
 <header class="header-area-3 stiky">
-    <div class="container header-3">
+    <div class="container fluid-header-3">
         <div class="row align-items-center">
             <div class="col-xl-3 col-lg col-md-6 col-6">
                 <!-- ca-logo -->
@@ -25,9 +25,9 @@
                             </li>
                             <li><a href=@Url.Action("About", "Pages")>About Us</a></li>
                             <li>
-                                <a href="@Url.Action("Index", "Service")">Service <span><i class="fa-solid fa-angle-down"></i></span></a>
+                                <a href="#">Services<span><i class="fa-solid fa-angle-down"></i></span></a>
                                 <ul class="sub-menu">
-                                    <li><a href=@Url.Action("Index", "Service")>Services</a></li>
+                                    @* <li><a href=@Url.Action("Index", "Service")>Services</a></li> *@
                                     <li><a href=@Url.Action("Left", "Service")>Travel</a></li>
                                     <li><a href=@Url.Action("Right", "Service")>Trade</a></li>
                                     <li><a href=@Url.Action("Single", "Service")>Logistics</a></li>
@@ -40,14 +40,13 @@
                                     <li><a href=@Url.Action("Team", "Pages")>Team</a></li>
                                     <li><a href=@Url.Action("Testimonial", "Pages")>Testimonial</a></li>
                                     <li><a href=@Url.Action("Faq", "Pages")>Faq</a></li>
-                                    @* <li><a href=@Url.Action("Pricing", "Pages")>Pricing Plan</a></li> *@
+                                  
                                     <li><a href=@Url.Action("Contact", "Pages")>Contact</a></li>
                                     @* <li><a href=@Url.Action("Error404", "Pages")>404</a></li> *@
                                 </ul>
                             </li>
-                             <a href="@Url.Action("Faq", "Pages")">FAQ<span></span></a>
-                            @* <li> *@
-                               
+                            <li>                             <a href="@Url.Action("Faq", "Pages")">FAQ<san></span></a>
+</li>
                                 @* <ul class="sub-menu">
                                     <li><a href=@Url.Action("Index", "Blog")>Blog</a></li>
                                     <li><a href=@Url.Action("Left", "Blog")>Blog Left</a></li>
@@ -70,9 +69,9 @@
             </div>
             <div class="col-xl-3 col-lg col-md-6 col-6">
                 <!-- ca-btn -->
-                <div class="ca-btn-header d-none d-lg-block text-end">
+                @* <div class="ca-btn-header d-none d-lg-block text-end">
                     <a href=@Url.Action("Contact", "Pages") class="ca-btn-primary-3 theme-bg-3 text-white br-50">Contact Us <span><i class="fa-solid fa-angle-right"></i></span></a>
-                </div>
+                </div> *@
                 <div class="ca-header-action-item d-lg-none text-end">
                     <button type="button" class="ca-offcanvas-toogle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16">

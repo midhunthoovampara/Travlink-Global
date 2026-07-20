@@ -2,16 +2,18 @@
 
 @{
     ViewBag.Title = "About";
+    ViewBag.BodyClass = "travlink-about-page-body";
 }
 
 @section styles
 {
-
+    <link rel="stylesheet" href="~/css/about-team-responsive.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/inner-page-refinements.css" asp-append-version="true" />
 }
 
 <main>
     <!-- breadcrumb area start -->
-    <section class="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
+    @* <section class="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
         <div class="ca-breadcrumb-shape p-absolute bre-sh-1">
             <img src="~/img/shape/breadcrumn-shape.png" alt="">
         </div>
@@ -28,10 +30,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> *@
     <!-- breadcrumb area end -->
     <!-- about section start -->
-    <section class="ca-about-3 pt-100 pb-70">
+    <section class="ca-about-3 travlink-about-story pt-100 pb-70">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-30">
@@ -124,69 +126,50 @@
     </section>
     <!-- about section end -->
     <!-- choose section start -->
-    <section class="ca-about-3 cream-bg-3 pt-100 pb-70">
+    <section class="travlink-why-choose" aria-labelledby="travlink-why-choose-title">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-30">
-                    <div class="ca-choose-content3">
-                        <div class="ca-about-content-3 ca-sec-content-3">
-                            <h5 class="ca-section-subtitle subtitle-bg-6 p-relative theme-color-3 br-50">Why Choose Us</h5>
-                            <h2 class="ca-section-title theme-black-3 fnw-600 pt-16 ca-text-cap"> Your Trusted Gateway to Travel, Trade & Business Across Asia</h2>
-<p class="pt-16 pb-40">
-    Travlink Global brings together international travel, supplier sourcing,
-    and logistics coordination under one trusted brand. With a growing network
-    of partners across Asia, we help individuals and businesses explore new
-    opportunities through reliable services and long-term relationships.
-</p>                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <!-- single box item -->
-                                <div class="ca-iner-ch-box-content mb-40">
-                                    <h4 class="ca-title fnw-600 theme-black-2 pb-16">One Partner for Every Journey</h4>
- <p>
-        From travel planning and visa assistance to supplier sourcing and
-        logistics support, we provide complete solutions through a single
-        trusted partner.
-    </p>                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <!-- single box item -->
-                                <div class="ca-iner-ch-box-content mb-40">
-                                    <h4 class="ca-title fnw-600 theme-black-2 pb-16">Supply Chain Management</h4>
-                                    <p>With years of industry experience and a commitment to innovation, we have become leaders </p>
-                                </div>
-                            </div>
-                            <div class="ca-iner-ch-box-content mb-40">
-    <h4 class="ca-title fnw-600 theme-black-2 pb-16">
-        Strong Network Across Asia
-    </h4>
+            <header class="travlink-why-choose__header wow tpFadeInUp" data-wow-duration="1.2s" data-wow-delay=".1s">
+                <span class="travlink-why-choose__eyebrow">Why Choose Travlink Global</span>
+                <h2 id="travlink-why-choose-title">Why Businesses &amp; Travelers Choose Travlink Global</h2>
+                <p>Whether you're travelling internationally, sourcing reliable suppliers, or coordinating global shipments, we focus on providing professional support, transparent communication, and solutions tailored to your requirements.</p>
+                <span class="travlink-why-choose__divider" aria-hidden="true"></span>
+            </header>
 
-    <p>
-        Our trusted business relationships across Chpna, Vietnam, Thailand,
-        Malaysia, Kazakhstan, Uzbekistan, Sri Lanka, and India enable us
-        to connect you with reliable opportunities.
-    </p>
-</div>
-                        </div>
-                        <div class="ca-about-3-btn">
-                            @* <a href="#" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Learn More<span><i class="fa-solid fa-angle-right"></i></span></a> *@
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-30">
-                    <div class="ca-choose-img p-relative z-index-1">
-                        <img class="w-100 wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay=".2s" src="~/img/about/abtus3.png" alt="">
-                        <div class="ca-ch-butom-img p-absolute">
-                            <img class="w-100 wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay=".3s" src="~/img/about/ca-ch-2.png" alt="">
-                        </div>
-                    </div>
-                </div>
+            <div class="travlink-why-choose__grid">
+                <article class="travlink-why-feature wow tpFadeInUp" data-wow-duration="1.1s" data-wow-delay=".1s">
+                    <span class="travlink-why-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span>
+                    <div><h3>Professional Service</h3><p>Every enquiry handled with care and follow-through.</p></div>
+                </article>
+                <article class="travlink-why-feature wow tpFadeInUp" data-wow-duration="1.1s" data-wow-delay=".16s">
+                    <span class="travlink-why-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.2 2.5 3.4 5.5 3.4 9S14.2 18.5 12 21M12 3c-2.2 2.5-3.4 5.5-3.4 9S9.8 18.5 12 21"/></svg></span>
+                    <div><h3>Global Network</h3><p>Contacts across Asia, the Gulf, and beyond.</p></div>
+                </article>
+                <article class="travlink-why-feature wow tpFadeInUp" data-wow-duration="1.1s" data-wow-delay=".22s">
+                    <span class="travlink-why-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 13v-2a8 8 0 0 1 16 0v2"/><path d="M4 13H2v5h4v-5H4ZM20 13h2v5h-4v-5h2ZM18 18c0 2-2 3-5 3"/></svg></span>
+                    <div><h3>Trusted Support</h3><p>Real people, real answers &mdash; not automated replies.</p></div>
+                </article>
+                <article class="travlink-why-feature wow tpFadeInUp" data-wow-duration="1.1s" data-wow-delay=".28s">
+                    <span class="travlink-why-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 1.2 3.8L17 8l-3.8 1.2L12 13l-1.2-3.8L7 8l3.8-1.2L12 3ZM19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14ZM5 13l.7 1.8 1.8.7-1.8.7L5 18l-.7-1.8-1.8-.7 1.8-.7L5 13Z"/></svg></span>
+                    <div><h3>Personalized Solutions</h3><p>No two clients get the same template.</p></div>
+                </article>
+                <article class="travlink-why-feature wow tpFadeInUp" data-wow-duration="1.1s" data-wow-delay=".34s">
+                    <span class="travlink-why-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 11.5a8 8 0 0 1-8.5 8L7 22v-3.3A8 8 0 1 1 21 11.5Z"/><path d="M8 10h8M8 14h5"/></svg></span>
+                    <div><h3>Transparent Communication</h3><p>Clear pricing, clear timelines, no surprises.</p></div>
+                </article>
+                <article class="travlink-why-feature wow tpFadeInUp" data-wow-duration="1.1s" data-wow-delay=".4s">
+                    <span class="travlink-why-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v2M16 4a3 3 0 0 1 0 6M17 13a5 5 0 0 1 4 5v2"/></svg></span>
+                    <div><h3>Customer-Focused Approach</h3><p>Your requirement comes first, always.</p></div>
+                </article>
+                <article class="travlink-why-feature wow tpFadeInUp" data-wow-duration="1.1s" data-wow-delay=".46s">
+                    <span class="travlink-why-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></svg></span>
+                    <div><h3>Reliable International Assistance</h3><p>Support that doesn't stop at the border.</p></div>
+                </article>
             </div>
         </div>
     </section>
     <!-- choose section end -->
     <!-- valus section start -->
-    <section class="ca-about-3 pt-100 pb-70">
+    <section class="ca-about-3 travlink-about-values pt-100 pb-70">
         <div class="container">
             <div class="row flex-column-reverse flex-lg-row">
                 <div class="col-lg-6 mb-30">
