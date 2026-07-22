@@ -43,13 +43,25 @@ img { max-width: 100%; height: auto; }
     .ca-menu-close3 { border-color: rgba(255,255,255,.25); color: #fff; }
 
     /* Home service cards: compact horizontal touch rail. */
-    .ca-service-3-cards { display: flex; flex-wrap: nowrap; gap: 16px; margin-right: -20px; margin-left: -20px; padding: 8px 20px 22px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 20px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .ca-service-3-cards { display: flex; flex-wrap: nowrap; gap: 16px; margin-right: -20px; margin-left: -20px; padding: 8px max(20px, calc((100% - min(78vw, 300px)) / 2)) 22px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-behavior: smooth; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
     .ca-service-3-cards::-webkit-scrollbar, .travlink-trade-services__list::-webkit-scrollbar, .travlink-shipping-services__list::-webkit-scrollbar { display: none; }
-    .ca-service-3-cards > [class*="col-"] { flex: 0 0 auto; width: min(86vw, 360px); padding: 0; scroll-snap-align: start; }
+    .ca-service-3-cards > [class*="col-"] { flex: 0 0 min(78vw, 300px); width: min(78vw, 300px); padding: 0; scroll-snap-align: center; }
     .travlink-service-card, .travlink-service-card__content { min-height: 570px !important; height: 570px; }
     .travlink-service-card__content { padding: 26px 24px; }
     .travlink-service-card__title { font-size: 42px; }
     .travlink-service-card__description { font-size: 14px; line-height: 1.55; }
+    .travlink-service-card::after { z-index: 2; pointer-events: none; background: linear-gradient(180deg, rgba(5,10,20,.10) 0%, rgba(5,10,20,.42) 52%, rgba(5,10,20,.82) 100%); transition: opacity 400ms ease; }
+    .travlink-service-card__image { z-index: 1; pointer-events: none; transform: scale(1.05); transition: opacity 450ms ease, transform 700ms cubic-bezier(.22,1,.36,1); }
+    .travlink-service-card__content { position: relative; z-index: 3; }
+    .travlink-service-card:not(.is-active) { border-color: #eaeaea; box-shadow: none; transform: none; }
+    .travlink-service-card:not(.is-active)::after, .travlink-service-card:not(.is-active) .travlink-service-card__image { opacity: 0; }
+    .travlink-service-card:not(.is-active) .travlink-service-card__image { transform: scale(1.05); }
+    .travlink-service-card:not(.is-active) .travlink-service-card__title { color: #151515; }
+    .travlink-service-card:not(.is-active) .travlink-service-card__description { color: #65615d; }
+    .travlink-service-card:not(.is-active) .travlink-service-card__cta { color: #191919; border-color: rgba(21,21,21,.38); }
+    .travlink-service-card.is-active { border-color: transparent; box-shadow: 0 22px 52px rgba(13,22,30,.18); transform: none; }
+    .travlink-service-card.is-active::after, .travlink-service-card.is-active .travlink-service-card__image { opacity: 1; }
+    .travlink-service-card.is-active .travlink-service-card__image { transform: scale(1); }
 
     /* Trade and Shipping services: two compact cards per row on phones. */
     .travlink-trade-services__list, .travlink-shipping-services__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; overflow: visible; border: 0; scroll-snap-type: none; }

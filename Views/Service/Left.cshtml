@@ -17,9 +17,33 @@
         </div>
     </section>
 
+    <section class="travlink-travel-selector" aria-labelledby="travel-service-selector-title">
+        <div class="container">
+            <header class="travlink-travel-selector__header">
+                <span class="travlink-travel-eyebrow">Our Travel Services</span>
+                <h2 id="travel-service-selector-title">Choose the Service <em>You Need</em></h2>
+                <p>Travel planning and visa support, available in one place.</p>
+            </header>
+
+            <div class="travlink-travel-selector__grid">
+                <a class="travlink-travel-selector__card" href="#travel-packages" aria-label="Explore Travel Packages">
+                    @* <span class="travlink-travel-selector__number">01</span> *@
+                    <h3>Travel Packages</h3>
+                    <i class="fa-solid fa-arrow-right travlink-travel-selector__arrow" aria-hidden="true"></i>
+                </a>
+
+                <a class="travlink-travel-selector__card" href="#visa-assistance" aria-label="Explore Visa Assistance">
+                    @* <span class="travlink-travel-selector__number">2</span> *@
+                    <h3>Visa Assistance</h3>
+                    <i class="fa-solid fa-arrow-right travlink-travel-selector__arrow" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="travlink-travel-features" aria-label="Travel packages and visa assistance">
         <div class="container">
-            <article class="travlink-travel-feature travlink-travel-feature--packages" aria-labelledby="travel-packages-title">
+            <article class="travlink-travel-feature travlink-travel-feature--packages" id="travel-packages" aria-labelledby="travel-packages-title">
                 <div class="travlink-travel-feature__image">
                     <img src="~/img/service/travell.jpg" alt="Airplane wing above a city skyline, representing international travel" />
                 </div>
@@ -33,7 +57,7 @@
                         <article class="travlink-package-item"><i class="fa-solid fa-car-side" aria-hidden="true"></i><div><h3>Airport Transfers</h3></div></article>
                         @if (showYachtExperiences)
                         {
-                            <article class="travlink-package-item"><i class="fa-solid fa-anchor" aria-hidden="true"></i><div><h3>Yacht Experiences</h3></div></article>
+                            <article class="travlink-package-item"><i class="fa-solid fa-anchor" aria-hidden="true"></i><div><h3> Leisure Activities</h3></div></article>
                         }
                         <article class="travlink-package-item"><i class="fa-regular fa-calendar" aria-hidden="true"></i><div><h3>Holiday Planning</h3></div></article>
                         <article class="travlink-package-item"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><div><h3>Business Travel</h3></div></article>
@@ -42,7 +66,7 @@
                 </div>
             </article>
 
-            <article class="travlink-travel-feature travlink-travel-feature--visa" aria-labelledby="visa-title">
+            <article class="travlink-travel-feature travlink-travel-feature--visa" id="visa-assistance" aria-labelledby="visa-title">
                 <div class="travlink-travel-feature__content">
                     <span class="travlink-travel-eyebrow">Visa Assistance</span>
                     @* <span class="travlink-travel-feature__tag">Travel Service 02</span> *@
@@ -52,7 +76,68 @@
                         <article class="travlink-visa-card"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><h3>Business Visa</h3></article>
                         <article class="travlink-visa-card"><i class="fa-solid fa-plane-departure" aria-hidden="true"></i><h3>Transit Visa</h3></article>
                     </div>
-                    <p class="travlink-visa__countries"><strong>Example countries:</strong> Qatar <span>&bull;</span> Kuwait <span>&bull;</span> China <span>&bull;</span> Uzbekistan <span>&bull;</span> Kazakhstan <span>&bull;</span> and more.</p>
+                    <section class="travlink-country-showcase" aria-labelledby="visa-country-title">
+                        <span class="travlink-country-showcase__label">Countries We Assist</span>
+                        <h3 id="visa-country-title">Visa Assistance <em>Across Multiple Destinations</em></h3>
+
+                        <div class="travlink-country-carousel" role="region" aria-label="Countries supported for visa assistance">
+                            <div class="travlink-country-carousel__track">
+                                <div class="travlink-country-carousel__group">
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/qatar.jpg" width="760" height="500" loading="lazy" decoding="async" alt="Doha waterfront skyline in Qatar" />
+                                        <span class="travlink-country-card__name">Qatar</span>
+                                    </article>
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/kuwait.jpg" width="760" height="500" loading="lazy" decoding="async" alt="The Kuwait Towers in Kuwait City" />
+                                        <span class="travlink-country-card__name">Kuwait</span>
+                                    </article>
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/china.jpg" width="760" height="500" loading="lazy" decoding="async" alt="The Great Wall of China across mountain ridges" />
+                                        <span class="travlink-country-card__name">China</span>
+                                    </article>
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/uzbekistan.jpg" width="760" height="500" loading="lazy" decoding="async" alt="Historic tiled architecture in Samarkand, Uzbekistan" />
+                                        <span class="travlink-country-card__name">Uzbekistan</span>
+                                    </article>
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/kazakhstan.jpg" width="760" height="500" loading="lazy" decoding="async" alt="Bayterek Tower and modern architecture in Astana, Kazakhstan" />
+                                        <span class="travlink-country-card__name">Kazakhstan</span>
+                                    </article>
+                                    <article class="travlink-country-card travlink-country-card--more">
+                                        <i class="fa-solid fa-earth-asia" aria-hidden="true"></i>
+                                        <span class="travlink-country-card__name">And More<small>Contact us for other destinations</small></span>
+                                    </article>
+                                </div>
+
+                                <div class="travlink-country-carousel__group" aria-hidden="true">
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/qatar.jpg" width="760" height="500" loading="lazy" decoding="async" alt="" />
+                                        <span class="travlink-country-card__name">Qatar</span>
+                                    </article>
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/kuwait.jpg" width="760" height="500" loading="lazy" decoding="async" alt="" />
+                                        <span class="travlink-country-card__name">Kuwait</span>
+                                    </article>
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/china.jpg" width="760" height="500" loading="lazy" decoding="async" alt="" />
+                                        <span class="travlink-country-card__name">China</span>
+                                    </article>
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/uzbekistan.jpg" width="760" height="500" loading="lazy" decoding="async" alt="" />
+                                        <span class="travlink-country-card__name">Uzbekistan</span>
+                                    </article>
+                                    <article class="travlink-country-card">
+                                        <img src="~/img/service/countries/kazakhstan.jpg" width="760" height="500" loading="lazy" decoding="async" alt="" />
+                                        <span class="travlink-country-card__name">Kazakhstan</span>
+                                    </article>
+                                    <article class="travlink-country-card travlink-country-card--more">
+                                        <i class="fa-solid fa-earth-asia" aria-hidden="true"></i>
+                                        <span class="travlink-country-card__name">And More<small>Contact us for other destinations</small></span>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
                 <div class="travlink-travel-feature__image">
                     <img src="~/img/service/visa.jpg" alt="Passport and boarding pass prepared for international travel" />

@@ -37,11 +37,12 @@
                             <li>
                                 <a href="#">Pages <span><i class="fa-solid fa-angle-down"></i></span></a>
                                 <ul class="sub-menu">
-                                    <li><a href=@Url.Action("Team", "Pages")>Team</a></li>
+                                    @* <li><a href=@Url.Action("Team", "Pages")>Team</a></li> *@
                                     <li><a href=@Url.Action("Testimonial", "Pages")>Testimonial</a></li>
+                                                                        <li><a href=@Url.Action("Contact", "Pages")>Contact</a></li>
+
                                     <li><a href=@Url.Action("Faq", "Pages")>Faq</a></li>
                                   
-                                    <li><a href=@Url.Action("Contact", "Pages")>Contact</a></li>
                                     @* <li><a href=@Url.Action("Error404", "Pages")>404</a></li> *@
                                 </ul>
                             </li>

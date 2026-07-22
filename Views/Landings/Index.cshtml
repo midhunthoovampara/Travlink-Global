@@ -470,11 +470,11 @@
                     <div class="travlink-about-editorial__column travlink-about-editorial__column--left">
                         <figure class="travlink-about-editorial__image travlink-about-editorial__image--large">
                             <img src="~/img/about/abt1.png" alt="International flight viewed above the clouds">
-                            <figcaption><span class="counter">8</span>+ Asian Countries</figcaption>
+                            <figcaption>Visa Assistance</figcaption>
                         </figure>
                         <figure class="travlink-about-editorial__image travlink-about-editorial__image--small">
                             <img src="~/img/service/trade.jpg" alt="International business partners completing a trade agreement">
-                            <figcaption>Global Trade</figcaption>
+                            <figcaption>Sourcing</figcaption>
                         </figure>
                     </div>
                     <div class="travlink-about-editorial__column travlink-about-editorial__column--right">
@@ -495,7 +495,7 @@
                         <p>Travlink Global is a travel, trade, and shipping company built on founder-led experience &mdash; in visa facilitation, sourcing, and travel planning. We bring that experience together under one platform, built for people and businesses who want things handled properly, without the noise.</p>
                         <p>We focus on creating seamless global experiences while staying professional, transparent, and genuinely useful to the people we work with.</p>
                     </div>
-                    <p class="travlink-about-editorial__note">Travlink Global is a brand operated by Deacon Trading Company, India.</p>
+                    @* <p class="travlink-about-editorial__note">Travlink Global is a brand operated by Deacon Trading Company, India.</p> *@
                     <div class="ca-about-3-btn">
                         <a href=@Url.Action("About", "Pages") class="travlink-about-editorial__button">About Travlink Global <span><i class="fa-solid fa-angle-right"></i></span></a>
                     </div>
@@ -935,22 +935,144 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const cards = Array.from(document.querySelectorAll('.travlink-service-card'));
+            const slider = document.querySelector('.ca-service-3-cards');
             const usesTap = window.matchMedia('(hover: none)').matches;
             const usesDesktopCards = window.matchMedia('(min-width: 992px)');
+            const usesMobileSlider = window.matchMedia('(max-width: 767px)');
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            let currentIndex = 0;
+            let autoScrollTimer;
+            let resumeTimer;
+            let scrollFrame;
+            let autoScrollReleaseTimer;
+            let isUserInteracting = false;
+            let isAutoScrolling = false;
+            let isServiceSectionVisible = false;
+            let hasEnteredServiceSection = false;
 
             function setCardState(card, active) {
                 card.classList.toggle('is-active', active);
                 card.setAttribute('aria-expanded', active ? 'true' : 'false');
             }
 
+            function setActiveCard(index) {
+                cards.forEach(function (card, cardIndex) {
+                    setCardState(card, cardIndex === index);
+                });
+                currentIndex = index;
+            }
+
+            function stopAutoScroll() {
+                window.clearInterval(autoScrollTimer);
+                autoScrollTimer = null;
+            }
+
+            function scrollToCard(index) {
+                if (!slider || !cards[index]) return;
+
+                const cardColumn = cards[index].parentElement;
+                const sliderRect = slider.getBoundingClientRect();
+                const cardRect = cardColumn.getBoundingClientRect();
+                const targetLeft = slider.scrollLeft + (cardRect.left - sliderRect.left) - ((slider.clientWidth - cardRect.width) / 2);
+
+                isAutoScrolling = true;
+                window.clearTimeout(autoScrollReleaseTimer);
+                slider.scrollTo({ left: targetLeft, behavior: 'smooth' });
+                autoScrollReleaseTimer = window.setTimeout(function () {
+                    isAutoScrolling = false;
+                }, 1200);
+            }
+
+            function startAutoScroll() {
+                stopAutoScroll();
+                if (!usesMobileSlider.matches || reducedMotion.matches || !isServiceSectionVisible || cards.length < 2) return;
+
+                autoScrollTimer = window.setInterval(function () {
+                    if (isUserInteracting) return;
+                    scrollToCard((currentIndex + 1) % cards.length);
+                }, 4000);
+            }
+
+            function resumeAfterInactivity() {
+                if (!usesMobileSlider.matches) return;
+
+                window.clearTimeout(resumeTimer);
+                resumeTimer = window.setTimeout(function () {
+                    isUserInteracting = false;
+                    startAutoScroll();
+                }, 4000);
+            }
+
+            function holdAutoScroll() {
+                if (!usesMobileSlider.matches) return;
+                isUserInteracting = true;
+                stopAutoScroll();
+                window.clearTimeout(resumeTimer);
+            }
+
+            function pauseAfterManualScroll() {
+                holdAutoScroll();
+                resumeAfterInactivity();
+            }
+
+            function updateActiveCard() {
+                scrollFrame = null;
+                if (!slider || !usesMobileSlider.matches) return;
+
+                const sliderRect = slider.getBoundingClientRect();
+                const sliderCenter = sliderRect.left + (slider.clientWidth / 2);
+                let closestIndex = 0;
+                let closestDistance = Infinity;
+
+                cards.forEach(function (card, index) {
+                    const rect = card.getBoundingClientRect();
+                    const distance = Math.abs(sliderCenter - (rect.left + rect.width / 2));
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestIndex = index;
+                    }
+                });
+
+                setActiveCard(closestIndex);
+            }
+
+            function requestActiveCardUpdate() {
+                if (scrollFrame) return;
+                scrollFrame = window.requestAnimationFrame(updateActiveCard);
+            }
+
+            function configureMobileSlider() {
+                stopAutoScroll();
+                window.clearTimeout(resumeTimer);
+                window.clearTimeout(autoScrollReleaseTimer);
+                isUserInteracting = false;
+                isAutoScrolling = false;
+
+                if (!usesMobileSlider.matches) {
+                    cards.forEach(function (card) { setCardState(card, false); });
+                    return;
+                }
+
+                if (isServiceSectionVisible) {
+                    if (!hasEnteredServiceSection) {
+                        setActiveCard(0);
+                        hasEnteredServiceSection = true;
+                    } else {
+                        requestActiveCardUpdate();
+                    }
+                    startAutoScroll();
+                }
+            }
+
             cards.forEach(function (card) {
                 card.addEventListener('click', function (event) {
-                    if (usesDesktopCards.matches && !event.target.closest('a')) {
+                    if ((usesDesktopCards.matches || usesMobileSlider.matches) && !event.target.closest('a')) {
                         const serviceLink = card.querySelector('.travlink-service-card__cta');
                         if (serviceLink) window.location.assign(serviceLink.href);
                         return;
                     }
 
+                    if (usesMobileSlider.matches) return;
                     if (!usesTap || event.target.closest('a')) return;
 
                     const shouldOpen = !card.classList.contains('is-active');
@@ -963,12 +1085,13 @@
                     if (event.target.closest('a')) return;
 
                     event.preventDefault();
-                    if (usesDesktopCards.matches) {
+                    if (usesDesktopCards.matches || usesMobileSlider.matches) {
                         const serviceLink = card.querySelector('.travlink-service-card__cta');
                         if (serviceLink) window.location.assign(serviceLink.href);
                         return;
                     }
 
+                    if (usesMobileSlider.matches) return;
                     const shouldOpen = !card.classList.contains('is-active');
                     cards.forEach(function (item) { setCardState(item, false); });
                     setCardState(card, shouldOpen);
@@ -976,9 +1099,53 @@
             });
 
             document.addEventListener('click', function (event) {
-                if (!usesTap || event.target.closest('.travlink-service-card')) return;
+                if (usesMobileSlider.matches || !usesTap || event.target.closest('.travlink-service-card')) return;
                 cards.forEach(function (card) { setCardState(card, false); });
             });
+
+            if (slider && cards.length) {
+                slider.addEventListener('scroll', function () {
+                    if (!isAutoScrolling) pauseAfterManualScroll();
+                    requestActiveCardUpdate();
+                }, { passive: true });
+                slider.addEventListener('touchstart', holdAutoScroll, { passive: true });
+                slider.addEventListener('touchend', resumeAfterInactivity, { passive: true });
+                slider.addEventListener('touchcancel', resumeAfterInactivity, { passive: true });
+                slider.addEventListener('pointerdown', holdAutoScroll, { passive: true });
+                slider.addEventListener('pointerup', resumeAfterInactivity, { passive: true });
+                slider.addEventListener('pointercancel', resumeAfterInactivity, { passive: true });
+                slider.addEventListener('wheel', pauseAfterManualScroll, { passive: true });
+
+                const serviceObserver = new IntersectionObserver(function (entries) {
+                    const entry = entries[0];
+                    isServiceSectionVisible = entry.isIntersecting && entry.intersectionRatio >= .15;
+
+                    if (!isServiceSectionVisible) {
+                        stopAutoScroll();
+                        return;
+                    }
+
+                    if (usesMobileSlider.matches) {
+                        if (!hasEnteredServiceSection) {
+                            setActiveCard(0);
+                            hasEnteredServiceSection = true;
+                        } else {
+                            requestActiveCardUpdate();
+                        }
+                        startAutoScroll();
+                    }
+                }, { threshold: [0, .15, .35, .6] });
+
+                serviceObserver.observe(slider);
+                if (usesMobileSlider.addEventListener) {
+                    usesMobileSlider.addEventListener('change', configureMobileSlider);
+                    reducedMotion.addEventListener('change', configureMobileSlider);
+                } else {
+                    usesMobileSlider.addListener(configureMobileSlider);
+                    reducedMotion.addListener(configureMobileSlider);
+                }
+                configureMobileSlider();
+            }
         });
     </script>
 }

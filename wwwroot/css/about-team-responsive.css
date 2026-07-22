@@ -25,6 +25,121 @@
 }
 
 /* Premium Why Choose Travlink Global feature grid. */
+
+.travlink-about-story__copy {
+    display: grid;
+    gap: 14px;
+}
+
+.travlink-about-story__copy p {
+    margin: 0;
+    line-height: 1.75;
+}
+
+/* Editorial Why We Are section. */
+.travlink-about-page-body .travlink-about-values {
+    background: #fff;
+}
+
+.travlink-why-we-are {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    align-items: start;
+}
+
+.travlink-why-we-are__intro {
+    padding-right: clamp(36px, 5vw, 72px);
+}
+
+.travlink-why-we-are__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #1d63b8;
+    font: 700 11px/1 Inter, Outfit, sans-serif;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.travlink-why-we-are__eyebrow::before {
+    width: 32px;
+    height: 1px;
+    background: #1d63b8;
+    content: "";
+}
+
+.travlink-why-we-are__intro h2 {
+    margin: 20px 0 0;
+    color: #101827;
+    font: 500 clamp(38px, 4vw, 56px)/1.05 "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -.035em;
+}
+
+.travlink-why-we-are__copy {
+    display: grid;
+    gap: 16px;
+    margin-top: 26px;
+}
+
+.travlink-why-we-are__copy p,
+.travlink-why-we-are__list p {
+    margin: 0;
+    color: #5f6877;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.travlink-why-we-are__practice {
+    padding-left: clamp(36px, 5vw, 72px);
+    border-left: 1px solid rgba(15, 23, 42, .12);
+}
+
+.travlink-why-we-are__practice h3 {
+    margin: 0 0 28px;
+    color: #174ea6;
+    font-size: clamp(24px, 2.3vw, 32px);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.travlink-why-we-are__list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.travlink-why-we-are__list li {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+    padding: 19px 0;
+    border-top: 1px solid rgba(15, 23, 42, .08);
+}
+
+.travlink-why-we-are__list li:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.travlink-why-we-are__check {
+    display: inline-grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(29, 99, 184, .09);
+    color: #1d63b8;
+    font-size: 12px;
+}
+
+.travlink-why-we-are__list strong {
+    color: #172033;
+    font-weight: 650;
+}
+
 .travlink-about-page-body .travlink-why-choose {
     position: relative;
     overflow: hidden;
@@ -318,6 +433,40 @@
 }
 
 @media (max-width: 767px) {
+    .travlink-why-we-are {
+        grid-template-columns: 1fr;
+    }
+
+    .travlink-why-we-are__intro {
+        padding-right: 0;
+    }
+
+    .travlink-why-we-are__intro h2 {
+        font-size: clamp(36px, 10.5vw, 46px);
+    }
+
+    .travlink-why-we-are__practice {
+        margin-top: 36px;
+        padding: 34px 0 0;
+        border-top: 1px solid rgba(15, 23, 42, .12);
+        border-left: 0;
+    }
+
+    .travlink-why-we-are__practice h3 {
+        margin-bottom: 24px;
+    }
+
+    .travlink-why-we-are__list li {
+        grid-template-columns: 30px minmax(0, 1fr);
+        gap: 13px;
+        padding: 17px 0;
+    }
+
+    .travlink-why-we-are__check {
+        width: 28px;
+        height: 28px;
+    }
+
     .travlink-about-page-body .travlink-why-choose {
         padding: 60px 0;
     }
@@ -593,5 +742,112 @@
     .travlink-why-feature__icon,
     .travlink-why-feature h3 {
         transition: none;
+    }
+}
+
+/* Unified About-page editorial headings and story alignment. */
+.travlink-about-page-body .travlink-about-heading__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #0e47a1;
+    font: 700 11px/1 Inter, Outfit, sans-serif;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.travlink-about-page-body .travlink-about-heading__eyebrow::before {
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: currentColor;
+    content: "";
+}
+
+.travlink-about-page-body .travlink-about-heading__eyebrow::after {
+    display: none;
+}
+
+.travlink-about-page-body .travlink-about-section-title {
+    max-width: 820px;
+    margin: 19px 0 0;
+    color: #111827;
+    font: 500 clamp(46px, 5.1vw, 70px)/1 "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -.045em;
+    text-transform: none;
+}
+
+.travlink-about-page-body .travlink-about-section-title em {
+    color: #0e47a1;
+    font-weight: 400;
+}
+
+.travlink-about-page-body .travlink-about-story > .container > .row {
+    align-items: center;
+}
+
+.travlink-about-page-body .travlink-about-story {
+    padding-top: clamp(145px, 12vw, 175px) !important;
+}
+
+.travlink-about-page-body .travlink-about-story .ca-ab-content3 {
+    width: 100%;
+    margin-left: 0;
+}
+
+.travlink-about-page-body .travlink-about-story__copy {
+    padding-bottom: 28px !important;
+}
+
+.travlink-about-page-body .travlink-about-story .ca-ab-item-check {
+    gap: 13px 18px;
+}
+
+.travlink-about-page-body .travlink-about-story .ca-ab-sngle-item {
+    align-items: flex-start;
+    margin: 0;
+    padding: 14px;
+    border: 1px solid rgba(15, 23, 42, .07);
+    border-radius: 14px;
+    background: #f8fafc;
+}
+
+.travlink-about-page-body .travlink-about-story .ca-ab-sngle-item-ic span {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    line-height: 24px;
+}
+
+.travlink-about-page-body .travlink-about-story .ca-item-ch-title {
+    margin: 2px 0 0;
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+@media (max-width: 991px) {
+    .travlink-about-page-body .travlink-about-story > .container > .row {
+        row-gap: 34px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .travlink-about-page-body .travlink-about-story {
+        padding-top: 118px !important;
+    }
+
+    .travlink-about-page-body .travlink-about-section-title {
+        margin-top: 17px;
+        font-size: clamp(38px, 10.5vw, 48px);
+        line-height: 1.03;
+    }
+
+    .travlink-about-page-body .travlink-about-story .ca-ab-item-check {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
