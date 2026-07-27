@@ -1,9 +1,0 @@
-C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\CodexBuild\obj\Debug\net9.0\rpswa.dswa.cache.json
-C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\CodexBuild\obj\Debug\net9.0\Cargon.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\CodexBuild\obj\Debug\net9.0\Cargon.AssemblyInfoInputs.cache
-C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\CodexBuild\obj\Debug\net9.0\Cargon.AssemblyInfo.cs
-C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\CodexBuild\obj\Debug\net9.0\Cargon.csproj.CoreCompileInputs.cache
-C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\CodexBuild\obj\Debug\net9.0\Cargon.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\CodexBuild\obj\Debug\net9.0\Cargon.RazorAssemblyInfo.cache
-C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\CodexBuild\obj\Debug\net9.0\Cargon.RazorAssemblyInfo.cs
-C:\Users\hp\OneDrive\Desktop\Travlink\Travlink\obj\CodexBuild\obj\Debug\net9.0\Cargon.sourcelink.json

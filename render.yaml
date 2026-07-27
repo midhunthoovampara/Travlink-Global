@@ -1,7 +1,0 @@
-﻿services:
-  - type: web
-    name: travlink
-    env: docker
-    plan: free
-    autoDeploy: true
-    dockerfilePath: ./Dockerfile
