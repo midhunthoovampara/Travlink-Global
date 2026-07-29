@@ -6,7 +6,7 @@ host that serves HTML, CSS, and JavaScript.
 
 ## Requirements
 
-- Node.js 20.9 or newer
+- Node.js 24
 - npm
 
 ## Development
@@ -17,6 +17,20 @@ npm run dev
 ```
 
 Open `http://localhost:3000`.
+
+## Editing page content
+
+Page content is stored as readable HTML in `content/markup/`:
+
+- `home.html` contains the home page.
+- `about.html`, `travel.html`, and the other named files contain their
+  corresponding pages.
+- Files ending in `.head.html` contain only that page's stylesheet links.
+- The small JSON files in `content/` contain page titles, descriptions, and
+  body classes.
+
+Edit the normal `.html` files when changing sections, headings, cards, or text.
+Do not place full-page HTML back inside the JSON files.
 
 ## Validation
 

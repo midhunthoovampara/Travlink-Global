@@ -1,5 +1,5 @@
 ﻿.travlink-travel-page { color: #111827; background: #fff; }
-.travlink-travel-hero { position: relative; min-height: clamp(700px, 78vh, 820px); display: flex; align-items: flex-end; overflow: hidden; padding: 175px 0 82px; background: url("../img/service/travelservice.png") center/cover no-repeat; isolation: isolate; }
+.travlink-travel-hero { position: relative; min-height: clamp(700px, 78vh, 820px); display: flex; align-items: flex-end; overflow: hidden; padding: 175px 0 82px; background: url("../img/service/travel-hero-resort.webp") center/cover no-repeat; isolation: isolate; }
 .travlink-travel-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(5,12,22,.02) 20%, rgba(5,12,22,.18) 55%, rgba(5,12,22,.78) 100%); }
 .travlink-travel-hero__content { width: 100%; }
 .travlink-travel-hero__label, .travlink-travel-eyebrow { display: inline-block; color: #0e47a1; font: 700 13px/1.2 Inter,Outfit,sans-serif; letter-spacing: .27em; text-transform: uppercase; }

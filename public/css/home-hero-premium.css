@@ -31,19 +31,15 @@
     align-items: center;
     overflow: hidden;
     padding: 150px 0 90px;
-    background: url("../img/slider/heronew.png") center / cover no-repeat;
+    background: url("../img/slider/travlink-hero-sailboat-uhd.webp") center / cover no-repeat;
     isolation: isolate;
 }
 .travlink-home .travlink-hero__media {
     position: absolute;
     z-index: 0;
-    inset: -3%;
-    background: url("../img/slider/heronew.png") center / cover no-repeat;
+    inset: 0;
+    background: url("../img/slider/travlink-hero-sailboat-uhd.webp") center / cover no-repeat;
     pointer-events: none;
-    transform: scale(1.02);
-    transform-origin: center 45%;
-    will-change: transform;
-    animation: travlinkHeroImageBreath 10s cubic-bezier(.45, 0, .55, 1) infinite alternate;
 }
 .travlink-home .travlink-hero::before {
     position: absolute;
@@ -185,10 +181,6 @@
     from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
 }
-@keyframes travlinkHeroImageBreath {
-    from { transform: scale(1.02); }
-    to { transform: scale(1.1); }
-}
 @media (max-width: 991px) {
     .travlink-home .header-area-3 { top: 14px; padding: 0; }
     .travlink-home .header-area-3 .header-3 { width: min(calc(100% - 24px), 1240px); padding: 10px 14px; border-radius: 22px; }
@@ -212,5 +204,4 @@
 @media (prefers-reduced-motion: reduce) {
     .travlink-home .travlink-hero__content,
     .travlink-home .travlink-hero__actions a { animation: none; transition: none; }
-    .travlink-home .travlink-hero__media { animation: none; transform: scale(1.02); }
 }

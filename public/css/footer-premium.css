@@ -11,27 +11,6 @@
     gap: 38px;
     padding-bottom: 44px;
 }
-.travlink-footer__logo {
-    display: inline-block;
-    color: #f5f3ee !important;
-    font-family: "Outfit", sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: -.02em;
-}
-.travlink-footer__logo { display: inline-flex; align-items: center; gap: 11px; }
-.travlink-footer__logo-mark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 39px;
-    height: 39px;
-    border: 1px solid rgba(77,163,255,.5);
-    border-radius: 50%;
-    color: #4da3ff;
-    font-size: 19px;
-}
 .travlink-footer__description {
     max-width: 300px;
     margin: 18px 0 0;
@@ -128,7 +107,6 @@
     .travlink-footer__note { grid-column: auto; }
 }
 /* Keep the shared navigation and footer typography consistent. */
-.header-area-3 .ca-logo h3,
 .ca-main-menu-3 ul li > a,
 .header-area-3 .ca-btn-header a,
 .travlink-footer,

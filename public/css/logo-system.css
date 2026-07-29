@@ -1,0 +1,223 @@
+/* Travlink Global responsive logo system. */
+.header-area-3 .ca-logo {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  margin: 0;
+}
+
+/* Selected inner pages always use the white sticky navigation. */
+:is(
+    .travlink-about-page-body,
+    .travlink-faq-page-body,
+    .travlink-contact-page-body
+  )
+  .header-area-3.stiky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+:is(
+    .travlink-about-page-body,
+    .travlink-faq-page-body,
+    .travlink-contact-page-body
+  )
+  .header-area-3
+  .ca-main-menu-3
+  > nav
+  > ul
+  > li
+  > a,
+:is(
+    .travlink-about-page-body,
+    .travlink-faq-page-body,
+    .travlink-contact-page-body
+  )
+  .header-area-3
+  .ca-offcanvas-toogle {
+  color: #10243d !important;
+}
+
+.travlink-site-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 54px;
+  max-width: 100%;
+  line-height: 0;
+  transform-origin: left center;
+  transition: transform 180ms ease;
+}
+
+.travlink-site-logo__image {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: opacity 180ms ease;
+}
+
+.travlink-site-logo__image--secondary {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  opacity: 0;
+}
+
+/* Match the transparent-navbar logo to the footer logo dimensions. */
+:is(
+    .travlink-home,
+    .travlink-travel-page-body,
+    .travlink-trade-page-body,
+    .travlink-shipping-page-body
+  )
+  .header-area-3:not(.scroll-header)
+  .travlink-site-logo {
+  width: 210px;
+  height: auto;
+  transform: none;
+}
+
+:is(
+    .travlink-home,
+    .travlink-travel-page-body,
+    .travlink-trade-page-body,
+    .travlink-shipping-page-body
+  )
+  .header-area-3:not(.scroll-header)
+  .travlink-site-logo__image {
+  width: 100%;
+  height: auto;
+}
+
+/* Image-hero headers use the white wordmark until the white sticky state appears. */
+:is(
+    .travlink-home,
+    .travlink-travel-page-body,
+    .travlink-trade-page-body,
+    .travlink-shipping-page-body
+  )
+  .header-area-3:not(.scroll-header)
+  .travlink-site-logo__image--primary {
+  opacity: 0;
+}
+
+:is(
+    .travlink-home,
+    .travlink-travel-page-body,
+    .travlink-trade-page-body,
+    .travlink-shipping-page-body
+  )
+  .header-area-3:not(.scroll-header)
+  .travlink-site-logo__image--secondary {
+  opacity: 1;
+}
+
+:is(
+    .travlink-home,
+    .travlink-travel-page-body,
+    .travlink-trade-page-body,
+    .travlink-shipping-page-body
+  )
+  .header-area-3:not(.scroll-header)
+  .ca-main-menu-3
+  > nav
+  > ul
+  > li
+  > a,
+:is(
+    .travlink-home,
+    .travlink-travel-page-body,
+    .travlink-trade-page-body,
+    .travlink-shipping-page-body
+  )
+  .header-area-3:not(.scroll-header)
+  .ca-offcanvas-toogle {
+  color: #fff !important;
+}
+
+.travlink-offcanvas-logo {
+  display: inline-flex;
+  align-items: center;
+  width: 145px;
+  max-width: 100%;
+  line-height: 0;
+}
+
+.travlink-offcanvas-logo img,
+.travlink-footer__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.travlink-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  width: 210px;
+  max-width: 100%;
+  line-height: 0;
+}
+
+@media (max-width: 1199px) {
+  .travlink-site-logo {
+    height: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  :is(
+      .travlink-about-page-body,
+      .travlink-faq-page-body,
+      .travlink-contact-page-body
+    )
+    .header-area-3.stiky {
+    top: 0;
+    padding: 13px 0;
+  }
+
+  .travlink-site-logo {
+    height: 40px;
+  }
+
+  :is(
+      .travlink-home,
+      .travlink-travel-page-body,
+      .travlink-trade-page-body,
+      .travlink-shipping-page-body
+    )
+    .header-area-3:not(.scroll-header)
+    .travlink-site-logo {
+    width: 155px;
+    height: auto;
+    transform: none;
+  }
+
+  .travlink-footer__logo {
+    width: 155px;
+  }
+}
+
+@media (max-width: 375px) {
+  .travlink-site-logo {
+    height: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travlink-site-logo,
+  .travlink-site-logo__image {
+    transition: none;
+  }
+
+}
