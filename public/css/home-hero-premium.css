@@ -177,6 +177,24 @@
 .travlink-home .travlink-hero__actions a:focus-visible { outline: 3px solid rgba(102, 178, 255, .7); outline-offset: 3px; }
 .travlink-home .travlink-hero__scroll { position: absolute; z-index: 2; bottom: 22px; left: 50%; color: #fff; opacity: .65; transform: translateX(-50%); }
 .travlink-home .travlink-hero__mouse { background: transparent !important; }
+
+/* Keep the Home contact submit button solid, consistent with primary actions. */
+.travlink-home .contact-3-area .submit-btn .ca-btn-primary-3 {
+    border: 0;
+    background: #0e47a1 !important;
+    box-shadow: 0 10px 24px rgba(14, 71, 161, .2);
+    color: #fff !important;
+}
+.travlink-home .contact-3-area .submit-btn .ca-btn-primary-3::after {
+    display: none;
+}
+.travlink-home .contact-3-area .submit-btn .ca-btn-primary-3:hover {
+    background: #2b5dac !important;
+    box-shadow: 0 14px 28px rgba(14, 71, 161, .26);
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
 @keyframes travlinkFadeUp {
     from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
