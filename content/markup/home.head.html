@@ -228,14 +228,48 @@
   .travlink-home .travlink-process {
     border-top: 0;
     border-bottom: 0;
-    background: linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #f4eee7 14%,
-      #ede5db 48%,
-      #f5efe9 86%,
-      #ffffff 100%
-    );
+    background-image:
+      linear-gradient(180deg, rgba(3, 13, 27, 0.74), rgba(3, 17, 34, 0.82)),
+      url("/img/process/travlink-process-premium.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .travlink-home .travlink-process__header .ca-section-subtitle {
+    color: #a9d6ff;
+  }
+
+  .travlink-home .travlink-process__header .ca-section-title,
+  .travlink-home .travlink-process__header .ca-section-title em,
+  .travlink-home .travlink-process__step h3 {
+    color: #ffffff;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.34);
+  }
+
+  .travlink-home .travlink-process__grid::before {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .travlink-home .travlink-process__number {
+    color: #ffffff;
+    background: rgba(7, 24, 45, 0.58);
+    border-color: rgba(255, 255, 255, 0.46);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .travlink-home .travlink-process__step:hover .travlink-process__number,
+  .travlink-home .travlink-process__step:hover h3 {
+    color: #a9d6ff;
+    border-color: rgba(169, 214, 255, 0.8);
+  }
+
+  @media (max-width: 767px) {
+    .travlink-home .travlink-process {
+      background-position: 70% center;
+    }
   }
 
   .travlink-home main > section {
@@ -299,3 +333,9 @@
 </style>
 
 <link rel="stylesheet" href="/css/logo-system.css" />
+<link rel="stylesheet" href="/css/home-about-showcase.css" />
+<link rel="stylesheet" href="/css/home-storytelling.css?v=20260801-process-row-4" />
+<link rel="stylesheet" href="/css/home-process-journey.css?v=20260801-1" />
+<link rel="stylesheet" href="/css/home-services-editorial.css?v=20260802-3" />
+<link rel="stylesheet" href="/css/home-hero-story.css?v=20260802-4" />
+<link rel="stylesheet" href="/css/home-footer-luxury.css?v=20260802-1" />

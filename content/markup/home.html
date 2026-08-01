@@ -198,29 +198,50 @@
   <!-- hero start -->
   <section class="travlink-hero">
     <div class="travlink-hero__media" aria-hidden="true"></div>
+    <div class="travlink-hero__story" aria-hidden="true">
+      <div class="travlink-hero__world-map"></div>
+      <svg class="travlink-hero__routes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <path class="travlink-hero__route travlink-hero__route--base" d="M70 280 C270 115 460 350 650 225 S1030 105 1370 280" />
+        <path class="travlink-hero__route travlink-hero__route--active" pathLength="100" d="M70 280 C270 115 460 350 650 225 S1030 105 1370 280" />
+        <path class="travlink-hero__ocean-route" d="M170 690 C390 555 590 790 805 630 S1120 530 1390 695" />
+        <circle class="travlink-hero__node" cx="78" cy="277" r="4" />
+        <circle class="travlink-hero__node" cx="653" cy="224" r="4" />
+        <circle class="travlink-hero__node" cx="1362" cy="276" r="4" />
+        <circle class="travlink-hero__node travlink-hero__node--ocean" cx="174" cy="687" r="3.5" />
+        <circle class="travlink-hero__node travlink-hero__node--ocean" cx="807" cy="628" r="3.5" />
+        <g class="travlink-hero__plane">
+          <path d="M-12 -2 L-3 -2 L3 -11 L7 -11 L4 -2 L13 1 L13 4 L4 3 L7 12 L3 12 L-3 3 L-12 3 L-16 7 L-18 7 L-16 1 L-18 -5 L-16 -5 Z" />
+          <animateMotion dur="24s" repeatCount="indefinite" rotate="auto" path="M70 280 C270 115 460 350 650 225 S1030 105 1370 280" />
+        </g>
+      </svg>
+      <svg class="travlink-hero__compass" viewBox="0 0 120 120" focusable="false">
+        <circle cx="60" cy="60" r="48" />
+        <circle cx="60" cy="60" r="35" />
+        <path d="M60 6V20M60 100V114M6 60H20M100 60H114" />
+        <path class="travlink-hero__compass-needle" d="M72 44L64 64L48 76L56 56Z" />
+      </svg>
+    </div>
     <div class="travlink-hero__inner">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-10 col-lg-11">
             <div class="travlink-hero__content">
-              <div class="travlink-hero__badge">
+              <!-- <div class="travlink-hero__badge">
                 <span class="travlink-hero__badge-dot"></span>
                 Travlink Global
-              </div>
+              </div> -->
               <h1 class="travlink-hero__title">
                 <span class="title-blue"
                   >Travel &bull; Trade &bull; Connect</span
                 >
               </h1>
               <p class="travlink-hero__copy">
-                From visas to vessels, we help people and businesses move across
-                borders &mdash; with travel, trade, and shipping handled under
-                one roof. Explore what we do, and where it can take you.
+                From visas to vessels, we help people and businesses move across borders — with travel, trade, and shipping handled under one roof. Explore what we do, and where it can take you.
               </p>
               <div class="travlink-hero__actions">
                 <a
                   href="#travlink-services"
-                  class="ca-btn-primary-3 theme-bg-3 text-white br-50"
+                  class="travlink-secondary"
                 >
                   Explore Services
                   <span><i class="fa-solid fa-angle-right"></i></span>
@@ -241,6 +262,54 @@
   </section>
   <!-- hero end -->
 
+  <div class="travlink-story-canvas">
+    <div class="travlink-story-decor" aria-hidden="true">
+      <svg class="story-routes" viewBox="0 0 1440 3200" preserveAspectRatio="none" focusable="false">
+        <path class="story-route story-route--one" d="M -80 430 C 250 160, 510 650, 810 380 S 1260 210, 1510 520" />
+        <path class="story-route story-route--two" d="M 1510 1280 C 1160 1030, 980 1470, 650 1260 S 180 1090, -90 1430" />
+        <path class="story-route story-route--three" d="M -100 2410 C 260 2150, 560 2650, 900 2350 S 1260 2220, 1510 2540" />
+      </svg>
+      <svg class="story-network story-network--one" viewBox="0 0 180 120" focusable="false">
+        <path d="M20 70L70 28L112 64L158 22M70 28L92 102M112 64L92 102L158 92" />
+        <circle cx="20" cy="70" r="5" /><circle cx="70" cy="28" r="5" />
+        <circle cx="112" cy="64" r="5" /><circle cx="158" cy="22" r="5" />
+        <circle cx="92" cy="102" r="5" /><circle cx="158" cy="92" r="5" />
+      </svg>
+      <svg class="story-network story-network--two" viewBox="0 0 180 120" focusable="false">
+        <path d="M18 34L60 78L105 24L160 58M60 78L104 104L160 58" />
+        <circle cx="18" cy="34" r="5" /><circle cx="60" cy="78" r="5" />
+        <circle cx="105" cy="24" r="5" /><circle cx="160" cy="58" r="5" />
+        <circle cx="104" cy="104" r="5" />
+      </svg>
+      <svg class="story-ship story-ship--one" viewBox="0 0 180 88" focusable="false">
+        <path class="story-ship__wake" d="M8 78C35 72 55 84 82 78S130 72 172 78" />
+        <path class="story-ship__hull" d="M18 53H166L148 72H45L29 64Z" />
+        <path class="story-ship__deck" d="M35 48H150" />
+        <rect class="story-ship__cargo" x="48" y="32" width="24" height="15" rx="2" />
+        <rect class="story-ship__cargo story-ship__cargo--cyan" x="75" y="32" width="24" height="15" rx="2" />
+        <rect class="story-ship__cargo story-ship__cargo--gold" x="102" y="32" width="24" height="15" rx="2" />
+        <rect class="story-ship__cargo" x="62" y="15" width="24" height="15" rx="2" />
+        <rect class="story-ship__cargo story-ship__cargo--cyan" x="89" y="15" width="24" height="15" rx="2" />
+        <path class="story-ship__bridge" d="M130 24H148V48H127Z" />
+      </svg>
+      <svg class="story-ship story-ship--two" viewBox="0 0 180 88" focusable="false">
+        <path class="story-ship__wake" d="M8 78C35 72 55 84 82 78S130 72 172 78" />
+        <path class="story-ship__hull" d="M18 53H166L148 72H45L29 64Z" />
+        <path class="story-ship__deck" d="M35 48H150" />
+        <rect class="story-ship__cargo" x="48" y="32" width="24" height="15" rx="2" />
+        <rect class="story-ship__cargo story-ship__cargo--gold" x="75" y="32" width="24" height="15" rx="2" />
+        <rect class="story-ship__cargo story-ship__cargo--cyan" x="102" y="32" width="24" height="15" rx="2" />
+        <rect class="story-ship__cargo" x="62" y="15" width="24" height="15" rx="2" />
+        <rect class="story-ship__cargo story-ship__cargo--cyan" x="89" y="15" width="24" height="15" rx="2" />
+        <path class="story-ship__bridge" d="M130 24H148V48H127Z" />
+      </svg>
+      <span class="story-plane"><i class="fa-solid fa-plane" aria-hidden="true"></i></span>
+      <span class="story-node story-node--one"></span>
+      <span class="story-node story-node--two"></span>
+      <span class="story-node story-node--three"></span>
+      <span class="story-node story-node--four"></span>
+    </div>
+
   <!-- service section start -->
   <section
     id="travlink-services"
@@ -253,14 +322,23 @@
         data-aos-duration="800"
       >
         <span class="travlink-service-intro__eyebrow">Our Services</span>
-        <h2 class="travlink-service-intro__title">
-          One world. <em>Three ways forward.</em>
-        </h2>
+        <h4 class="travlink-service-intro__title">
+          One world. <em>Two ways forward.</em>
+        </h4>
       </div>
     </div>
-    <div class="container">
-      <div class="row g-4 ca-service-3-cards">
-        <div class="col-lg-4 col-md-6">
+    <div class="travlink-services-editorial__decor" aria-hidden="true">
+      <svg viewBox="0 0 1200 620" preserveAspectRatio="none" focusable="false">
+        <path class="travlink-services-editorial__route" d="M30 470 C250 110 430 520 610 290 S930 80 1170 250" />
+      </svg>
+      <span class="travlink-services-editorial__plane"><i class="fa-solid fa-plane"></i></span>
+      <span class="travlink-services-editorial__node travlink-services-editorial__node--one"></span>
+      <span class="travlink-services-editorial__node travlink-services-editorial__node--two"></span>
+      <span class="travlink-services-editorial__node travlink-services-editorial__node--three"></span>
+    </div>
+    <div class="container travlink-services-editorial">
+      <div class="row g-4 ca-service-3-cards travlink-service-gateways">
+        <div class="col-lg-6 col-md-6">
           <article
             class="travlink-service-card"
             tabindex="0"
@@ -273,6 +351,7 @@
             />
             <div class="travlink-service-card__content">
               <h2 class="travlink-service-card__title">Travel</h2>
+              <p class="travlink-service-card__teaser">Journeys shaped around you.</p>
               <p class="travlink-service-card__description">
                 Visas, holidays, and business trips &mdash; planned around you,
                 not a template.
@@ -283,7 +362,7 @@
             </div>
           </article>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-6 col-md-6">
           <article
             class="travlink-service-card"
             tabindex="0"
@@ -296,33 +375,12 @@
             />
             <div class="travlink-service-card__content">
               <h2 class="travlink-service-card__title">Trade</h2>
+              <p class="travlink-service-card__teaser">Global opportunity, thoughtfully connected.</p>
               <p class="travlink-service-card__description">
                 Sourcing and supplier connections across China, Vietnam, and
                 beyond.
               </p>
               <a class="travlink-service-card__cta" href="/trade/"
-                >Explore <span aria-hidden="true">&rarr;</span></a
-              >
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <article
-            class="travlink-service-card"
-            tabindex="0"
-            aria-expanded="false"
-          >
-            <img
-              class="travlink-service-card__image"
-              src="/img/service/SRV2.jpeg"
-              alt="Global cargo shipping operation"
-            />
-            <div class="travlink-service-card__content">
-              <h2 class="travlink-service-card__title">Shipping</h2>
-              <p class="travlink-service-card__description">
-                Freight, customs, and delivery &mdash; handled door to door.
-              </p>
-              <a class="travlink-service-card__cta" href="/shipping/"
                 >Explore <span aria-hidden="true">&rarr;</span></a
               >
             </div>
@@ -350,50 +408,96 @@
         </h5>
       </div>
 
-      <div class="travlink-process__grid">
-        <article
-          class="travlink-process__step"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="650"
-        >
-          <span class="travlink-process__number">01</span>
-          <h3>Contact Us</h3>
-          <p>Reach out with what you need&mdash;travel, trade, or shipping.</p>
-        </article>
+      <div class="travlink-process__journey" data-active-step="0">
+        <div class="travlink-process__route" aria-hidden="true">
+          <svg viewBox="0 0 1000 54" preserveAspectRatio="none" focusable="false">
+            <path class="travlink-process__route-base" pathLength="100" d="M10 27 C170 8 330 46 500 27 S830 8 990 27" />
+            <path class="travlink-process__route-progress" pathLength="100" d="M10 27 C170 8 330 46 500 27 S830 8 990 27" />
+          </svg>
+          <span class="travlink-process__route-marker"></span>
+          <span class="travlink-process__route-stop" style="--route-stop: 0%"></span>
+          <span class="travlink-process__route-stop" style="--route-stop: 33.333%"></span>
+          <span class="travlink-process__route-stop" style="--route-stop: 66.666%"></span>
+          <span class="travlink-process__route-stop" style="--route-stop: 100%"></span>
+        </div>
 
-        <article
-          class="travlink-process__step"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="650"
-        >
-          <span class="travlink-process__number">02</span>
-          <h3>Tell Us Your Requirement</h3>
-          <p>Share the details. We&rsquo;ll ask the right questions.</p>
-        </article>
+        <div class="travlink-process__grid" aria-label="Our four-step process">
+          <button
+            type="button"
+            id="travlink-process-step-1"
+            class="travlink-process__step is-active"
+            aria-expanded="true"
+            aria-controls="travlink-process-description-1"
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="650"
+          >
+            <figure class="travlink-process__visual" aria-hidden="true">
+              <img src="/img/process/generated/process-contact.webp" alt="" width="640" height="640" loading="lazy" decoding="async" />
+            </figure>
+            <span class="travlink-process__number">01</span>
+            <h3>Contact Us</h3>
+            <p id="travlink-process-description-1" class="travlink-process__description">Reach out with what you need &mdash; travel or trade.</p>
+            <span class="travlink-process__cue" aria-hidden="true">View step <span>&rarr;</span></span>
+          </button>
 
-        <article
-          class="travlink-process__step"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="650"
-        >
-          <span class="travlink-process__number">03</span>
-          <h3>We Plan the Best Solution</h3>
-          <p>A plan built around your requirement, not a fixed package.</p>
-        </article>
+          <button
+            type="button"
+            id="travlink-process-step-2"
+            class="travlink-process__step"
+            aria-expanded="false"
+            aria-controls="travlink-process-description-2"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="650"
+          >
+            <figure class="travlink-process__visual" aria-hidden="true">
+              <img src="/img/process/generated/process-requirements.webp" alt="" width="640" height="640" loading="lazy" decoding="async" />
+            </figure>
+            <span class="travlink-process__number">02</span>
+            <h3>Tell Us Your Requirement</h3>
+            <p id="travlink-process-description-2" class="travlink-process__description">Share the details. We&rsquo;ll ask the right questions.</p>
+            <span class="travlink-process__cue" aria-hidden="true">View step <span>&rarr;</span></span>
+          </button>
 
-        <article
-          class="travlink-process__step"
-          data-aos="fade-up"
-          data-aos-delay="300"
-          data-aos-duration="650"
-        >
-          <span class="travlink-process__number">04</span>
-          <h3>We Deliver the Service</h3>
-          <p>From first enquiry to final delivery, we stay involved.</p>
-        </article>
+          <button
+            type="button"
+            id="travlink-process-step-3"
+            class="travlink-process__step"
+            aria-expanded="false"
+            aria-controls="travlink-process-description-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="650"
+          >
+            <figure class="travlink-process__visual" aria-hidden="true">
+              <img src="/img/process/generated/process-plan.webp" alt="" width="640" height="640" loading="lazy" decoding="async" />
+            </figure>
+            <span class="travlink-process__number">03</span>
+            <h3>We Plan the Best Solution</h3>
+            <p id="travlink-process-description-3" class="travlink-process__description">A plan built around your need, not a fixed package.</p>
+            <span class="travlink-process__cue" aria-hidden="true">View step <span>&rarr;</span></span>
+          </button>
+
+          <button
+            type="button"
+            id="travlink-process-step-4"
+            class="travlink-process__step"
+            aria-expanded="false"
+            aria-controls="travlink-process-description-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="650"
+          >
+            <figure class="travlink-process__visual" aria-hidden="true">
+              <img src="/img/process/generated/process-delivery.webp" alt="" width="640" height="640" loading="lazy" decoding="async" />
+            </figure>
+            <span class="travlink-process__number">04</span>
+            <h3>We Deliver the Service</h3>
+            <p id="travlink-process-description-4" class="travlink-process__description">From first enquiry to final delivery, we stay involved.</p>
+            <span class="travlink-process__cue" aria-hidden="true">View step <span>&rarr;</span></span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -401,86 +505,70 @@
 
   <!-- about section start -->
   <section
-    class="ca-about-3 travlink-about-editorial"
+    class="ca-about-3 travlink-about-editorial travlink-about-showcase"
     aria-labelledby="travlink-about-title"
   >
     <div class="container">
-      <div class="travlink-about-editorial__layout">
-        <div
-          class="travlink-about-editorial__collage"
-          aria-label="Travlink Global across Asia and international markets"
-        >
-          <div
-            class="travlink-about-editorial__column travlink-about-editorial__column--left"
-          >
-            <figure
-              class="travlink-about-editorial__image travlink-about-editorial__image--large"
-            >
-              <img
-                src="/img/about/abt1.png"
-                alt="International flight viewed above the clouds"
-              />
-              <figcaption>Visa Assistance</figcaption>
-            </figure>
-            <figure
-              class="travlink-about-editorial__image travlink-about-editorial__image--small"
-            >
-              <img
-                src="/img/service/trade.jpg"
-                alt="International business partners completing a trade agreement"
-              />
-              <figcaption>Sourcing</figcaption>
-            </figure>
-          </div>
-          <div
-            class="travlink-about-editorial__column travlink-about-editorial__column--right"
-          >
-            <figure
-              class="travlink-about-editorial__image travlink-about-editorial__image--small"
-            >
-              <img
-                src="/img/faq/faq1.jpeg"
-                alt="Container ship sailing at sunset"
-              />
-              <figcaption>Ocean Shipping</figcaption>
-            </figure>
-            <figure
-              class="travlink-about-editorial__image travlink-about-editorial__image--large"
-            >
-              <img
-                src="/img/service/tt.jpg"
-                alt="Modern warehouse and global supply chain operation"
-              />
-              <figcaption>Travel packages</figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="travlink-about-editorial__content">
-          <span class="travlink-about-editorial__eyebrow">About Us</span>
-          <h2 id="travlink-about-title">
-            Built for journeys, trade, <em>and movement across borders.</em>
-          </h2>
-          <div class="travlink-about-editorial__copy">
-            <p>
-              Travlink Global is a travel, trade, and shipping company built on
-              founder-led experience &mdash; in visa facilitation, sourcing, and
-              travel planning. We bring that experience together under one
-              platform, built for people and businesses who want things handled
-              properly, without the noise.
-            </p>
-            <p>
-              We focus on creating seamless global experiences while staying
-              professional, transparent, and genuinely useful to the people we
-              work with.
-            </p>
-          </div>
-          <div class="ca-about-3-btn">
-            <a href="/about/" class="travlink-about-editorial__button"
-              >About Travlink Global
-              <span><i class="fa-solid fa-angle-right"></i></span
-            ></a>
-          </div>
-        </div>
+      <header class="travlink-about-showcase__header text-center">
+        <span class="travlink-about-showcase__eyebrow">About Travlink</span>
+      </header>
+
+      <div class="travlink-about-showcase__stories">
+        <article class="travlink-about-showcase__story" data-aos="fade-up" data-aos-duration="650">
+          <figure class="travlink-about-showcase__visual">
+            <img
+              src="/img/about/generated/about-travel-artwork.jpg"
+              alt="Air travel represented by an aircraft, globe, suitcase, and travel document"
+              width="1000"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <h3>Travel</h3>
+          <p>Thoughtful journeys, planned around the way you want to move.</p>
+        </article>
+
+        <article class="travlink-about-showcase__story" data-aos="fade-up" data-aos-delay="100" data-aos-duration="650">
+          <figure class="travlink-about-showcase__visual">
+            <img
+              src="/img/about/generated/about-trade-artwork.jpg"
+              alt="Global trade represented by a cargo ship, port crane, containers, and parcels"
+              width="1000"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <h3>Trade</h3>
+          <p>Reliable sourcing and trade support across global markets.</p>
+        </article>
+
+        <article class="travlink-about-showcase__story" data-aos="fade-up" data-aos-delay="200" data-aos-duration="650">
+          <figure class="travlink-about-showcase__visual">
+            <img
+              src="/img/about/generated/about-connect-artwork.jpg"
+              alt="Worldwide connections represented by a handshake and a connected globe"
+              width="1000"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <h3>Connect</h3>
+          <p>People, ideas, and opportunities brought closer.</p>
+        </article>
+      </div>
+
+      <div class="travlink-about-showcase__footer text-center">
+        <h2 id="travlink-about-title">
+          <strong>Built for journeys, trade,</strong>
+          <em>and movement across borders.</em>
+        </h2>
+        <a href="/about/" class="travlink-about-showcase__button">
+          About Travlink
+          <span aria-hidden="true"><i class="fa-solid fa-angle-right"></i></span>
+        </a>
       </div>
     </div>
   </section>
@@ -637,6 +725,7 @@
   </section>
   <!-- contact-section end -->
   <!-- blog section end -->
+  </div>
 </main>
 
 <footer class="travlink-footer">
@@ -766,19 +855,10 @@
       document.querySelectorAll(".travlink-service-card"),
     );
     const slider = document.querySelector(".ca-service-3-cards");
-    const usesTap = window.matchMedia("(hover: none)").matches;
+    const usesTap = window.matchMedia("(hover: none)");
     const usesDesktopCards = window.matchMedia("(min-width: 992px)");
     const usesMobileSlider = window.matchMedia("(max-width: 767px)");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let currentIndex = 0;
-    let autoScrollTimer;
-    let resumeTimer;
-    let scrollFrame;
-    let autoScrollReleaseTimer;
-    let isUserInteracting = false;
-    let isAutoScrolling = false;
-    let isServiceSectionVisible = false;
-    let hasEnteredServiceSection = false;
+    let scrollFrame = 0;
 
     function setCardState(card, active) {
       card.classList.toggle("is-active", active);
@@ -789,73 +869,10 @@
       cards.forEach(function (card, cardIndex) {
         setCardState(card, cardIndex === index);
       });
-      currentIndex = index;
-    }
-
-    function stopAutoScroll() {
-      window.clearInterval(autoScrollTimer);
-      autoScrollTimer = null;
-    }
-
-    function scrollToCard(index) {
-      if (!slider || !cards[index]) return;
-
-      const cardColumn = cards[index].parentElement;
-      const sliderRect = slider.getBoundingClientRect();
-      const cardRect = cardColumn.getBoundingClientRect();
-      const targetLeft =
-        slider.scrollLeft +
-        (cardRect.left - sliderRect.left) -
-        (slider.clientWidth - cardRect.width) / 2;
-
-      isAutoScrolling = true;
-      window.clearTimeout(autoScrollReleaseTimer);
-      slider.scrollTo({ left: targetLeft, behavior: "smooth" });
-      autoScrollReleaseTimer = window.setTimeout(function () {
-        isAutoScrolling = false;
-      }, 1200);
-    }
-
-    function startAutoScroll() {
-      stopAutoScroll();
-      if (
-        !usesMobileSlider.matches ||
-        reducedMotion.matches ||
-        !isServiceSectionVisible ||
-        cards.length < 2
-      )
-        return;
-
-      autoScrollTimer = window.setInterval(function () {
-        if (isUserInteracting) return;
-        scrollToCard((currentIndex + 1) % cards.length);
-      }, 4000);
-    }
-
-    function resumeAfterInactivity() {
-      if (!usesMobileSlider.matches) return;
-
-      window.clearTimeout(resumeTimer);
-      resumeTimer = window.setTimeout(function () {
-        isUserInteracting = false;
-        startAutoScroll();
-      }, 4000);
-    }
-
-    function holdAutoScroll() {
-      if (!usesMobileSlider.matches) return;
-      isUserInteracting = true;
-      stopAutoScroll();
-      window.clearTimeout(resumeTimer);
-    }
-
-    function pauseAfterManualScroll() {
-      holdAutoScroll();
-      resumeAfterInactivity();
     }
 
     function updateActiveCard() {
-      scrollFrame = null;
+      scrollFrame = 0;
       if (!slider || !usesMobileSlider.matches) return;
 
       const sliderRect = slider.getBoundingClientRect();
@@ -881,28 +898,15 @@
     }
 
     function configureMobileSlider() {
-      stopAutoScroll();
-      window.clearTimeout(resumeTimer);
-      window.clearTimeout(autoScrollReleaseTimer);
-      isUserInteracting = false;
-      isAutoScrolling = false;
-
       if (!usesMobileSlider.matches) {
         cards.forEach(function (card) {
           setCardState(card, false);
         });
+        slider.scrollLeft = 0;
         return;
       }
 
-      if (isServiceSectionVisible) {
-        if (!hasEnteredServiceSection) {
-          setActiveCard(0);
-          hasEnteredServiceSection = true;
-        } else {
-          requestActiveCardUpdate();
-        }
-        startAutoScroll();
-      }
+      requestActiveCardUpdate();
     }
 
     cards.forEach(function (card) {
@@ -916,9 +920,7 @@
           return;
         }
 
-        if (usesMobileSlider.matches) return;
-        if (!usesTap || event.target.closest("a")) return;
-
+        if (!usesTap.matches || event.target.closest("a")) return;
         const shouldOpen = !card.classList.contains("is-active");
         cards.forEach(function (item) {
           setCardState(item, false);
@@ -937,7 +939,6 @@
           return;
         }
 
-        if (usesMobileSlider.matches) return;
         const shouldOpen = !card.classList.contains("is-active");
         cards.forEach(function (item) {
           setCardState(item, false);
@@ -949,10 +950,10 @@
     document.addEventListener("click", function (event) {
       if (
         usesMobileSlider.matches ||
-        !usesTap ||
+        !usesTap.matches ||
         event.target.closest(".travlink-service-card")
-      )
-        return;
+      ) return;
+
       cards.forEach(function (card) {
         setCardState(card, false);
       });
@@ -962,62 +963,206 @@
       slider.addEventListener(
         "scroll",
         function () {
-          if (!isAutoScrolling) pauseAfterManualScroll();
           requestActiveCardUpdate();
         },
         { passive: true },
       );
-      slider.addEventListener("touchstart", holdAutoScroll, { passive: true });
-      slider.addEventListener("touchend", resumeAfterInactivity, {
-        passive: true,
-      });
-      slider.addEventListener("touchcancel", resumeAfterInactivity, {
-        passive: true,
-      });
-      slider.addEventListener("pointerdown", holdAutoScroll, { passive: true });
-      slider.addEventListener("pointerup", resumeAfterInactivity, {
-        passive: true,
-      });
-      slider.addEventListener("pointercancel", resumeAfterInactivity, {
-        passive: true,
-      });
-      slider.addEventListener("wheel", pauseAfterManualScroll, {
-        passive: true,
-      });
-
-      const serviceObserver = new IntersectionObserver(
-        function (entries) {
-          const entry = entries[0];
-          isServiceSectionVisible =
-            entry.isIntersecting && entry.intersectionRatio >= 0.15;
-
-          if (!isServiceSectionVisible) {
-            stopAutoScroll();
-            return;
-          }
-
-          if (usesMobileSlider.matches) {
-            if (!hasEnteredServiceSection) {
-              setActiveCard(0);
-              hasEnteredServiceSection = true;
-            } else {
-              requestActiveCardUpdate();
-            }
-            startAutoScroll();
-          }
-        },
-        { threshold: [0, 0.15, 0.35, 0.6] },
-      );
-
-      serviceObserver.observe(slider);
       if (usesMobileSlider.addEventListener) {
         usesMobileSlider.addEventListener("change", configureMobileSlider);
-        reducedMotion.addEventListener("change", configureMobileSlider);
       } else {
         usesMobileSlider.addListener(configureMobileSlider);
-        reducedMotion.addListener(configureMobileSlider);
       }
+
+      if (usesMobileSlider.matches) setActiveCard(0);
       configureMobileSlider();
     }
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const canvas = document.querySelector(".travlink-story-canvas");
+    if (!canvas) return;
+
+    const revealSelectors = [
+      ".travlink-service-intro",
+      ".ca-service-3-cards",
+      ".travlink-process__header",
+      ".travlink-process__grid",
+      ".travlink-process__step",
+      ".travlink-about-showcase__header",
+      ".travlink-about-showcase__story",
+      ".travlink-about-showcase__footer",
+      ".contact-3-area .ca-blog-content-3",
+      ".contact-3-area .ca-contact-from",
+      ".contact-3-area .ca-form-loca-3"
+    ];
+    const revealItems = Array.from(
+      canvas.querySelectorAll(revealSelectors.join(",")),
+    );
+
+    canvas
+      .querySelectorAll(".travlink-about-showcase__visual")
+      .forEach(function (image) {
+        image.classList.add("story-image");
+      });
+
+    revealItems.forEach(function (item, index) {
+      item.classList.add("story-reveal");
+      item.style.setProperty("--story-delay", (index % 4) * 85 + "ms");
+    });
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+      revealItems.forEach(function (item) {
+        item.classList.add("is-visible");
+      });
+      return;
+    }
+
+    canvas.classList.add("story-motion-ready");
+    const revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -7% 0px" },
+    );
+
+    revealItems.forEach(function (item) {
+      revealObserver.observe(item);
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const processJourney = document.querySelector(".travlink-process__journey");
+    if (!processJourney) return;
+
+    const processRail = processJourney.querySelector(".travlink-process__grid");
+    const processCards = Array.from(
+      processRail.querySelectorAll(".travlink-process__step"),
+    );
+    const mobileJourney = window.matchMedia("(max-width: 991.98px)");
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let activeProcessCard = 0;
+    let processScrollFrame = 0;
+
+    function setActiveProcessCard(index, shouldScroll) {
+      const nextIndex = Math.max(0, Math.min(index, processCards.length - 1));
+      const progress = processCards.length > 1
+        ? nextIndex / (processCards.length - 1)
+        : 0;
+
+      activeProcessCard = nextIndex;
+      processJourney.dataset.activeStep = String(nextIndex);
+      processJourney.style.setProperty(
+        "--process-progress",
+        1 + progress * 98 + "%",
+      );
+      processJourney.style.setProperty(
+        "--process-progress-value",
+        String(progress * 100),
+      );
+
+      processCards.forEach(function (card, cardIndex) {
+        const isActive = cardIndex === nextIndex;
+        card.classList.toggle("is-active", isActive);
+        card.setAttribute("aria-expanded", String(isActive));
+      });
+
+      if (shouldScroll && mobileJourney.matches) {
+        processCards[nextIndex].scrollIntoView({
+          behavior: reducedMotion.matches ? "auto" : "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+    }
+
+    function activateNearestProcessCard() {
+      processScrollFrame = 0;
+      if (!mobileJourney.matches) return;
+
+      const railRect = processRail.getBoundingClientRect();
+      const railCenter = railRect.left + processRail.clientWidth / 2;
+      let nearestIndex = activeProcessCard;
+      let nearestDistance = Infinity;
+
+      processCards.forEach(function (card, index) {
+        const cardRect = card.getBoundingClientRect();
+        const distance = Math.abs(
+          railCenter - (cardRect.left + cardRect.width / 2),
+        );
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestIndex = index;
+        }
+      });
+
+      if (nearestIndex !== activeProcessCard) {
+        setActiveProcessCard(nearestIndex, false);
+      }
+    }
+
+    processCards.forEach(function (card, index) {
+      card.addEventListener("pointerenter", function () {
+        if (finePointer.matches && !mobileJourney.matches) {
+          setActiveProcessCard(index, false);
+        }
+      });
+
+      card.addEventListener("click", function () {
+        setActiveProcessCard(index, true);
+      });
+
+      card.addEventListener("focus", function () {
+        setActiveProcessCard(index, mobileJourney.matches);
+      });
+
+      card.addEventListener("keydown", function (event) {
+        let nextIndex = index;
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+          nextIndex = Math.min(index + 1, processCards.length - 1);
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+          nextIndex = Math.max(index - 1, 0);
+        } else if (event.key === "Home") {
+          nextIndex = 0;
+        } else if (event.key === "End") {
+          nextIndex = processCards.length - 1;
+        } else {
+          return;
+        }
+
+        event.preventDefault();
+        processCards[nextIndex].focus({ preventScroll: true });
+        setActiveProcessCard(nextIndex, true);
+      });
+    });
+
+    processRail.addEventListener("scroll", function () {
+      if (!mobileJourney.matches || processScrollFrame) return;
+      processScrollFrame = window.requestAnimationFrame(
+        activateNearestProcessCard,
+      );
+    }, { passive: true });
+
+    function configureProcessJourney() {
+      if (!mobileJourney.matches) {
+        processRail.scrollLeft = 0;
+      }
+      setActiveProcessCard(activeProcessCard, mobileJourney.matches);
+    }
+
+    if (mobileJourney.addEventListener) {
+      mobileJourney.addEventListener("change", configureProcessJourney);
+    } else {
+      mobileJourney.addListener(configureProcessJourney);
+    }
+
+    setActiveProcessCard(0, false);
   });
 </script>

@@ -1,0 +1,209 @@
+/* Home About showcase: generated artwork with a minimal editorial layout. */
+.travlink-home .travlink-about-showcase {
+  position: relative;
+  overflow: hidden;
+  padding: 96px 0 100px !important;
+  background: #fdfcf9;
+}
+
+.travlink-home .travlink-about-showcase::before {
+  display: none;
+}
+
+.travlink-home .travlink-about-showcase .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1220px;
+}
+
+.travlink-about-showcase__header {
+  margin-bottom: 38px;
+}
+
+.travlink-about-showcase__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #1d63b8;
+  font: 700 11px/1 Outfit, Inter, sans-serif;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.travlink-about-showcase__eyebrow::before,
+.travlink-about-showcase__eyebrow::after {
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  content: "";
+  opacity: 0.45;
+}
+
+.travlink-about-showcase__stories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(26px, 4vw, 54px);
+  align-items: start;
+}
+
+.travlink-about-showcase__story {
+  min-width: 0;
+  text-align: center;
+}
+
+.travlink-about-showcase__visual {
+  width: min(100%, 340px);
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  filter: drop-shadow(0 18px 30px rgba(32, 72, 111, 0.1));
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.travlink-about-showcase__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.travlink-about-showcase__story:hover .travlink-about-showcase__visual {
+  transform: translateY(-6px);
+}
+
+.travlink-about-showcase__story h3 {
+  margin: 0 0 10px;
+  color: #11335d;
+  font: 600 clamp(34px, 3vw, 44px)/1 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.025em;
+}
+
+.travlink-about-showcase__story p {
+  max-width: 280px;
+  margin: 0 auto;
+  color: #5d6876;
+  font: 400 15px/1.65 Outfit, Inter, sans-serif;
+}
+
+.travlink-about-showcase__footer {
+  max-width: 860px;
+  margin: 62px auto 0;
+  padding-top: 44px;
+  border-top: 1px solid rgba(29, 99, 184, 0.16);
+}
+
+.travlink-about-showcase__footer h2 {
+  margin: 0;
+  color: #101827;
+  font: 500 clamp(38px, 4.4vw, 62px)/1.04 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.travlink-about-showcase__footer h2 strong {
+  font-weight: 600;
+}
+
+.travlink-about-showcase__footer h2 em {
+  display: block;
+  color: #1d63b8;
+  font-weight: 400;
+}
+
+.travlink-about-showcase__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 30px;
+  padding: 14px 22px 14px 24px;
+  border-radius: 999px;
+  background: #10243d;
+  box-shadow: 0 12px 28px rgba(16, 36, 61, 0.16);
+  color: #fff;
+  font: 600 14px/1 Outfit, Inter, sans-serif;
+  text-decoration: none;
+  transition: background-color 250ms ease, box-shadow 250ms ease, transform 250ms ease;
+}
+
+.travlink-about-showcase__button span {
+  display: inline-flex;
+  transition: transform 250ms ease;
+}
+
+.travlink-about-showcase__button:hover,
+.travlink-about-showcase__button:focus-visible {
+  background: #1d63b8;
+  box-shadow: 0 16px 34px rgba(29, 99, 184, 0.22);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.travlink-about-showcase__button:hover span,
+.travlink-about-showcase__button:focus-visible span {
+  transform: translateX(3px);
+}
+
+@media (max-width: 991.98px) {
+  .travlink-home .travlink-about-showcase {
+    padding: 78px 0 82px !important;
+  }
+
+  .travlink-about-showcase__stories {
+    gap: 24px;
+  }
+
+  .travlink-about-showcase__visual {
+    margin-bottom: 20px;
+  }
+
+  .travlink-about-showcase__story p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .travlink-home .travlink-about-showcase {
+    padding: 66px 0 70px !important;
+  }
+
+  .travlink-about-showcase__header {
+    margin-bottom: 32px;
+  }
+
+  .travlink-about-showcase__stories {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .travlink-about-showcase__visual {
+    width: min(82vw, 310px);
+    margin-bottom: 18px;
+  }
+
+  .travlink-about-showcase__story h3 {
+    font-size: 38px;
+  }
+
+  .travlink-about-showcase__story p {
+    max-width: 300px;
+  }
+
+  .travlink-about-showcase__footer {
+    margin-top: 50px;
+    padding-top: 36px;
+  }
+
+  .travlink-about-showcase__footer h2 {
+    font-size: clamp(35px, 10vw, 46px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travlink-about-showcase__visual,
+  .travlink-about-showcase__button,
+  .travlink-about-showcase__button span {
+    transition: none;
+  }
+}

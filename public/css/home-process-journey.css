@@ -1,0 +1,383 @@
+/* Home: interactive Our Process journey. Kept separate to avoid changing shared pages. */
+.travlink-story-canvas .travlink-process__header {
+  margin: 0 auto 68px;
+}
+
+.travlink-story-canvas .travlink-process__header .ca-section-subtitle {
+  margin-bottom: 18px;
+}
+
+.travlink-story-canvas .travlink-process__journey {
+  --process-progress: 1%;
+  --process-progress-value: 0;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.travlink-story-canvas .travlink-process__route {
+  position: relative;
+  height: 54px;
+  margin: 0 28px 22px;
+}
+
+.travlink-story-canvas .travlink-process__route svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.travlink-story-canvas .travlink-process__route-base,
+.travlink-story-canvas .travlink-process__route-progress {
+  fill: none;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.travlink-story-canvas .travlink-process__route-base {
+  stroke: rgba(31, 111, 205, .27);
+  stroke-width: 1.5;
+  stroke-dasharray: 7 9;
+}
+
+.travlink-story-canvas .travlink-process__route-progress {
+  stroke: #1774c8;
+  stroke-width: 2.25;
+  stroke-dasharray: 100;
+  stroke-dashoffset: calc(100 - var(--process-progress-value));
+  transition: stroke-dashoffset 480ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-story-canvas .travlink-process__route-marker {
+  position: absolute;
+  top: 50%;
+  left: var(--process-progress);
+  z-index: 2;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #1683d8;
+  box-shadow: 0 0 0 6px rgba(22, 131, 216, .1), 0 0 18px rgba(22, 131, 216, .28);
+  transform: translate(-50%, -50%);
+  transition: left 480ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-story-canvas .travlink-process__route-stop {
+  position: absolute;
+  top: 50%;
+  left: var(--route-stop);
+  width: 7px;
+  height: 7px;
+  border: 1.5px solid rgba(23, 116, 200, .48);
+  border-radius: 50%;
+  background: #f7fbff;
+  box-shadow: 0 0 0 4px rgba(23, 116, 200, .06);
+  transform: translate(-50%, -50%);
+}
+
+.travlink-story-canvas .travlink-process__grid {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.travlink-story-canvas .travlink-process__grid::before {
+  display: none !important;
+  content: none !important;
+}
+
+.travlink-story-canvas .travlink-process__step {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 390px;
+  margin: 0;
+  padding: 25px 20px 22px;
+  overflow: hidden;
+  appearance: none;
+  border: 1px solid rgba(15, 42, 75, .1);
+  border-radius: 22px;
+  outline: 0;
+  background: rgba(255, 255, 255, .8);
+  box-shadow: 0 12px 34px rgba(15, 42, 75, .05);
+  color: #101827;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  transition:
+    flex-grow 420ms cubic-bezier(.22, 1, .36, 1),
+    transform 420ms cubic-bezier(.22, 1, .36, 1),
+    border-color 420ms ease,
+    box-shadow 420ms ease,
+    background-color 420ms ease;
+}
+
+.travlink-story-canvas .travlink-process__step::after {
+  position: absolute;
+  inset: auto 12% -42% 12%;
+  height: 58%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(32, 128, 211, .13), transparent 70%);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 420ms ease, transform 420ms ease;
+  transform: translateY(12px);
+}
+
+.travlink-story-canvas .travlink-process__step.is-active {
+  flex-grow: 1.15;
+  border-color: rgba(24, 105, 210, .45);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 18px 48px rgba(15, 52, 96, .1);
+  transform: translateY(-4px);
+}
+
+.travlink-story-canvas .travlink-process__step.is-active::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.travlink-story-canvas .travlink-process__step:focus-visible {
+  border-color: #1774c8;
+  box-shadow: 0 0 0 4px rgba(23, 116, 200, .15), 0 18px 48px rgba(15, 52, 96, .11);
+}
+
+.travlink-story-canvas .travlink-process__visual {
+  position: relative;
+  z-index: 1;
+  width: 138px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  margin: 0 auto 18px;
+  overflow: hidden;
+  border: 1px solid rgba(36, 118, 197, .11);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(247, 251, 255, .98), rgba(234, 245, 255, .9));
+  box-shadow: 0 12px 28px rgba(22, 78, 130, .08);
+  transform: translateY(4px) scale(.97);
+  transition: transform 480ms cubic-bezier(.22, 1, .36, 1), box-shadow 420ms ease;
+}
+
+.travlink-story-canvas .travlink-process__step.is-active .travlink-process__visual {
+  box-shadow: 0 16px 36px rgba(22, 92, 157, .15), 0 0 0 8px rgba(32, 128, 211, .045);
+  transform: translateY(0) scale(1);
+}
+
+.travlink-story-canvas .travlink-process__visual img,
+.travlink-story-canvas .travlink-process__step:hover .travlink-process__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+  filter: saturate(.9);
+  transition: filter 420ms ease, transform 480ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-story-canvas .travlink-process__step.is-active .travlink-process__visual img {
+  filter: saturate(1.04);
+  transform: scale(1.025);
+}
+
+.travlink-story-canvas .travlink-process__number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, .84);
+  background: linear-gradient(145deg, #174f88, #2386cb);
+  box-shadow: 0 9px 24px rgba(26, 92, 153, .2);
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: .1em;
+}
+
+.travlink-story-canvas .travlink-process__step h3 {
+  position: relative;
+  z-index: 1;
+  min-height: 66px;
+  margin: 0;
+  color: #101827;
+  font-size: clamp(22px, 2vw, 29px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -.45px;
+  transition: color 400ms ease, transform 400ms ease;
+}
+
+.travlink-story-canvas .travlink-process__step.is-active h3 {
+  color: #123f70;
+  transform: translateY(-2px);
+}
+
+.travlink-story-canvas .travlink-process__description {
+  position: relative;
+  z-index: 1;
+  max-width: 280px;
+  max-height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  color: #5c6674;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(9px);
+  transition:
+    max-height 420ms cubic-bezier(.22, 1, .36, 1),
+    margin-top 420ms cubic-bezier(.22, 1, .36, 1),
+    opacity 350ms ease,
+    transform 420ms cubic-bezier(.22, 1, .36, 1),
+    visibility 0s linear 420ms;
+}
+
+.travlink-story-canvas .travlink-process__step.is-active .travlink-process__description {
+  max-height: 92px;
+  margin-top: 11px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s, 0s, 80ms, 80ms, 0s;
+}
+
+.travlink-story-canvas .travlink-process__cue {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  left: 20px;
+  z-index: 1;
+  color: #437199;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .72;
+  transition: opacity 300ms ease, transform 400ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-story-canvas .travlink-process__cue span {
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 300ms ease;
+}
+
+.travlink-story-canvas .travlink-process__step:hover .travlink-process__cue span,
+.travlink-story-canvas .travlink-process__step:focus-visible .travlink-process__cue span {
+  transform: translateX(4px);
+}
+
+.travlink-story-canvas .travlink-process__step.is-active .travlink-process__cue {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .travlink-story-canvas .travlink-process__grid {
+    gap: 16px;
+  }
+
+  .travlink-story-canvas .travlink-process__step {
+    padding-inline: 16px;
+  }
+
+  .travlink-story-canvas .travlink-process__visual {
+    width: 128px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .travlink-story-canvas .travlink-process__header {
+    margin-bottom: 52px;
+  }
+
+  .travlink-story-canvas .travlink-process__route {
+    margin: 0 22px 18px;
+  }
+
+  .travlink-story-canvas .travlink-process__grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch;
+    gap: 16px !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 8px 20px 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .travlink-story-canvas .travlink-process__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .travlink-story-canvas .travlink-process__step,
+  .travlink-story-canvas .travlink-process__step.is-active {
+    flex: 0 0 min(56vw, 340px);
+    width: min(56vw, 340px);
+    max-width: none;
+    min-width: 0;
+    min-height: 390px;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .travlink-story-canvas .travlink-process__header {
+    margin-bottom: 42px;
+  }
+
+  .travlink-story-canvas .travlink-process__route {
+    height: 42px;
+    margin: 0 20px 14px;
+  }
+
+  .travlink-story-canvas .travlink-process__step,
+  .travlink-story-canvas .travlink-process__step.is-active {
+    flex-basis: min(80vw, 310px);
+    width: min(80vw, 310px);
+    padding: 24px 18px 20px;
+  }
+
+  .travlink-story-canvas .travlink-process__visual {
+    width: 138px;
+  }
+
+  .travlink-story-canvas .travlink-process__number {
+    top: 18px;
+    left: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travlink-story-canvas .travlink-process__step,
+  .travlink-story-canvas .travlink-process__route-progress,
+  .travlink-story-canvas .travlink-process__route-marker,
+  .travlink-story-canvas .travlink-process__description,
+  .travlink-story-canvas .travlink-process__visual,
+  .travlink-story-canvas .travlink-process__visual img,
+  .travlink-story-canvas .travlink-process__cue,
+  .travlink-story-canvas .travlink-process__cue span {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

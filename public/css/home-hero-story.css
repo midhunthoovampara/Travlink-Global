@@ -1,0 +1,328 @@
+/* Home: cinematic Travel, Trade and Connect hero story. */
+.travlink-home .travlink-hero {
+  min-height: 100svh;
+  padding: 148px 0 108px;
+  background: #092d4b;
+  isolation: isolate;
+}
+
+.travlink-home .travlink-hero__media {
+  z-index: 0;
+  inset: -5px;
+  background-position: center;
+  background-size: cover;
+  transform: translate3d(0, 0, 0) scale(1.008);
+  animation: heroOceanFloat 10s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.travlink-home .travlink-hero::before {
+  z-index: 1;
+  display: block;
+  background:
+    linear-gradient(90deg, rgba(3, 12, 23, .55) 0%, rgba(3, 12, 23, .35) 44%, rgba(3, 12, 23, .12) 75%, rgba(3, 12, 23, .2) 100%),
+    linear-gradient(180deg, rgba(3, 9, 17, .12) 0%, rgba(3, 12, 23, .12) 45%, rgba(3, 14, 28, .54) 100%);
+}
+
+.travlink-home .travlink-hero__story {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.travlink-home .travlink-hero__world-map {
+  position: absolute;
+  right: -4%;
+  bottom: -7%;
+  width: min(72vw, 1020px);
+  aspect-ratio: 1.8;
+  background: url("../img/background/world-map-outline.svg") center / contain no-repeat;
+  opacity: .075;
+  filter: drop-shadow(0 0 18px rgba(94, 183, 239, .22));
+  transform: translate3d(0, 0, 0);
+  animation: heroMapDrift 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.travlink-home .travlink-hero__routes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  opacity: .34;
+  transition: opacity 500ms ease, filter 500ms ease;
+}
+
+/* Cursor movement must not alter any hero visuals. */
+.travlink-home .travlink-hero__pointer-glow {
+  display: none !important;
+}
+
+.travlink-home .travlink-hero:hover .travlink-hero__routes,
+.travlink-home .travlink-hero.is-pointer-active .travlink-hero__routes {
+  opacity: .34 !important;
+  filter: none !important;
+}
+
+.travlink-home .travlink-hero:hover .travlink-hero__node,
+.travlink-home .travlink-hero.is-pointer-active .travlink-hero__node {
+  filter: none !important;
+}
+
+.travlink-home .travlink-hero__route,
+.travlink-home .travlink-hero__ocean-route {
+  fill: none;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.travlink-home .travlink-hero__route--base {
+  stroke: rgba(150, 216, 255, .33);
+  stroke-width: 1.1;
+  stroke-dasharray: 5 10;
+}
+
+.travlink-home .travlink-hero__route--active {
+  stroke: rgba(74, 170, 235, .76);
+  stroke-width: 1.5;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: heroRouteDraw 24s cubic-bezier(.22, 1, .36, 1) infinite;
+}
+
+.travlink-home .travlink-hero__ocean-route {
+  stroke: rgba(154, 218, 245, .26);
+  stroke-width: 1;
+  stroke-dasharray: 6 12;
+  animation: heroRouteCurrent 26s linear infinite;
+}
+
+.travlink-home .travlink-hero__node {
+  fill: rgba(176, 226, 255, .9);
+  stroke: rgba(48, 146, 218, .54);
+  stroke-width: 8;
+  paint-order: stroke;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: heroNodePulse 4.8s ease-in-out infinite;
+  transition: filter 450ms ease, opacity 450ms ease;
+}
+
+.travlink-home .travlink-hero__node:nth-of-type(2) {
+  animation-delay: -1.6s;
+}
+
+.travlink-home .travlink-hero__node:nth-of-type(3) {
+  animation-delay: -3.2s;
+}
+
+.travlink-home .travlink-hero__node--ocean {
+  fill: rgba(108, 197, 233, .75);
+  stroke-width: 6;
+}
+
+.travlink-home .travlink-hero__plane {
+  fill: #bfe8ff;
+  opacity: .72;
+  filter: drop-shadow(0 3px 7px rgba(21, 108, 175, .5));
+}
+
+.travlink-home .travlink-hero__compass {
+  position: absolute;
+  right: 8%;
+  bottom: 12%;
+  width: clamp(76px, 7vw, 108px);
+  height: auto;
+  overflow: visible;
+  opacity: .075;
+  animation: heroCompassDrift 30s ease-in-out infinite alternate;
+}
+
+.travlink-home .travlink-hero__compass circle,
+.travlink-home .travlink-hero__compass path {
+  fill: none;
+  stroke: #d8f1ff;
+  stroke-width: 1.25;
+}
+
+.travlink-home .travlink-hero__compass .travlink-hero__compass-needle {
+  fill: rgba(216, 241, 255, .34);
+}
+
+.travlink-home .travlink-hero__inner {
+  z-index: 4;
+}
+
+.travlink-home .travlink-hero__inner .row {
+  justify-content: flex-start !important;
+}
+
+.travlink-home .travlink-hero__content {
+  max-width: 730px;
+  margin: 0;
+  padding: 44px 0 0 clamp(0px, 1.6vw, 24px);
+  text-align: left;
+}
+
+.travlink-home .travlink-hero__title {
+  max-width: 730px;
+  margin: 0;
+  font-size: clamp(3.35rem, 5.7vw, 5.7rem);
+  line-height: .96;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.travlink-home .travlink-hero__copy {
+  max-width: 590px;
+  margin: 22px 0 0;
+  text-align: left;
+}
+
+.travlink-home .travlink-hero__actions {
+  justify-content: flex-start;
+}
+
+.travlink-home .travlink-hero__scroll {
+  z-index: 5;
+  bottom: 30px;
+}
+
+@media (max-width: 1199.98px) {
+  .travlink-home .travlink-hero__content {
+    max-width: 660px;
+  }
+
+  .travlink-home .travlink-hero__title {
+    font-size: clamp(3.15rem, 6.1vw, 5rem);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .travlink-home .travlink-hero {
+    padding: 132px 0 96px;
+  }
+
+  .travlink-home .travlink-hero__content {
+    max-width: 620px;
+    padding-top: 36px;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .travlink-home .travlink-hero {
+    min-height: 100svh;
+    padding: 110px 0 74px;
+  }
+
+  .travlink-home .travlink-hero::before {
+    background: linear-gradient(180deg, rgba(3, 10, 19, .18) 0%, rgba(3, 10, 19, .3) 50%, rgba(3, 13, 26, .67) 100%);
+  }
+
+  .travlink-home .travlink-hero__media {
+    background-position: 58% center;
+  }
+
+  .travlink-home .travlink-hero__world-map {
+    right: -34%;
+    bottom: 2%;
+    width: 132vw;
+    opacity: .06;
+  }
+
+  .travlink-home .travlink-hero__routes {
+    width: 156%;
+    left: -30%;
+    opacity: .25;
+  }
+
+  .travlink-home .travlink-hero__compass {
+    display: none;
+  }
+
+  .travlink-home .travlink-hero__content,
+  .travlink-home .travlink-hero__title,
+  .travlink-home .travlink-hero__copy {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .travlink-home .travlink-hero__content {
+    padding-top: 24px;
+  }
+
+  .travlink-home .travlink-hero__title {
+    font-size: clamp(2.05rem, 8vw, 3.15rem);
+    white-space: nowrap;
+  }
+
+  .travlink-home .travlink-hero__actions {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 390px) {
+  .travlink-home .travlink-hero__title {
+    font-size: clamp(1.85rem, 8.1vw, 2.45rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travlink-home .travlink-hero__media,
+  .travlink-home .travlink-hero__world-map,
+  .travlink-home .travlink-hero__route,
+  .travlink-home .travlink-hero__ocean-route,
+  .travlink-home .travlink-hero__node,
+  .travlink-home .travlink-hero__plane,
+  .travlink-home .travlink-hero__compass {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .travlink-home .travlink-hero__route--active {
+    stroke-dashoffset: 0;
+  }
+
+  .travlink-home .travlink-hero__plane {
+    display: none;
+  }
+}
+
+@keyframes heroOceanFloat {
+  from { transform: translate3d(0, -2px, 0) scale(1.008); }
+  to { transform: translate3d(0, 2px, 0) scale(1.008); }
+}
+
+@keyframes heroMapDrift {
+  from { transform: translate3d(-3px, 1px, 0); }
+  to { transform: translate3d(4px, -2px, 0); }
+}
+
+@keyframes heroRouteDraw {
+  0%, 7% { stroke-dashoffset: 100; opacity: 0; }
+  12% { opacity: 1; }
+  72%, 86% { stroke-dashoffset: 0; opacity: 1; }
+  96%, 100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+@keyframes heroRouteCurrent {
+  to { stroke-dashoffset: -180; }
+}
+
+@keyframes heroNodePulse {
+  0%, 100% { opacity: .5; transform: scale(.92); }
+  50% { opacity: .95; transform: scale(1.2); }
+}
+
+@keyframes heroCompassDrift {
+  from { transform: translate3d(-2px, 1px, 0) rotate(-1deg); }
+  to { transform: translate3d(3px, -2px, 0) rotate(1deg); }
+}

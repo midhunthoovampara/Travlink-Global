@@ -139,3 +139,170 @@ img { max-width: 100%; height: auto; }
         padding: 13px 0;
     }
 }
+
+/* Home service cards: scale the complete card footprint to 75%. */
+.travlink-home .ca-service-3-cards {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.travlink-home .travlink-service-card,
+.travlink-home .travlink-service-card__content {
+    min-height: 480px;
+}
+
+.travlink-home .travlink-service-card__content {
+    padding: 33px 29px 30px;
+}
+
+.travlink-home .travlink-service-card__title {
+    margin-bottom: 14px;
+    font-size: clamp(2.7rem, 3.75vw, 3.95rem);
+}
+
+.travlink-home .travlink-service-card__description {
+    max-width: 221px;
+    font-size: 13px;
+}
+
+.travlink-home .travlink-service-card__cta {
+    gap: 11px;
+    font-size: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .travlink-home .travlink-service-card,
+    .travlink-home .travlink-service-card__content {
+        min-height: 443px;
+    }
+}
+
+@media (max-width: 767px) {
+    .travlink-home .ca-service-3-cards {
+        width: auto;
+        gap: 12px;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding-right: max(20px, calc((100% - min(58.5vw, 225px)) / 2));
+        padding-left: max(20px, calc((100% - min(58.5vw, 225px)) / 2));
+    }
+
+    .travlink-home .ca-service-3-cards > [class*="col-"] {
+        flex-basis: min(58.5vw, 225px);
+        width: min(58.5vw, 225px);
+    }
+
+    .travlink-home .travlink-service-card,
+    .travlink-home .travlink-service-card__content {
+        min-height: 428px !important;
+        height: 428px;
+    }
+
+    .travlink-home .travlink-service-card__content {
+        padding: 20px 18px;
+    }
+
+    .travlink-home .travlink-service-card__title {
+        font-size: 32px;
+    }
+
+    .travlink-home .travlink-service-card__description {
+        font-size: 12px;
+    }
+}
+
+/* Premium service-card finish and stable image framing. */
+.travlink-home .travlink-service-card {
+    border-color: rgba(15, 35, 58, 0.08);
+    border-radius: 28px;
+    box-shadow: 0 16px 40px rgba(13, 22, 30, 0.09);
+}
+
+.travlink-home .travlink-service-card__image {
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    transform: none;
+}
+
+.travlink-home .travlink-service-card:is(:hover, :focus-visible, .is-active) {
+    box-shadow: 0 24px 58px rgba(13, 22, 30, 0.17);
+}
+
+.travlink-home .travlink-service-card:is(:hover, :focus-visible, .is-active) .travlink-service-card__image,
+.travlink-home .travlink-service-card:not(.is-active) .travlink-service-card__image,
+.travlink-home .travlink-service-card.is-active .travlink-service-card__image {
+    transform: none;
+}
+
+@media (max-width: 767px) {
+    .travlink-home .travlink-service-card {
+        border-radius: 22px;
+    }
+}
+
+/* Keep service imagery and content visible; tighten the section composition. */
+.travlink-home .travlink-service-section {
+    padding-top: 82px !important;
+    padding-bottom: 82px !important;
+}
+
+.travlink-home .travlink-service-intro {
+    margin-bottom: 48px !important;
+}
+
+.travlink-home .ca-service-3-cards {
+    --bs-gutter-x: 18px;
+    --bs-gutter-y: 18px;
+}
+
+.travlink-home .travlink-service-card::after {
+    z-index: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 16, 28, 0.16) 0%,
+        rgba(7, 16, 28, 0.4) 52%,
+        rgba(7, 16, 28, 0.82) 100%
+    );
+    opacity: 1 !important;
+}
+
+.travlink-home .travlink-service-card__image {
+    z-index: -1;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.travlink-home .travlink-service-card__content {
+    position: relative;
+    z-index: 1;
+}
+
+.travlink-home .travlink-service-card .travlink-service-card__title,
+.travlink-home .travlink-service-card .travlink-service-card__cta {
+    color: #fff;
+}
+
+.travlink-home .travlink-service-card .travlink-service-card__description {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.travlink-home .travlink-service-card .travlink-service-card__cta {
+    border-color: rgba(255, 255, 255, 0.62);
+}
+
+@media (max-width: 767px) {
+    .travlink-home .travlink-service-section {
+        padding-top: 58px !important;
+        padding-bottom: 58px !important;
+    }
+
+    .travlink-home .travlink-service-intro {
+        margin-bottom: 32px !important;
+    }
+
+    .travlink-home .ca-service-3-cards {
+        gap: 14px;
+    }
+}
