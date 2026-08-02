@@ -1,5 +1,5 @@
-/* Home: refined editorial footer. Content and destinations remain unchanged. */
-.travlink-home .travlink-footer {
+/* Shared refined editorial footer. Content and destinations remain unchanged. */
+.travlink-react-page .travlink-footer {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -12,7 +12,7 @@
   color: #f4f8fb;
 }
 
-.travlink-home .travlink-footer::before {
+.travlink-react-page .travlink-footer::before {
   position: absolute;
   top: -16%;
   right: -7%;
@@ -26,7 +26,7 @@
   filter: drop-shadow(0 0 20px rgba(78, 170, 229, .18));
 }
 
-.travlink-home .travlink-footer::after {
+.travlink-react-page .travlink-footer::after {
   position: absolute;
   top: 0;
   right: 8%;
@@ -38,26 +38,26 @@
   box-shadow: 0 0 22px rgba(63, 158, 220, .15);
 }
 
-.travlink-home .travlink-footer > .container {
+.travlink-react-page .travlink-footer > .container {
   position: relative;
   z-index: 1;
   max-width: 1240px;
 }
 
-.travlink-home .travlink-footer__top {
+.travlink-react-page .travlink-footer__top {
   display: grid;
   grid-template-columns: minmax(280px, 1.55fr) .78fr .78fr minmax(220px, 1.1fr);
   gap: clamp(34px, 4vw, 60px);
   padding: 78px 0 64px;
 }
 
-.travlink-home .travlink-footer__brand {
+.travlink-react-page .travlink-footer__brand {
   position: relative;
   padding-right: clamp(30px, 4vw, 58px);
   border-right: 1px solid rgba(255, 255, 255, .09);
 }
 
-.travlink-home .travlink-footer__logo {
+.travlink-react-page .travlink-footer__logo {
   display: inline-flex;
   width: clamp(172px, 15vw, 208px);
   padding: 2px 0;
@@ -65,18 +65,18 @@
   transition: opacity 300ms ease, transform 300ms ease;
 }
 
-.travlink-home .travlink-footer__logo:hover {
+.travlink-react-page .travlink-footer__logo:hover {
   opacity: 1;
   transform: translateY(-2px);
 }
 
-.travlink-home .travlink-footer__logo img {
+.travlink-react-page .travlink-footer__logo img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.travlink-home .travlink-footer__description {
+.travlink-react-page .travlink-footer__description {
   max-width: 355px;
   margin: 25px 0 0;
   color: rgba(224, 235, 244, .68);
@@ -87,13 +87,13 @@
   letter-spacing: .005em;
 }
 
-.travlink-home .travlink-footer__socials {
+.travlink-react-page .travlink-footer__socials {
   display: flex;
   gap: 11px;
   margin-top: 27px;
 }
 
-.travlink-home .travlink-footer__socials a {
+.travlink-react-page .travlink-footer__socials a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -110,8 +110,8 @@
   transition: color 300ms ease, border-color 300ms ease, background-color 300ms ease, box-shadow 300ms ease, transform 300ms cubic-bezier(.22, 1, .36, 1);
 }
 
-.travlink-home .travlink-footer__socials a:hover,
-.travlink-home .travlink-footer__socials a:focus-visible {
+.travlink-react-page .travlink-footer__socials a:hover,
+.travlink-react-page .travlink-footer__socials a:focus-visible {
   border-color: rgba(91, 181, 240, .76);
   background: rgba(41, 134, 201, .28);
   box-shadow: 0 10px 26px rgba(0, 0, 0, .2), 0 0 0 4px rgba(77, 163, 255, .08);
@@ -120,11 +120,11 @@
   transform: translateY(-3px);
 }
 
-.travlink-home .travlink-footer__column {
+.travlink-react-page .travlink-footer__column {
   padding-top: 8px;
 }
 
-.travlink-home .travlink-footer__column h2 {
+.travlink-react-page .travlink-footer__column h2 {
   position: relative;
   margin: 0 0 27px;
   padding-bottom: 13px;
@@ -137,7 +137,7 @@
   text-transform: none;
 }
 
-.travlink-home .travlink-footer__column h2::after {
+.travlink-react-page .travlink-footer__column h2::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -148,18 +148,18 @@
   box-shadow: 0 0 10px rgba(70, 159, 221, .2);
 }
 
-.travlink-home .travlink-footer__column ul {
+.travlink-react-page .travlink-footer__column ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.travlink-home .travlink-footer__column li + li {
+.travlink-react-page .travlink-footer__column li + li {
   margin-top: 12px;
 }
 
-.travlink-home .travlink-footer__column a,
-.travlink-home .travlink-footer__legal a {
+.travlink-react-page .travlink-footer__column a,
+.travlink-react-page .travlink-footer__legal a {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -173,8 +173,8 @@
   transition: color 280ms ease, transform 280ms cubic-bezier(.22, 1, .36, 1);
 }
 
-.travlink-home .travlink-footer__column a::after,
-.travlink-home .travlink-footer__legal a::after {
+.travlink-react-page .travlink-footer__column a::after,
+.travlink-react-page .travlink-footer__legal a::after {
   right: auto;
   bottom: -4px;
   left: 0;
@@ -182,28 +182,28 @@
   background: linear-gradient(90deg, #4da3ff, rgba(77, 163, 255, .15));
 }
 
-.travlink-home .travlink-footer__column a:hover,
-.travlink-home .travlink-footer__column a:focus-visible,
-.travlink-home .travlink-footer__legal a:hover,
-.travlink-home .travlink-footer__legal a:focus-visible {
+.travlink-react-page .travlink-footer__column a:hover,
+.travlink-react-page .travlink-footer__column a:focus-visible,
+.travlink-react-page .travlink-footer__legal a:hover,
+.travlink-react-page .travlink-footer__legal a:focus-visible {
   color: #fff;
   outline: 0;
   transform: translateX(3px);
 }
 
-.travlink-home .travlink-footer__contact i {
+.travlink-react-page .travlink-footer__contact i {
   width: 17px;
   color: #62b4ed;
   font-size: 14px;
   text-align: center;
 }
 
-.travlink-home .travlink-footer__contact a {
+.travlink-react-page .travlink-footer__contact a {
   max-width: 100%;
   overflow-wrap: anywhere;
 }
 
-.travlink-home .travlink-footer__bottom {
+.travlink-react-page .travlink-footer__bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -213,7 +213,7 @@
   border-top: 1px solid rgba(255, 255, 255, .09);
 }
 
-.travlink-home .travlink-footer__bottom p {
+.travlink-react-page .travlink-footer__bottom p {
   margin: 0;
   color: rgba(211, 226, 237, .5);
   font-family: "Outfit", sans-serif;
@@ -222,7 +222,7 @@
   letter-spacing: .02em;
 }
 
-.travlink-home .travlink-footer__legal {
+.travlink-react-page .travlink-footer__legal {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -230,52 +230,52 @@
   white-space: nowrap;
 }
 
-.travlink-home .travlink-footer__legal a {
+.travlink-react-page .travlink-footer__legal a {
   color: rgba(211, 226, 237, .54);
   font-size: 12.5px;
 }
 
 @media (max-width: 991.98px) {
-  .travlink-home .travlink-footer__top {
+  .travlink-react-page .travlink-footer__top {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 48px 52px;
     padding: 66px 0 52px;
   }
 
-  .travlink-home .travlink-footer__brand {
+  .travlink-react-page .travlink-footer__brand {
     grid-column: 1 / -1;
     padding: 0 0 38px;
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, .09);
   }
 
-  .travlink-home .travlink-footer__description {
+  .travlink-react-page .travlink-footer__description {
     max-width: 470px;
   }
 
-  .travlink-home .travlink-footer__contact {
+  .travlink-react-page .travlink-footer__contact {
     grid-column: 1 / -1;
   }
 }
 
 @media (max-width: 575.98px) {
-  .travlink-home .travlink-footer {
+  .travlink-react-page .travlink-footer {
     padding: 0;
   }
 
-  .travlink-home .travlink-footer .container {
+  .travlink-react-page .travlink-footer .container {
     padding-right: 22px;
     padding-left: 22px;
   }
 
-  .travlink-home .travlink-footer::before {
+  .travlink-react-page .travlink-footer::before {
     top: 4%;
     right: -48%;
     width: 160vw;
     opacity: .04;
   }
 
-  .travlink-home .travlink-footer__top {
+  .travlink-react-page .travlink-footer__top {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 38px 24px;
@@ -284,59 +284,59 @@
     overflow: visible;
   }
 
-  .travlink-home .travlink-footer__top > * {
+  .travlink-react-page .travlink-footer__top > * {
     min-width: 0;
   }
 
-  .travlink-home .travlink-footer__brand {
+  .travlink-react-page .travlink-footer__brand {
     grid-column: 1 / -1;
     padding-bottom: 34px;
   }
 
-  .travlink-home .travlink-footer__logo {
+  .travlink-react-page .travlink-footer__logo {
     width: 174px;
   }
 
-  .travlink-home .travlink-footer__description {
+  .travlink-react-page .travlink-footer__description {
     max-width: 330px;
     margin-top: 21px;
     font-size: 13.5px;
     line-height: 1.7;
   }
 
-  .travlink-home .travlink-footer__socials {
+  .travlink-react-page .travlink-footer__socials {
     margin-top: 23px;
   }
 
-  .travlink-home .travlink-footer__socials a {
+  .travlink-react-page .travlink-footer__socials a {
     width: 40px;
     height: 40px;
   }
 
-  .travlink-home .travlink-footer__column {
+  .travlink-react-page .travlink-footer__column {
     min-width: 0;
     padding-top: 0;
   }
 
-  .travlink-home .travlink-footer__column h2 {
+  .travlink-react-page .travlink-footer__column h2 {
     margin-bottom: 21px;
     font-size: 20px;
   }
 
-  .travlink-home .travlink-footer__column li + li {
+  .travlink-react-page .travlink-footer__column li + li {
     margin-top: 9px;
   }
 
-  .travlink-home .travlink-footer__column a {
+  .travlink-react-page .travlink-footer__column a {
     font-size: 13.5px;
   }
 
-  .travlink-home .travlink-footer__contact {
+  .travlink-react-page .travlink-footer__contact {
     grid-column: 1 / -1;
     padding-top: 4px;
   }
 
-  .travlink-home .travlink-footer__bottom {
+  .travlink-react-page .travlink-footer__bottom {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -346,17 +346,17 @@
     padding: 21px 0 27px;
   }
 
-  .travlink-home .travlink-footer__legal {
+  .travlink-react-page .travlink-footer__legal {
     justify-content: flex-start;
     gap: 10px 19px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .travlink-home .travlink-footer__logo,
-  .travlink-home .travlink-footer__socials a,
-  .travlink-home .travlink-footer__column a,
-  .travlink-home .travlink-footer__legal a {
+  .travlink-react-page .travlink-footer__logo,
+  .travlink-react-page .travlink-footer__socials a,
+  .travlink-react-page .travlink-footer__column a,
+  .travlink-react-page .travlink-footer__legal a {
     transition: none !important;
   }
 }

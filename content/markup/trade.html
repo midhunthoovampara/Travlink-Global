@@ -36,7 +36,6 @@
                 <ul class="sub-menu">
                   <li><a href="/travel/">Travel</a></li>
                   <li><a href="/trade/">Trade</a></li>
-                  <li><a href="/shipping/">Shipping</a></li>
                 </ul>
               </li>
 
@@ -210,80 +209,126 @@
     aria-labelledby="trade-services-title"
   >
     <div class="container">
-      <div class="travlink-trade-services__layout">
-        <div class="travlink-trade-services__intro">
-          <span class="travlink-trade-eyebrow">Trade Services</span>
-          <h2 id="trade-services-title">
-            From the right supplier <em>to the final delivery.</em>
-          </h2>
-          <img
-            src="/img/service/trade.jpg"
-            alt="International trade and sourcing coordination"
-          />
+      <div class="travlink-trade-journey__masthead">
+      <article class="travlink-trade-origin travlink-trade-origin--china" aria-label="China sourcing hubs">
+        <div class="travlink-trade-origin__map" aria-hidden="true">
+          <svg viewBox="0 0 180 120" focusable="false">
+            <path d="M31 46 42 27 65 23 77 12 96 21 117 17 132 28 151 35 145 49 157 61 139 72 132 92 111 91 101 106 81 97 66 103 55 88 37 82 42 67 25 59Z" />
+            <circle cx="119" cy="77" r="3"/><circle cx="130" cy="68" r="3"/>
+            <circle cx="107" cy="57" r="3"/><circle cx="80" cy="61" r="3"/>
+          </svg>
         </div>
-        <div class="travlink-trade-services__list">
-          <article>
-            <i class="fa-solid fa-box-open" aria-hidden="true"></i>
-            <h3>Product Sourcing</h3>
-            <span
-              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></span>
-          </article>
-          <article>
-            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
-            <h3>Supplier Identification</h3>
-            <span
-              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></span>
-          </article>
-          <article>
-            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-            <h3>Supplier Verification</h3>
-            <span
-              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></span>
-          </article>
-          <article>
-            <i class="fa-solid fa-industry" aria-hidden="true"></i>
-            <h3>Factory Coordination</h3>
-            <span
-              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></span>
-          </article>
-          <article>
-            <i
-              class="fa-solid fa-arrow-right-to-bracket"
+        <div><h3>China</h3><p>Guangzhou · Shenzhen · Yiwu · Shanghai</p></div>
+      </article>
+
+      <header class="travlink-trade-journey__intro">
+        <span class="travlink-trade-eyebrow">Trade Services</span>
+        <h2 id="trade-services-title">
+          From the right supplier <em>to final delivery.</em>
+        </h2>
+        <p>
+          We manage every stage of your sourcing journey &mdash; from trusted
+          manufacturers in China and Vietnam to documentation, visits,
+          exhibitions, and delivery.
+        </p>
+      </header>
+        <article class="travlink-trade-origin travlink-trade-origin--vietnam" aria-label="Vietnam sourcing hubs">
+          <div class="travlink-trade-origin__map travlink-trade-origin__map--vietnam" aria-hidden="true">
+            <svg viewBox="0 0 100 160" focusable="false">
+              <path d="M53 8 67 19 61 34 68 48 58 61 66 77 57 93 63 108 51 126 55 145 42 153 34 136 40 119 34 101 43 85 36 67 45 51 39 34 47 20Z" />
+              <circle cx="54" cy="29" r="3" /><circle cx="49" cy="127" r="3" />
+            </svg>
+          </div>
+          <div><h3>Vietnam</h3><p>Hanoi · Ho Chi Minh City</p></div>
+        </article>
+      </div>
+
+      <div
+        class="travlink-trade-journey"
+        aria-label="Trade services from sourcing to final delivery"
+      >
+        <div class="travlink-trade-journey__viewport">
+          <div class="travlink-trade-journey__canvas" style="--route-progress: 12">
+            <svg
+              class="travlink-trade-journey__route"
+              viewBox="0 0 1240 650"
+              preserveAspectRatio="none"
               aria-hidden="true"
-            ></i>
-            <h3>Import Consultation</h3>
-            <span
-              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></span>
-          </article>
-          <article>
-            <i
-              class="fa-solid fa-arrow-right-from-bracket"
-              aria-hidden="true"
-            ></i>
-            <h3>Export Consultation</h3>
-            <span
-              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></span>
-          </article>
-          <article>
-            <i class="fa-solid fa-users" aria-hidden="true"></i>
-            <h3>Business Networking</h3>
-            <span
-              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></span>
-          </article>
-          <article>
-            <i class="fa-solid fa-globe" aria-hidden="true"></i>
-            <h3>International Procurement</h3>
-            <span
-              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></span>
-          </article>
+              focusable="false"
+            >
+              <defs>
+                <path
+                  id="travlinkTradeRoutePath"
+                  pathLength="100"
+                  d="M90 178 C190 115 295 115 390 174 S560 225 650 170 S830 112 945 174 S1160 230 1130 345 C1105 445 1000 470 900 423 S730 370 630 423 S450 475 350 423 S160 385 145 500 C135 565 270 578 465 565 S600 550 625 552"
+                />
+              </defs>
+              <use href="#travlinkTradeRoutePath" class="travlink-trade-journey__route-base" />
+              <use href="#travlinkTradeRoutePath" class="travlink-trade-journey__route-progress" />
+              <g class="travlink-trade-journey__cargo">
+                <rect x="-12" y="-8" width="24" height="16" rx="3" />
+                <path d="M-7-3H7M-7 2H7M0-7V7" />
+                <animateMotion dur="24s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#travlinkTradeRoutePath" />
+                </animateMotion>
+              </g>
+            </svg>
+
+            <div class="travlink-trade-journey__steps">
+              <button class="travlink-trade-step is-active" type="button" data-progress="13" aria-pressed="true">
+                <span class="travlink-trade-step__number">01</span>
+                <span class="travlink-trade-step__icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></span>
+                <strong>Product Sourcing</strong>
+                <!-- <span class="travlink-trade-step__description">We identify trusted manufacturers that match your product requirements.</span> -->
+              </button>
+              <button class="travlink-trade-step" type="button" data-progress="26" aria-pressed="false">
+                <span class="travlink-trade-step__number">02</span>
+                <span class="travlink-trade-step__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+                <strong>Supplier Verification</strong>
+                <!-- <span class="travlink-trade-step__description">We verify credibility, quality, certifications, and production capability.</span> -->
+              </button>
+              <button class="travlink-trade-step" type="button" data-progress="39" aria-pressed="false">
+                <span class="travlink-trade-step__number">03</span>
+                <span class="travlink-trade-step__icon"><i class="fa-solid fa-box" aria-hidden="true"></i></span>
+                <strong>Sample Verification</strong>
+                <!-- <span class="travlink-trade-step__description">We review samples before production so quality meets your standards.</span> -->
+              </button>
+              <button class="travlink-trade-step" type="button" data-progress="52" aria-pressed="false">
+                <span class="travlink-trade-step__number">04</span>
+                <span class="travlink-trade-step__icon"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></span>
+                <strong>Export Documentation</strong>
+                <!-- <span class="travlink-trade-step__description">We support export and customs documentation for a smoother transaction.</span> -->
+              </button>
+              <button class="travlink-trade-step" type="button" data-progress="65" aria-pressed="false">
+                <span class="travlink-trade-step__number">05</span>
+                <span class="travlink-trade-step__icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></span>
+                <strong>Factory Visit</strong>
+                <!-- <span class="travlink-trade-step__description">We arrange inspections and visits for first-hand production insight.</span> -->
+              </button>
+              <button class="travlink-trade-step" type="button" data-progress="78" aria-pressed="false">
+                <span class="travlink-trade-step__number">06</span>
+                <span class="travlink-trade-step__icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></span>
+                <strong>Business Delegation</strong>
+                <!-- <span class="travlink-trade-step__description">We coordinate meetings, delegations, and valuable business introductions.</span> -->
+              </button>
+              <button class="travlink-trade-step" type="button" data-progress="90" aria-pressed="false">
+                <span class="travlink-trade-step__number">07</span>
+                <span class="travlink-trade-step__icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
+                <strong>Trade Exhibition Assistance</strong>
+                <!-- <span class="travlink-trade-step__description">We support international exhibitions, trade fairs, and supplier meetings.</span> -->
+              </button>
+              <div class="travlink-trade-delivery" aria-label="Final delivery">
+                <span><i class="fa-solid fa-earth-asia" aria-hidden="true"></i></span>
+                <div><strong>Final Delivery</strong><small>We ensure your products are delivered safely to your destination, on time and with complete support.</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="travlink-trade-trust" aria-label="Why choose Travlink Global trade services">
+          <div><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i><span><strong>End-to-End Support</strong><small>We manage the complete process so you can focus on your business.</small></span></div>
+          <div><i class="fa-solid fa-handshake" aria-hidden="true"></i><span><strong>Trusted Supplier Network</strong><small>Verified supplier and partner relationships.</small></span></div>
+          <div><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span><strong>Quality Assurance</strong><small>Every stage checked for quality and reliability.</small></span></div>
+          <div><i class="fa-solid fa-globe" aria-hidden="true"></i><span><strong>Global Reach</strong><small>Connecting China, Vietnam, and your destination.</small></span></div>
         </div>
       </div>
     </div>
@@ -493,7 +538,7 @@
         </a>
         <p class="travlink-footer__description">
           Connecting people and businesses across borders through trusted
-          travel, trade, and shipping solutions.
+          travel and trade solutions.
         </p>
         <div class="travlink-footer__socials" aria-label="Social media links">
           <a
@@ -530,7 +575,6 @@
           <li><a href="/about/">About</a></li>
           <li><a href="/travel/">Travel</a></li>
           <li><a href="/trade/">Trade</a></li>
-          <li><a href="/shipping/">Shipping</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
@@ -540,7 +584,6 @@
         <ul>
           <li><a href="/travel/">Travel</a></li>
           <li><a href="/trade/">Trade</a></li>
-          <li><a href="/shipping/">Shipping</a></li>
         </ul>
       </nav>
 
@@ -600,3 +643,4 @@
 <script src="/js/main.js"></script>
 <script src="/js/scroll-motion.js"></script>
 <script src="/js/mobile-navigation.js"></script>
+<script src="/js/trade-sourcing-journey.js"></script>

@@ -36,7 +36,6 @@
                 <ul class="sub-menu">
                   <li><a href="/travel/">Travel</a></li>
                   <li><a href="/trade/">Trade</a></li>
-                  <li><a href="/shipping/">Shipping</a></li>
                 </ul>
               </li>
 
@@ -256,47 +255,147 @@
         id="travel-packages"
         aria-labelledby="travel-packages-title"
       >
-        <div class="travlink-travel-feature__image">
-          <img
-            src="/img/service/travell.jpg"
-            alt="Airplane wing above a city skyline, representing international travel"
-          />
-        </div>
-        <div class="travlink-travel-feature__content">
+        <header class="travlink-packages-editorial__intro">
           <span class="travlink-travel-eyebrow">Travel Packages</span>
           <h2 id="travel-packages-title">
             Holidays, business trips, <em>and everything in between.</em>
           </h2>
-          <div class="travlink-package-list">
-            <article class="travlink-package-item">
-              <i class="fa-regular fa-map" aria-hidden="true"></i>
-              <div><h3>International Tour Packages</h3></div>
-            </article>
-            <article class="travlink-package-item">
-              <i class="fa-solid fa-bed" aria-hidden="true"></i>
-              <div><h3>Hotel Bookings</h3></div>
-            </article>
-            <article class="travlink-package-item">
-              <i class="fa-solid fa-car-side" aria-hidden="true"></i>
-              <div><h3>Airport Transfers</h3></div>
-            </article>
-            <article class="travlink-package-item">
-              <i class="fa-solid fa-anchor" aria-hidden="true"></i>
-              <div><h3>Leisure Activities</h3></div>
-            </article>
-            <article class="travlink-package-item">
-              <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-              <div><h3>Holiday Planning</h3></div>
-            </article>
-            <article class="travlink-package-item">
-              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
-              <div><h3>Business Travel</h3></div>
-            </article>
-            <article class="travlink-package-item">
-              <i class="fa-solid fa-route" aria-hidden="true"></i>
-              <div><h3>Customized Itineraries</h3></div>
-            </article>
-          </div>
+          <p>
+            Travel, planned around you &mdash; from essential arrangements to
+            rare experiences across land, sea, and sky.
+          </p>
+        </header>
+
+        <div class="travlink-packages-route" aria-hidden="true">
+          <svg viewBox="0 0 1120 132" focusable="false">
+            <defs>
+              <linearGradient id="travlinkRouteFade" x1="0" x2="1">
+                <stop offset="0" stop-color="#2f9fe6" stop-opacity="0" />
+                <stop offset=".18" stop-color="#2f9fe6" stop-opacity=".58" />
+                <stop offset=".82" stop-color="#0e47a1" stop-opacity=".58" />
+                <stop offset="1" stop-color="#0e47a1" stop-opacity="0" />
+              </linearGradient>
+              <path
+                id="travlinkPackageRoutePath"
+                d="M18 94 C220 8 370 122 555 60 S884 10 1102 76"
+              />
+            </defs>
+            <use
+              href="#travlinkPackageRoutePath"
+              class="travlink-packages-route__line"
+              stroke="url(#travlinkRouteFade)"
+            />
+            <circle cx="214" cy="48" r="4" />
+            <circle cx="555" cy="60" r="4" />
+            <circle cx="906" cy="35" r="4" />
+            <g class="travlink-packages-route__aircraft">
+              <path d="M0-3 16 0 0 3 4 12-1 12-7 3-14 2-14-2-7-3-1-12 4-12Z" />
+              <animateMotion dur="26s" repeatCount="indefinite" rotate="auto">
+                <mpath href="#travlinkPackageRoutePath" />
+              </animateMotion>
+            </g>
+          </svg>
+        </div>
+
+        <div class="travlink-package-categories">
+          <article class="travlink-package-category">
+            <figure class="travlink-package-category__media">
+              <img
+                src="/img/service/travel-packages/essential-travel-editorial-v1.png"
+                width="1672"
+                height="941"
+                loading="lazy"
+                decoding="async"
+                alt="Business traveller in a premium airport lounge overlooking a long-haul aircraft"
+              />
+            </figure>
+            <div class="travlink-package-category__content">
+              <span class="travlink-package-category__number">01</span>
+              <span class="travlink-travel-eyebrow">Travel Planning</span>
+              <h3>Essential Travel</h3>
+              <p>Travel made simple, considered, and seamless from planning to arrival.</p>
+              <div class="travlink-package-category__services">
+                <div class="travlink-package-item"><i class="fa-regular fa-map" aria-hidden="true"></i><h4>International Tour Packages</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-plane-departure" aria-hidden="true"></i><h4>Flight Assistance</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-hotel" aria-hidden="true"></i><h4>Hotel &amp; Accommodation Assistance</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i><h4>Travel Insurance</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><h4>Business Travel</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-route" aria-hidden="true"></i><h4>Customised Itineraries</h4></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="travlink-package-category travlink-package-category--reverse travlink-package-category--dark">
+            <figure class="travlink-package-category__media">
+              <img
+                src="/img/service/travel-packages/luxury-experiences-editorial-v1.png"
+                width="1672"
+                height="941"
+                loading="lazy"
+                decoding="async"
+                alt="Private jet beside a sapphire coast with a luxury yacht beyond"
+              />
+            </figure>
+            <div class="travlink-package-category__content">
+              <span class="travlink-package-category__number">02</span>
+              <span class="travlink-travel-eyebrow">Private Access</span>
+              <h3>Luxury Experiences</h3>
+              <p>Exceptional journeys shaped around privacy, freedom, and effortless movement.</p>
+              <div class="travlink-package-category__services">
+                <div class="travlink-package-item"><i class="fa-solid fa-plane" aria-hidden="true"></i><h4>Private Jet Charter</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-ship" aria-hidden="true"></i><h4>Yacht Charter</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-sailboat" aria-hidden="true"></i><h4>Sailboat Experiences</h4></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="travlink-package-category travlink-package-category--ocean">
+            <figure class="travlink-package-category__media">
+              <img
+                src="/img/service/travel-packages/ocean-experiences-editorial-v1.png"
+                width="1672"
+                height="941"
+                loading="lazy"
+                decoding="async"
+                alt="Secluded tropical cove with a kayak, clear water, and distant sailboat"
+              />
+            </figure>
+            <div class="travlink-package-category__content">
+              <span class="travlink-package-category__number">03</span>
+              <span class="travlink-travel-eyebrow">Beyond the Shore</span>
+              <h3>Ocean Experiences</h3>
+              <p>Discover island horizons and clear-water adventures at your own pace.</p>
+              <div class="travlink-package-category__services">
+                <div class="travlink-package-item"><i class="fa-solid fa-umbrella-beach" aria-hidden="true"></i><h4>Island Hopping</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-water" aria-hidden="true"></i><h4>Surfing</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-mask-face" aria-hidden="true"></i><h4>Snorkelling</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-person-swimming" aria-hidden="true"></i><h4>Kayaking</h4></div>
+                <div class="travlink-package-item"><i class="fa-solid fa-fish-fins" aria-hidden="true"></i><h4>Scuba Diving</h4></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="travlink-package-category travlink-package-category--reverse travlink-package-category--adventure">
+            <figure class="travlink-package-category__media">
+              <img
+                src="/img/service/travel-packages/adventure-experiences-editorial-v1.png"
+                width="1672"
+                height="941"
+                loading="lazy"
+                decoding="async"
+                alt="Trekker following a high mountain ridge at first light"
+              />
+            </figure>
+            <div class="travlink-package-category__content">
+              <span class="travlink-package-category__number">04</span>
+              <span class="travlink-travel-eyebrow">The Path Less Travelled</span>
+              <h3>Adventure Experiences</h3>
+              <p>Go further with a carefully considered journey into extraordinary terrain.</p>
+              <div class="travlink-package-category__services">
+                <div class="travlink-package-item"><i class="fa-solid fa-person-hiking" aria-hidden="true"></i><h4>Trekking</h4></div>
+              </div>
+            </div>
+          </article>
         </div>
       </article>
 
@@ -328,9 +427,9 @@
             class="travlink-country-showcase"
             aria-labelledby="visa-country-title"
           >
-            <span class="travlink-country-showcase__label"
-              >Countries We Assist</span
-            >
+            <!-- <span class="travlink-country-showcase__label"
+              >Countries We Assist</span -->
+
             <h3 id="visa-country-title">
               Visa Assistance <em>Across Multiple Destinations</em>
             </h3>
@@ -682,7 +781,7 @@
         </a>
         <p class="travlink-footer__description">
           Connecting people and businesses across borders through trusted
-          travel, trade, and shipping solutions.
+          travel and trade solutions.
         </p>
         <div class="travlink-footer__socials" aria-label="Social media links">
           <a
@@ -719,7 +818,6 @@
           <li><a href="/about/">About</a></li>
           <li><a href="/travel/">Travel</a></li>
           <li><a href="/trade/">Trade</a></li>
-          <li><a href="/shipping/">Shipping</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
@@ -729,7 +827,6 @@
         <ul>
           <li><a href="/travel/">Travel</a></li>
           <li><a href="/trade/">Trade</a></li>
-          <li><a href="/shipping/">Shipping</a></li>
         </ul>
       </nav>
 
@@ -789,3 +886,4 @@
 <script src="/js/main.js"></script>
 <script src="/js/scroll-motion.js"></script>
 <script src="/js/mobile-navigation.js"></script>
+<script src="/js/travel-country-carousel.js"></script>

@@ -152,10 +152,12 @@ html { scroll-behavior: smooth; }
 .travlink-country-showcase__label { display: block; color: #0e47a1; font: 700 10px/1 Inter, Outfit, sans-serif; letter-spacing: .19em; text-transform: uppercase; }
 .travlink-country-showcase h3 { max-width: 520px; margin: 13px 0 22px; color: #111827; font: 500 clamp(28px, 2.3vw, 36px)/1.05 "Cormorant Garamond", Georgia, serif; letter-spacing: -.025em; }
 .travlink-country-showcase h3 em { color: #0e47a1; font-weight: 400; font-style: italic; }
-.travlink-country-carousel { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); }
-.travlink-country-carousel__track { display: flex; width: max-content; animation: travlinkCountryMarquee 40s linear infinite; will-change: transform; }
+.travlink-country-carousel { width: 100%; margin-block: -14px; padding-block: 14px; overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); }
+.travlink-country-carousel__track { display: flex; width: max-content; animation: travlinkCountryMarquee 26s linear infinite; will-change: transform; }
 .travlink-country-carousel__group { display: flex; flex-shrink: 0; gap: 16px; padding-right: 16px; }
-.travlink-country-card { position: relative; flex: 0 0 190px; width: 190px; height: 125px; overflow: hidden; border: 1px solid rgba(15,23,42,.08); border-radius: 14px; background: #f8fafc; box-shadow: 0 8px 22px rgba(15,23,42,.06); }
+.travlink-country-card { position: relative; flex: 0 0 190px; width: 190px; height: 125px; overflow: hidden; border: 1px solid rgba(15,23,42,.08); border-radius: 14px; background: #f8fafc; box-shadow: 0 8px 22px rgba(15,23,42,.06); transform-origin: center; transition: transform .48s cubic-bezier(.22,1,.36,1), border-color .48s ease, box-shadow .48s ease; }
+.travlink-country-card.is-centered { z-index: 3; border-color: rgba(47,159,230,.52); box-shadow: 0 16px 34px rgba(14,71,161,.2); transform: scale(1.075); }
+.travlink-country-card.is-centered img { transform: scale(1.04); }
 .travlink-country-card::after { position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, rgba(4,10,20,.04) 30%, rgba(4,10,20,.72) 100%); content: ""; pointer-events: none; }
 .travlink-country-card img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s cubic-bezier(.22,1,.36,1); }
 .travlink-country-card__name { position: absolute; z-index: 2; right: 14px; bottom: 12px; left: 14px; color: #fff; font: 600 14px/1.2 Outfit, Inter, sans-serif; }
@@ -197,7 +199,7 @@ html { scroll-behavior: smooth; }
     .travlink-country-showcase { margin-top: 29px; padding-top: 24px; }
     .travlink-country-showcase h3 { margin-bottom: 19px; font-size: clamp(27px, 7vw, 33px); }
     .travlink-country-carousel { margin-right: -4px; -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent); mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent); }
-    .travlink-country-carousel__track { animation-duration: 30s; }
+    .travlink-country-carousel__track { animation-duration: 20s; }
     .travlink-country-carousel__group { gap: 12px; padding-right: 12px; }
     .travlink-country-card { flex-basis: 155px; width: 155px; height: 105px; border-radius: 12px; }
     .travlink-country-card__name { right: 12px; bottom: 10px; left: 12px; font-size: 13px; }
@@ -211,5 +213,5 @@ html { scroll-behavior: smooth; }
     .travlink-country-carousel { overflow-x: auto; -webkit-mask-image: none; mask-image: none; scrollbar-width: none; }
     .travlink-country-carousel::-webkit-scrollbar { display: none; }
     .travlink-country-carousel__track { animation: none; transform: none; }
-    .travlink-country-card img { transition: none; }
+    .travlink-country-card, .travlink-country-card img { transition: none; }
 }

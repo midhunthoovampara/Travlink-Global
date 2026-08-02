@@ -1,0 +1,249 @@
+/* Premium editorial treatment scoped to the Travel Packages feature. */
+.travlink-travel-feature--packages {
+  display: block;
+  width: 100%;
+}
+
+.travlink-packages-editorial__intro {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.travlink-travel-feature--packages .travlink-packages-editorial__intro h2 {
+  max-width: 760px;
+  margin: 20px auto 0;
+}
+
+.travlink-packages-editorial__intro > p {
+  max-width: 610px;
+  margin: 20px auto 0;
+  color: #647184;
+  font: 400 16px/1.75 Outfit, Inter, sans-serif;
+}
+
+.travlink-packages-route {
+  width: min(100%, 1120px);
+  height: 132px;
+  margin: 34px auto 20px;
+  opacity: .68;
+  overflow: hidden;
+}
+
+.travlink-packages-route svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.travlink-packages-route__line {
+  fill: none;
+  stroke-width: 1.4;
+  stroke-dasharray: 6 9;
+  animation: travlinkPackageRoute 18s linear infinite;
+}
+
+.travlink-packages-route circle {
+  fill: #fff;
+  stroke: rgba(14, 71, 161, .58);
+  stroke-width: 1.5;
+}
+
+.travlink-packages-route__aircraft {
+  fill: #0e47a1;
+  filter: drop-shadow(0 3px 5px rgba(14, 71, 161, .22));
+}
+
+.travlink-package-categories {
+  display: grid;
+  gap: clamp(72px, 8vw, 116px);
+}
+
+.travlink-package-category {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+  min-height: 590px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, .09);
+  border-radius: 28px;
+  background: #f8fafc;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, .08);
+}
+
+.travlink-package-category--reverse {
+  grid-template-columns: minmax(360px, .92fr) minmax(0, 1.08fr);
+}
+
+.travlink-package-category--reverse .travlink-package-category__media {
+  order: 2;
+}
+
+.travlink-package-category__media {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #dce5ed;
+}
+
+.travlink-package-category__media::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(4, 15, 34, .02), rgba(4, 15, 34, .2));
+  content: "";
+  pointer-events: none;
+  transition: opacity .6s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-package-category__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .9s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-package-category__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: clamp(42px, 5vw, 72px);
+}
+
+.travlink-package-category__number {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  color: rgba(14, 71, 161, .16);
+  font: 500 54px/1 "Cormorant Garamond", Georgia, serif;
+}
+
+.travlink-package-category__content > h3 {
+  max-width: 480px;
+  margin: 17px 0 0;
+  color: #101827;
+  font: 500 clamp(42px, 4vw, 58px)/.98 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -.035em;
+}
+
+.travlink-package-category__content > p {
+  max-width: 470px;
+  margin: 19px 0 0;
+  color: #667386;
+  font: 400 15px/1.7 Outfit, Inter, sans-serif;
+}
+
+.travlink-travel-feature--packages .travlink-package-category__services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 22px;
+  margin-top: 30px;
+  border-top: 1px solid rgba(15, 23, 42, .11);
+}
+
+.travlink-travel-feature--packages .travlink-package-category .travlink-package-item,
+.travlink-travel-feature--packages .travlink-package-category .travlink-package-item:nth-child(odd) {
+  display: flex;
+  align-items: center;
+  width: auto;
+  min-width: 0;
+  min-height: 66px;
+  gap: 11px;
+  margin: 0;
+  padding: 13px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(15, 23, 42, .11);
+  background: transparent;
+  transform: none;
+}
+
+.travlink-travel-feature--packages .travlink-package-category .travlink-package-item::after {
+  right: auto;
+  left: 0;
+  background: #2f9fe6;
+}
+
+.travlink-travel-feature--packages .travlink-package-category .travlink-package-item i {
+  flex: 0 0 22px;
+  width: 22px;
+  color: #0e47a1;
+  font-size: 15px;
+  transition: color .35s ease, transform .35s ease;
+}
+
+.travlink-travel-feature--packages .travlink-package-category .travlink-package-item h4 {
+  margin: 0;
+  color: #253044;
+  font: 500 14px/1.4 Outfit, Inter, sans-serif;
+  letter-spacing: -.01em;
+  transition: color .35s ease;
+}
+
+.travlink-package-category--dark {
+  border-color: rgba(255, 255, 255, .08);
+  background: #09182d;
+  box-shadow: 0 30px 82px rgba(4, 15, 34, .2);
+}
+
+.travlink-package-category--dark .travlink-package-category__number { color: rgba(117, 190, 240, .13); }
+.travlink-package-category--dark .travlink-travel-eyebrow { color: #75bef0; }
+.travlink-package-category--dark .travlink-package-category__content > h3 { color: #fff; }
+.travlink-package-category--dark .travlink-package-category__content > p { color: rgba(231, 239, 248, .68); }
+.travlink-travel-feature--packages .travlink-package-category--dark .travlink-package-category__services,
+.travlink-travel-feature--packages .travlink-package-category--dark .travlink-package-item { border-color: rgba(255, 255, 255, .12); }
+.travlink-travel-feature--packages .travlink-package-category--dark .travlink-package-item h4 { color: rgba(255, 255, 255, .88); }
+.travlink-travel-feature--packages .travlink-package-category--dark .travlink-package-item i { color: #75bef0; }
+
+.travlink-package-category--ocean { background: linear-gradient(145deg, #f5fbfd, #eff7fb); }
+.travlink-package-category--adventure { background: linear-gradient(145deg, #f7f7f3, #f3f6f7); }
+
+@keyframes travlinkPackageRoute {
+  to { stroke-dashoffset: -180; }
+}
+
+@media (hover: hover) and (min-width: 992px) {
+  .travlink-package-category:hover .travlink-package-category__media img { transform: scale(1.04); }
+  .travlink-package-category:hover .travlink-package-category__media::after { opacity: .58; }
+  .travlink-travel-feature--packages .travlink-package-category .travlink-package-item:hover::after { width: 100%; }
+  .travlink-travel-feature--packages .travlink-package-category .travlink-package-item:hover i { color: #2f9fe6; transform: translateY(-2px); }
+  .travlink-travel-feature--packages .travlink-package-category .travlink-package-item:hover h4 { color: #0e47a1; }
+  .travlink-travel-feature--packages .travlink-package-category--dark .travlink-package-item:hover h4 { color: #fff; }
+}
+
+@media (max-width: 991px) {
+  .travlink-package-category,
+  .travlink-package-category--reverse {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .travlink-package-category--reverse .travlink-package-category__media { order: 0; }
+  .travlink-package-category__media { min-height: 390px; aspect-ratio: 16 / 10; }
+  .travlink-package-category__content { padding: 48px; }
+}
+
+@media (max-width: 767px) {
+  .travlink-packages-editorial__intro > p { font-size: 14px; line-height: 1.65; }
+  .travlink-packages-route { height: 90px; margin: 22px auto 14px; }
+  .travlink-package-categories { gap: 38px; }
+  .travlink-package-category { border-radius: 20px; box-shadow: 0 18px 46px rgba(15, 23, 42, .09); }
+  .travlink-package-category__media { min-height: 250px; aspect-ratio: 16 / 11; }
+  .travlink-package-category__content { padding: 36px 24px 32px; }
+  .travlink-package-category__number { top: 24px; right: 24px; font-size: 43px; }
+  .travlink-package-category__content > h3 { max-width: 82%; font-size: clamp(38px, 11vw, 48px); }
+  .travlink-package-category__content > p { margin-top: 15px; font-size: 14px; }
+  .travlink-travel-feature--packages .travlink-package-category__services { grid-template-columns: 1fr; margin-top: 24px; }
+  .travlink-travel-feature--packages .travlink-package-category .travlink-package-item,
+  .travlink-travel-feature--packages .travlink-package-category .travlink-package-item:nth-child(odd) { min-height: 59px !important; padding: 11px 0; }
+  .travlink-travel-feature--packages .travlink-package-category .travlink-package-item h4 { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travlink-packages-route__line { animation: none; }
+  .travlink-packages-route__aircraft { display: none; }
+  .travlink-package-category__media img,
+  .travlink-package-category__media::after,
+  .travlink-package-item i { transition: none; }
+}
