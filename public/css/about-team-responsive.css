@@ -36,6 +36,81 @@
     line-height: 1.75;
 }
 
+.travlink-about-story__highlight {
+    position: relative;
+    padding: 15px 18px;
+    border-left: 3px solid #1d63b8;
+    border-radius: 0 12px 12px 0;
+    background: linear-gradient(90deg, rgba(29, 99, 184, .1), rgba(29, 99, 184, .025));
+    color: #10233e;
+}
+
+.travlink-about-story__highlight strong,
+.travlink-about-story__platform strong,
+.travlink-about-story__connections > p strong {
+    font-weight: 650;
+}
+
+.travlink-about-story__platform {
+    color: #10233e;
+    font-size: 17px;
+}
+
+.travlink-about-story__platform span {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 5px;
+    background: rgba(29, 99, 184, .1);
+    color: #0e47a1;
+    font-weight: 700;
+}
+
+.travlink-about-story__connections {
+    margin-top: 3px;
+    padding-top: 17px;
+    border-top: 1px solid rgba(15, 23, 42, .1);
+}
+
+.travlink-about-story__connections > p {
+    color: #10233e;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+.travlink-about-story__connections ul {
+    display: grid;
+    gap: 9px;
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.travlink-about-story__connections li {
+    position: relative;
+    padding-left: 21px;
+    color: #556579;
+    font: 400 16px/1.6 Outfit, Inter, sans-serif;
+}
+
+.travlink-about-story__connections li::before {
+    position: absolute;
+    top: .68em;
+    left: 1px;
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #1d63b8;
+    box-shadow: 0 0 0 1px rgba(29, 99, 184, .3);
+    content: "";
+    transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+    .travlink-about-story__connections > p { font-size: 17px; }
+    .travlink-about-story__connections li { font-size: 15px; }
+}
+
 /* Editorial Why We Are section. */
 .travlink-about-page-body .travlink-about-values {
     background: #fff;
