@@ -1,0 +1,406 @@
+/* Full-width navigation shell shared by every Travlink Global page. */
+.travlink-react-page .header-area-3.stiky,
+.travlink-react-page .header-area-3.stiky.scroll-header {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 78px !important;
+  min-height: 78px !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  animation: none !important;
+  border-bottom: 1px solid rgba(15, 36, 61, .08);
+  background: #fff !important;
+  box-shadow: 0 9px 28px rgba(15, 36, 61, .1) !important;
+}
+
+.travlink-react-page .header-area-3 > .container.fluid-header-3 {
+  display: flex;
+  align-items: center;
+  width: 100% !important;
+  height: 78px !important;
+  min-height: 78px !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 9px clamp(20px, 4vw, 64px) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.travlink-react-page .header-area-3 > .container.fluid-header-3 > .row {
+  display: flex;
+  align-items: center !important;
+  width: 100%;
+  min-height: 60px;
+  margin: 0;
+}
+
+.travlink-react-page .header-area-3 .ca-logo {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  margin: 0;
+  transform: none !important;
+}
+
+.travlink-react-page .header-area-3 .ca-main-menu-3,
+.travlink-react-page .header-area-3 .ca-main-menu-3 > nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 60px;
+}
+
+.travlink-react-page .header-area-3 .ca-main-menu-3 > nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.travlink-react-page .header-area-3 .travlink-site-logo {
+  width: min(205px, 100%) !important;
+  height: 60px !important;
+}
+
+.travlink-react-page .header-area-3 .travlink-site-logo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo__image--primary,
+.travlink-home .header-area-3 .travlink-site-logo__image--primary {
+  opacity: 1 !important;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo__image--secondary,
+.travlink-home .header-area-3 .travlink-site-logo__image--secondary {
+  opacity: 0 !important;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3 :is(
+  .ca-main-menu-3 > nav > ul > li > a,
+  .ca-offcanvas-toogle
+),
+.travlink-home .header-area-3 :is(
+  .ca-main-menu-3 > nav > ul > li > a,
+  .ca-offcanvas-toogle
+) {
+  color: #102f55 !important;
+}
+
+/* Override legacy image-hero rules that made first-load links white. */
+.travlink-react-page.travlink-react-page
+  .header-area-3.stiky:not(.scroll-header)
+  .travlink-site-logo__image--primary,
+.travlink-react-page.travlink-react-page
+  .header-area-3.stiky.scroll-header
+  .travlink-site-logo__image--primary {
+  opacity: 1 !important;
+}
+
+.travlink-react-page.travlink-react-page
+  .header-area-3.stiky:not(.scroll-header)
+  .travlink-site-logo__image--secondary,
+.travlink-react-page.travlink-react-page
+  .header-area-3.stiky.scroll-header
+  .travlink-site-logo__image--secondary {
+  opacity: 0 !important;
+}
+
+.travlink-react-page.travlink-react-page
+  .header-area-3.stiky:not(.scroll-header)
+  .ca-main-menu-3
+  > nav
+  > ul
+  > li
+  > a,
+.travlink-react-page.travlink-react-page
+  .header-area-3.stiky:not(.scroll-header)
+  .ca-offcanvas-toogle,
+.travlink-react-page.travlink-react-page
+  .header-area-3.stiky.scroll-header
+  .ca-main-menu-3
+  > nav
+  > ul
+  > li
+  > a,
+.travlink-react-page.travlink-react-page
+  .header-area-3.stiky.scroll-header
+  .ca-offcanvas-toogle {
+  color: #102f55 !important;
+}
+
+.travlink-react-page.travlink-react-page
+  .header-area-3
+  .ca-main-menu-3
+  > nav
+  > ul
+  > li:hover
+  > a {
+  color: #0e47a1 !important;
+}
+
+@media (max-width: 767px) {
+  .travlink-react-page .header-area-3.stiky,
+  .travlink-react-page .header-area-3.stiky.scroll-header {
+    height: 64px !important;
+    min-height: 64px !important;
+  }
+
+  .travlink-react-page .header-area-3 > .container.fluid-header-3 {
+    height: 64px !important;
+    min-height: 64px !important;
+    padding: 7px 18px !important;
+  }
+
+  .travlink-react-page .header-area-3 > .container.fluid-header-3 > .row {
+    min-height: 50px;
+  }
+
+  .travlink-react-page .header-area-3 .ca-logo {
+    height: 50px;
+  }
+
+  .travlink-react-page .header-area-3 .travlink-site-logo {
+    width: min(168px, 100%) !important;
+    height: 50px !important;
+  }
+
+  .travlink-react-page .header-area-3 .ca-offcanvas-toogle {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    border: 1px solid rgba(16, 47, 85, .18) !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, .12) !important;
+    box-shadow: 0 8px 22px rgba(5, 24, 49, .1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .travlink-react-page .header-area-3 .ca-offcanvas-toogle svg {
+    width: 25px;
+    height: 14px;
+  }
+
+  .travlink-react-page .ca-offcanvas {
+    top: 10px;
+    right: 10px;
+    left: auto;
+    z-index: 1100;
+    display: block;
+    width: min(calc(100% - 20px), 410px);
+    height: calc(100dvh - 20px);
+    max-height: none;
+    padding: 24px 22px 22px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid rgba(151, 205, 255, .2);
+    border-radius: 26px;
+    background:
+      radial-gradient(circle at 88% 4%, rgba(72, 157, 232, .22), transparent 31%),
+      linear-gradient(160deg, #102b49 0%, #081827 58%, #06111e 100%) !important;
+    box-shadow: 0 30px 80px rgba(0, 8, 20, .42);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(calc(100% + 28px));
+    transition: transform .42s cubic-bezier(.22, 1, .36, 1), opacity .24s ease, visibility .42s;
+  }
+
+  .travlink-react-page .ca-offcanvas.ca-offcanvas-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .travlink-react-page .ca-offcanvas-wrapper {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+  }
+
+  .travlink-react-page .ca-offcanvas-header {
+    margin-bottom: 26px !important;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+  }
+
+  .travlink-react-page .travlink-offcanvas-logo {
+    display: block;
+    width: 156px;
+  }
+
+  .travlink-react-page .travlink-offcanvas-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .travlink-react-page .ca-offcanvas-close-toggle {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    font-size: 20px;
+    transition: background-color .25s ease, transform .25s ease;
+  }
+
+  .travlink-react-page .ca-offcanvas-close-toggle:active {
+    background: rgba(255, 255, 255, .16);
+    transform: scale(.95);
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 {
+    margin-bottom: 28px !important;
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a {
+    display: flex;
+    min-height: 58px;
+    align-items: center;
+    padding: 14px 48px 14px 4px;
+    border: 0 !important;
+    color: rgba(255, 255, 255, .92) !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    letter-spacing: -.01em;
+    text-decoration: none;
+    transition: color .22s ease, padding-left .22s ease;
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a::before {
+    width: 0;
+    height: 2px;
+    margin-right: 0;
+    border-radius: 999px;
+    background: #79c7ff;
+    content: "";
+    opacity: 0;
+    transition: width .22s ease, margin-right .22s ease, opacity .22s ease;
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li:is(.active, :focus-within) > a {
+    color: #9ed8ff !important;
+    padding-left: 2px;
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li:is(.active, :focus-within) > a::before {
+    width: 18px;
+    margin-right: 10px;
+    opacity: 1;
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 .ca-menu-close3 {
+    top: 10px;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .07);
+    color: #cceaff;
+    line-height: 38px;
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 ul li .sub-menu {
+    margin: 0 0 12px;
+    padding: 4px 0 8px 18px;
+    border-left: 1px solid rgba(121, 199, 255, .28);
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 ul li .sub-menu a {
+    padding: 10px 12px;
+    border: 0 !important;
+    color: rgba(222, 240, 255, .72) !important;
+    font-size: 15px !important;
+  }
+
+  .travlink-react-page .ca-offcanvas-contact {
+    display: block !important;
+    margin: auto 0 0 !important;
+    padding-top: 20px;
+  }
+
+  .travlink-react-page .ca-offcanvas-contact .ca-btn-primary-3 {
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #2f8ede, #1769b2) !important;
+    box-shadow: 0 16px 34px rgba(7, 73, 135, .32);
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .travlink-react-page .ca-offcanvas-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1090;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 10, 20, .58);
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: opacity .3s ease, visibility .3s;
+  }
+
+  .travlink-react-page .ca-offcanvas-overlay.ca-offcanvas-overlay-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 380px) {
+  .travlink-react-page .ca-offcanvas {
+    top: 7px;
+    right: 7px;
+    width: calc(100% - 14px);
+    height: calc(100dvh - 14px);
+    padding: 20px 18px;
+    border-radius: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travlink-react-page .ca-offcanvas,
+  .travlink-react-page .ca-offcanvas-overlay {
+    transition: none;
+  }
+}

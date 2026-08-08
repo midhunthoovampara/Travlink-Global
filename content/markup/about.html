@@ -196,136 +196,86 @@
 <main>
   <!-- breadcrumb area start -->
   <!-- breadcrumb area end -->
-  <!-- about section start -->
-  <section class="ca-about-3 travlink-about-story pt-100 pb-70">
+  <!-- brand story section start -->
+  <section class="travlink-brand-story" aria-labelledby="travlink-brand-story-title">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mb-30">
-          <div class="ca-ab-iner p-relative z-index-1">
-            <!-- <div class="ca-iner-review-text p-absolute theme-bg-3">
-              <h3 class="ca-counter-title fnw-700 pb-16">
-                <span class="counter">25</span>K+
-              </h3>
-              <span>Clients Positive Reviews</span>
-            </div> -->
-            <div class="row">
-              <div class="col-lg-6 col-md-6 mb-30">
-                <div
-                  class="ca-ab-iner-img wow img-custom-anim-left"
-                  data-wow-duration="1.5s"
-                  data-wow-delay=".2s"
-                >
-                  <img class="w-100" src="/img/about/abtus1.png" alt="" />
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 mb-30">
-                <div
-                  class="ca-ab-iner-img ca-ab-iner-img-2 wow img-custom-anim-left"
-                  data-wow-duration="1.5s"
-                  data-wow-delay=".4s"
-                >
-                  <img class="w-100 mt-60" src="/img/about/abtus2.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
+      <header class="travlink-brand-story__header" data-story-reveal>
+        <span class="travlink-brand-story__eyebrow">Who We Are</span>
+        <h2 id="travlink-brand-story-title">Connecting Asia<br />Through Travel, Trade &amp;<br /><em>Shipping</em></h2>
+      </header>
+
+      <div class="travlink-brand-story__opening">
+        <figure class="travlink-brand-story__illustration" data-story-reveal>
+          <img
+            src="/img/about/generated/about-connect-handshake.jpg"
+            alt="International business travelers meeting beside a global trade port"
+            width="683"
+            height="683"
+            loading="eager"
+            decoding="async"
+          />
+          <svg viewBox="0 0 760 600" role="img" aria-labelledby="brand-illustration-title brand-illustration-description">
+            <title id="brand-illustration-title">Travel, trade, and connection across Asia</title>
+            <desc id="brand-illustration-description">A custom illustration combining a traveler, aircraft, factory, cargo ship, handshake, and connected global routes.</desc>
+            <defs>
+              <linearGradient id="brandOcean" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf5fd"/><stop offset="1" stop-color="#f9fcff"/></linearGradient>
+              <linearGradient id="brandBlue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2f9fe6"/><stop offset="1" stop-color="#0e47a1"/></linearGradient>
+              <filter id="brandGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <circle class="travlink-brand-story__globe" cx="380" cy="300" r="218" fill="url(#brandOcean)"/>
+            <g class="travlink-brand-story__globe-lines"><ellipse cx="380" cy="300" rx="218" ry="82"/><ellipse cx="380" cy="300" rx="92" ry="218"/><path d="M162 300h436M207 202h346M207 398h346"/></g>
+            <path class="travlink-brand-story__land" d="M260 176l70-31 61 21 34 43 75 12 29 50-48 36-8 68-55 12-31 77-59-30-18-63-64-38-22-72z"/>
+            <g class="travlink-brand-story__routes">
+              <path d="M96 164Q300 43 535 151T679 339"/>
+              <path d="M85 443Q296 544 454 438T678 396"/>
+              <path d="M182 520Q250 396 381 302T602 104"/>
+            </g>
+            <g class="travlink-brand-story__nodes"><circle cx="96" cy="164" r="7"/><circle cx="535" cy="151" r="7"/><circle cx="679" cy="339" r="7"/><circle cx="85" cy="443" r="7"/><circle cx="454" cy="438" r="7"/><circle cx="678" cy="396" r="7"/><circle cx="182" cy="520" r="7"/><circle cx="602" cy="104" r="7"/></g>
+            <g class="travlink-brand-story__factory" transform="translate(76 360)"><path d="M0 82V28l42 22V24l43 24V0h27v82z"/><path d="M18 65h18M52 65h18M87 65h14"/></g>
+            <g class="travlink-brand-story__ship" transform="translate(520 413)"><path d="M0 40h142l-22 34H25z"/><path d="M29 12h71v28H29zM43 0h43v12H43z"/><path d="M8 84q22 12 44 0 22 12 44 0 22 12 44 0"/></g>
+            <g class="travlink-brand-story__traveler" transform="translate(311 240)"><circle cx="28" cy="22" r="16"/><path d="M8 92V56q20-20 40 0v36M16 92l-7 59M42 92l8 59M48 63h35v62H48z"/></g>
+            <g class="travlink-brand-story__handshake" transform="translate(399 238)"><path d="m0 45 28-24 26 16 23-14 38 31-28 32-22-10-17 15L8 63z"/><path d="m43 42 38 32M31 54l37 31"/></g>
+            <g class="travlink-brand-story__plane"><path d="M-20 4 21-8 4 6l10 18-7 2-17-15-13 4z"/></g>
+            <text x="380" y="548">TRAVEL  •  TRADE  •  CONNECT</text>
+          </svg>
+        </figure>
+
+        <div class="travlink-brand-story__copy" data-story-reveal>
+          <p class="travlink-brand-story__lead"><strong>Travlink Global began with a simple observation:</strong></p>
+          <p>People want to travel further. Businesses want to trade globally. And opportunities often exist on the other side of a border &mdash; but reaching the right people can be difficult.</p>
+          <p class="travlink-brand-story__callout"><strong>That is where Travlink Global comes in.</strong></p>
+          <p class="travlink-brand-story__platform"><strong>We are building a platform that brings <span>Travel</span>, <span>Trade</span> and <span>Connect</span> together.</strong></p>
+          <p class="travlink-brand-story__narrative">From a traveller searching for a new destination, to a business looking for a supplier in China, a company planning a factory visit, an entrepreneur exploring an international opportunity, or a client looking for a private travel experience &mdash; our role is to create the connection that helps move things forward.</p>
         </div>
-        <div class="col-lg-6 mb-30">
-          <div class="ca-ab-content3">
-            <div class="ca-about-content-3 ca-sec-content-3">
-              <span class="travlink-about-heading__eyebrow">Who We Are</span>
-              <h2 class="travlink-about-section-title">
-                Connecting Asia Through <em>Travel, Trade &amp; Shipping</em>
-              </h2>
-              <div class="travlink-about-story__copy pt-16 pb-32">
-                <p>
-                  Travlink Global began with a simple observation: People want
-                  to travel further. Businesses want to trade globally. And
-                  opportunities often exist on the other side of a border
-                  &mdash; but reaching the right people can be difficult.
-                </p>
-                <p class="travlink-about-story__highlight">
-                  <strong>That is where Travlink Global comes in.</strong>
-                </p>
-                <p class="travlink-about-story__platform">
-                  <strong>
-                    We are building a platform that brings
-                    <span>Travel</span>, <span>Trade</span> and
-                    <span>Connect</span> together.
-                  </strong>
-                </p>
-                <p>
-                  From a traveller searching for a new destination, to a
-                  business looking for a supplier in China, a company planning
-                  a factory visit, an entrepreneur exploring an international
-                  opportunity, or a client looking for a private travel
-                  experience &mdash; our role is to create the connection that
-                  helps move things forward.
-                </p>
-                <div class="travlink-about-story__connections">
-                  <p><strong>We don&rsquo;t see travel and trade as completely separate worlds:</strong></p>
-                  <ul>
-                    <li>A business trip can become a sourcing opportunity.</li>
-                    <li>A factory visit can become a long-term partnership.</li>
-                    <li>A journey can become a new business connection.</li>
-                    <li>An exhibition can become the beginning of a global relationship.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="ca-ab-item-check">
-              <!-- single-item -->
-              <div class="ca-ab-sngle-item">
-                <div class="ca-ab-sngle-item-ic">
-                  <span><i class="fa-solid fa-check"></i></span>
-                </div>
-                <div class="ca-ab-sngle-item-content">
-                  <h4 class="ca-item-ch-title">
-                    International Travel & Visa Assistance
-                  </h4>
-                </div>
-              </div>
-              <!-- single-item -->
-              <div class="ca-ab-sngle-item">
-                <div class="ca-ab-sngle-item-ic">
-                  <span><i class="fa-solid fa-check"></i></span>
-                </div>
-                <div class="ca-ab-sngle-item-content">
-                  <h4 class="ca-item-ch-title">
-                    Supplier Sourcing & Factory Visits
-                  </h4>
-                </div>
-              </div>
-              <!-- single-item -->
-              <div class="ca-ab-sngle-item">
-                <div class="ca-ab-sngle-item-ic">
-                  <span><i class="fa-solid fa-check"></i></span>
-                </div>
-                <div class="ca-ab-sngle-item-content">
-                  <h4 class="ca-item-ch-title">
-                    Trusted Logistics & Shipping Coordination
-                  </h4>
-                </div>
-              </div>
-              <!-- single-item -->
-              <div class="ca-ab-sngle-item">
-                <div class="ca-ab-sngle-item-ic">
-                  <span><i class="fa-solid fa-check"></i></span>
-                </div>
-                <div class="ca-ab-sngle-item-content">
-                  <h4 class="ca-item-ch-title">
-                    Strong Business Network Across Asia
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div class="ca-about-3-btn"></div>
-          </div>
+      </div>
+
+      <div class="travlink-brand-story__connections">
+        <h3 data-story-reveal>We don&rsquo;t see travel and trade as completely separate worlds:</h3>
+        <div class="travlink-brand-story__connection-grid">
+          <article data-story-reveal><i class="fa-solid fa-link" aria-hidden="true"></i><p>A business trip can become<br />a sourcing opportunity.</p></article>
+          <article data-story-reveal><i class="fa-solid fa-link" aria-hidden="true"></i><p>A factory visit can become<br />a long-term partnership.</p></article>
+          <article data-story-reveal><i class="fa-solid fa-link" aria-hidden="true"></i><p>A journey can become<br />a new business connection.</p></article>
+          <article data-story-reveal><i class="fa-solid fa-link" aria-hidden="true"></i><p>An exhibition can become<br />the beginning of a global relationship.</p></article>
         </div>
+      </div>
+
+      <div class="travlink-brand-story__identity">
+        <h3 data-story-reveal>And that is the story behind our name.</h3>
+        <div class="travlink-brand-story__identity-grid">
+          <article data-story-reveal><span><i class="fa-solid fa-plane-departure" aria-hidden="true"></i></span><h4>Travel</h4><p>Represents movement,<br />discovery and experiences.</p></article>
+          <article data-story-reveal><span><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i></span><h4>Trade</h4><p>Represents sourcing,<br />business, shipping,<br />logistics and international commerce.</p></article>
+          <article data-story-reveal><span><i class="fa-solid fa-earth-asia" aria-hidden="true"></i></span><h4>Connect</h4><p>Represents the relationships<br />that bring people,<br />businesses and opportunities together.</p></article>
+        </div>
+      </div>
+
+      <div class="travlink-brand-story__final" data-story-reveal>
+        <span>Together</span>
+        <h3>Travel <i>•</i> Trade <i>•</i> Connect</h3>
+        <p>A simple idea with a global ambition &mdash;<br />connecting people and opportunities<br />across borders.</p>
       </div>
     </div>
   </section>
-  <!-- about section end -->
+  <!-- brand story section end -->
 
   <!-- connect section start -->
   <section class="travlink-connect" aria-labelledby="travlink-connect-title">
@@ -681,4 +631,5 @@
 <script src="/js/main.js"></script>
 <script src="/js/scroll-motion.js"></script>
 <script src="/js/mobile-navigation.js"></script>
+<script src="/js/about-brand-story.js"></script>
 <script src="/js/about-connect-network.js"></script>

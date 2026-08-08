@@ -1,0 +1,180 @@
+/* Compact trust strip directly below the homepage hero. */
+.travlink-home .travlink-benefits {
+  position: relative;
+  z-index: 5;
+  padding: 58px 0 60px;
+  border: 0;
+  background: #fff;
+}
+
+.travlink-home .travlink-benefits .container {
+  width: min(calc(100% - 48px), 1320px);
+  max-width: 1320px;
+}
+
+.travlink-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(42px, 5vw, 82px);
+}
+
+.travlink-benefit {
+  position: relative;
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  min-width: 0;
+}
+
+.travlink-benefit__icon {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  color: #2478ba;
+}
+
+.travlink-benefit__icon svg {
+  display: block;
+  width: 62px;
+  height: 62px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.65;
+}
+
+.travlink-benefit__content {
+  padding-top: 7px;
+}
+
+.travlink-benefit__content h2 {
+  margin: 0 0 14px;
+  color: #16263a;
+  font-family: Manrope, Inter, sans-serif !important;
+  font-size: clamp(18px, 1.45vw, 22px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+
+.travlink-benefit__content p {
+  max-width: 310px;
+  margin: 0;
+  color: #6a7480;
+  font-family: "DM Sans", Inter, sans-serif !important;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+@media (hover: hover) {
+  .travlink-benefit__icon {
+    transition: color .3s ease, transform .4s cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .travlink-benefit:hover .travlink-benefit__icon {
+    color: #115f9e;
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .travlink-home .travlink-benefits {
+    padding: 48px 0;
+  }
+
+  .travlink-benefits__grid {
+    gap: 34px;
+  }
+
+  .travlink-benefit {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .travlink-benefit__icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .travlink-benefit__icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .travlink-benefit__content {
+    padding-top: 3px;
+  }
+
+  .travlink-benefit__content h2 {
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+
+  .travlink-benefit__content p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .travlink-home .travlink-benefits {
+    padding: 38px 0 40px;
+  }
+
+  .travlink-home .travlink-benefits .container {
+    width: min(calc(100% - 36px), 520px);
+  }
+
+  .travlink-benefits__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .travlink-benefit {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 18px;
+    padding: 24px 0;
+  }
+
+  .travlink-benefit:first-child {
+    padding-top: 0;
+  }
+
+  .travlink-benefit:last-child {
+    padding-bottom: 0;
+  }
+
+  .travlink-benefit + .travlink-benefit {
+    border-top: 1px solid rgba(17, 54, 88, .09);
+  }
+
+  .travlink-benefit__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .travlink-benefit__icon svg {
+    width: 54px;
+    height: 54px;
+  }
+
+  .travlink-benefit__content h2 {
+    font-size: 18px;
+  }
+
+  .travlink-benefit__content p {
+    max-width: 330px;
+    font-size: 13.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travlink-benefit__icon {
+    transition: none !important;
+  }
+}

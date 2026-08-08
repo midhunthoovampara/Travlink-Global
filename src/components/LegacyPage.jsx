@@ -3,6 +3,40 @@ import path from "node:path";
 
 const contentDirectory = path.join(process.cwd(), "content");
 const markupDirectory = path.join(contentDirectory, "markup");
+const sharedHeaderPath = path.join(markupDirectory, "shared-header.html");
+const sharedFooterPath = path.join(markupDirectory, "shared-footer.html");
+
+function replaceMarkedSection(markup, startMarker, endMarker, replacement) {
+  const startIndex = markup.indexOf(startMarker);
+  const endIndex = markup.indexOf(endMarker, startIndex);
+
+  if (startIndex === -1 || endIndex === -1) {
+    throw new Error(`Missing shared markup boundary: ${startMarker}`);
+  }
+
+  return `${markup.slice(0, startIndex)}${replacement.trim()}${markup.slice(
+    endIndex + endMarker.length,
+  )}`;
+}
+
+function applySharedChrome(markup) {
+  const sharedHeader = fs.readFileSync(sharedHeaderPath, "utf8");
+  const sharedFooter = fs.readFileSync(sharedFooterPath, "utf8");
+
+  const withSharedHeader = replaceMarkedSection(
+    markup,
+    "<!-- Header Area Start-->",
+    "<!-- offcanvas end -->",
+    sharedHeader,
+  );
+
+  return replaceMarkedSection(
+    withSharedHeader,
+    '<footer class="travlink-footer">',
+    "</footer>",
+    sharedFooter,
+  );
+}
 
 export const pageKeys = [
   "about",
@@ -24,7 +58,9 @@ export function getLegacyPage(key) {
   if (
     !fs.existsSync(filePath) ||
     !fs.existsSync(headPath) ||
-    !fs.existsSync(bodyPath)
+    !fs.existsSync(bodyPath) ||
+    !fs.existsSync(sharedHeaderPath) ||
+    !fs.existsSync(sharedFooterPath)
   ) {
     throw new Error(`Missing content files for page "${key}".`);
   }
@@ -32,7 +68,7 @@ export function getLegacyPage(key) {
   return {
     ...JSON.parse(fs.readFileSync(filePath, "utf8")),
     headMarkup: fs.readFileSync(headPath, "utf8"),
-    bodyMarkup: fs.readFileSync(bodyPath, "utf8"),
+    bodyMarkup: applySharedChrome(fs.readFileSync(bodyPath, "utf8")),
   };
 }
 

@@ -31,14 +31,14 @@
     align-items: center;
     overflow: hidden;
     padding: 150px 0 90px;
-    background: url("../img/slider/travlink-hero-sailboat-uhd.webp") center / cover no-repeat;
+    background: #061523;
     isolation: isolate;
 }
 .travlink-home .travlink-hero__media {
     position: absolute;
     z-index: 0;
     inset: 0;
-    background: url("../img/slider/travlink-hero-sailboat-uhd.webp") center / cover no-repeat;
+    background: #061523;
     pointer-events: none;
 }
 .travlink-home .travlink-hero::before {

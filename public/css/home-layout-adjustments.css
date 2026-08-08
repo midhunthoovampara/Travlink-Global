@@ -1,0 +1,543 @@
+/* Homepage-only refinements for the hero and Services title. */
+
+.travlink-home .travlink-hero {
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 100svh !important;
+  margin-bottom: 0;
+  overflow: visible !important;
+  padding: 82px 0 0 !important;
+  background-color: #061523 !important;
+  background-image: none !important;
+  background-position: center 55% !important;
+  background-size: cover !important;
+}
+
+.travlink-home .travlink-hero__media {
+  background-color: #061523 !important;
+  background-image: none !important;
+  background-position: center 55% !important;
+  background-size: cover !important;
+  animation: travlinkHeroImageDrift 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.travlink-home .travlink-hero__video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes travlinkHeroImageDrift {
+  from { transform: scale(1.02) translate3d(-.4%, 0, 0); }
+  to { transform: scale(1.07) translate3d(.6%, -.5%, 0); }
+}
+
+.travlink-home .travlink-hero::before {
+  background:
+    linear-gradient(90deg, rgba(2, 10, 20, .52) 0%, rgba(3, 13, 27, .24) 48%, transparent 74%),
+    linear-gradient(180deg, rgba(5, 20, 39, .12), rgba(2, 10, 20, .42)) !important;
+}
+
+.travlink-home .travlink-hero::after {
+  display: none !important;
+}
+
+.travlink-home .travlink-hero__content {
+  display: flex;
+  width: 100%;
+  max-width: 920px !important;
+  min-height: calc(100svh - 82px);
+  margin-right: auto !important;
+  margin-left: auto !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  text-align: center !important;
+}
+
+.travlink-home .travlink-hero__inner,
+.travlink-home .travlink-hero__inner > .container,
+.travlink-home .travlink-hero__inner .row {
+  width: 100%;
+}
+
+.travlink-home .travlink-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.travlink-home .travlink-hero__inner > .container {
+  max-width: none !important;
+  padding-right: clamp(18px, 4vw, 64px) !important;
+  padding-left: clamp(18px, 4vw, 64px) !important;
+}
+
+.travlink-home .travlink-hero__inner .row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.travlink-home .travlink-hero__inner .row > [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.travlink-home .travlink-hero__inner .row {
+  justify-content: center !important;
+}
+
+.travlink-home .travlink-hero__title,
+.travlink-home .travlink-hero__copy {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  text-align: center !important;
+}
+
+/* The desktop tagline is wider than its legacy content column. Give the
+   heading a viewport-wide box so the visible text is centered precisely. */
+.travlink-home .travlink-hero__title {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-right: calc(50% - 50vw) !important;
+  margin-left: calc(50% - 50vw) !important;
+  color: #fff !important;
+  font-size: clamp(64px, 6.8vw, 112px) !important;
+  font-weight: 800 !important;
+  line-height: 1.02 !important;
+  text-align: center !important;
+}
+
+.travlink-home .travlink-hero__title .title-blue {
+  display: block;
+  width: 100%;
+  color: #fff !important;
+  text-align: center;
+}
+
+.travlink-home .travlink-hero__copy {
+  max-width: 620px !important;
+  font-size: clamp(14px, 1.1vw, 17px) !important;
+  line-height: 1.65 !important;
+}
+
+.travlink-home .travlink-hero-services {
+  position: absolute;
+  z-index: 7;
+  right: 50%;
+  bottom: -48px;
+  display: grid;
+  width: min(75%, 1376px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid rgba(15, 36, 61, .1);
+  border-bottom: 0;
+  border-radius: 16px 16px 0 0;
+  background: rgba(255, 255, 255, .97);
+  box-shadow: 0 -14px 40px rgba(5, 25, 48, .16);
+  transform: translateX(50%);
+  animation: travlinkHeroStripIn .75s cubic-bezier(.22, 1, .36, 1) .2s both;
+}
+
+@keyframes travlinkHeroStripIn {
+  from {
+    opacity: 0;
+    transform: translate(50%, 18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(50%, 0);
+  }
+}
+
+.travlink-home .travlink-hero-service {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 96px;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 18px 12px;
+  border-right: 1px solid rgba(15, 36, 61, .1);
+  color: #173555;
+  text-align: center;
+  text-decoration: none;
+  transition: color .28s ease, background-color .28s ease, box-shadow .28s ease;
+}
+
+.travlink-home .travlink-hero-service:last-child {
+  border-right: 0;
+}
+
+.travlink-home .travlink-hero-service::after {
+  position: absolute;
+  right: 18px;
+  bottom: 0;
+  left: 18px;
+  height: 3px;
+  background: #1769b5;
+  content: "";
+  opacity: 0;
+  transform: scaleX(.35);
+  transition: opacity .28s ease, transform .28s ease;
+}
+
+.travlink-home .travlink-hero-service i {
+  flex: 0 0 auto;
+  color: inherit;
+  font-size: 22px;
+  transition: transform .28s ease;
+}
+
+.travlink-home .travlink-hero-service span {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@media (hover: hover) {
+  .travlink-home .travlink-hero-service:hover {
+    background: #f3f8fd;
+    color: #0e47a1;
+    box-shadow: inset 0 0 24px rgba(23, 105, 181, .06);
+  }
+
+  .travlink-home .travlink-hero-service:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .travlink-home .travlink-hero-service:hover i {
+    transform: translateY(-3px);
+  }
+}
+
+.travlink-home .travlink-hero__scroll {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  .travlink-home .travlink-service-intro__title {
+    width: max-content;
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .travlink-home .travlink-hero {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100svh !important;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 72px 0 0 !important;
+    border-radius: 0;
+    background-position: 62% center !important;
+    background-size: cover !important;
+  }
+
+  .travlink-home .travlink-hero__media {
+    background-position: 62% center !important;
+    background-size: cover !important;
+  }
+
+  .travlink-home .travlink-hero__content {
+    min-height: 0;
+    max-width: 100% !important;
+    padding: 0 10px !important;
+  }
+
+  .travlink-home .travlink-hero__title {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size: clamp(38px, 12vw, 56px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -.055em !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  .travlink-home .travlink-hero__copy {
+    max-width: min(100%, 220px);
+    font-size: 11px !important;
+    line-height: 1.55 !important;
+  }
+
+  .travlink-home .travlink-hero-services {
+    right: 0;
+    bottom: -36px;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 10px;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    transform: none;
+    animation-name: travlinkHeroStripInMobile;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .travlink-home .travlink-hero-services::-webkit-scrollbar {
+    display: none;
+  }
+
+  .travlink-home .travlink-hero-service {
+    min-width: 190px;
+    min-height: 72px;
+    flex: 0 0 190px;
+    gap: 8px;
+    padding: 13px 10px;
+    scroll-snap-align: start;
+  }
+
+  .travlink-home .travlink-hero-service i {
+    font-size: 19px;
+  }
+
+  .travlink-home .travlink-hero-service span {
+    font-size: 13px;
+  }
+
+  .travlink-home .travlink-service-intro__title {
+    width: auto;
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+@keyframes travlinkHeroStripInMobile {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travlink-home .travlink-hero-services {
+    animation: none;
+  }
+
+  .travlink-home .travlink-hero__media {
+    animation: none;
+    transform: none;
+  }
+
+  .travlink-home .travlink-hero__video {
+    display: none;
+  }
+}
+/* Lower-left editorial hero composition. */
+@media (min-width: 768px) {
+  .travlink-home .travlink-hero__content {
+    max-width: none !important;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 clamp(24px, 4vw, 80px) clamp(88px, 11vh, 124px);
+    text-align: left !important;
+  }
+
+  .travlink-home .travlink-hero__title {
+    width: min(900px, 76vw) !important;
+    max-width: min(900px, 76vw) !important;
+    margin: 0 !important;
+    font-size: clamp(48px, 5.2vw, 82px) !important;
+    line-height: .94 !important;
+    text-align: left !important;
+  }
+
+  .travlink-home .travlink-hero__title .title-blue {
+    text-align: left;
+  }
+
+  .travlink-home .travlink-hero__title-lead,
+  .travlink-home .travlink-hero__title-connect {
+    display: block;
+  }
+
+  .travlink-home .travlink-hero__title-connect {
+    margin-top: .02em;
+    font-size: clamp(82px, 9vw, 148px);
+    line-height: .88;
+    letter-spacing: -.07em;
+  }
+
+  .travlink-home .travlink-hero__copy {
+    max-width: none !important;
+    margin: 24px 0 0 !important;
+    font-size: clamp(16px, 1.25vw, 19px) !important;
+    white-space: nowrap;
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .travlink-home .travlink-hero__content {
+    min-height: calc(100svh - 72px) !important;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 14px 82px !important;
+    text-align: left !important;
+  }
+
+  .travlink-home .travlink-hero__title {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0;
+    font-size: clamp(36px, 10vw, 48px) !important;
+    line-height: .96 !important;
+    text-align: left !important;
+  }
+
+  .travlink-home .travlink-hero__title .title-blue {
+    text-align: left;
+  }
+
+  .travlink-home .travlink-hero__title-lead,
+  .travlink-home .travlink-hero__title-connect {
+    display: block;
+  }
+
+  .travlink-home .travlink-hero__title-connect {
+    font-size: clamp(66px, 20vw, 88px);
+    line-height: .9;
+    letter-spacing: -.07em;
+  }
+
+  .travlink-home .travlink-hero__copy {
+    max-width: none !important;
+    margin: 18px 0 0 !important;
+    font-size: clamp(10px, 2.8vw, 12px) !important;
+    white-space: nowrap;
+    text-align: left !important;
+  }
+}
+/* Hero accent and reference-style divider. */
+.travlink-home .travlink-hero__title-connect {
+  color: #79c7ff !important;
+  text-shadow: 0 8px 30px rgba(18, 103, 177, .34);
+}
+
+.travlink-home .travlink-hero__content::after {
+  display: none;
+  content: none;
+}
+/* Reference-style copy row with a wide action on the right. */
+.travlink-home .travlink-hero__meta {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.travlink-home .travlink-hero__meta .travlink-hero__copy {
+  margin: 0 !important;
+}
+
+.travlink-home .travlink-hero__explore {
+  display: inline-flex;
+  min-width: 220px;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-left: auto;
+  padding: 8px 22px;
+  border: 1px solid rgba(255, 255, 255, .68);
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: none;
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.travlink-home .travlink-hero__explore span {
+  font-size: 20px;
+  line-height: 1;
+  transition: transform .25s ease;
+}
+
+@media (hover: hover) {
+  .travlink-home .travlink-hero__explore:hover {
+    background: rgba(255, 255, 255, .14);
+    box-shadow: 0 14px 30px rgba(5, 24, 52, .2);
+    transform: translateY(-3px);
+  }
+
+  .travlink-home .travlink-hero__explore:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (max-width: 767px) {
+  .travlink-home .travlink-hero__meta {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  .travlink-home .travlink-hero__explore {
+    min-width: 200px;
+    min-height: 40px;
+    align-self: flex-end;
+    padding: 7px 18px;
+    font-size: 12px;
+  }
+}
+
+/* Compact Services section heading. */
+.travlink-home .travlink-service-intro__title {
+  font-size: clamp(32px, 3.2vw, 44px) !important;
+}
+
+/* Keep the Contact heading as one balanced desktop line. */
+@media (min-width: 992px) {
+  .travlink-home .contact-3-area .travlink-contact-heading {
+    width: max-content;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(34px, 2.8vw, 40px) !important;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .travlink-home .travlink-service-intro__title {
+    font-size: clamp(26px, 7.6vw, 31px) !important;
+  }
+}

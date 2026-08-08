@@ -1,5 +1,14 @@
-/* Shared Travlink atmospheric canvas, derived from the homepage theme. */
-.travlink-react-page:not(.travlink-home) {
+/* Fixed Travlink atmospheric canvas; page content scrolls above this layer. */
+.travlink-react-page {
+  position: relative;
+  isolation: isolate;
+  background: transparent !important;
+}
+
+.travlink-react-page::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background:
     radial-gradient(
       circle at 8% 24%,
@@ -19,8 +28,24 @@
       #f3faff 88%,
       #fff 100%
     );
-  background-color: #f4faff;
+  content: "";
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+.travlink-react-page:not(.travlink-home) {
   color: #111827;
+}
+
+.travlink-home .travlink-blue-shade {
+  background: transparent !important;
+}
+
+.travlink-home .travlink-service-section,
+.travlink-home .travlink-process,
+.travlink-home .travlink-about-showcase,
+.travlink-home .contact-3-area {
+  background: #fbf8f1 !important;
 }
 
 /* Fixed white navigation for every inner page. */
@@ -119,7 +144,7 @@
 }
 
 @media (max-width: 767px) {
-  .travlink-react-page:not(.travlink-home) {
+  .travlink-react-page::before {
     background:
       radial-gradient(circle at 0 18%, rgba(63, 169, 225, .16), transparent 35%),
       radial-gradient(circle at 100% 72%, rgba(88, 181, 229, .12), transparent 36%),

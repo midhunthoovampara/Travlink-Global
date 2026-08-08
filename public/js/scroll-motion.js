@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     "use strict";
 
     function addMotionClass(element, className, delay) {
@@ -11,6 +11,10 @@
     }
 
     function initialiseScrollMotion() {
+        if (document.querySelector(".travlink-home")) {
+            return;
+        }
+
         if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             return;
         }

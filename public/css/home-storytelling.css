@@ -465,14 +465,8 @@
 }
 
 .travlink-story-canvas .contact-3-area .ca-contact-from::before {
-  position: absolute;
-  inset: 12% -8% -8% 18%;
-  z-index: -1;
-  border-radius: 35%;
-  background: rgba(31, 111, 209, .15);
-  content: "";
-  filter: blur(45px);
-  pointer-events: none;
+  display: none;
+  content: none;
 }
 
 .travlink-story-canvas .contact-3-area :is(input, textarea, select):focus {
