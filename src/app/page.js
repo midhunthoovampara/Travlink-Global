@@ -1,10 +1,8 @@
-import LegacyPage, {
-  getLegacyPage,
-  getPageMetadata,
-} from "@/components/LegacyPage";
+import Home from "@/views/Home";
+import { getPageMetadata } from "@/lib/content";
 
 export const metadata = getPageMetadata("home");
 
 export default function HomePage() {
-  return <LegacyPage page={getLegacyPage("home")} />;
+  return <Home />;
 }

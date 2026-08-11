@@ -12,7 +12,7 @@
   background:
     linear-gradient(rgba(29,99,184,.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(29,99,184,.025) 1px, transparent 1px),
-    url("../img/background/world-map-outline.svg") center 62% / min(1100px,86vw) auto no-repeat;
+    url("/img/background/world-map-outline.svg") center 62% / min(1100px,86vw) auto no-repeat;
   background-size: 78px 78px,78px 78px,min(1100px,86vw) auto;
   content: "";
   opacity: .075;

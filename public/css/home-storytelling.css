@@ -25,40 +25,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 12% 11%, rgba(29, 111, 216, .15), transparent 28%),
-    radial-gradient(circle at 88% 35%, rgba(73, 180, 224, .14), transparent 27%),
-    radial-gradient(circle at 20% 73%, rgba(212, 170, 90, .09), transparent 23%),
-    radial-gradient(circle at 82% 89%, rgba(18, 82, 151, .09), transparent 25%),
-    linear-gradient(180deg, #f4f8fc 0%, #fff 22%, #eef5fb 48%, #f8fafc 72%, #fff 100%);
-}
-
-.travlink-story-canvas::before {
-  position: absolute;
-  inset: 0;
-  z-index: -3;
-  background-image: url("../img/background/world-map-outline.svg");
-  background-position: 68% 40%;
-  background-repeat: no-repeat;
-  background-size: min(1080px, 82vw) auto;
-  content: "";
-  opacity: .095;
-  pointer-events: none;
-  filter: drop-shadow(0 0 14px rgba(29, 99, 184, .2));
-  animation: storyMapDrift 28s ease-in-out infinite alternate;
-}
-
-.travlink-story-canvas::after {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background-image:
-    linear-gradient(rgba(25, 92, 157, .025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(25, 92, 157, .025) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(180deg, transparent 4%, #000 22%, #000 70%, transparent 96%);
-  content: "";
-  pointer-events: none;
+  background: transparent;
 }
 
 .travlink-story-canvas > section {

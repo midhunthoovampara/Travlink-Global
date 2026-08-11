@@ -38,7 +38,7 @@
   bottom: -7%;
   width: min(72vw, 1020px);
   aspect-ratio: 1.8;
-  background: url("../img/background/world-map-outline.svg") center / contain no-repeat;
+  background: url("/img/background/world-map-outline.svg") center / contain no-repeat;
   opacity: .075;
   filter: drop-shadow(0 0 18px rgba(94, 183, 239, .22));
   transform: translate3d(0, 0, 0);

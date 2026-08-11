@@ -1,0 +1,27 @@
+:root {
+  --color-primary: #1557b0;
+  --color-primary-dark: #0d3d7d;
+  --color-dark: #101827;
+  --color-text: #475569;
+  --color-muted: #64748b;
+  --color-white: #fff;
+  --color-light: #f6f8fb;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: Manrope, Outfit, Arial, sans-serif;
+  --container-width: 1280px;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --section-space: 110px;
+  --transition-fast: 220ms ease;
+  --transition-normal: 350ms ease;
+  --shadow-soft: 0 18px 50px rgba(15, 23, 42, .07);
+}
+
+@media (max-width: 991px) {
+  :root { --section-space: 84px; }
+}
+
+@media (max-width: 767px) {
+  :root { --section-space: 64px; }
+}

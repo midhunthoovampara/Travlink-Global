@@ -1,10 +1,9 @@
 import { notFound } from "next/navigation";
-import LegacyPage, {
-  getLegacyPage,
-  getPageMetadata,
-  pageKeys,
-} from "@/components/LegacyPage";
+import ContentPage from "@/views/ContentPage";
+import { getPageMetadata } from "@/lib/content";
+import { pageKeys } from "@/data/pages";
 
+// Static export requires every supported top-level page to be known at build time.
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -20,5 +19,5 @@ export async function generateMetadata({ params }) {
 export default async function StaticContentPage({ params }) {
   const { slug } = await params;
   if (!pageKeys.includes(slug)) notFound();
-  return <LegacyPage page={getLegacyPage(slug)} />;
+  return <ContentPage pageKey={slug} />;
 }

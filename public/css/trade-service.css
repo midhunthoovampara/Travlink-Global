@@ -1,5 +1,5 @@
 ﻿.travlink-trade-page { color: #111827; background: #fff; }
-.travlink-trade-hero { position: relative; min-height: clamp(700px,78vh,820px); display: flex; align-items: flex-end; overflow: hidden; padding: 175px 0 82px; background: url("../img/service/trade-hero-warehouse.webp") center/cover no-repeat; isolation: isolate; }
+.travlink-trade-hero { position: relative; min-height: clamp(700px,78vh,820px); display: flex; align-items: flex-end; overflow: hidden; padding: 175px 0 82px; background: url("/img/service/trade-hero-warehouse.webp") center/cover no-repeat; isolation: isolate; }
 .travlink-trade-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg,rgba(3,8,16,.02) 20%,rgba(3,8,16,.18) 55%,rgba(3,8,16,.82) 100%); }
 .travlink-trade-hero__content { width: 100%; }.travlink-trade-hero__label,.travlink-trade-eyebrow { display:inline-block; color:#0e47a1; font:700 13px/1.2 Inter,Outfit,sans-serif; letter-spacing:.27em; text-transform:uppercase; }.travlink-trade-hero__label { margin-bottom:20px; color:#d5eaff; }
 .travlink-trade-hero h1 { max-width:950px; margin:0; color:#f8f5ee; font:500 clamp(64px,5.7vw,78px)/.98 "Cormorant Garamond",Georgia,serif; letter-spacing:-.035em; }.travlink-trade-hero h1 span { color:#77b7ef; }

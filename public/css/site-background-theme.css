@@ -1,36 +1,8 @@
-/* Fixed Travlink atmospheric canvas; page content scrolls above this layer. */
+/* Shared page-level presentation. */
 .travlink-react-page {
   position: relative;
   isolation: isolate;
-  background: transparent !important;
-}
-
-.travlink-react-page::before {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(
-      circle at 8% 24%,
-      rgba(63, 169, 225, .2) 0,
-      rgba(63, 169, 225, 0) 40%
-    ),
-    radial-gradient(
-      circle at 92% 72%,
-      rgba(88, 181, 229, .14) 0,
-      rgba(88, 181, 229, 0) 42%
-    ),
-    linear-gradient(
-      180deg,
-      #fff 0%,
-      #f4faff 11%,
-      #e8f5fc 48%,
-      #f3faff 88%,
-      #fff 100%
-    );
-  content: "";
-  pointer-events: none;
-  transform: translateZ(0);
+  background: #fff;
 }
 
 .travlink-react-page:not(.travlink-home) {
@@ -81,6 +53,7 @@
 }
 
 .travlink-react-page:not(.travlink-home) > main,
+.travlink-react-page:not(.travlink-home) .tl-page-content > main,
 .travlink-react-page:not(.travlink-home) .travlink-travel-page,
 .travlink-react-page:not(.travlink-home) .travlink-trade-page,
 .travlink-react-page:not(.travlink-home) .travlink-shipping-page {
@@ -144,13 +117,6 @@
 }
 
 @media (max-width: 767px) {
-  .travlink-react-page::before {
-    background:
-      radial-gradient(circle at 0 18%, rgba(63, 169, 225, .16), transparent 35%),
-      radial-gradient(circle at 100% 72%, rgba(88, 181, 229, .12), transparent 36%),
-      linear-gradient(180deg, #fff 0%, #eef8fe 48%, #fff 100%);
-  }
-
   .travlink-react-page:not(.travlink-home) .header-area-3.stiky,
   .travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header {
     min-height: 68px;

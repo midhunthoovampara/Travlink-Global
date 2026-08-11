@@ -266,117 +266,140 @@
           </p>
         </header>
 
-        <div class="travlink-packages-route" aria-hidden="true">
-          <svg viewBox="0 0 1120 132" focusable="false">
-            <defs>
-              <linearGradient id="travlinkRouteFade" x1="0" x2="1">
-                <stop offset="0" stop-color="#2f9fe6" stop-opacity="0" />
-                <stop offset=".18" stop-color="#2f9fe6" stop-opacity=".58" />
-                <stop offset=".82" stop-color="#0e47a1" stop-opacity=".58" />
-                <stop offset="1" stop-color="#0e47a1" stop-opacity="0" />
-              </linearGradient>
-              <path
-                id="travlinkPackageRoutePath"
-                d="M18 94 C220 8 370 122 555 60 S884 10 1102 76"
-              />
-            </defs>
-            <use
-              href="#travlinkPackageRoutePath"
-              class="travlink-packages-route__line"
-              stroke="url(#travlinkRouteFade)"
-            />
-            <circle cx="214" cy="48" r="4" />
-            <circle cx="555" cy="60" r="4" />
-            <circle cx="906" cy="35" r="4" />
-            <g class="travlink-packages-route__aircraft">
-              <path d="M0-3 16 0 0 3 4 12-1 12-7 3-14 2-14-2-7-3-1-12 4-12Z" />
-              <animateMotion dur="26s" repeatCount="indefinite" rotate="auto">
-                <mpath href="#travlinkPackageRoutePath" />
-              </animateMotion>
-            </g>
-          </svg>
-        </div>
-
         <div class="travlink-package-categories">
-          <article class="travlink-package-category">
-            <figure class="travlink-package-category__media">
-              <img
-                src="/img/service/travel-packages/essential-travel-editorial-v1.png"
-                width="1672"
-                height="941"
-                loading="lazy"
-                decoding="async"
-                alt="Business traveller in a premium airport lounge overlooking a long-haul aircraft"
-              />
-            </figure>
-            <div class="travlink-package-category__content">
-              <span class="travlink-package-category__number">01</span>
-              <span class="travlink-travel-eyebrow">Travel Planning</span>
-              <h3>Essential Travel</h3>
+          <article class="travlink-essential-showcase" data-essential-showcase aria-labelledby="essential-travel-title">
+            <div class="travlink-essential-showcase__intro">
+              <span class="travlink-essential-showcase__index" aria-hidden="true">01</span>
+              <span class="travlink-essential-showcase__eyebrow">Travel Planning</span>
+              <h3 id="essential-travel-title">Essential Travel</h3>
               <p>Travel made simple, considered, and seamless from planning to arrival.</p>
-              <div class="travlink-package-category__services">
-                <div class="travlink-package-item"><i class="fa-regular fa-map" aria-hidden="true"></i><h4>International Tour Packages</h4></div>
-                <div class="travlink-package-item" id="flight-assistance"><i class="fa-solid fa-plane-departure" aria-hidden="true"></i><h4>Flight Assistance</h4></div>
-                <div class="travlink-package-item" id="hotel-assistance"><i class="fa-solid fa-hotel" aria-hidden="true"></i><h4>Hotel &amp; Accommodation Assistance</h4></div>
-                <div class="travlink-package-item"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i><h4>Travel Insurance</h4></div>
-                <div class="travlink-package-item" id="business-travel"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><h4>Business Travel</h4></div>
-                <div class="travlink-package-item"><i class="fa-solid fa-route" aria-hidden="true"></i><h4>Customised Itineraries</h4></div>
+
+              <nav class="travlink-essential-showcase__nav" aria-label="Essential Travel services">
+                <button class="is-active" type="button" data-essential-nav="0" aria-pressed="true"><span>01</span>International Tour Packages</button>
+                <button type="button" data-essential-nav="1" aria-pressed="false"><span>02</span>Flight Assistance</button>
+                <button type="button" data-essential-nav="2" aria-pressed="false"><span>03</span>Hotel &amp; Accommodation Assistance</button>
+                <button type="button" data-essential-nav="3" aria-pressed="false"><span>04</span>Travel Insurance</button>
+                <button type="button" data-essential-nav="4" aria-pressed="false"><span>05</span>Business Travel</button>
+                <button type="button" data-essential-nav="5" aria-pressed="false"><span>06</span>Customised Itineraries</button>
+              </nav>
+
+              <div class="travlink-essential-showcase__progress" aria-live="polite">
+                <strong data-essential-progress>01 / 06</strong><span>Essential Travel</span>
+              </div>
+            </div>
+
+            <div class="travlink-essential-showcase__viewport" data-essential-viewport>
+              <div class="travlink-essential-showcase__track">
+                <article class="travlink-essential-card is-active" data-essential-card="0" tabindex="0">
+                  <span class="travlink-essential-card__number">01</span>
+                  <figure><img src="/img/explore/generated/destination-dubai.jpg" alt="Dubai skyline and waterfront" loading="lazy" decoding="async" /></figure>
+                  <h4>International Tour Packages</h4>
+                </article>
+                <article class="travlink-essential-card" data-essential-card="1" tabindex="0" id="flight-assistance">
+                  <span class="travlink-essential-card__number">02</span>
+                  <figure><img src="/img/about/generated/about-travel-plane.jpg" alt="Passenger aircraft flying above the coast" loading="lazy" decoding="async" /></figure>
+                  <h4>Flight Assistance</h4>
+                </article>
+                <article class="travlink-essential-card" data-essential-card="2" tabindex="0" id="hotel-assistance">
+                  <span class="travlink-essential-card__number">03</span>
+                  <figure><img src="/img/service/travel-hero-resort.webp" alt="Premium island resort accommodation" loading="lazy" decoding="async" /></figure>
+                  <h4>Hotel &amp; Accommodation Assistance</h4>
+                </article>
+                <article class="travlink-essential-card" data-essential-card="3" tabindex="0">
+                  <span class="travlink-essential-card__number">04</span>
+                  <figure><img src="/img/service/visa.jpg" alt="Passport, tickets, and travel documents" loading="lazy" decoding="async" /></figure>
+                  <h4>Travel Insurance</h4>
+                </article>
+                <article class="travlink-essential-card" data-essential-card="4" tabindex="0" id="business-travel">
+                  <span class="travlink-essential-card__number">05</span>
+                  <figure><img src="/img/service/travel-packages/essential-travel-editorial-v1.png" alt="Business traveller in a premium airport lounge" loading="lazy" decoding="async" /></figure>
+                  <h4>Business Travel</h4>
+                </article>
+                <article class="travlink-essential-card" data-essential-card="5" tabindex="0">
+                  <span class="travlink-essential-card__number">06</span>
+                  <figure><img src="/img/process/generated/process-plan.webp" alt="Map and compass representing a customised itinerary" loading="lazy" decoding="async" /></figure>
+                  <h4>Customised Itineraries</h4>
+                </article>
               </div>
             </div>
           </article>
 
-          <article class="travlink-package-category travlink-package-category--reverse travlink-package-category--dark">
-            <figure class="travlink-package-category__media">
-              <img
-                src="/img/service/travel-packages/luxury-experiences-editorial-v1.png"
-                width="1672"
-                height="941"
-                loading="lazy"
-                decoding="async"
-                alt="Private jet beside a sapphire coast with a luxury yacht beyond"
-              />
-            </figure>
-            <div class="travlink-package-category__content">
-              <span class="travlink-package-category__number">02</span>
+          <article class="travlink-luxury-showcase" data-luxury-showcase aria-labelledby="luxury-experiences-title">
+            <header class="travlink-luxury-showcase__intro" data-luxury-reveal>
               <span class="travlink-travel-eyebrow">Private Access</span>
-              <h3>Luxury Experiences</h3>
+              <h3 id="luxury-experiences-title">Luxury Experiences</h3>
               <p>Exceptional journeys shaped around privacy, freedom, and effortless movement.</p>
-              <div class="travlink-package-category__services">
-                <div class="travlink-package-item"><i class="fa-solid fa-plane" aria-hidden="true"></i><h4>Private Jet Charter</h4></div>
-                <div class="travlink-package-item"><i class="fa-solid fa-ship" aria-hidden="true"></i><h4>Yacht Charter</h4></div>
-                <div class="travlink-package-item"><i class="fa-solid fa-sailboat" aria-hidden="true"></i><h4>Sailboat Experiences</h4></div>
-              </div>
+            </header>
+
+            <div class="travlink-luxury-showcase__cards" role="list" aria-label="Luxury Experiences services">
+              <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-reveal>
+                <span class="travlink-luxury-card__number" aria-hidden="true">01</span>
+                <figure>
+                  <img src="/img/service/travel-packages/luxury-experiences-editorial-v1.png" alt="Private aircraft ready for a luxury journey" loading="lazy" decoding="async" />
+                </figure>
+                <h4>Private Jet Charter</h4>
+              </article>
+
+              <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-reveal>
+                <span class="travlink-luxury-card__number" aria-hidden="true">02</span>
+                <figure>
+                  <img src="/img/service/travel-packages/luxury-experiences-editorial-v1.png" alt="Luxury yacht cruising beside a Mediterranean coast" loading="lazy" decoding="async" />
+                </figure>
+                <h4>Yacht Charter</h4>
+              </article>
+
+              <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-reveal>
+                <span class="travlink-luxury-card__number" aria-hidden="true">03</span>
+                <figure>
+                  <img src="/img/service/travel-service-sailing-v3.png" alt="Sailboat crossing clear coastal water" loading="lazy" decoding="async" />
+                </figure>
+                <h4>Sailboat Experiences</h4>
+              </article>
             </div>
           </article>
 
-          <article class="travlink-package-category travlink-package-category--ocean">
-            <figure class="travlink-package-category__media">
-              <img
-                src="/img/service/travel-packages/ocean-experiences-editorial-v1.png"
-                width="1672"
-                height="941"
-                loading="lazy"
-                decoding="async"
-                alt="Secluded tropical cove with a kayak, clear water, and distant sailboat"
-              />
-            </figure>
-            <div class="travlink-package-category__content">
-              <span class="travlink-package-category__number">03</span>
+          <article class="travlink-ocean-showcase" data-ocean-showcase aria-labelledby="ocean-experiences-title">
+            <header class="travlink-ocean-showcase__intro" data-ocean-reveal>
               <span class="travlink-travel-eyebrow">Beyond the Shore</span>
-              <h3>Ocean Experiences</h3>
+              <h3 id="ocean-experiences-title">Ocean Experiences</h3>
               <p>Discover island horizons and clear-water adventures at your own pace.</p>
-              <div class="travlink-package-category__services">
-                <div class="travlink-package-item"><i class="fa-solid fa-umbrella-beach" aria-hidden="true"></i><h4>Island Hopping</h4></div>
-                <div class="travlink-package-item"><i class="fa-solid fa-water" aria-hidden="true"></i><h4>Surfing</h4></div>
-                <div class="travlink-package-item"><i class="fa-solid fa-mask-face" aria-hidden="true"></i><h4>Snorkelling</h4></div>
-                <div class="travlink-package-item"><i class="fa-solid fa-person-swimming" aria-hidden="true"></i><h4>Kayaking</h4></div>
-                <div class="travlink-package-item"><i class="fa-solid fa-fish-fins" aria-hidden="true"></i><h4>Scuba Diving</h4></div>
-              </div>
+            </header>
+
+            <div class="travlink-ocean-showcase__cards" role="list" aria-label="Ocean Experiences services">
+              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+                <span class="travlink-ocean-card__number" aria-hidden="true">01</span>
+                <figure><img src="/img/explore/generated/destination-maldives.jpg" alt="Tropical islands surrounded by clear turquoise water" loading="lazy" decoding="async" /></figure>
+                <h4>Island Hopping</h4>
+              </article>
+
+              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+                <span class="travlink-ocean-card__number" aria-hidden="true">02</span>
+                <figure><img src="/img/slider/travlink-hero-sailing-dark-v4.png" alt="Open ocean waves at golden hour" loading="lazy" decoding="async" /></figure>
+                <h4>Surfing</h4>
+              </article>
+
+              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+                <span class="travlink-ocean-card__number" aria-hidden="true">03</span>
+                <figure><img src="/img/service/travel-packages/ocean-experiences-editorial-v1.png" alt="Snorkeller exploring clear shallow coastal water" loading="lazy" decoding="async" /></figure>
+                <h4>Snorkelling</h4>
+              </article>
+
+              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+                <span class="travlink-ocean-card__number" aria-hidden="true">04</span>
+                <figure><img src="/img/service/travel-packages/ocean-experiences-editorial-v1.png" alt="Kayaker crossing a secluded tropical cove" loading="lazy" decoding="async" /></figure>
+                <h4>Kayaking</h4>
+              </article>
+
+              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+                <span class="travlink-ocean-card__number" aria-hidden="true">05</span>
+                <figure><img src="/img/slider/travlink-hero-sailboat-uhd.webp" alt="Deep blue ocean viewed from above" loading="lazy" decoding="async" /></figure>
+                <h4>Scuba Diving</h4>
+              </article>
             </div>
           </article>
 
-          <article class="travlink-package-category travlink-package-category--reverse travlink-package-category--adventure">
-            <figure class="travlink-package-category__media">
+          <article class="travlink-adventure-showcase" aria-labelledby="adventure-experiences-title">
+            <figure class="travlink-adventure-showcase__background">
               <img
                 src="/img/service/travel-packages/adventure-experiences-editorial-v1.png"
                 width="1672"
@@ -386,13 +409,15 @@
                 alt="Trekker following a high mountain ridge at first light"
               />
             </figure>
-            <div class="travlink-package-category__content">
-              <span class="travlink-package-category__number">04</span>
+
+            <div class="travlink-adventure-showcase__content">
+              <span class="travlink-adventure-showcase__number" aria-hidden="true">04</span>
               <span class="travlink-travel-eyebrow">The Path Less Travelled</span>
-              <h3>Adventure Experiences</h3>
+              <h3 id="adventure-experiences-title">Adventure Experiences</h3>
               <p>Go further with a carefully considered journey into extraordinary terrain.</p>
-              <div class="travlink-package-category__services">
-                <div class="travlink-package-item"><i class="fa-solid fa-person-hiking" aria-hidden="true"></i><h4>Trekking</h4></div>
+              <div class="travlink-adventure-showcase__service">
+                <i class="fa-solid fa-person-hiking" aria-hidden="true"></i>
+                <h4>Trekking</h4>
               </div>
             </div>
           </article>
@@ -410,15 +435,15 @@
             Getting the paperwork right, <em>the first time.</em>
           </h2>
           <div class="travlink-visa__types">
-            <article class="travlink-visa-card">
+            <article class="travlink-visa-card" id="tourist-visa">
               <i class="fa-solid fa-passport" aria-hidden="true"></i>
               <h3>Tourist Visa</h3>
             </article>
-            <article class="travlink-visa-card">
+            <article class="travlink-visa-card" id="business-visa">
               <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
               <h3>Business Visa</h3>
             </article>
-            <article class="travlink-visa-card">
+            <article class="travlink-visa-card" id="transit-visa">
               <i class="fa-solid fa-plane-departure" aria-hidden="true"></i>
               <h3>Transit Visa</h3>
             </article>
@@ -427,166 +452,85 @@
             class="travlink-country-showcase"
             aria-labelledby="visa-country-title"
           >
-            <!-- <span class="travlink-country-showcase__label"
-              >Countries We Assist</span -->
+            <nav class="travlink-country-index" aria-label="Visa Assistance sections">
+              <a href="#visa-title">Visa Assistance</a>
+              <a href="#tourist-visa">Tourist Visa</a>
+              <a href="#business-visa">Business Visa</a>
+              <a href="#transit-visa">Transit Visa</a>
+              <a class="is-active" href="#visa-country-title" aria-current="location">Countries</a>
+              <a href="#travel-faq-title">FAQ</a>
+              <a href="#travel-contact">Contact</a>
+            </nav>
 
             <h3 id="visa-country-title">
               Visa Assistance <em>Across Multiple Destinations</em>
             </h3>
 
-            <div
-              class="travlink-country-carousel"
-              role="region"
-              aria-label="Countries supported for visa assistance"
-            >
-              <div class="travlink-country-carousel__track">
-                <div class="travlink-country-carousel__group">
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/qatar.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Doha waterfront skyline in Qatar"
-                    />
-                    <span class="travlink-country-card__name">Qatar</span>
-                  </article>
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/kuwait.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt="The Kuwait Towers in Kuwait City"
-                    />
-                    <span class="travlink-country-card__name">Kuwait</span>
-                  </article>
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/china.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt="The Great Wall of China across mountain ridges"
-                    />
-                    <span class="travlink-country-card__name">China</span>
-                  </article>
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/uzbekistan.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Historic tiled architecture in Samarkand, Uzbekistan"
-                    />
-                    <span class="travlink-country-card__name">Uzbekistan</span>
-                  </article>
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/kazakhstan.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Bayterek Tower and modern architecture in Astana, Kazakhstan"
-                    />
-                    <span class="travlink-country-card__name">Kazakhstan</span>
-                  </article>
-                  <article
-                    class="travlink-country-card travlink-country-card--more"
-                  >
-                    <i class="fa-solid fa-earth-asia" aria-hidden="true"></i>
-                    <span class="travlink-country-card__name"
-                      >And More<small
-                        >Contact us for other destinations</small
-                      ></span
-                    >
-                  </article>
-                </div>
-
-                <div
-                  class="travlink-country-carousel__group"
-                  aria-hidden="true"
-                >
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/qatar.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
-                    <span class="travlink-country-card__name">Qatar</span>
-                  </article>
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/kuwait.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
-                    <span class="travlink-country-card__name">Kuwait</span>
-                  </article>
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/china.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
-                    <span class="travlink-country-card__name">China</span>
-                  </article>
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/uzbekistan.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
-                    <span class="travlink-country-card__name">Uzbekistan</span>
-                  </article>
-                  <article class="travlink-country-card">
-                    <img
-                      src="/img/service/countries/kazakhstan.jpg"
-                      width="760"
-                      height="500"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
-                    <span class="travlink-country-card__name">Kazakhstan</span>
-                  </article>
-                  <article
-                    class="travlink-country-card travlink-country-card--more"
-                  >
-                    <i class="fa-solid fa-earth-asia" aria-hidden="true"></i>
-                    <span class="travlink-country-card__name"
-                      >And More<small
-                        >Contact us for other destinations</small
-                      ></span
-                    >
-                  </article>
-                </div>
-              </div>
+            <div class="travlink-country-grid" role="list" aria-label="Countries supported for visa assistance">
+              <article class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait" data-country-tile role="listitem">
+                <img src="/img/service/countries/qatar.jpg" width="760" height="500" loading="lazy" decoding="async" alt="Doha waterfront skyline in Qatar" />
+                <span>Qatar</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image" data-country-tile role="listitem">
+                <img src="/img/service/countries/kuwait.jpg" width="760" height="500" loading="lazy" decoding="async" alt="The Kuwait Towers in Kuwait City" />
+                <span>Kuwait</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--wide" data-country-tile role="listitem">
+                <img src="/img/service/countries/china.jpg" width="760" height="500" loading="lazy" decoding="async" alt="The Great Wall of China across mountain ridges" />
+                <span>China</span>
+              </article>
+              <div class="travlink-destination-tile travlink-destination-tile--space" data-country-tile aria-hidden="true"></div>
+              <article class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait" data-country-tile role="listitem">
+                <img src="/img/service/countries/uzbekistan.jpg" width="760" height="500" loading="lazy" decoding="async" alt="Historic tiled architecture in Samarkand, Uzbekistan" />
+                <span>Uzbekistan</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image" data-country-tile role="listitem">
+                <img src="/img/service/countries/kazakhstan.jpg" width="760" height="500" loading="lazy" decoding="async" alt="Bayterek Tower and modern architecture in Astana, Kazakhstan" />
+                <span>Kazakhstan</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait" data-country-tile role="listitem">
+                <img src="/img/service/countries/uae.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Dubai skyline and waterfront in the United Arab Emirates" />
+                <span>UAE</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--wide" data-country-tile role="listitem">
+                <img src="/img/service/countries/saudi-arabia.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Historic desert architecture and palm groves in Saudi Arabia" />
+                <span>Saudi Arabia</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image" data-country-tile role="listitem">
+                <img src="/img/service/countries/oman.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Muscat waterfront and mountains in Oman" />
+                <span>Oman</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image" data-country-tile role="listitem">
+                <img src="/img/service/countries/bahrain.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="Manama skyline and traditional boats in Bahrain" />
+                <span>Bahrain</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait" data-country-tile role="listitem">
+                <img src="/img/service/countries/vietnam.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Lantern-lit heritage street in Hoi An, Vietnam" />
+                <span>Vietnam</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--wide" data-country-tile role="listitem">
+                <img src="/img/service/countries/thailand.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Ornate temple architecture in Bangkok, Thailand" />
+                <span>Thailand</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait" data-country-tile role="listitem">
+                <img src="/img/service/countries/malaysia.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Kuala Lumpur skyline and Petronas Twin Towers in Malaysia" />
+                <span>Malaysia</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--wide" data-country-tile role="listitem">
+                <img src="/img/service/countries/singapore.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Marina Bay and Gardens by the Bay in Singapore" />
+                <span>Singapore</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--image" data-country-tile role="listitem">
+                <img src="/img/service/countries/sri-lanka.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Tea-country train crossing the hills of Sri Lanka" />
+                <span>Sri Lanka</span>
+              </article>
+              <article class="travlink-destination-tile travlink-destination-tile--text travlink-destination-tile--more" data-country-tile role="listitem">
+                <span class="travlink-destination-tile__kicker">And More</span>
+                <h4>Looking for another destination?</h4>
+                <a href="/contact/">Contact Us <span aria-hidden="true">&rarr;</span></a>
+              </article>
             </div>
           </section>
-        </div>
-        <div class="travlink-travel-feature__image">
-          <img
-            src="/img/service/visa.jpg"
-            alt="Passport and boarding pass prepared for international travel"
-          />
         </div>
       </article>
     </div>
@@ -597,7 +541,7 @@
   >
     <div class="container">
       <div class="travlink-travel-support__grid">
-        <aside class="travlink-travel-contact">
+        <aside class="travlink-travel-contact" id="travel-contact">
           <span class="travlink-travel-eyebrow">Contact Us</span>
           <h2>Request Travel <em>Consultation</em></h2>
           <form class="travlink-travel-contact__form" action="#">
@@ -886,4 +830,7 @@
 <script src="/js/main.js"></script>
 <script src="/js/scroll-motion.js"></script>
 <script src="/js/mobile-navigation.js"></script>
-<script src="/js/travel-country-carousel.js"></script>
+<script src="/js/travel-country-editorial.js?v=20260812-1"></script>
+<script src="/js/travel-essential-showcase.js"></script>
+<script src="/js/travel-luxury-showcase.js"></script>
+<script src="/js/travel-ocean-showcase.js"></script>

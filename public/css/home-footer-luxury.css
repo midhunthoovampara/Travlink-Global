@@ -12,20 +12,6 @@
   color: #f4f8fb;
 }
 
-.travlink-react-page .travlink-footer::before {
-  position: absolute;
-  top: -16%;
-  right: -7%;
-  z-index: -2;
-  width: min(64vw, 920px);
-  aspect-ratio: 1.8;
-  background: url("../img/background/world-map-outline.svg") center / contain no-repeat;
-  content: "";
-  opacity: .055;
-  pointer-events: none;
-  filter: drop-shadow(0 0 20px rgba(78, 170, 229, .18));
-}
-
 .travlink-react-page .travlink-footer::after {
   position: absolute;
   top: 0;

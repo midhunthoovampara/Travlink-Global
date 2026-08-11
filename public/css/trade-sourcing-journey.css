@@ -10,7 +10,7 @@
   position: absolute;
   inset: 22% 0 5%;
   background:
-    url("../img/background/world-map-outline.svg") center 58% / min(1080px, 82vw) auto no-repeat,
+    url("/img/background/world-map-outline.svg") center 58% / min(1080px, 82vw) auto no-repeat,
     radial-gradient(circle at 14% 82%, rgba(47,159,230,.12), transparent 24%),
     radial-gradient(circle at 88% 65%, rgba(14,71,161,.08), transparent 25%);
   content: "";

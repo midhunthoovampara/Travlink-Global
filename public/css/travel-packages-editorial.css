@@ -22,41 +22,645 @@
   font: 400 16px/1.75 Outfit, Inter, sans-serif;
 }
 
-.travlink-packages-route {
-  width: min(100%, 1120px);
-  height: 132px;
-  margin: 34px auto 20px;
-  opacity: .68;
-  overflow: hidden;
-}
-
-.travlink-packages-route svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.travlink-packages-route__line {
-  fill: none;
-  stroke-width: 1.4;
-  stroke-dasharray: 6 9;
-  animation: travlinkPackageRoute 18s linear infinite;
-}
-
-.travlink-packages-route circle {
-  fill: #fff;
-  stroke: rgba(14, 71, 161, .58);
-  stroke-width: 1.5;
-}
-
-.travlink-packages-route__aircraft {
-  fill: #0e47a1;
-  filter: drop-shadow(0 3px 5px rgba(14, 71, 161, .22));
-}
-
 .travlink-package-categories {
   display: grid;
   gap: clamp(72px, 8vw, 116px);
+  margin-top: clamp(48px, 6vw, 72px);
+}
+
+/* Essential Travel: cinematic horizontal service showcase. */
+.travlink-essential-showcase {
+  position: relative;
+  width: 100vw;
+  min-height: clamp(700px, 46vw, 820px);
+  margin-inline: calc(50% - 50vw);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 58% 54%, rgba(73, 65, 102, .24), transparent 31%),
+    linear-gradient(135deg, #11101a 0%, #191622 50%, #100f18 100%);
+  isolation: isolate;
+}
+
+.travlink-essential-showcase::before {
+  position: absolute;
+  inset: -18%;
+  z-index: -1;
+  background:
+    repeating-conic-gradient(
+      from 218deg at 55% 53%,
+      rgba(220, 214, 229, .15) 0 .08deg,
+      transparent .08deg 4.5deg
+    );
+  content: "";
+  opacity: .22;
+  pointer-events: none;
+  transform: scale(1.12);
+  animation: travlinkEssentialStreaks 18s ease-in-out infinite alternate;
+}
+
+.travlink-essential-showcase::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(3, 10, 19, .32), transparent 52%, rgba(3, 10, 19, .22));
+  content: "";
+  pointer-events: none;
+}
+
+.travlink-essential-showcase__intro {
+  position: absolute;
+  top: 0;
+  left: max(calc((100vw - 1500px) / 2), 6vw);
+  z-index: 2;
+  width: min(610px, 39vw);
+  padding-top: clamp(34px, 3vw, 58px);
+}
+
+.travlink-essential-showcase__index {
+  display: none;
+}
+
+.travlink-essential-showcase__eyebrow {
+  display: inline-block;
+  color: #ff4e29;
+  font: 700 12px/1.2 Outfit, Inter, sans-serif;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+}
+
+.travlink-essential-showcase__intro h3 {
+  max-width: 590px;
+  margin: 14px 0 0;
+  color: #ff4e29;
+  font: 500 clamp(55px, 4.9vw, 82px)/.9 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+
+.travlink-essential-showcase__intro > p {
+  max-width: 530px;
+  margin: 38px 0 0 max(48px, 5vw);
+  color: rgba(255, 255, 255, .88);
+  font: 500 clamp(16px, 1.05vw, 20px)/1.28 Outfit, Inter, sans-serif;
+}
+
+.travlink-essential-showcase__nav {
+  display: grid;
+  gap: 0;
+  width: 255px;
+  margin-top: 28px;
+  padding-left: 14px;
+  border-left: 1px solid rgba(255, 78, 41, .82);
+}
+
+.travlink-essential-showcase__nav button {
+  position: relative;
+  width: 100%;
+  padding: 7px 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, .4);
+  font: 500 11px/1.35 Outfit, Inter, sans-serif;
+  text-align: left;
+  transition: color .3s ease, transform .3s ease;
+}
+
+.travlink-essential-showcase__nav button::before {
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ff4e29;
+  box-shadow: none;
+  content: "";
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity .3s ease;
+}
+
+.travlink-essential-showcase__nav button span {
+  display: inline-block;
+  width: 31px;
+  color: rgba(255, 78, 41, .48);
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+.travlink-essential-showcase__nav button:is(:hover, :focus-visible, .is-active) {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.travlink-essential-showcase__nav button.is-active::before { opacity: 1; }
+.travlink-essential-showcase__nav button.is-active span { color: #ff4e29; }
+
+.travlink-essential-showcase__progress { display: none; }
+
+.travlink-essential-showcase__viewport {
+  position: absolute;
+  top: clamp(245px, 17vw, 292px);
+  right: 0;
+  bottom: 0;
+  left: 48.5%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.travlink-essential-showcase__viewport::-webkit-scrollbar { display: none; }
+
+.travlink-essential-showcase__track {
+  display: flex;
+  width: max-content;
+  min-height: 100%;
+  align-items: flex-start;
+  gap: clamp(54px, 4.2vw, 82px);
+  padding: 0 max(90px, 7vw) 34px 28px;
+}
+
+.travlink-essential-card {
+  position: relative;
+  width: clamp(190px, 11vw, 210px);
+  min-height: 430px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  opacity: .42;
+  transform: scale(.98);
+  transform-origin: center;
+  transition: opacity .48s ease, transform .48s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-essential-card__number {
+  display: block;
+  margin-bottom: 24px;
+  color: rgba(226, 238, 248, .46);
+  font: 700 24px/1 Outfit, Inter, sans-serif;
+  letter-spacing: .04em;
+  transition: color .35s ease;
+}
+
+.travlink-essential-card figure {
+  position: relative;
+  height: clamp(250px, 14.4vw, 272px);
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(153, 198, 235, .16);
+  border-radius: 14px;
+  background: #0d1928;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .2);
+  transition: border-color .4s ease, box-shadow .4s ease;
+}
+
+.travlink-essential-card figure::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4, 11, 20, .03), rgba(4, 11, 20, .38));
+  content: "";
+  transition: opacity .4s ease;
+}
+
+.travlink-essential-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.72) contrast(1.04);
+  transform: scale(1.035);
+  transition: filter .55s ease, transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-essential-card h4 {
+  margin: 28px 0 0;
+  color: rgba(255, 78, 41, .34);
+  font: 700 clamp(22px, 1.55vw, 29px)/1.08 Outfit, Inter, sans-serif;
+  letter-spacing: -.025em;
+  transition: color .35s ease;
+}
+
+.travlink-essential-card:is(:hover, :focus-visible, .is-active) {
+  opacity: 1;
+  outline: none;
+  transform: translateY(-6px) scale(1.02);
+}
+
+.travlink-essential-card.is-active .travlink-essential-card__number { color: #fff; }
+.travlink-essential-card.is-active figure { border-color: rgba(255, 78, 41, .38); box-shadow: 0 25px 58px rgba(0, 0, 0, .38); }
+.travlink-essential-card.is-active figure::after { opacity: .45; }
+.travlink-essential-card.is-active img { filter: saturate(.98) contrast(1.06); transform: scale(1.08); }
+.travlink-essential-card.is-active h4 { color: #ff4e29; }
+
+@keyframes travlinkEssentialStreaks {
+  from { transform: scale(1.1) translate3d(-.5%, 0, 0); }
+  to { transform: scale(1.16) translate3d(.5%, -.4%, 0); }
+}
+
+/* Luxury Experiences: open, full-width editorial composition. */
+.travlink-luxury-showcase {
+  position: relative;
+  width: 100vw;
+  min-height: 850px;
+  margin-inline: calc(50% - 50vw);
+  padding: 76px max(calc((100vw - 1500px) / 2), 6vw) 92px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fbf8f1 0%, #f6f7fa 100%);
+}
+
+.travlink-luxury-showcase__intro {
+  position: relative;
+  z-index: 2;
+  width: 34%;
+  max-width: 480px;
+}
+
+.travlink-luxury-showcase__intro .travlink-travel-eyebrow {
+  color: #1557b0;
+  font-size: 12px;
+  letter-spacing: .3em;
+}
+
+.travlink-luxury-showcase__intro h3 {
+  margin: 22px 0 0;
+  color: #13213a;
+  font: 500 clamp(58px, 5vw, 92px)/.95 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+
+.travlink-luxury-showcase__intro p {
+  max-width: 455px;
+  margin: 30px 0 0 max(34px, 3.6vw);
+  color: #37445a;
+  font: 500 clamp(16px, 1.08vw, 20px)/1.45 Outfit, Inter, sans-serif;
+}
+
+.travlink-luxury-showcase__cards {
+  position: absolute;
+  top: 150px;
+  right: max(calc((100vw - 1500px) / 2), 4vw);
+  left: 40%;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.travlink-luxury-card {
+  width: clamp(250px, 16vw, 300px);
+  flex: 0 0 auto;
+  color: #435069;
+  transition: transform .45s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-luxury-card:nth-child(2),
+.travlink-luxury-card:nth-child(3) { margin-top: 18px; }
+.travlink-luxury-card:nth-child(2) { margin-top: 44px; }
+
+.travlink-luxury-card__number {
+  display: block;
+  margin-bottom: 18px;
+  color: rgba(15, 35, 65, .22);
+  font: 600 42px/1 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -.02em;
+  transition: color .35s ease;
+}
+
+.travlink-luxury-card figure {
+  position: relative;
+  height: clamp(360px, 23vw, 430px);
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #dce4ea;
+  box-shadow: 0 10px 28px rgba(24, 40, 67, .06);
+  transition: box-shadow .45s ease;
+}
+
+.travlink-luxury-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.88) contrast(1.02);
+  transition: filter .55s ease, transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-luxury-card:nth-child(1) img { object-position: 57% 62%; }
+.travlink-luxury-card:nth-child(2) img { object-position: 24% 40%; }
+.travlink-luxury-card:nth-child(3) img { object-position: 47% 50%; }
+
+.travlink-luxury-card h4 {
+  max-width: 240px;
+  margin: 24px 0 0;
+  color: #25334b;
+  font: 600 clamp(20px, 1.55vw, 27px)/1.08 Outfit, Inter, sans-serif;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+  transition: color .35s ease;
+}
+
+.travlink-luxury-showcase.is-reveal-ready [data-luxury-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .75s ease, transform .85s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-luxury-showcase.is-visible [data-luxury-reveal] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.travlink-luxury-showcase.is-visible .travlink-luxury-card:nth-child(1) { transition-delay: .15s; }
+.travlink-luxury-showcase.is-visible .travlink-luxury-card:nth-child(2) { transition-delay: .3s; }
+.travlink-luxury-showcase.is-visible .travlink-luxury-card:nth-child(3) { transition-delay: .45s; }
+
+@media (hover: hover) and (min-width: 992px) {
+  .travlink-luxury-card:is(:hover, :focus-visible) {
+    outline: none;
+    transform: translateY(-4px);
+  }
+  .travlink-luxury-card:is(:hover, :focus-visible) .travlink-luxury-card__number,
+  .travlink-luxury-card:is(:hover, :focus-visible) h4 { color: #1557b0; }
+  .travlink-luxury-card:is(:hover, :focus-visible) figure { box-shadow: 0 20px 40px rgba(24, 40, 67, .14); }
+  .travlink-luxury-card:is(:hover, :focus-visible) img { filter: saturate(1) contrast(1.03); transform: scale(1.035); }
+}
+
+/* Ocean Experiences: staggered, open editorial sequence. */
+.travlink-ocean-showcase {
+  position: relative;
+  width: 100vw;
+  min-height: 920px;
+  margin-inline: calc(50% - 50vw);
+  padding: 78px max(calc((100vw - 1500px) / 2), 6vw) 100px;
+  overflow: hidden;
+  background: #f7eee4;
+  isolation: isolate;
+}
+
+.travlink-ocean-showcase::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 70% 44%, rgba(21, 87, 176, .045) 0 2px, transparent 2.5px),
+    repeating-radial-gradient(ellipse at 72% 45%, transparent 0 62px, rgba(21, 87, 176, .028) 63px 64px, transparent 65px 106px);
+  background-size: 210px 180px, auto;
+  content: "";
+  opacity: .8;
+  pointer-events: none;
+}
+
+.travlink-ocean-showcase::after {
+  position: absolute;
+  top: 27%;
+  right: 5%;
+  z-index: -1;
+  width: 48%;
+  height: 46%;
+  border-top: 1px dashed rgba(21, 87, 176, .05);
+  border-right: 1px dashed rgba(21, 87, 176, .05);
+  border-radius: 50%;
+  content: "";
+  opacity: .7;
+  pointer-events: none;
+  transform: rotate(8deg);
+  transition: opacity .45s ease, border-color .45s ease;
+}
+
+.travlink-ocean-showcase__intro {
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  max-width: 650px;
+}
+
+.travlink-ocean-showcase__intro .travlink-travel-eyebrow {
+  color: #1557b0;
+  font-size: 12px;
+  letter-spacing: .3em;
+}
+
+.travlink-ocean-showcase__intro h3 {
+  margin: 10px 0 0;
+  color: #12223a;
+  font: 500 clamp(54px, 3.6vw, 66px)/.95 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -.04em;
+  text-wrap: balance;
+  white-space: nowrap;
+}
+
+.travlink-ocean-showcase__intro p {
+  max-width: 560px;
+  margin: 38px 0 0 max(60px, 5.2vw);
+  color: #182135;
+  font: 500 clamp(17px, 1.1vw, 21px)/1.24 Outfit, Inter, sans-serif;
+}
+
+.travlink-ocean-showcase__cards {
+  position: absolute;
+  top: 315px;
+  right: 0;
+  bottom: auto;
+  left: 32.7%;
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(38px, 3.75vw, 70px);
+  padding-right: max(calc((100vw - 1500px) / 2), 4vw);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.travlink-ocean-showcase__cards::-webkit-scrollbar { display: none; }
+
+.travlink-ocean-card {
+  position: relative;
+  width: clamp(420px, 30vw, 560px);
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  color: #40516b;
+  transition: transform .45s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-ocean-card:nth-child(n) { top: auto; right: auto; left: auto; }
+
+.travlink-ocean-card__number {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(15, 35, 65, .2);
+  font: 600 28px/1 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -.02em;
+  transition: color .35s ease;
+}
+
+.travlink-ocean-card figure {
+  position: relative;
+  height: clamp(280px, 20vw, 376px);
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #dceaf0;
+  box-shadow: 0 10px 28px rgba(18, 56, 91, .06);
+  transition: box-shadow .45s ease;
+}
+
+.travlink-ocean-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.88) contrast(1.02);
+  transition: filter .55s ease, transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-ocean-card:nth-child(2) img { object-position: 72% 55%; }
+.travlink-ocean-card:nth-child(3) img { object-position: 45% 78%; }
+.travlink-ocean-card:nth-child(4) img { object-position: 28% 57%; }
+.travlink-ocean-card:nth-child(5) img { object-position: 52% 54%; filter: saturate(.78) brightness(.86); }
+
+.travlink-ocean-card h4 {
+  max-width: 470px;
+  margin: 38px 0 0;
+  color: #1557b0;
+  font: 600 clamp(27px, 1.85vw, 35px)/1.08 Outfit, Inter, sans-serif;
+  letter-spacing: -.025em;
+  transition: color .35s ease;
+}
+
+.travlink-ocean-showcase.is-reveal-ready [data-ocean-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .75s ease, transform .85s cubic-bezier(.22, 1, .36, 1);
+}
+
+.travlink-ocean-showcase.is-visible [data-ocean-reveal] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.travlink-ocean-showcase.is-visible .travlink-ocean-card:nth-child(1) { transition-delay: .14s; }
+.travlink-ocean-showcase.is-visible .travlink-ocean-card:nth-child(2) { transition-delay: .28s; }
+.travlink-ocean-showcase.is-visible .travlink-ocean-card:nth-child(3) { transition-delay: .42s; }
+.travlink-ocean-showcase.is-visible .travlink-ocean-card:nth-child(4) { transition-delay: .56s; }
+.travlink-ocean-showcase.is-visible .travlink-ocean-card:nth-child(5) { transition-delay: .7s; }
+
+@media (hover: hover) and (min-width: 992px) {
+  .travlink-ocean-card:is(:hover, :focus-visible) {
+    z-index: 3;
+    outline: none;
+    transform: translateY(-4px);
+  }
+  .travlink-ocean-card:is(:hover, :focus-visible) .travlink-ocean-card__number,
+  .travlink-ocean-card:is(:hover, :focus-visible) h4 { color: #1557b0; }
+  .travlink-ocean-card:is(:hover, :focus-visible) figure { box-shadow: 0 20px 40px rgba(18, 56, 91, .14); }
+  .travlink-ocean-card:is(:hover, :focus-visible) img { filter: saturate(1) contrast(1.03); transform: scale(1.035); }
+  .travlink-ocean-showcase:has(.travlink-ocean-card:hover)::after { border-color: rgba(21, 87, 176, .09); opacity: 1; }
+}
+
+/* Adventure Experiences: full-width photographic story panel. */
+.travlink-adventure-showcase {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  min-height: clamp(650px, 47vw, 860px);
+  margin-inline: calc(50% - 50vw);
+  align-items: flex-end;
+  overflow: hidden;
+  background: #172131;
+  isolation: isolate;
+}
+
+.travlink-adventure-showcase__background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  margin: 0;
+  overflow: hidden;
+}
+
+.travlink-adventure-showcase__background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 54%;
+  transform: scale(1.01);
+  transition: transform 1.2s cubic-bezier(.22, 1, .36, 1), filter .8s ease;
+}
+
+.travlink-adventure-showcase::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(4, 12, 24, .82) 0%, rgba(4, 12, 24, .48) 45%, rgba(4, 12, 24, .1) 76%),
+    linear-gradient(0deg, rgba(4, 12, 24, .8) 0%, transparent 52%);
+  content: "";
+  pointer-events: none;
+}
+
+.travlink-adventure-showcase__content {
+  position: relative;
+  width: min(680px, 56vw);
+  margin-left: max(calc((100vw - 1500px) / 2), 7vw);
+  padding: 0 0 clamp(70px, 7vw, 112px);
+  color: #fff;
+}
+
+.travlink-adventure-showcase__number {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 18px);
+  color: rgba(255, 255, 255, .2);
+  font: 500 58px/1 "Cormorant Garamond", Georgia, serif;
+}
+
+.travlink-adventure-showcase .travlink-travel-eyebrow {
+  color: #80c8f4;
+  font-size: 12px;
+  letter-spacing: .3em;
+}
+
+.travlink-adventure-showcase__content h3 {
+  max-width: 680px;
+  margin: 20px 0 0;
+  color: #fff;
+  font: 500 clamp(58px, 5.4vw, 94px)/.92 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -.04em;
+  text-wrap: balance;
+}
+
+.travlink-adventure-showcase__content > p {
+  max-width: 540px;
+  margin: 28px 0 0;
+  color: rgba(245, 249, 253, .8);
+  font: 500 clamp(16px, 1.08vw, 20px)/1.5 Outfit, Inter, sans-serif;
+}
+
+.travlink-adventure-showcase__service {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 164px;
+  margin-top: 34px;
+  padding: 14px 22px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 999px;
+  background: rgba(8, 24, 43, .3);
+  backdrop-filter: blur(8px);
+}
+
+.travlink-adventure-showcase__service i { color: #80c8f4; font-size: 17px; }
+.travlink-adventure-showcase__service h4 { margin: 0; color: #fff; font: 600 15px/1 Outfit, Inter, sans-serif; }
+
+@media (hover: hover) and (min-width: 992px) {
+  .travlink-adventure-showcase:hover .travlink-adventure-showcase__background img {
+    filter: saturate(1.05) contrast(1.03);
+    transform: scale(1.035);
+  }
 }
 
 .travlink-package-category {
@@ -199,10 +803,6 @@
 .travlink-package-category--ocean { background: linear-gradient(145deg, #f5fbfd, #eff7fb); }
 .travlink-package-category--adventure { background: linear-gradient(145deg, #f7f7f3, #f3f6f7); }
 
-@keyframes travlinkPackageRoute {
-  to { stroke-dashoffset: -180; }
-}
-
 @media (hover: hover) and (min-width: 992px) {
   .travlink-package-category:hover .travlink-package-category__media img { transform: scale(1.04); }
   .travlink-package-category:hover .travlink-package-category__media::after { opacity: .58; }
@@ -213,6 +813,18 @@
 }
 
 @media (max-width: 991px) {
+  .travlink-essential-showcase {
+    min-height: 680px;
+  }
+  .travlink-essential-showcase__intro { left: 5vw; width: 44vw; padding-top: 46px; }
+  .travlink-essential-showcase__intro h3 { font-size: clamp(48px, 6.4vw, 62px); }
+  .travlink-essential-showcase__intro > p { margin-top: 26px; margin-left: 24px; font-size: 15px; }
+  .travlink-essential-showcase__nav { margin-top: 28px; }
+  .travlink-essential-showcase__viewport { top: 260px; left: 47%; }
+  .travlink-essential-showcase__track { gap: 42px; padding: 0 60px 38px 24px; }
+  .travlink-essential-card { width: 205px; min-height: 430px; }
+  .travlink-essential-card figure { height: 275px; }
+
   .travlink-package-category,
   .travlink-package-category--reverse {
     grid-template-columns: 1fr;
@@ -224,10 +836,179 @@
   .travlink-package-category__content { padding: 48px; }
 }
 
+@media (max-width: 1399px) {
+  .travlink-luxury-showcase {
+    min-height: 0;
+    padding: 68px 6vw 82px;
+  }
+  .travlink-luxury-showcase__intro { width: 100%; max-width: 620px; }
+  .travlink-luxury-showcase__intro p { margin-left: 0; }
+  .travlink-luxury-showcase__cards {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: calc(100% + 6vw);
+    margin-top: 54px;
+    padding-right: 6vw;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+  .travlink-luxury-showcase__cards::-webkit-scrollbar { display: none; }
+  .travlink-luxury-card { scroll-snap-align: start; }
+  .travlink-luxury-card:nth-child(2),
+  .travlink-luxury-card:nth-child(3) { margin-top: 24px; }
+
+  .travlink-ocean-showcase {
+    min-height: 0;
+    padding: 68px 6vw 82px;
+  }
+  .travlink-ocean-showcase__intro { width: 100%; max-width: 640px; }
+  .travlink-ocean-showcase__intro h3 { white-space: normal; }
+  .travlink-ocean-showcase__intro p { margin-left: 0; }
+  .travlink-ocean-showcase__cards {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    display: flex;
+    width: calc(100% + 6vw);
+    gap: 24px;
+    margin-top: 54px;
+    padding-right: 6vw;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+  .travlink-ocean-showcase__cards::-webkit-scrollbar { display: none; }
+  .travlink-ocean-card,
+  .travlink-ocean-card:nth-child(n) {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    flex: 0 0 auto;
+    width: clamp(340px, 52vw, 520px);
+    scroll-snap-align: start;
+  }
+}
+
 @media (max-width: 767px) {
   .travlink-packages-editorial__intro > p { font-size: 14px; line-height: 1.65; }
-  .travlink-packages-route { height: 90px; margin: 22px auto 14px; }
-  .travlink-package-categories { gap: 38px; }
+  .travlink-package-categories { gap: 38px; margin-top: 38px; }
+  .travlink-essential-showcase {
+    min-height: 0;
+  }
+  .travlink-essential-showcase__intro {
+    position: relative;
+    left: auto;
+    width: auto;
+    padding: 44px 24px 20px;
+    background: linear-gradient(180deg, rgba(5, 14, 25, .9), rgba(5, 14, 25, .2));
+  }
+  .travlink-essential-showcase__eyebrow { font-size: 10px; }
+  .travlink-essential-showcase__intro h3 {
+    max-width: 390px;
+    margin-top: 14px;
+    padding-right: 18px;
+    font-size: clamp(46px, 14vw, 62px);
+  }
+  .travlink-essential-showcase__intro > p {
+    max-width: 420px;
+    margin: 22px 0 0;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  .travlink-essential-showcase__nav { display: none; }
+  .travlink-essential-showcase__progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 27px;
+    color: rgba(222, 235, 246, .58);
+    font: 600 10px/1 Outfit, Inter, sans-serif;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .travlink-essential-showcase__progress strong { color: #ff4e29; font-size: 12px; }
+  .travlink-essential-showcase__viewport {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    scroll-padding-inline: 18px;
+  }
+  .travlink-essential-showcase__track {
+    min-height: 0;
+    gap: 14px;
+    padding: 12px 18px 42px;
+  }
+  .travlink-essential-card {
+    width: min(78vw, 305px);
+    min-height: 410px;
+    opacity: .58;
+  }
+  .travlink-essential-card__number { margin-bottom: 15px; font-size: 17px; }
+  .travlink-essential-card figure { height: 282px; border-radius: 15px; }
+  .travlink-essential-card h4 { margin-top: 18px; font-size: 27px; }
+  .travlink-essential-card:is(:hover, :focus-visible, .is-active) { transform: scale(1); }
+  .travlink-luxury-showcase { padding: 52px 24px 62px; }
+  .travlink-luxury-showcase__intro .travlink-travel-eyebrow { font-size: 10px; }
+  .travlink-luxury-showcase__intro h3 { margin-top: 16px; font-size: clamp(48px, 15vw, 66px); }
+  .travlink-luxury-showcase__intro p { margin-top: 22px; font-size: 15px; }
+  .travlink-luxury-showcase__cards {
+    width: calc(100% + 24px);
+    gap: 16px;
+    margin-top: 40px;
+    padding-right: 24px;
+  }
+  .travlink-luxury-card {
+    width: min(78vw, 280px);
+    scroll-snap-align: center;
+  }
+  .travlink-luxury-card:nth-child(2),
+  .travlink-luxury-card:nth-child(3) { margin-top: 0; }
+  .travlink-luxury-card__number { margin-bottom: 14px; font-size: 28px; }
+  .travlink-luxury-card figure { height: 330px; }
+  .travlink-luxury-card h4 { margin-top: 18px; font-size: 21px; }
+  .travlink-ocean-showcase { padding: 52px 24px 62px; }
+  .travlink-ocean-showcase__intro .travlink-travel-eyebrow { font-size: 10px; }
+  .travlink-ocean-showcase__intro h3 { margin-top: 16px; font-size: clamp(48px, 15vw, 66px); }
+  .travlink-ocean-showcase__intro p { margin-top: 22px; font-size: 15px; }
+  .travlink-ocean-showcase__cards {
+    width: calc(100% + 24px);
+    gap: 16px;
+    margin-top: 40px;
+    padding-right: 24px;
+  }
+  .travlink-ocean-card,
+  .travlink-ocean-card:nth-child(n) {
+    width: min(78vw, 280px);
+    scroll-snap-align: start;
+  }
+  .travlink-ocean-card__number { margin-bottom: 14px; font-size: 36px; }
+  .travlink-ocean-card figure { height: 330px; }
+  .travlink-ocean-card h4 { margin-top: 18px; font-size: 21px; }
+  .travlink-adventure-showcase { min-height: 620px; }
+  .travlink-adventure-showcase__background img { object-position: 61% center; }
+  .travlink-adventure-showcase::after {
+    background: linear-gradient(0deg, rgba(4, 12, 24, .92) 0%, rgba(4, 12, 24, .48) 64%, rgba(4, 12, 24, .12) 100%);
+  }
+  .travlink-adventure-showcase__content {
+    width: auto;
+    margin: 0;
+    padding: 0 24px 52px;
+  }
+  .travlink-adventure-showcase__number { right: 24px; bottom: calc(100% + 10px); font-size: 46px; }
+  .travlink-adventure-showcase .travlink-travel-eyebrow { font-size: 10px; }
+  .travlink-adventure-showcase__content h3 { margin-top: 15px; font-size: clamp(50px, 15vw, 68px); }
+  .travlink-adventure-showcase__content > p { margin-top: 20px; font-size: 15px; line-height: 1.5; }
+  .travlink-adventure-showcase__service { margin-top: 26px; padding: 12px 18px; }
   .travlink-package-category { border-radius: 20px; box-shadow: 0 18px 46px rgba(15, 23, 42, .09); }
   .travlink-package-category__media { min-height: 250px; aspect-ratio: 16 / 11; }
   .travlink-package-category__content { padding: 36px 24px 32px; }
@@ -241,9 +1022,20 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .travlink-packages-route__line { animation: none; }
-  .travlink-packages-route__aircraft { display: none; }
+  .travlink-essential-showcase::before { animation: none; }
+  .travlink-essential-showcase__viewport { scroll-behavior: auto; }
+  .travlink-essential-card,
+  .travlink-essential-card img,
+  .travlink-essential-card figure,
+  .travlink-essential-card h4 { transition: none; }
   .travlink-package-category__media img,
   .travlink-package-category__media::after,
   .travlink-package-item i { transition: none; }
+  .travlink-luxury-showcase [data-luxury-reveal],
+  .travlink-luxury-card,
+  .travlink-luxury-card img { transition: none; }
+  .travlink-ocean-showcase [data-ocean-reveal],
+  .travlink-ocean-card,
+  .travlink-ocean-card img,
+  .travlink-ocean-showcase::after { transition: none; }
 }

@@ -1,4 +1,7 @@
 import "./globals.css";
+import "@/styles/variables.css";
+import "@/styles/components.css";
+import "@/styles/animations.css";
 
 export const metadata = {
   metadataBase: new URL("https://travlinkglobal.com"),

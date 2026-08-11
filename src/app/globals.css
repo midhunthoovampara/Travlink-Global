@@ -28,3 +28,7 @@ body {
 .travlink-react-page > script {
   display: none;
 }
+
+.tl-page-content {
+  display: contents;
+}

@@ -20,7 +20,7 @@
   inset: 18% 0 2%;
   z-index: 0;
   overflow: hidden;
-  background-image: url("../img/background/world-map-outline.svg");
+  background-image: url("/img/background/world-map-outline.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: min(940px, 78vw) auto;
