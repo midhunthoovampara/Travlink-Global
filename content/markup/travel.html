@@ -286,6 +286,11 @@
               <div class="travlink-essential-showcase__progress" aria-live="polite">
                 <strong data-essential-progress>01 / 06</strong><span>Essential Travel</span>
               </div>
+
+            </div>
+
+            <div class="travlink-swipe-cue travlink-swipe-cue--dark travlink-swipe-cue--essential" aria-hidden="true">
+              <span>Swipe to explore</span><i></i>
             </div>
 
             <div class="travlink-essential-showcase__viewport" data-essential-viewport>
@@ -329,10 +334,16 @@
               <span class="travlink-travel-eyebrow">Private Access</span>
               <h3 id="luxury-experiences-title">Luxury Experiences</h3>
               <p>Exceptional journeys shaped around privacy, freedom, and effortless movement.</p>
+
+              <nav class="travlink-showcase-service-nav travlink-showcase-service-nav--luxury" aria-label="Luxury Experiences services">
+                <button class="is-active" type="button" data-luxury-nav="0" aria-pressed="true"><span>01</span>Private Jet Charter</button>
+                <button type="button" data-luxury-nav="1" aria-pressed="false"><span>02</span>Yacht Charter</button>
+                <button type="button" data-luxury-nav="2" aria-pressed="false"><span>03</span>Sailboat Experiences</button>
+              </nav>
             </header>
 
-            <div class="travlink-luxury-showcase__cards" role="list" aria-label="Luxury Experiences services">
-              <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-reveal>
+            <div class="travlink-luxury-showcase__cards" role="list" aria-label="Luxury Experiences services" data-luxury-viewport>
+              <article class="travlink-luxury-card is-active" role="listitem" tabindex="0" data-luxury-card="0" data-luxury-reveal>
                 <span class="travlink-luxury-card__number" aria-hidden="true">01</span>
                 <figure>
                   <img src="/img/service/travel-packages/luxury-experiences-editorial-v1.png" alt="Private aircraft ready for a luxury journey" loading="lazy" decoding="async" />
@@ -340,7 +351,7 @@
                 <h4>Private Jet Charter</h4>
               </article>
 
-              <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-reveal>
+              <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-card="1" data-luxury-reveal>
                 <span class="travlink-luxury-card__number" aria-hidden="true">02</span>
                 <figure>
                   <img src="/img/service/travel-packages/luxury-experiences-editorial-v1.png" alt="Luxury yacht cruising beside a Mediterranean coast" loading="lazy" decoding="async" />
@@ -348,7 +359,7 @@
                 <h4>Yacht Charter</h4>
               </article>
 
-              <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-reveal>
+              <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-card="2" data-luxury-reveal>
                 <span class="travlink-luxury-card__number" aria-hidden="true">03</span>
                 <figure>
                   <img src="/img/service/travel-service-sailing-v3.png" alt="Sailboat crossing clear coastal water" loading="lazy" decoding="async" />
@@ -363,34 +374,47 @@
               <span class="travlink-travel-eyebrow">Beyond the Shore</span>
               <h3 id="ocean-experiences-title">Ocean Experiences</h3>
               <p>Discover island horizons and clear-water adventures at your own pace.</p>
+
+              <nav class="travlink-showcase-service-nav travlink-showcase-service-nav--ocean" aria-label="Ocean Experiences services">
+                <button class="is-active" type="button" data-ocean-nav="0" aria-pressed="true"><span>01</span>Island Hopping</button>
+                <button type="button" data-ocean-nav="1" aria-pressed="false"><span>02</span>Surfing</button>
+                <button type="button" data-ocean-nav="2" aria-pressed="false"><span>03</span>Snorkelling</button>
+                <button type="button" data-ocean-nav="3" aria-pressed="false"><span>04</span>Kayaking</button>
+                <button type="button" data-ocean-nav="4" aria-pressed="false"><span>05</span>Scuba Diving</button>
+              </nav>
+
             </header>
 
-            <div class="travlink-ocean-showcase__cards" role="list" aria-label="Ocean Experiences services">
-              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+            <div class="travlink-swipe-cue travlink-swipe-cue--ocean" aria-hidden="true">
+              <span>Swipe to explore</span><i></i>
+            </div>
+
+            <div class="travlink-ocean-showcase__cards" role="list" aria-label="Ocean Experiences services" data-ocean-viewport>
+              <article class="travlink-ocean-card is-active" role="listitem" tabindex="0" data-ocean-card="0" data-ocean-reveal>
                 <span class="travlink-ocean-card__number" aria-hidden="true">01</span>
                 <figure><img src="/img/explore/generated/destination-maldives.jpg" alt="Tropical islands surrounded by clear turquoise water" loading="lazy" decoding="async" /></figure>
                 <h4>Island Hopping</h4>
               </article>
 
-              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-card="1" data-ocean-reveal>
                 <span class="travlink-ocean-card__number" aria-hidden="true">02</span>
                 <figure><img src="/img/slider/travlink-hero-sailing-dark-v4.png" alt="Open ocean waves at golden hour" loading="lazy" decoding="async" /></figure>
                 <h4>Surfing</h4>
               </article>
 
-              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-card="2" data-ocean-reveal>
                 <span class="travlink-ocean-card__number" aria-hidden="true">03</span>
                 <figure><img src="/img/service/travel-packages/ocean-experiences-editorial-v1.png" alt="Snorkeller exploring clear shallow coastal water" loading="lazy" decoding="async" /></figure>
                 <h4>Snorkelling</h4>
               </article>
 
-              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-card="3" data-ocean-reveal>
                 <span class="travlink-ocean-card__number" aria-hidden="true">04</span>
                 <figure><img src="/img/service/travel-packages/ocean-experiences-editorial-v1.png" alt="Kayaker crossing a secluded tropical cove" loading="lazy" decoding="async" /></figure>
                 <h4>Kayaking</h4>
               </article>
 
-              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-reveal>
+              <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-card="4" data-ocean-reveal>
                 <span class="travlink-ocean-card__number" aria-hidden="true">05</span>
                 <figure><img src="/img/slider/travlink-hero-sailboat-uhd.webp" alt="Deep blue ocean viewed from above" loading="lazy" decoding="async" /></figure>
                 <h4>Scuba Diving</h4>
@@ -458,8 +482,8 @@
               <a href="#business-visa">Business Visa</a>
               <a href="#transit-visa">Transit Visa</a>
               <a class="is-active" href="#visa-country-title" aria-current="location">Countries</a>
-              <a href="#travel-faq-title">FAQ</a>
-              <a href="#travel-contact">Contact</a>
+              <!-- <a href="#travel-faq-title">FAQ</a>
+              <a href="#travel-contact">Contact</a> -->
             </nav>
 
             <h3 id="visa-country-title">
@@ -828,9 +852,9 @@
 <script src="/js/waypoints.min.js"></script>
 <script src="/js/aos.js"></script>
 <script src="/js/main.js"></script>
-<script src="/js/scroll-motion.js"></script>
+<script src="/js/scroll-motion.js?v=20260812-text-reveal-2"></script>
 <script src="/js/mobile-navigation.js"></script>
 <script src="/js/travel-country-editorial.js?v=20260812-1"></script>
-<script src="/js/travel-essential-showcase.js"></script>
-<script src="/js/travel-luxury-showcase.js"></script>
-<script src="/js/travel-ocean-showcase.js"></script>
+<script src="/js/travel-essential-showcase.js?v=20260812-2"></script>
+<script src="/js/travel-luxury-showcase.js?v=20260812-2"></script>
+<script src="/js/travel-ocean-showcase.js?v=20260812-2"></script>

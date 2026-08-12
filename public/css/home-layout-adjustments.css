@@ -381,7 +381,7 @@
 
   .travlink-home .travlink-hero__title-connect {
     margin-top: .02em;
-    font-size: clamp(82px, 9vw, 148px);
+    font-size: clamp(94px, 10.5vw, 172px);
     line-height: .88;
     letter-spacing: -.07em;
   }
@@ -424,7 +424,7 @@
   }
 
   .travlink-home .travlink-hero__title-connect {
-    font-size: clamp(66px, 20vw, 88px);
+    font-size: clamp(74px, 23vw, 102px);
     line-height: .9;
     letter-spacing: -.07em;
   }

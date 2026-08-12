@@ -14,11 +14,24 @@
     transform: translateY(0);
 }
 
+/* Text is never hidden while JavaScript loads; the observer only triggers its entrance. */
+.travlink-text-reveal.travlink-scroll-visible {
+    animation: travlinkTextReveal 720ms cubic-bezier(.22, .61, .36, 1) both;
+    animation-delay: var(--travlink-motion-delay, 0ms);
+}
+
+@keyframes travlinkTextReveal {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .travlink-scroll-section,
-    .travlink-scroll-item {
+    .travlink-scroll-item,
+    .travlink-text-reveal {
         opacity: 1;
         transform: none;
         transition: none;
+        animation: none;
     }
 }

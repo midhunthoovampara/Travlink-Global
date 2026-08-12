@@ -5,6 +5,8 @@ import { defaultDescription, pageRegistry } from "@/data/pages";
 const contentDirectory = path.join(process.cwd(), "content");
 const markupDirectory = path.join(contentDirectory, "markup");
 
+// Markup is read at render time so content edits remain behind this server-only boundary.
+
 function between(markup, startToken, endToken) {
   const start = markup.indexOf(startToken);
   const end = markup.indexOf(endToken, start);

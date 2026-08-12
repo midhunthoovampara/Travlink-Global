@@ -284,6 +284,22 @@ html { scroll-behavior: smooth; }
     background: #237bc4;
     box-shadow: 0 0 0 1px #237bc4;
 }
+
+/* Compact service hero: approximately half of the visible screen. */
+.travlink-travel-page .travlink-travel-hero {
+    width: 100%;
+    height: clamp(560px, 80svh, 820px);
+    min-height: 0;
+    padding: 124px 0 48px;
+}
+
+@media (max-width: 767px) {
+    .travlink-travel-page .travlink-travel-hero {
+        height: clamp(520px, 80svh, 700px);
+        min-height: 0;
+        padding: 104px 0 36px;
+    }
+}
 .travlink-country-grid {
     display: grid;
     grid-column: 2;

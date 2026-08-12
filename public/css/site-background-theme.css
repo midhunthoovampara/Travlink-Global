@@ -83,6 +83,15 @@
   background: transparent !important;
 }
 
+/* Carry the Ocean Experiences sand canvas through the Travel service journey. */
+.travlink-react-page.travlink-travel-page-body :is(
+  .travlink-travel-selector,
+  .travlink-travel-features,
+  .travlink-travel-support
+) {
+  background: #f7eee4 !important;
+}
+
 /* Maintain crisp surfaces over the atmospheric background. */
 .travlink-react-page:not(.travlink-home) :is(
   .travlink-travel-selector__card,

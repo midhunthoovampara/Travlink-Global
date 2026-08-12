@@ -35,6 +35,18 @@
             ".travlink-footer__top > *"
         ].join(",");
         var items = document.querySelectorAll(itemSelector);
+        var travelText = document.querySelectorAll([
+            ".travlink-travel-selector__header > *",
+            ".travlink-packages-editorial__intro > *",
+            ".travlink-essential-showcase__intro > :is(span, h3, p)",
+            ".travlink-luxury-showcase__intro > *",
+            ".travlink-ocean-showcase__intro > *",
+            ".travlink-adventure-showcase__content > :is(span, h3, p)",
+            ".travlink-travel-feature--visa > .travlink-travel-feature__content > :is(span, h2)",
+            ".travlink-country-showcase > h3",
+            ".travlink-travel-contact > :is(span, h2)",
+            ".travlink-travel-faq__heading > *"
+        ].join(","));
 
         for (var index = 0; index < sections.length; index++) {
             addMotionClass(sections[index], "travlink-scroll-section", 0);
@@ -44,8 +56,12 @@
             addMotionClass(items[itemIndex], "travlink-scroll-item", (itemIndex % 5) * 70);
         }
 
+        for (var textIndex = 0; textIndex < travelText.length; textIndex++) {
+            addMotionClass(travelText[textIndex], "travlink-text-reveal", (textIndex % 4) * 65);
+        }
+
         if (!("IntersectionObserver" in window)) {
-            document.querySelectorAll(".travlink-scroll-section, .travlink-scroll-item").forEach(function (element) {
+            document.querySelectorAll(".travlink-scroll-section, .travlink-scroll-item, .travlink-text-reveal").forEach(function (element) {
                 element.classList.add("travlink-scroll-visible");
             });
             return;
@@ -62,11 +78,11 @@
             });
         }, {
             root: null,
-            rootMargin: "0px 0px -8% 0px",
+            rootMargin: "0px 0px 12% 0px",
             threshold: 0.08
         });
 
-        document.querySelectorAll(".travlink-scroll-section, .travlink-scroll-item").forEach(function (element) {
+        document.querySelectorAll(".travlink-scroll-section, .travlink-scroll-item, .travlink-text-reveal").forEach(function (element) {
             observer.observe(element);
         });
     }

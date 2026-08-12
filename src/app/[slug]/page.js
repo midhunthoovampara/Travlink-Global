@@ -3,7 +3,7 @@ import ContentPage from "@/views/ContentPage";
 import { getPageMetadata } from "@/lib/content";
 import { pageKeys } from "@/data/pages";
 
-// Static export requires every supported top-level page to be known at build time.
+// Static export requires every supported top-level content page to be known at build time.
 export const dynamicParams = false;
 
 export function generateStaticParams() {
