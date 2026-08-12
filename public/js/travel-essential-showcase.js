@@ -36,10 +36,12 @@
         }
 
         if (shouldScroll) {
-          cards[nextIndex].scrollIntoView({
-            behavior: reducedMotion.matches ? "auto" : "smooth",
-            block: "nearest",
-            inline: "center"
+          var card = cards[nextIndex];
+          var targetLeft = card.offsetLeft - (viewport.clientWidth - card.offsetWidth) / 2;
+
+          viewport.scrollTo({
+            left: Math.max(0, targetLeft),
+            behavior: reducedMotion.matches ? "auto" : "smooth"
           });
         }
       }

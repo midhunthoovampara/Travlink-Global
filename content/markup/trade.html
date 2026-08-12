@@ -223,7 +223,7 @@
 
       <header class="travlink-trade-journey__intro">
         <span class="travlink-trade-eyebrow">Trade Services</span>
-        <h2 id="trade-services-title">
+        <h2 class="travlink-section-heading" id="trade-services-title">
           From the right supplier <em>to final delivery.</em>
         </h2>
         <p>
@@ -248,7 +248,7 @@
         aria-label="Trade services from sourcing to final delivery"
       >
         <div class="travlink-trade-journey__viewport">
-          <div class="travlink-trade-journey__canvas" style="--route-progress: 12">
+          <div class="travlink-trade-journey__canvas">
             <svg
               class="travlink-trade-journey__route"
               viewBox="0 0 1240 650"
@@ -265,13 +265,6 @@
               </defs>
               <use href="#travlinkTradeRoutePath" class="travlink-trade-journey__route-base" />
               <use href="#travlinkTradeRoutePath" class="travlink-trade-journey__route-progress" />
-              <g class="travlink-trade-journey__cargo">
-                <rect x="-12" y="-8" width="24" height="16" rx="3" />
-                <path d="M-7-3H7M-7 2H7M0-7V7" />
-                <animateMotion dur="24s" repeatCount="indefinite" rotate="auto">
-                  <mpath href="#travlinkTradeRoutePath" />
-                </animateMotion>
-              </g>
             </svg>
 
             <div class="travlink-trade-journey__steps">
@@ -339,7 +332,7 @@
       <div class="travlink-shipping__shell">
         <header class="travlink-shipping__intro">
           <span class="travlink-trade-eyebrow">Shipping</span>
-          <h2 id="trade-shipping-title">
+          <h2 class="travlink-section-heading" id="trade-shipping-title">
             Moving your business <em>across borders.</em>
           </h2>
           <p>
@@ -688,4 +681,3 @@
 <script src="/js/main.js"></script>
 <script src="/js/scroll-motion.js"></script>
 <script src="/js/mobile-navigation.js"></script>
-<script src="/js/trade-sourcing-journey.js"></script>

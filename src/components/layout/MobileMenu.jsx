@@ -11,7 +11,7 @@ export default function MobileMenu({ isOpen, onClose }) {
           <div className="ca-offcanvas-header d-flex justify-content-between align-items-center mb-40">
             <div className="ca-offcanvas-logo">
               <a className="travlink-offcanvas-logo" href="/" aria-label="Travlink Global home">
-                <Image src="/img/logo/travlink-secondary.png" alt="Travlink Global" />
+                <Image src="/img/logo/travlink-secondary-2026.png" alt="Travlink Global" />
               </a>
             </div>
             <div className="ca-offcanvas-close">

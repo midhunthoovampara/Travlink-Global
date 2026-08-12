@@ -1,19 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
 
 /* Travlink Global — centralized premium editorial typography. */
 :root,
 .travlink-react-page {
-  --travlink-type-heading: "Cormorant Garamond", Georgia, serif;
-  --travlink-type-body: "Inter", system-ui, sans-serif;
+  --travlink-type-heading: "Poppins", system-ui, sans-serif;
+  --travlink-type-body: "Poppins", system-ui, sans-serif;
   --travlink-type-serif: var(--travlink-type-heading);
   --travlink-type-sans: var(--travlink-type-body);
   --font-heading: var(--travlink-type-heading);
   --font-body: var(--travlink-type-body);
+  --travlink-section-heading-size: clamp(34px, 4vw, 48px);
+  --travlink-section-heading-weight: 400;
+  --travlink-section-heading-line-height: 1.08;
+  --travlink-section-heading-spacing: -.035em;
 }
 
 .travlink-react-page {
   font-family: var(--travlink-type-body) !important;
   font-weight: 400;
+}
+
+/* Override legacy component font shorthands without affecting icon fonts. */
+.travlink-react-page :is(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  option,
+  label,
+  small,
+  strong,
+  b,
+  em,
+  span,
+  li,
+  dt,
+  dd,
+  blockquote,
+  figcaption,
+  address,
+  th,
+  td,
+  summary
+) {
+  font-family: var(--travlink-type-body) !important;
+}
+
+.travlink-react-page svg text {
+  font-family: var(--travlink-type-body) !important;
 }
 
 /* Body copy and supporting text. */
@@ -251,5 +293,219 @@
 @media (max-width: 767px) {
   .travlink-react-page :is(h1, h2) {
     line-height: 1.08;
+  }
+}
+
+/* Final lightweight hierarchy for the Poppins system. */
+.travlink-react-page :is(
+  h1,
+  h2,
+  .ca-section-title,
+  .ca-about-title,
+  .ca-breadcrumb-title,
+  .travlink-hero__title,
+  .travlink-travel-hero__title,
+  .travlink-trade-hero h1,
+  .travlink-shipping-hero h1,
+  .travlink-service-intro__title,
+  .travlink-essential-showcase__intro h3,
+  .travlink-luxury-showcase__intro h3,
+  .travlink-ocean-showcase__intro h3,
+  .travlink-adventure-showcase__content h3,
+  .travlink-country-showcase > h3,
+  .travlink-brand-story__final h3,
+  .travlink-footer h2
+) {
+  font-weight: 400 !important;
+}
+
+.travlink-react-page :is(
+  p,
+  a,
+  nav,
+  nav a,
+  li,
+  dt,
+  dd,
+  blockquote,
+  figcaption,
+  address,
+  th,
+  td,
+  summary,
+  small,
+  input,
+  textarea,
+  select,
+  option,
+  .accordion-button,
+  .accordion-body,
+  .travlink-faq-question,
+  .ca-accordion-header button
+) {
+  font-weight: 400 !important;
+}
+
+.travlink-react-page :is(
+  h3,
+  h4,
+  h5,
+  h6,
+  button,
+  [role="button"],
+  label,
+  strong,
+  b,
+  [class*="__eyebrow"],
+  [class*="__label"],
+  [class*="__badge"],
+  [class*="__tag"],
+  .ca-section-subtitle,
+  .ca-sub-title,
+  .ca-btn-primary-3,
+  .travlink-secondary
+) {
+  font-weight: 500 !important;
+}
+
+.travlink-react-page span {
+  font-weight: inherit !important;
+}
+
+.travlink-react-page :is(
+  .accordion-button,
+  .travlink-faq-question,
+  .ca-accordion-header button
+) :is(strong, b, span) {
+  font-weight: 400 !important;
+}
+
+/* Explicit reusable section-title class. Add it only where this scale is wanted. */
+.travlink-react-page .travlink-section-heading {
+  font-family: var(--travlink-type-heading) !important;
+  font-size: var(--travlink-section-heading-size) !important;
+  font-weight: var(--travlink-section-heading-weight) !important;
+  line-height: var(--travlink-section-heading-line-height) !important;
+  letter-spacing: var(--travlink-section-heading-spacing) !important;
+}
+
+.travlink-react-page .travlink-section-heading :is(strong, b, em, span) {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+}
+
+.travlink-react-page .travlink-section-heading em {
+  font-style: normal;
+}
+
+/* Benefit and gateway-card h2 elements remain compact card titles. */
+.travlink-react-page main .travlink-benefit__content h2,
+.travlink-react-page main .travlink-service-card__title {
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -.025em !important;
+}
+
+.travlink-react-page main .travlink-benefit__content h2 {
+  font-size: clamp(18px, 1.45vw, 22px) !important;
+}
+
+/* Preserve the original component scales for intentionally distinct headings. */
+.travlink-react-page main :is(
+  .travlink-travel-hero h1,
+  .travlink-trade-hero h1,
+  .travlink-shipping-hero h1
+) {
+  font-size: clamp(34px, 4vw, 48px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+}
+
+.travlink-react-page main :is(
+  .travlink-travel-hero h1,
+  .travlink-trade-hero h1,
+  .travlink-shipping-hero h1
+) :is(strong, b, em, span) {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+}
+
+.travlink-react-page main .ca-breadcrumb-title {
+  font-size: 64px !important;
+}
+
+.travlink-react-page main .travlink-travel-contact h2 {
+  font-size: clamp(34px, 3vw, 43px) !important;
+  font-weight: 300 !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.025em !important;
+}
+
+.travlink-react-page main .travlink-trade-contact h2 {
+  font-size: clamp(34px, 3vw, 43px) !important;
+  font-weight: 300 !important;
+  line-height: 1.03 !important;
+  letter-spacing: -.03em !important;
+}
+
+.travlink-react-page main .travlink-travel-faq__heading h2 {
+  font-size: clamp(43px, 4.2vw, 60px) !important;
+  font-weight: 300 !important;
+  line-height: 1.03 !important;
+  letter-spacing: -.03em !important;
+}
+
+.travlink-react-page main .travlink-trade-faq__heading h2 {
+  font-size: clamp(40px, 3.6vw, 52px) !important;
+  font-weight: 300 !important;
+  line-height: 1.03 !important;
+  letter-spacing: -.03em !important;
+}
+
+.travlink-react-page main .travlink-shipping-faq__heading h2 {
+  font-size: clamp(40px, 3.6vw, 52px) !important;
+}
+
+.travlink-react-page main :is(
+  .travlink-travel-contact h2,
+  .travlink-trade-contact h2,
+  .travlink-travel-faq__heading h2,
+  .travlink-trade-faq__heading h2
+) em {
+  font-weight: 300 !important;
+  font-style: italic;
+}
+
+.travlink-react-page main :is(
+  .ca-faq-inner .ca-section-title,
+  .ca-faq-iner2 .ca-section-title
+) {
+  font-size: 44px !important;
+}
+
+@media (max-width: 767px) {
+  .travlink-react-page main .travlink-benefit__content h2 {
+    font-size: 18px !important;
+  }
+
+  .travlink-react-page main .ca-breadcrumb-title {
+    font-size: clamp(38px, 10vw, 46px) !important;
+  }
+
+  .travlink-react-page main :is(
+    .ca-faq-inner .ca-section-title,
+    .ca-faq-iner2 .ca-section-title
+  ) {
+    font-size: 27px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .travlink-react-page main .ca-breadcrumb-title {
+    font-size: 44px !important;
   }
 }

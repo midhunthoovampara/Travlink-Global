@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="travlink-footer__top">
         <div className="travlink-footer__brand">
           <a className="travlink-footer__logo" href="/" aria-label="Travlink Global home">
-            <Image src="/img/logo/travlink-secondary.png" alt="Travlink Global" />
+            <Image src="/img/logo/travlink-secondary-2026.png" alt="Travlink Global" />
           </a>
           <p className="travlink-footer__description">Connecting people and businesses across borders through trusted travel and trade solutions.</p>
           <div className="travlink-footer__socials" aria-label="Social media links">{socialLinks.map((link) => <a key={link.id} href={link.href} target={link.href === "#" ? undefined : "_blank"} rel={link.href === "#" ? undefined : "noopener noreferrer"} aria-label={link.label}><i className={link.icon} /></a>)}</div>

@@ -11,9 +11,6 @@ export const metadata = {
   },
   description:
     "International travel, visa assistance, trade sourcing, and shipping support from Travlink Global.",
-  icons: {
-    icon: "/img/icon/ca-fav-3.svg",
-  },
 };
 
 export default function RootLayout({ children }) {

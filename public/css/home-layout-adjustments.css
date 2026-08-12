@@ -365,7 +365,7 @@
     width: min(900px, 76vw) !important;
     max-width: min(900px, 76vw) !important;
     margin: 0 !important;
-    font-size: clamp(48px, 5.2vw, 82px) !important;
+    font-size: clamp(44px, 4.6vw, 72px) !important;
     line-height: .94 !important;
     text-align: left !important;
   }
@@ -381,7 +381,7 @@
 
   .travlink-home .travlink-hero__title-connect {
     margin-top: .02em;
-    font-size: clamp(94px, 10.5vw, 172px);
+    font-size: clamp(82px, 9vw, 146px);
     line-height: .88;
     letter-spacing: -.07em;
   }
@@ -389,7 +389,7 @@
   .travlink-home .travlink-hero__copy {
     max-width: none !important;
     margin: 24px 0 0 !important;
-    font-size: clamp(16px, 1.25vw, 19px) !important;
+    font-size: clamp(14px, 1.05vw, 17px) !important;
     white-space: nowrap;
     text-align: left !important;
   }
@@ -409,7 +409,7 @@
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0;
-    font-size: clamp(36px, 10vw, 48px) !important;
+    font-size: clamp(32px, 9vw, 42px) !important;
     line-height: .96 !important;
     text-align: left !important;
   }
@@ -424,7 +424,7 @@
   }
 
   .travlink-home .travlink-hero__title-connect {
-    font-size: clamp(74px, 23vw, 102px);
+    font-size: clamp(64px, 20vw, 88px);
     line-height: .9;
     letter-spacing: -.07em;
   }
@@ -432,7 +432,7 @@
   .travlink-home .travlink-hero__copy {
     max-width: none !important;
     margin: 18px 0 0 !important;
-    font-size: clamp(10px, 2.8vw, 12px) !important;
+    font-size: clamp(9px, 2.5vw, 11px) !important;
     white-space: nowrap;
     text-align: left !important;
   }
@@ -463,19 +463,19 @@
 
 .travlink-home .travlink-hero__explore {
   display: inline-flex;
-  min-width: 220px;
-  min-height: 42px;
+  min-width: 200px;
+  min-height: 40px;
   align-items: center;
   justify-content: center;
   gap: 18px;
   margin-left: auto;
-  padding: 8px 22px;
+  padding: 7px 19px;
   border: 1px solid rgba(255, 255, 255, .68);
   border-radius: 999px;
   background: transparent;
   box-shadow: none;
   color: #fff !important;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   text-decoration: none;
   transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
@@ -484,7 +484,7 @@
 }
 
 .travlink-home .travlink-hero__explore span {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
   transition: transform .25s ease;
 }
@@ -511,17 +511,12 @@
   }
 
   .travlink-home .travlink-hero__explore {
-    min-width: 200px;
-    min-height: 40px;
+    min-width: 180px;
+    min-height: 38px;
     align-self: flex-end;
-    padding: 7px 18px;
-    font-size: 12px;
+    padding: 6px 16px;
+    font-size: 11px;
   }
-}
-
-/* Compact Services section heading. */
-.travlink-home .travlink-service-intro__title {
-  font-size: clamp(32px, 3.2vw, 44px) !important;
 }
 
 /* Keep the Contact heading as one balanced desktop line. */
@@ -533,11 +528,5 @@
     margin-left: auto;
     font-size: clamp(34px, 2.8vw, 40px) !important;
     white-space: nowrap;
-  }
-}
-
-@media (max-width: 767px) {
-  .travlink-home .travlink-service-intro__title {
-    font-size: clamp(26px, 7.6vw, 31px) !important;
   }
 }

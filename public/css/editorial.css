@@ -1,7 +1,7 @@
 ﻿/* Shared luxury editorial typography for major section headings. */
 :root {
-    --travlink-editorial-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-    --travlink-label-sans: "Inter", "Outfit", sans-serif;
+    --travlink-editorial-serif: "Poppins", system-ui, sans-serif;
+    --travlink-label-sans: "Poppins", system-ui, sans-serif;
     --travlink-editorial-ink: #111827;
     --travlink-primary-accent: #0e47a1;
 }

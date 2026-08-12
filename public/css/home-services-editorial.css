@@ -557,10 +557,6 @@
     padding-top: 0;
   }
 
-  .travlink-home .travlink-services-composition .travlink-service-intro__title {
-    font-size: clamp(38px, 11vw, 50px) !important;
-  }
-
   .travlink-home .travlink-services-composition .travlink-service-intro__copy {
     margin-top: 20px;
     font-size: 14px;

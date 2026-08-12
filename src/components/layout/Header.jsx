@@ -23,8 +23,8 @@ export default function Header() {
         <div className="container fluid-header-3"><div className="row align-items-center">
           <div className="col-xl-3 col-lg col-md-6 col-6"><div className="ca-logo">
             <a className="travlink-site-logo" href="/" aria-label="Travlink Global home">
-              <Image className="travlink-site-logo__image travlink-site-logo__image--primary" src="/img/logo/travlink-primary.png" alt="Travlink Global" />
-              <Image className="travlink-site-logo__image travlink-site-logo__image--secondary" src="/img/logo/travlink-secondary.png" alt="" aria-hidden="true" />
+              <Image className="travlink-site-logo__image travlink-site-logo__image--primary" src="/img/logo/travlink-primary-2026.png" alt="Travlink Global" />
+              <Image className="travlink-site-logo__image travlink-site-logo__image--secondary" src="/img/logo/travlink-secondary-2026.png" alt="" aria-hidden="true" />
             </a>
           </div></div>
           <div className="col-xl-6 col-lg-7 d-none d-lg-block"><div className="ca-main-menu-3">
