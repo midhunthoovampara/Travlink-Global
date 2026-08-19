@@ -1,965 +1,1279 @@
 /* Home: two premium editorial service gateways. */
 .travlink-story-canvas .travlink-service-section {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-top: 24px !important;
+    padding-bottom: 18px !important;
 }
 
 .travlink-story-canvas .travlink-service-intro {
-  position: relative;
-  z-index: 3;
+    position: relative;
+    z-index: 3;
 }
 
 .travlink-story-canvas .travlink-services-editorial {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .travlink-story-canvas .travlink-services-editorial__decor {
-  position: absolute;
-  inset: 18% 0 2%;
-  z-index: 0;
-  overflow: hidden;
-  background-image: url("/img/background/world-map-outline.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: min(940px, 78vw) auto;
-  opacity: .11;
-  pointer-events: none;
-  mask-image: linear-gradient(90deg, transparent 2%, #000 16%, #000 84%, transparent 98%);
+    position: absolute;
+    inset: 18% 0 2%;
+    z-index: 0;
+    overflow: hidden;
+    background-image: url("/img/explore/world-map-background-v2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: min(940px, 78vw) auto;
+    opacity: .11;
+    pointer-events: none;
+    mask-image: linear-gradient(90deg, transparent 2%, #000 16%, #000 84%, transparent 98%);
 }
 
 .travlink-story-canvas .travlink-services-editorial__decor svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .travlink-story-canvas .travlink-services-editorial__route {
-  fill: none;
-  stroke: rgba(24, 111, 199, .65);
-  stroke-width: 1.4;
-  stroke-linecap: round;
-  stroke-dasharray: 7 11;
-  vector-effect: non-scaling-stroke;
-  animation: servicesRouteFlow 22s linear infinite;
+    fill: none;
+    stroke: rgba(24, 111, 199, .65);
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-dasharray: 7 11;
+    vector-effect: non-scaling-stroke;
+    animation: servicesRouteFlow 22s linear infinite;
 }
 
 .travlink-story-canvas .travlink-services-editorial__plane {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #1675c7;
-  font-size: 15px;
-  line-height: 1;
-  opacity: .72;
-  offset-path: path("M30 470 C250 110 430 520 610 290 S930 80 1170 250");
-  offset-rotate: auto;
-  animation: servicesPlaneJourney 26s linear infinite;
-  filter: drop-shadow(0 3px 8px rgba(19, 93, 158, .24));
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1675c7;
+    font-size: 15px;
+    line-height: 1;
+    opacity: .72;
+    offset-path: path("M30 470 C250 110 430 520 610 290 S930 80 1170 250");
+    offset-rotate: auto;
+    animation: servicesPlaneJourney 26s linear infinite;
+    filter: drop-shadow(0 3px 8px rgba(19, 93, 158, .24));
 }
 
 .travlink-story-canvas .travlink-services-editorial__node {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #2b83cf;
-  box-shadow: 0 0 0 6px rgba(43, 131, 207, .08), 0 0 18px rgba(43, 131, 207, .2);
-  animation: servicesNodePulse 4.6s ease-in-out infinite;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2b83cf;
+    box-shadow: 0 0 0 6px rgba(43, 131, 207, .08), 0 0 18px rgba(43, 131, 207, .2);
+    animation: servicesNodePulse 4.6s ease-in-out infinite;
 }
 
 .travlink-story-canvas .travlink-services-editorial__node--one {
-  top: 70%;
-  left: 14%;
+    top: 70%;
+    left: 14%;
 }
 
 .travlink-story-canvas .travlink-services-editorial__node--two {
-  top: 35%;
-  left: 51%;
-  animation-delay: -1.7s;
+    top: 35%;
+    left: 51%;
+    animation-delay: -1.7s;
 }
 
 .travlink-story-canvas .travlink-services-editorial__node--three {
-  top: 48%;
-  right: 12%;
-  animation-delay: -3.1s;
+    top: 48%;
+    right: 12%;
+    animation-delay: -3.1s;
 }
 
 .travlink-story-canvas .travlink-service-gateways {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  width: min(100%, 1080px);
-  margin: 0 auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    width: min(100%, 1080px);
+    margin: 0 auto;
 }
 
 .travlink-story-canvas .travlink-service-gateways::before {
-  position: absolute;
-  top: 15%;
-  bottom: 15%;
-  left: 50%;
-  z-index: 0;
-  width: 1px;
-  background: linear-gradient(180deg, transparent, rgba(24, 111, 199, .32) 24%, rgba(24, 111, 199, .32) 76%, transparent);
-  content: "";
-  transform: translateX(-50%);
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 50%;
+    z-index: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(24, 111, 199, .32) 24%, rgba(24, 111, 199, .32) 76%, transparent);
+    content: "";
+    transform: translateX(-50%);
 }
 
 .travlink-story-canvas .travlink-service-gateways::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 0;
-  width: 7px;
-  height: 7px;
-  border: 1px solid rgba(24, 111, 199, .48);
-  background: #f6faff;
-  content: "";
-  transform: translate(-50%, -50%) rotate(45deg);
-  box-shadow: 0 0 0 6px rgba(24, 111, 199, .06);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgba(24, 111, 199, .48);
+    background: #f6faff;
+    content: "";
+    transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: 0 0 0 6px rgba(24, 111, 199, .06);
 }
 
-.travlink-story-canvas .travlink-service-gateways > [class*="col-"] {
-  position: relative;
-  z-index: 1;
-  width: auto;
-  max-width: none;
-  padding: 0;
+.travlink-story-canvas .travlink-service-gateways>[class*="col-"] {
+    position: relative;
+    z-index: 1;
+    width: auto;
+    max-width: none;
+    padding: 0;
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-  min-height: 480px;
-  height: 480px;
+    min-height: 480px;
+    height: 480px;
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
-  border: 1px solid rgba(26, 78, 128, .14);
-  border-radius: 28px;
-  background: #10243a;
-  box-shadow: 0 18px 48px rgba(10, 35, 61, .12);
-  transform: none;
-  transition: transform 450ms cubic-bezier(.22, 1, .36, 1), border-color 400ms ease, box-shadow 450ms ease;
+    border: 1px solid rgba(26, 78, 128, .14);
+    border-radius: 28px;
+    background: #10243a;
+    box-shadow: 0 18px 48px rgba(10, 35, 61, .12);
+    transform: none;
+    transition: transform 450ms cubic-bezier(.22, 1, .36, 1), border-color 400ms ease, box-shadow 450ms ease;
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card::after {
-  z-index: 0;
-  background: linear-gradient(180deg, rgba(5, 14, 24, .16) 0%, rgba(5, 14, 24, .34) 42%, rgba(5, 14, 24, .9) 100%);
-  opacity: 1 !important;
-  transition: opacity 450ms ease;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(5, 14, 24, .16) 0%, rgba(5, 14, 24, .34) 42%, rgba(5, 14, 24, .9) 100%);
+    opacity: 1 !important;
+    transition: opacity 450ms ease;
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card__image,
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card:not(.is-active) .travlink-service-card__image,
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__image {
-  z-index: -1;
-  max-width: none;
-  opacity: 1 !important;
-  object-fit: cover;
-  object-position: center;
-  filter: saturate(.88) contrast(.94) brightness(.94);
-  transform: scale(1) !important;
-  transition: transform 800ms cubic-bezier(.22, 1, .36, 1), filter 500ms ease;
+    z-index: -1;
+    max-width: none;
+    opacity: 1 !important;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(.88) contrast(.94) brightness(.94);
+    transform: scale(1) !important;
+    transition: transform 800ms cubic-bezier(.22, 1, .36, 1), filter 500ms ease;
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-  position: relative;
-  z-index: 2;
-  justify-content: flex-end;
-  padding: 40px 38px 36px;
+    position: relative;
+    z-index: 2;
+    justify-content: flex-end;
+    padding: 40px 38px 36px;
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title {
-  min-height: 0;
-  margin: 0 0 16px;
-  color: #fff !important;
-  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  font-size: clamp(52px, 5.35vw, 76px);
-  font-style: normal;
-  font-weight: 600;
-  line-height: .9;
-  letter-spacing: -.042em;
-  text-shadow: 0 4px 26px rgba(0, 0, 0, .34);
-  transform: translateY(0);
-  transition: transform 450ms cubic-bezier(.22, 1, .36, 1);
+    min-height: 0;
+    margin: 0 0 16px;
+    color: #fff !important;
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-size: clamp(52px, 5.35vw, 76px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: .9;
+    letter-spacing: -.042em;
+    text-shadow: 0 4px 26px rgba(0, 0, 0, .34);
+    transform: translateY(0);
+    transition: transform 450ms cubic-bezier(.22, 1, .36, 1);
 }
 
 .travlink-story-canvas .travlink-service-card__teaser {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  max-width: 350px;
-  margin: 0;
-  color: rgba(242, 249, 255, .9);
-  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: .005em;
-  text-transform: none;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, .26);
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    max-width: 350px;
+    margin: 0;
+    color: rgba(242, 249, 255, .9);
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: .005em;
+    text-transform: none;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, .26);
 }
 
 .travlink-story-canvas .travlink-service-card__teaser::before {
-  width: 24px;
-  height: 1px;
-  flex: 0 0 24px;
-  background: rgba(103, 186, 244, .9);
-  box-shadow: 0 0 10px rgba(68, 166, 235, .34);
-  content: "";
+    width: 24px;
+    height: 1px;
+    flex: 0 0 24px;
+    background: rgba(103, 186, 244, .9);
+    box-shadow: 0 0 10px rgba(68, 166, 235, .34);
+    content: "";
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card__description {
-  max-width: 360px;
-  max-height: 0;
-  margin: 0;
-  overflow: hidden;
-  color: rgba(247, 250, 253, .88) !important;
-  font-family: "Outfit", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.62;
-  letter-spacing: .005em;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, .24);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: max-height 450ms cubic-bezier(.22, 1, .36, 1), margin-top 450ms cubic-bezier(.22, 1, .36, 1), opacity 350ms ease, transform 450ms cubic-bezier(.22, 1, .36, 1), visibility 0s linear 450ms;
+    max-width: 360px;
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    color: rgba(247, 250, 253, .88) !important;
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.62;
+    letter-spacing: .005em;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, .24);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: max-height 450ms cubic-bezier(.22, 1, .36, 1), margin-top 450ms cubic-bezier(.22, 1, .36, 1), opacity 350ms ease, transform 450ms cubic-bezier(.22, 1, .36, 1), visibility 0s linear 450ms;
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
-  gap: 10px;
-  margin-top: 24px;
-  padding-bottom: 7px;
-  color: #fff !important;
-  border-color: rgba(137, 205, 250, .72) !important;
-  font-family: "Inter", "Outfit", sans-serif;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: .16em;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, .24);
+    gap: 10px;
+    margin-top: 24px;
+    padding-bottom: 7px;
+    color: #fff !important;
+    border-color: rgba(137, 205, 250, .72) !important;
+    font-family: "Inter", "Outfit", sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .24);
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta span {
-  transform: translateX(0);
-  transition: transform 350ms cubic-bezier(.22, 1, .36, 1);
+    transform: translateX(0);
+    transition: transform 350ms cubic-bezier(.22, 1, .36, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible {
-    border-color: rgba(43, 138, 222, .78);
-    box-shadow: 0 28px 68px rgba(10, 39, 70, .22);
-    transform: translateY(-5px);
-  }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover::after,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within::after,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible::after {
-    opacity: .86 !important;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible {
+        border-color: rgba(43, 138, 222, .78);
+        box-shadow: 0 28px 68px rgba(10, 39, 70, .22);
+        transform: translateY(-5px);
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__image,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__image,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__image {
-    transform: scale(1.045) !important;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover::after,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within::after,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible::after {
+        opacity: .86 !important;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__title,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__title,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__title {
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__image,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__image,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__image {
+        transform: scale(1.045) !important;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__title,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__title,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__title {
+        transform: translateY(-4px);
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__description,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__description,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__description {
+        max-height: 82px;
+        margin-top: 13px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition-delay: 0s, 0s, 70ms, 70ms, 0s;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__cta span,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__cta span,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__cta span {
+        transform: translateX(5px);
+    }
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active {
+    border-color: rgba(43, 138, 222, .72);
+    box-shadow: 0 24px 58px rgba(10, 39, 70, .2);
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active::after {
+    opacity: .87 !important;
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
     transform: translateY(-4px);
-  }
+}
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__description,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__description,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__description {
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__description {
     max-height: 82px;
     margin-top: 13px;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     transition-delay: 0s, 0s, 70ms, 70ms, 0s;
-  }
-
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__cta span,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__cta span,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__cta span {
-    transform: translateX(5px);
-  }
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active {
-  border-color: rgba(43, 138, 222, .72);
-  box-shadow: 0 24px 58px rgba(10, 39, 70, .2);
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active::after {
-  opacity: .87 !important;
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
-  transform: translateY(-4px);
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__description {
-  max-height: 82px;
-  margin-top: 13px;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition-delay: 0s, 0s, 70ms, 70ms, 0s;
 }
 
 .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__cta span {
-  transform: translateX(5px);
+    transform: translateX(5px);
 }
 
 @media (max-width: 991.98px) and (min-width: 768px) {
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    min-height: 443px;
-    height: 443px;
-  }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    padding: 34px 30px 31px;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        min-height: 443px;
+        height: 443px;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        padding: 34px 30px 31px;
+    }
 }
 
 @media (max-width: 767.98px) {
-  .travlink-story-canvas .travlink-services-editorial__decor {
-    inset: 24% 0 3%;
-    background-position: 48% center;
-    background-size: 760px auto;
-    opacity: .075;
-  }
+    .travlink-story-canvas .travlink-services-editorial__decor {
+        inset: 24% 0 3%;
+        background-position: 48% center;
+        background-size: 760px auto;
+        opacity: .075;
+    }
 
-  .travlink-story-canvas .travlink-services-editorial__plane {
-    display: none;
-  }
+    .travlink-story-canvas .travlink-services-editorial__plane {
+        display: none;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 16px;
-    width: auto;
-    max-width: none;
-    margin-right: -20px;
-    margin-left: -20px;
-    padding: 8px max(20px, calc((100% - min(80vw, 310px)) / 2)) 24px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-inline: contain;
-    scroll-behavior: smooth;
-    scroll-padding-inline: 20px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
+    .travlink-story-canvas .travlink-service-gateways {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 16px;
+        width: auto;
+        max-width: none;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 8px max(20px, calc((100% - min(80vw, 310px)) / 2)) 24px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-inline: contain;
+        scroll-behavior: smooth;
+        scroll-padding-inline: 20px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways::-webkit-scrollbar {
-    display: none;
-  }
+    .travlink-story-canvas .travlink-service-gateways::-webkit-scrollbar {
+        display: none;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways::before,
-  .travlink-story-canvas .travlink-service-gateways::after {
-    display: none;
-  }
+    .travlink-story-canvas .travlink-service-gateways::before,
+    .travlink-story-canvas .travlink-service-gateways::after {
+        display: none;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways > [class*="col-"] {
-    flex: 0 0 min(80vw, 310px);
-    width: min(80vw, 310px);
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
+    .travlink-story-canvas .travlink-service-gateways>[class*="col-"] {
+        flex: 0 0 min(80vw, 310px);
+        width: min(80vw, 310px);
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    min-height: 428px !important;
-    height: 428px;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        min-height: 428px !important;
+        height: 428px;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
-    border-radius: 22px;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
+        border-radius: 22px;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    padding: 28px 24px 25px;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        padding: 28px 24px 25px;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title {
-    margin-bottom: 13px;
-    font-size: clamp(44px, 15vw, 58px);
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title {
+        margin-bottom: 13px;
+        font-size: clamp(44px, 15vw, 58px);
+    }
 
-  .travlink-story-canvas .travlink-service-card__teaser {
-    gap: 9px;
-    font-size: 17px;
-  }
+    .travlink-story-canvas .travlink-service-card__teaser {
+        gap: 9px;
+        font-size: 17px;
+    }
 
-  .travlink-story-canvas .travlink-service-card__teaser::before {
-    width: 18px;
-    flex-basis: 18px;
-  }
+    .travlink-story-canvas .travlink-service-card__teaser::before {
+        width: 18px;
+        flex-basis: 18px;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__description {
-    font-size: 14px;
-    line-height: 1.58;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__description {
+        font-size: 14px;
+        line-height: 1.58;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
-    margin-top: 20px;
-    font-size: 10px;
-    letter-spacing: .14em;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
+        margin-top: 20px;
+        font-size: 10px;
+        letter-spacing: .14em;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active {
-    border-color: rgba(43, 138, 222, .72);
-    box-shadow: 0 24px 58px rgba(10, 39, 70, .2);
-    transform: none;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active {
+        border-color: rgba(43, 138, 222, .72);
+        box-shadow: 0 24px 58px rgba(10, 39, 70, .2);
+        transform: none;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active::after {
-    opacity: .87 !important;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active::after {
+        opacity: .87 !important;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
-    transform: translateY(-4px);
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
+        transform: translateY(-4px);
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__description {
-    max-height: 78px;
-    margin-top: 12px;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transition-delay: 0s, 0s, 70ms, 70ms, 0s;
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__description {
+        max-height: 78px;
+        margin-top: 12px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition-delay: 0s, 0s, 70ms, 70ms, 0s;
+    }
 
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__cta span {
-    transform: translateX(5px);
-  }
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__cta span {
+        transform: translateX(5px);
+    }
 }
 
-/* Asymmetric editorial composition: introduction left, gateways lower right. */
-.travlink-home .travlink-services-composition {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: minmax(280px, .72fr) minmax(620px, 1.45fr);
-  gap: clamp(48px, 6vw, 104px);
-  width: min(calc(100% - 48px), 1380px);
-  max-width: 1380px;
-  align-items: start;
-  padding-top: clamp(54px, 6vw, 88px);
-  padding-bottom: clamp(64px, 7vw, 108px);
+/* Premium finishing layer for the homepage service composition. */
+.travlink-home .travlink-story-canvas .travlink-service-section {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(105, 190, 238, .15), transparent 34%),
+        radial-gradient(circle at 88% 82%, rgba(32, 108, 177, .08), transparent 36%),
+        linear-gradient(135deg, #fbfdff 0%, #eef8fe 48%, #f8fcff 100%) !important;
 }
 
-.travlink-home .travlink-services-composition .travlink-service-intro {
-  width: 100% !important;
-  max-width: 500px !important;
-  margin: 0 !important;
-  padding-top: clamp(6px, 2vw, 26px);
-  text-align: left !important;
+.travlink-home .travlink-services-composition::before {
+    display: none;
+    content: none;
 }
 
 .travlink-home .travlink-services-composition .travlink-service-intro__eyebrow {
-  justify-content: flex-start;
-}
-
-.travlink-home .travlink-services-composition .travlink-service-intro__title {
-  width: auto !important;
-  max-width: 500px !important;
-  margin-right: 0;
-  margin-left: 0;
-  font-size: clamp(48px, 4.6vw, 72px) !important;
-  line-height: .98 !important;
-  text-align: left !important;
-  white-space: normal !important;
-}
-
-.travlink-home .travlink-services-composition .travlink-service-intro__title::after {
-  margin-right: 0;
-  margin-left: 0;
+    color: #1d63b8;
+    font-weight: 600;
+    letter-spacing: .25em;
 }
 
 .travlink-home .travlink-services-composition .travlink-service-intro__copy {
-  max-width: 430px;
-  margin: 26px 0 0;
-  color: #596675;
-  font-size: 15px;
-  line-height: 1.75;
-  text-align: left;
-}
-
-.travlink-home .travlink-services-composition .travlink-services-editorial {
-  width: 100%;
-  max-width: none;
-  margin-top: clamp(112px, 11vw, 168px);
-  padding: 0;
-}
-
-.travlink-home .travlink-services-composition .travlink-service-gateways {
-  width: 100%;
-  gap: clamp(20px, 2.2vw, 34px);
-  margin: 0;
-}
-
-@media (max-width: 1199.98px) {
-  .travlink-home .travlink-services-composition {
-    grid-template-columns: minmax(250px, .68fr) minmax(520px, 1.32fr);
-    gap: 42px;
-  }
-
-  .travlink-home .travlink-services-composition .travlink-services-editorial {
-    margin-top: 96px;
-  }
-
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    min-height: 350px;
-    height: 350px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .travlink-home .travlink-services-composition {
-    grid-template-columns: 1fr;
-    gap: 44px;
-    width: min(calc(100% - 48px), 760px);
-  }
-
-  .travlink-home .travlink-services-composition .travlink-service-intro {
-    max-width: 560px !important;
-  }
-
-  .travlink-home .travlink-services-composition .travlink-services-editorial {
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .travlink-home .travlink-services-composition {
-    gap: 34px;
-    width: min(calc(100% - 36px), 520px);
-    padding-top: 48px;
-    padding-bottom: 64px;
-  }
-
-  .travlink-home .travlink-services-composition .travlink-service-intro {
-    padding-top: 0;
-  }
-
-  .travlink-home .travlink-services-composition .travlink-service-intro__copy {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .travlink-story-canvas .travlink-services-editorial__route,
-  .travlink-story-canvas .travlink-services-editorial__plane,
-  .travlink-story-canvas .travlink-services-editorial__node,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card::after,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__image,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__description,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta span {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-@keyframes servicesRouteFlow {
-  to { stroke-dashoffset: -180; }
-}
-
-@keyframes servicesPlaneJourney {
-  0%, 8% { offset-distance: 0%; opacity: 0; }
-  14%, 88% { opacity: .72; }
-  96%, 100% { offset-distance: 100%; opacity: 0; }
-}
-
-@keyframes servicesNodePulse {
-  0%, 100% { opacity: .5; transform: scale(1); }
-  50% { opacity: .9; transform: scale(1.3); }
-}
-
-/* Reference-inspired wide service cards: landscape media over a clean body. */
-.travlink-story-canvas .travlink-services-editorial {
-  max-width: 1320px;
-}
-
-.travlink-story-canvas .travlink-service-gateways {
-  width: min(100%, 1220px);
-  gap: clamp(28px, 4.5vw, 64px);
-}
-
-.travlink-story-canvas .travlink-service-gateways::before,
-.travlink-story-canvas .travlink-service-gateways::after {
-  display: none;
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card {
-  display: grid;
-  min-height: 0;
-  height: auto;
-  grid-template-rows: clamp(210px, 20vw, 280px) auto;
-  overflow: hidden;
-  border: 1px solid rgba(18, 49, 78, .12);
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(10, 35, 61, .14);
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card::after {
-  display: none;
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card__image,
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card:not(.is-active) .travlink-service-card__image,
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__image {
-  position: relative;
-  inset: auto;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  opacity: 1 !important;
-  object-fit: cover;
-  filter: saturate(1.05) contrast(1.02);
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-  min-height: 180px;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  padding: 22px clamp(24px, 3vw, 44px) 24px;
-  background: #fff;
-  color: #10243a;
-  text-align: center;
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card__title {
-  margin: 0 0 7px;
-  color: #10243a !important;
-  font-family: "Manrope", sans-serif;
-  font-size: clamp(34px, 3.2vw, 48px);
-  font-weight: 750;
-  line-height: 1;
-  letter-spacing: -.045em;
-  text-shadow: none;
-}
-
-.travlink-story-canvas .travlink-service-card__teaser {
-  display: block;
-  max-width: 420px;
-  color: #3d5368;
-  font-family: "DM Sans", sans-serif;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  text-shadow: none;
-}
-
-.travlink-story-canvas .travlink-service-card__teaser::before {
-  display: none;
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card__description {
-  max-width: 440px;
-  max-height: none;
-  margin: 8px 0 0;
-  overflow: visible;
-  color: #526577 !important;
-  font-family: "DM Sans", sans-serif;
-  font-size: 15px;
-  line-height: 1.55;
-  text-shadow: none;
-  opacity: 1;
-  visibility: visible;
-  transform: none;
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
-  margin-top: 13px;
-  color: #145fa6 !important;
-  border-color: rgba(20, 95, 166, .38) !important;
-  font-family: "DM Sans", sans-serif;
-  font-size: 11px;
-  text-shadow: none;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible {
-    border-color: rgba(20, 95, 166, .3);
-    box-shadow: 0 18px 40px rgba(10, 35, 61, .17);
-    transform: translateY(-5px);
-  }
-
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__title,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__title,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__title,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__description,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__description,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__description {
-    max-height: none;
-    margin-top: 12px;
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .travlink-story-canvas .travlink-service-gateways {
-    display: grid;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    grid-template-columns: 1fr;
-    gap: 22px;
-    overflow: visible;
-  }
-
-  .travlink-story-canvas .travlink-service-gateways > [class*="col-"] {
-    width: 100%;
-  }
-
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    min-height: 0 !important;
-    height: auto;
-  }
-
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
-    grid-template-rows: clamp(190px, 57vw, 260px) auto;
-    border-radius: 7px;
-  }
-
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    padding: 20px 20px 22px;
-  }
-
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title {
-    font-size: 36px;
-  }
-}
-/* Keep both wide service cards dimensionally identical. */
-@media (min-width: 768px) {
-  .travlink-story-canvas .travlink-service-gateways > [class*="col-"] {
-    min-width: 0;
-  }
-
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
-    width: 100%;
-    height: 100%;
-  }
-
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    min-height: 180px;
-    height: 180px;
-  }
-}
-/* Stable card text hierarchy with no active-state overlap. */
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-  gap: 0;
-  overflow: hidden;
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
-  margin: 0 0 8px !important;
-  font-size: clamp(27px, 2.45vw, 36px);
-  line-height: 1.05;
-  transform: none !important;
-}
-
-.travlink-story-canvas .travlink-service-card__teaser {
-  margin: 0;
-  font-size: 11.5px;
-  line-height: 1.35;
-  letter-spacing: .14em;
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card__description,
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__description {
-  max-height: none;
-  margin: 7px 0 0 !important;
-  font-size: 13px;
-  line-height: 1.4;
-  transform: none !important;
-}
-
-.travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
-  margin-top: 10px !important;
-  font-size: 10px;
-}
-
-@media (max-width: 767.98px) {
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
-  .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
-    font-size: 30px;
-  }
-}
-
-/* Compact full-image service cards. */
-.travlink-home .travlink-story-canvas .travlink-service-gateways {
-  width: min(100%, 960px);
-  gap: 30px;
+    color: #4f6070;
 }
 
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
-  position: relative;
-  display: block;
-  min-height: 390px;
-  height: 390px;
-  overflow: hidden;
-  border: 0;
-  border-radius: 20px;
-  background: #0b2136;
-  box-shadow: 0 16px 40px rgba(10, 35, 61, .16);
+    border: 1px solid rgba(255, 255, 255, .6);
+    border-radius: 24px;
+    box-shadow:
+        0 28px 65px rgba(10, 35, 61, .17),
+        0 3px 12px rgba(10, 35, 61, .08),
+        inset 0 0 0 1px rgba(8, 40, 70, .05);
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card::before {
+    position: absolute;
+    inset: 11px;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 16px;
+    content: "";
+    pointer-events: none;
 }
 
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card::after {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: block;
-  background: linear-gradient(180deg, rgba(3, 13, 24, .04) 18%, rgba(3, 15, 27, .3) 53%, rgba(3, 15, 27, .9) 100%);
-  content: "";
-  opacity: 1 !important;
-  pointer-events: none;
+    background:
+        linear-gradient(180deg, rgba(4, 15, 27, .02) 12%, rgba(4, 16, 29, .18) 46%, rgba(3, 14, 26, .92) 100%);
 }
 
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__image,
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:not(.is-active) .travlink-service-card__image,
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__image {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: saturate(.96) contrast(1.02);
-  transform: scale(1) !important;
-  transition: transform .85s cubic-bezier(.22, 1, .36, 1), filter .45s ease;
+    filter: saturate(.9) contrast(1.04) brightness(.96);
 }
 
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  min-height: 390px;
-  height: 390px;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 28px 30px;
-  overflow: hidden;
-  background: transparent;
-  color: #fff;
-  text-align: left;
+    padding: 34px 36px;
 }
 
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
-  margin: 0 0 7px !important;
-  color: #fff !important;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(32px, 3vw, 42px);
-  font-weight: 650;
-  line-height: 1;
-  text-shadow: 0 3px 18px rgba(0, 0, 0, .34);
-  transform: none !important;
-}
-
-.travlink-home .travlink-story-canvas .travlink-service-card__teaser {
-  display: block;
-  margin: 0;
-  color: rgba(255, 255, 255, .92);
-  font-size: 11px;
-  line-height: 1.4;
-  letter-spacing: .13em;
-  text-align: left;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, .32);
+    margin-bottom: 10px !important;
+    font-size: clamp(34px, 3vw, 44px);
+    font-weight: 500;
+    letter-spacing: -.025em;
 }
 
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__description,
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__description {
-  max-width: 390px;
-  max-height: none;
-  margin: 7px 0 0 !important;
-  color: rgba(255, 255, 255, .84) !important;
-  font-size: 12.5px;
-  line-height: 1.45;
-  text-align: left;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, .34);
-  opacity: 1;
-  visibility: visible;
-  transform: none !important;
+    max-width: 350px;
+    color: rgba(255, 255, 255, .88) !important;
+    font-size: 12px;
+    letter-spacing: .01em;
 }
 
 .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
-  margin-top: 12px !important;
-  color: #fff !important;
-  border-color: rgba(255, 255, 255, .68) !important;
-  font-size: 10px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, .32);
+    display: inline-flex;
+    min-height: 32px;
+    align-items: center;
+    gap: 9px;
+    margin-top: 15px !important;
+    padding: 8px 13px;
+    border: 1px solid rgba(255, 255, 255, .5) !important;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .1);
+    letter-spacing: .08em;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover,
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within,
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible {
-    box-shadow: 0 24px 54px rgba(10, 35, 61, .22);
-    transform: translateY(-5px);
-  }
 
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__image,
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__image,
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__image {
-    filter: saturate(1.03) contrast(1.04);
-    transform: scale(1.045) !important;
-  }
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible {
+        border-color: rgba(183, 129, 52, .48);
+        box-shadow:
+            0 34px 76px rgba(10, 35, 61, .23),
+            0 4px 16px rgba(10, 35, 61, .1),
+            inset 0 0 0 1px rgba(255, 255, 255, .18);
+        transform: translateY(-6px);
+    }
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__cta,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__cta {
+        border-color: rgba(246, 211, 151, .8) !important;
+        background: rgba(255, 255, 255, .16);
+    }
 }
 
 @media (max-width: 767.98px) {
-  .travlink-home .travlink-story-canvas .travlink-service-gateways {
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
+        border-radius: 20px;
+    }
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card::before {
+        inset: 8px;
+        border-radius: 14px;
+    }
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        padding: 28px 27px;
+    }
+}
+
+/* Asymmetric editorial composition: introduction left, gateways lower right. */
+.travlink-home .travlink-services-composition {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(280px, .72fr) minmax(620px, 1.45fr);
+    gap: clamp(48px, 6vw, 104px);
+    width: min(calc(100% - 48px), 1380px);
+    max-width: 1380px;
+    align-items: start;
+    padding-top: clamp(28px, 3vw, 40px);
+    padding-bottom: clamp(30px, 3.4vw, 46px);
+}
+
+.travlink-home .travlink-services-composition .travlink-service-intro {
+    width: 100% !important;
+    max-width: 540px !important;
+    margin: 0 !important;
+    padding-top: clamp(6px, 2vw, 26px);
+    text-align: left !important;
+}
+
+.travlink-home .travlink-services-composition .travlink-service-intro__eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 6px 14px !important;
+    background: rgba(29, 117, 216, 0.08) !important;
+    border: 1px solid rgba(29, 117, 216, 0.18) !important;
+    border-radius: 30px !important;
+    color: #1a5bb8 !important;
+    font: 700 11px/1 "Outfit", "Inter", sans-serif !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 2px 10px rgba(29, 117, 216, 0.05) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+.travlink-home .travlink-services-composition .travlink-service-intro__eyebrow-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1d75d8;
+    box-shadow: 0 0 8px rgba(29, 117, 216, 0.6);
+    animation: travlinkEyebrowPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes travlinkEyebrowPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.85);
+    }
+}
+
+.travlink-home .travlink-services-composition .travlink-service-intro__title {
+    width: auto !important;
+    max-width: 580px !important;
+    margin: 20px 0 0 !important;
+    color: #0f172a !important;
+    font-family: "Outfit", "Inter", sans-serif !important;
+    font-size: clamp(38px, 4.2vw, 62px) !important;
+    font-weight: 900 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.035em !important;
+    text-align: left !important;
+    white-space: normal !important;
+}
+
+.travlink-home .travlink-services-composition .travlink-service-intro__title-lead {
+    display: block !important;
+    color: #0b132a !important;
+    font-family: "Outfit", "Inter", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 1.1em !important;
+    letter-spacing: -0.035em !important;
+}
+
+.travlink-home .travlink-services-composition .travlink-service-intro__title-accent,
+.travlink-home .travlink-services-composition .travlink-service-intro__title em {
+    display: block !important;
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-style: italic !important;
+    font-weight: 300 !important;
+    font-size: 0.85em !important;
+    color: #1d65b8 !important;
+    background: linear-gradient(135deg, #0b4f8a 0%, #1d75d8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap !important;
+}
+
+.travlink-home .travlink-services-composition .travlink-service-intro__title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 2px;
+    margin: 22px 0 0;
+    background: linear-gradient(90deg, #1d75d8 0%, rgba(29, 117, 216, 0.15) 100%);
+    border-radius: 2px;
+}
+
+.travlink-home .travlink-services-composition .travlink-service-intro__copy {
+    max-width: 440px;
+    margin: 24px 0 0;
+    color: #475569 !important;
+    font: 400 15.5px/1.7 "Outfit", "Inter", sans-serif !important;
+    letter-spacing: -0.005em !important;
+    text-align: left;
+}
+
+.travlink-home .travlink-services-composition .travlink-services-editorial {
     width: 100%;
-    gap: 18px;
-  }
+    max-width: none;
+    margin-top: clamp(112px, 11vw, 168px);
+    padding: 0;
+}
 
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    min-height: 350px !important;
-    height: 350px;
-  }
+.travlink-home .travlink-services-composition .travlink-service-gateways {
+    width: 100%;
+    gap: clamp(20px, 2.2vw, 34px);
+    margin: 0;
+}
 
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
-    border-radius: 17px;
-  }
+@media (max-width: 1199.98px) {
+    .travlink-home .travlink-services-composition {
+        grid-template-columns: minmax(250px, .68fr) minmax(520px, 1.32fr);
+        gap: 42px;
+    }
 
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
-    padding: 24px 22px;
-  }
+    .travlink-home .travlink-services-composition .travlink-services-editorial {
+        margin-top: 96px;
+    }
 
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
-  .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
-    font-size: 32px;
-  }
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        min-height: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .travlink-home .travlink-services-composition {
+        grid-template-columns: 1fr;
+        gap: 44px;
+        width: min(calc(100% - 48px), 760px);
+    }
+
+    .travlink-home .travlink-services-composition .travlink-service-intro {
+        max-width: 560px !important;
+    }
+
+    .travlink-home .travlink-services-composition .travlink-services-editorial {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .travlink-story-canvas .travlink-service-section {
+        padding-top: 18px !important;
+        padding-bottom: 12px !important;
+    }
+
+    .travlink-home .travlink-services-composition {
+        gap: 34px;
+        width: min(calc(100% - 36px), 520px);
+        padding-top: 26px;
+        padding-bottom: 36px;
+    }
+
+    .travlink-home .travlink-services-composition .travlink-service-intro {
+        padding-top: 0;
+    }
+
+    .travlink-home .travlink-services-composition .travlink-service-intro__copy {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .travlink-story-canvas .travlink-services-editorial__route,
+    .travlink-story-canvas .travlink-services-editorial__plane,
+    .travlink-story-canvas .travlink-services-editorial__node,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card::after,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__image,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__description,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta span {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@keyframes servicesRouteFlow {
+    to {
+        stroke-dashoffset: -180;
+    }
+}
+
+@keyframes servicesPlaneJourney {
+
+    0%,
+    8% {
+        offset-distance: 0%;
+        opacity: 0;
+    }
+
+    14%,
+    88% {
+        opacity: .72;
+    }
+
+    96%,
+    100% {
+        offset-distance: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes servicesNodePulse {
+
+    0%,
+    100% {
+        opacity: .5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .9;
+        transform: scale(1.3);
+    }
+}
+
+/* Reference-inspired wide service cards: landscape media over a clean body. */
+.travlink-story-canvas .travlink-services-editorial {
+    max-width: 1320px;
+}
+
+.travlink-story-canvas .travlink-service-gateways {
+    width: min(100%, 1220px);
+    gap: clamp(28px, 4.5vw, 64px);
+}
+
+.travlink-story-canvas .travlink-service-gateways::before,
+.travlink-story-canvas .travlink-service-gateways::after {
+    display: none;
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card {
+    display: grid;
+    min-height: 0;
+    height: auto;
+    grid-template-rows: clamp(210px, 20vw, 280px) auto;
+    overflow: hidden;
+    border: 1px solid rgba(18, 49, 78, .12);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(10, 35, 61, .14);
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card::after {
+    display: none;
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card__image,
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card:not(.is-active) .travlink-service-card__image,
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__image {
+    position: relative;
+    inset: auto;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
+    object-fit: cover;
+    filter: saturate(1.05) contrast(1.02);
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+    min-height: 180px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 22px clamp(24px, 3vw, 44px) 24px;
+    background: #fff;
+    color: #10243a;
+    text-align: center;
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card__title {
+    margin: 0 0 7px;
+    color: #10243a !important;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(34px, 3.2vw, 48px);
+    font-weight: 750;
+    line-height: 1;
+    letter-spacing: -.045em;
+    text-shadow: none;
+}
+
+.travlink-story-canvas .travlink-service-card__teaser {
+    display: block;
+    max-width: 420px;
+    color: #3d5368;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-shadow: none;
+}
+
+.travlink-story-canvas .travlink-service-card__teaser::before {
+    display: none;
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card__description {
+    max-width: 440px;
+    max-height: none;
+    margin: 8px 0 0;
+    overflow: visible;
+    color: #526577 !important;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    text-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
+    margin-top: 13px;
+    color: #145fa6 !important;
+    border-color: rgba(20, 95, 166, .38) !important;
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    text-shadow: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible {
+        border-color: rgba(20, 95, 166, .3);
+        box-shadow: 0 18px 40px rgba(10, 35, 61, .17);
+        transform: translateY(-5px);
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__title,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__title,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__title,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__description,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__description,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__description {
+        max-height: none;
+        margin-top: 12px;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .travlink-story-canvas .travlink-service-gateways {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+        gap: 22px;
+        overflow: visible;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways>[class*="col-"] {
+        width: 100%;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        min-height: 0 !important;
+        height: auto;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
+        grid-template-rows: clamp(190px, 57vw, 260px) auto;
+        border-radius: 7px;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        padding: 20px 20px 22px;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title {
+        font-size: 36px;
+    }
+}
+
+/* Keep both wide service cards dimensionally identical. */
+@media (min-width: 768px) {
+    .travlink-story-canvas .travlink-service-gateways>[class*="col-"] {
+        min-width: 0;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        min-height: 180px;
+        height: 180px;
+    }
+}
+
+/* Stable card text hierarchy with no active-state overlap. */
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+    gap: 0;
+    overflow: hidden;
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
+    margin: 0 0 8px !important;
+    font-size: clamp(27px, 2.45vw, 36px);
+    line-height: 1.05;
+    transform: none !important;
+}
+
+.travlink-story-canvas .travlink-service-card__teaser {
+    margin: 0;
+    font-size: 11.5px;
+    line-height: 1.35;
+    letter-spacing: .14em;
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card__description,
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__description {
+    max-height: none;
+    margin: 7px 0 0 !important;
+    font-size: 13px;
+    line-height: 1.4;
+    transform: none !important;
+}
+
+.travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
+    margin-top: 10px !important;
+    font-size: 10px;
+}
+
+@media (max-width: 767.98px) {
+
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
+    .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
+        font-size: 30px;
+    }
+}
+
+/* Compact full-image service cards. */
+.travlink-home .travlink-story-canvas .travlink-service-gateways {
+    width: min(100%, 960px);
+    gap: 30px;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
+    position: relative;
+    display: block;
+    min-height: 390px;
+    height: 390px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 20px;
+    background: #0b2136;
+    box-shadow: 0 16px 40px rgba(10, 35, 61, .16);
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    background: linear-gradient(180deg, rgba(3, 13, 24, .04) 18%, rgba(3, 15, 27, .3) 53%, rgba(3, 15, 27, .9) 100%);
+    content: "";
+    opacity: 1 !important;
+    pointer-events: none;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__image,
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:not(.is-active) .travlink-service-card__image,
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(.96) contrast(1.02);
+    transform: scale(1) !important;
+    transition: transform .85s cubic-bezier(.22, 1, .36, 1), filter .45s ease;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    min-height: 390px;
+    height: 390px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 28px 30px;
+    overflow: hidden;
+    background: transparent;
+    color: #fff;
+    text-align: left;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
+    margin: 0 0 7px !important;
+    color: #fff !important;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(32px, 3vw, 42px);
+    font-weight: 650;
+    line-height: 1;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, .34);
+    transform: none !important;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-card__teaser {
+    display: block;
+    margin: 0;
+    color: rgba(255, 255, 255, .92);
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: .13em;
+    text-align: left;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .32);
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__description,
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__description {
+    max-width: 390px;
+    max-height: none;
+    margin: 7px 0 0 !important;
+    color: rgba(255, 255, 255, .84) !important;
+    font-size: 12.5px;
+    line-height: 1.45;
+    text-align: left;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .34);
+    opacity: 1;
+    visibility: visible;
+    transform: none !important;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
+    margin-top: 12px !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, .68) !important;
+    font-size: 10px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .32);
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible {
+        box-shadow: 0 24px 54px rgba(10, 35, 61, .22);
+        transform: translateY(-5px);
+    }
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover .travlink-service-card__image,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within .travlink-service-card__image,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible .travlink-service-card__image {
+        filter: saturate(1.03) contrast(1.04);
+        transform: scale(1.045) !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .travlink-home .travlink-story-canvas .travlink-service-gateways {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        min-height: 350px !important;
+        height: 350px;
+    }
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
+        border-radius: 17px;
+    }
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        padding: 24px 22px;
+    }
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
+        font-size: 32px;
+    }
+}
+
+/* Keep the premium finish last so it wins the compact-card cascade. */
+.travlink-home .travlink-services-composition .travlink-service-intro__copy {
+    color: #4f6070;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
+    border: 1px solid rgba(255, 255, 255, .6);
+    border-radius: 24px;
+    box-shadow:
+        0 28px 65px rgba(10, 35, 61, .17),
+        0 3px 12px rgba(10, 35, 61, .08),
+        inset 0 0 0 1px rgba(8, 40, 70, .05);
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card::after {
+    background: linear-gradient(180deg, rgba(4, 15, 27, .02) 12%, rgba(4, 16, 29, .18) 46%, rgba(3, 14, 26, .92) 100%);
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__image,
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:not(.is-active) .travlink-service-card__image,
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__image {
+    filter: saturate(.9) contrast(1.04) brightness(.96);
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+    padding: 34px 36px;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__title,
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__title {
+    margin-bottom: 10px !important;
+    font-size: clamp(34px, 3vw, 44px);
+    font-weight: 500;
+    letter-spacing: -.025em;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__description,
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card.is-active .travlink-service-card__description {
+    max-width: 350px;
+    color: rgba(255, 255, 255, .88) !important;
+    font-size: 12px;
+    letter-spacing: .01em;
+}
+
+.travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__cta {
+    display: inline-flex;
+    min-height: 32px;
+    align-items: center;
+    gap: 9px;
+    margin-top: 15px !important;
+    padding: 8px 13px;
+    border: 1px solid rgba(255, 255, 255, .5) !important;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .1);
+    letter-spacing: .08em;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:hover,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-within,
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card:focus-visible {
+        border-color: rgba(183, 129, 52, .48);
+        box-shadow:
+            0 34px 76px rgba(10, 35, 61, .23),
+            0 4px 16px rgba(10, 35, 61, .1),
+            inset 0 0 0 1px rgba(255, 255, 255, .18);
+        transform: translateY(-6px);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card {
+        border-radius: 20px;
+    }
+
+    .travlink-home .travlink-story-canvas .travlink-service-gateways .travlink-service-card__content {
+        padding: 28px 27px;
+    }
 }

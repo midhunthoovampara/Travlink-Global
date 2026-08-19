@@ -1,202 +1,512 @@
 .travlink-brand-story {
-  position: relative;
-  overflow: hidden;
-  padding: clamp(105px,10vw,150px) 0;
-  background: #fff;
-  isolation: isolate;
+    position: relative;
+    overflow: hidden;
+    padding: clamp(105px, 10vw, 150px) 0;
+    background: #fff;
+    isolation: isolate;
 }
+
 .travlink-brand-story::before {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background:
-    radial-gradient(circle at 8% 18%,rgba(47,159,230,.1),transparent 24%),
-    radial-gradient(circle at 94% 72%,rgba(14,71,161,.07),transparent 26%);
-  content: "";
-  pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background:
+        radial-gradient(circle at 8% 18%, rgba(47, 159, 230, .1), transparent 24%),
+        radial-gradient(circle at 94% 72%, rgba(14, 71, 161, .07), transparent 26%);
+    content: "";
+    pointer-events: none;
 }
-.travlink-brand-story__header { max-width: 900px; margin: 0 auto 70px; text-align: center; }
+
+.travlink-brand-story__header {
+    max-width: 900px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
 .travlink-brand-story__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: #1d63b8;
-  font: 700 11px/1 Outfit,Inter,sans-serif;
-  letter-spacing: .25em;
-  text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #1d63b8;
+    font: 700 11px/1 Outfit, Inter, sans-serif;
+    letter-spacing: .25em;
+    text-transform: uppercase;
 }
-.travlink-brand-story__eyebrow::before,.travlink-brand-story__eyebrow::after { width: 31px; height: 1px; background: currentColor; content: ""; opacity: .55; }
+
+.travlink-brand-story__eyebrow::before,
+.travlink-brand-story__eyebrow::after {
+    width: 31px;
+    height: 1px;
+    background: currentColor;
+    content: "";
+    opacity: .55;
+}
+
 .travlink-brand-story__header h2 {
-  margin: 20px 0 0;
-  color: #10233e;
-  font: 500 clamp(50px,5.5vw,76px)/.96 "Cormorant Garamond",Georgia,serif;
-  letter-spacing: -.045em;
+    margin: 20px 0 0;
+    color: #10233e;
+    font: 500 clamp(50px, 5.5vw, 76px)/.96 "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -.045em;
 }
-.travlink-brand-story__header h2 em { color: #0e47a1; font-weight: 500; }
-.travlink-brand-story__opening { display: grid; grid-template-columns: minmax(500px,1.05fr) minmax(420px,.95fr); gap: clamp(50px,6vw,88px); align-items: center; }
+
+.travlink-brand-story__header h2 em {
+    color: #0e47a1;
+    font-weight: 500;
+}
+
+.travlink-brand-story__opening {
+    display: grid;
+    grid-template-columns: minmax(500px, 1.05fr) minmax(420px, .95fr);
+    gap: clamp(50px, 6vw, 88px);
+    align-items: center;
+}
+
 .travlink-brand-story__illustration {
-  overflow: hidden;
-  margin: 0;
-  border-radius: 28px;
-  background: #eaf3f8;
-  box-shadow: 0 26px 60px rgba(18,77,126,.16);
+    overflow: hidden;
+    margin: 0;
+    border-radius: 28px;
+    background: #eaf3f8;
+    box-shadow: 0 26px 60px rgba(18, 77, 126, .16);
 }
-.travlink-brand-story__illustration img { display: block; width: 100%; aspect-ratio: 19/15; object-fit: cover; object-position: center; }
-.travlink-brand-story__illustration svg { display: none; }
-.travlink-brand-story__globe { filter: drop-shadow(0 24px 42px rgba(18,77,126,.12)); }
-.travlink-brand-story__globe-lines { fill: none; stroke: rgba(14,71,161,.1); stroke-width: 1.2; }
-.travlink-brand-story__land { fill: rgba(29,99,184,.12); stroke: rgba(14,71,161,.2); stroke-width: 1.3; }
+
+.travlink-brand-story__illustration img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 19/15;
+    object-fit: cover;
+    object-position: center;
+}
+
+.travlink-brand-story__illustration svg {
+    display: none;
+}
+
+.travlink-brand-story__globe {
+    filter: drop-shadow(0 24px 42px rgba(18, 77, 126, .12));
+}
+
+.travlink-brand-story__globe-lines {
+    fill: none;
+    stroke: rgba(14, 71, 161, .1);
+    stroke-width: 1.2;
+}
+
+.travlink-brand-story__land {
+    fill: rgba(29, 99, 184, .12);
+    stroke: rgba(14, 71, 161, .2);
+    stroke-width: 1.3;
+}
+
 .travlink-brand-story__routes path {
-  fill: none;
-  stroke: #2f9fe6;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-dasharray: 5 9;
-  opacity: .7;
+    fill: none;
+    stroke: #2f9fe6;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 5 9;
+    opacity: .7;
 }
-.travlink-brand-story:not(.is-in-view) .travlink-brand-story__routes path { stroke-dasharray: 0 800; }
-.travlink-brand-story.is-in-view .travlink-brand-story__routes path { animation: travlink-brand-route 1.6s cubic-bezier(.22,1,.36,1) both; }
-.travlink-brand-story.is-in-view .travlink-brand-story__routes path:nth-child(2) { animation-delay: .18s; }
-.travlink-brand-story.is-in-view .travlink-brand-story__routes path:nth-child(3) { animation-delay: .36s; }
-@keyframes travlink-brand-route { from { stroke-dasharray: 0 800; } to { stroke-dasharray: 5 9; } }
-.travlink-brand-story__nodes circle { fill: #0e47a1; stroke: #fff; stroke-width: 3; filter: url(#brandGlow); }
-.travlink-brand-story__factory,.travlink-brand-story__ship,.travlink-brand-story__traveler,.travlink-brand-story__handshake { fill: #fff; stroke: #0e47a1; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 10px 15px rgba(14,71,161,.13)); }
-.travlink-brand-story__plane { fill: #0e47a1; filter: drop-shadow(0 5px 7px rgba(14,71,161,.3)); offset-path: path("M96 164Q300 43 535 151T679 339"); animation: travlink-brand-plane 22s linear infinite; }
-@keyframes travlink-brand-plane { from { offset-distance: 0; } to { offset-distance: 100%; } }
-.travlink-brand-story__illustration text { fill: #0e47a1; font: 700 13px/1 Outfit,Inter,sans-serif; letter-spacing: .22em; text-anchor: middle; }
-.travlink-brand-story__copy { display: grid; gap: 21px; }
-.travlink-brand-story__copy p { margin: 0; color: #5a697d; font: 400 16px/1.78 Outfit,Inter,sans-serif; }
-.travlink-brand-story__lead { color: #10233e !important; font-size: 19px !important; }
+
+.travlink-brand-story:not(.is-in-view) .travlink-brand-story__routes path {
+    stroke-dasharray: 0 800;
+}
+
+.travlink-brand-story.is-in-view .travlink-brand-story__routes path {
+    animation: travlink-brand-route 1.6s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.travlink-brand-story.is-in-view .travlink-brand-story__routes path:nth-child(2) {
+    animation-delay: .18s;
+}
+
+.travlink-brand-story.is-in-view .travlink-brand-story__routes path:nth-child(3) {
+    animation-delay: .36s;
+}
+
+@keyframes travlink-brand-route {
+    from {
+        stroke-dasharray: 0 800;
+    }
+
+    to {
+        stroke-dasharray: 5 9;
+    }
+}
+
+.travlink-brand-story__nodes circle {
+    fill: #0e47a1;
+    stroke: #fff;
+    stroke-width: 3;
+    filter: url(#brandGlow);
+}
+
+.travlink-brand-story__factory,
+.travlink-brand-story__ship,
+.travlink-brand-story__traveler,
+.travlink-brand-story__handshake {
+    fill: #fff;
+    stroke: #0e47a1;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 10px 15px rgba(14, 71, 161, .13));
+}
+
+.travlink-brand-story__plane {
+    fill: #0e47a1;
+    filter: drop-shadow(0 5px 7px rgba(14, 71, 161, .3));
+    offset-path: path("M96 164Q300 43 535 151T679 339");
+    animation: travlink-brand-plane 22s linear infinite;
+}
+
+@keyframes travlink-brand-plane {
+    from {
+        offset-distance: 0;
+    }
+
+    to {
+        offset-distance: 100%;
+    }
+}
+
+.travlink-brand-story__illustration text {
+    fill: #0e47a1;
+    font: 700 13px/1 Outfit, Inter, sans-serif;
+    letter-spacing: .22em;
+    text-anchor: middle;
+}
+
+.travlink-brand-story__copy {
+    display: grid;
+    gap: 21px;
+}
+
+.travlink-brand-story__copy p {
+    margin: 0;
+    color: #5a697d;
+    font: 400 16px/1.78 Outfit, Inter, sans-serif;
+}
+
+.travlink-brand-story__lead {
+    color: #10233e !important;
+    font-size: 19px !important;
+}
+
 .travlink-brand-story__callout {
-  padding: 17px 20px;
-  border-left: 4px solid #1d63b8;
-  border-radius: 0 14px 14px 0;
-  background: linear-gradient(90deg,rgba(29,99,184,.11),rgba(47,159,230,.035));
-  box-shadow: 0 12px 28px rgba(29,99,184,.08);
-  color: #123764 !important;
-  font-size: 18px !important;
+    padding: 17px 20px;
+    border-left: 4px solid #1d63b8;
+    border-radius: 0 14px 14px 0;
+    background: linear-gradient(90deg, rgba(29, 99, 184, .11), rgba(47, 159, 230, .035));
+    box-shadow: 0 12px 28px rgba(29, 99, 184, .08);
+    color: #123764 !important;
+    font-size: 18px !important;
 }
-.travlink-brand-story__platform { color: #10233e !important; font-size: 17px !important; }
+
+.travlink-brand-story__platform {
+    color: #10233e !important;
+    font-size: 17px !important;
+}
+
 .travlink-brand-story__platform span {
-  display: inline-block;
-  margin: 2px;
-  padding: 3px 9px;
-  border: 1px solid rgba(29,99,184,.12);
-  border-radius: 999px;
-  background: #eef6fd;
-  color: #0e47a1;
-  transition: box-shadow .3s ease,transform .3s ease;
+    display: inline-block;
+    margin: 2px;
+    padding: 3px 9px;
+    border: 1px solid rgba(29, 99, 184, .12);
+    border-radius: 999px;
+    background: #eef6fd;
+    color: #0e47a1;
+    transition: box-shadow .3s ease, transform .3s ease;
 }
-.travlink-brand-story__platform span:hover { box-shadow: 0 0 20px rgba(47,159,230,.25); transform: translateY(-2px); }
-.travlink-brand-story__narrative { padding-top: 20px; border-top: 1px solid rgba(15,23,42,.09); }
-.travlink-brand-story__connections,.travlink-brand-story__identity { margin-top: clamp(82px,8vw,120px); }
-.travlink-brand-story__connections > h3,.travlink-brand-story__identity > h3 {
-  max-width: 770px;
-  margin: 0 auto 38px;
-  color: #10233e;
-  font: 500 clamp(33px,3.6vw,49px)/1.08 "Cormorant Garamond",Georgia,serif;
-  letter-spacing: -.035em;
-  text-align: center;
+
+.travlink-brand-story__platform span:hover {
+    box-shadow: 0 0 20px rgba(47, 159, 230, .25);
+    transform: translateY(-2px);
 }
-.travlink-brand-story__connection-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+
+.travlink-brand-story__narrative {
+    padding-top: 20px;
+    border-top: 1px solid rgba(15, 23, 42, .09);
+}
+
+.travlink-brand-story__connections,
+.travlink-brand-story__identity {
+    margin-top: clamp(82px, 8vw, 120px);
+}
+
+.travlink-brand-story__connections>h3,
+.travlink-brand-story__identity>h3 {
+    max-width: 770px;
+    margin: 0 auto 38px;
+    color: #10233e;
+    font: 500 clamp(33px, 3.6vw, 49px)/1.08 "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -.035em;
+    text-align: center;
+}
+
+.travlink-brand-story__connection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
 .travlink-brand-story__connection-grid article {
-  display: grid;
-  grid-template-columns: 42px minmax(0,1fr);
-  align-items: center;
-  gap: 17px;
-  min-height: 126px;
-  padding: 25px 28px;
-  border: 1px solid rgba(15,23,42,.08);
-  border-radius: 19px;
-  background: #fff;
-  box-shadow: 0 13px 34px rgba(23,63,101,.06);
-  transition: border-color .35s ease,box-shadow .35s ease,transform .35s cubic-bezier(.22,1,.36,1);
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: center;
+    gap: 17px;
+    min-height: 126px;
+    padding: 25px 28px;
+    border: 1px solid rgba(15, 23, 42, .08);
+    border-radius: 19px;
+    background: #fff;
+    box-shadow: 0 13px 34px rgba(23, 63, 101, .06);
+    transition: border-color .35s ease, box-shadow .35s ease, transform .35s cubic-bezier(.22, 1, .36, 1);
 }
+
 .travlink-brand-story__connection-grid i {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #edf6fd;
-  color: #0e47a1;
-  font-size: 15px;
-  transition: box-shadow .35s ease,transform .35s ease;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #edf6fd;
+    color: #0e47a1;
+    font-size: 15px;
+    transition: box-shadow .35s ease, transform .35s ease;
 }
-.travlink-brand-story__connection-grid p { margin: 0; color: #34455c; font: 500 17px/1.5 Outfit,Inter,sans-serif; }
-.travlink-brand-story__connection-grid article:hover { border-color: rgba(29,99,184,.45); box-shadow: 0 20px 48px rgba(14,71,161,.11); transform: translateY(-6px); }
-.travlink-brand-story__connection-grid article:hover i { box-shadow: 0 0 18px rgba(47,159,230,.3); transform: rotate(-8deg) scale(1.07); }
-.travlink-brand-story__identity-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+
+.travlink-brand-story__connection-grid p {
+    margin: 0;
+    color: #34455c;
+    font: 500 17px/1.5 Outfit, Inter, sans-serif;
+}
+
+.travlink-brand-story__connection-grid article:hover {
+    border-color: rgba(29, 99, 184, .45);
+    box-shadow: 0 20px 48px rgba(14, 71, 161, .11);
+    transform: translateY(-6px);
+}
+
+.travlink-brand-story__connection-grid article:hover i {
+    box-shadow: 0 0 18px rgba(47, 159, 230, .3);
+    transform: rotate(-8deg) scale(1.07);
+}
+
+.travlink-brand-story__identity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
 .travlink-brand-story__identity-grid article {
-  min-height: 310px;
-  padding: 40px 32px;
-  border: 1px solid rgba(14,71,161,.1);
-  border-radius: 22px;
-  background: linear-gradient(145deg,#fff,#f9fcff);
-  box-shadow: 0 16px 42px rgba(18,64,104,.07);
-  text-align: center;
-  transition: border-color .35s ease,box-shadow .35s ease,transform .4s cubic-bezier(.22,1,.36,1),background-color .35s ease;
+    min-height: 310px;
+    padding: 40px 32px;
+    border: 1px solid rgba(14, 71, 161, .1);
+    border-radius: 22px;
+    background: linear-gradient(145deg, #fff, #f9fcff);
+    box-shadow: 0 16px 42px rgba(18, 64, 104, .07);
+    text-align: center;
+    transition: border-color .35s ease, box-shadow .35s ease, transform .4s cubic-bezier(.22, 1, .36, 1), background-color .35s ease;
 }
-.travlink-brand-story__identity-grid article > span {
-  display: grid;
-  place-items: center;
-  width: 82px;
-  height: 82px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background: linear-gradient(145deg,#eef7fd,#e0effb);
-  color: #0e47a1;
-  font-size: 30px;
-  transition: color .35s ease,background .35s ease,transform .45s cubic-bezier(.22,1,.36,1);
+
+.travlink-brand-story__identity-grid article>span {
+    display: grid;
+    place-items: center;
+    width: 82px;
+    height: 82px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #eef7fd, #e0effb);
+    color: #0e47a1;
+    font-size: 30px;
+    transition: color .35s ease, background .35s ease, transform .45s cubic-bezier(.22, 1, .36, 1);
 }
-.travlink-brand-story__identity-grid h4 { margin: 27px 0 14px; color: #0e47a1; font: 700 14px/1 Outfit,Inter,sans-serif; letter-spacing: .23em; text-transform: uppercase; }
-.travlink-brand-story__identity-grid p { margin: 0; color: #627187; font: 400 15px/1.65 Outfit,Inter,sans-serif; }
-.travlink-brand-story__identity-grid article:hover { border-color: rgba(29,99,184,.48); background: #fff; box-shadow: 0 24px 54px rgba(14,71,161,.14); transform: translateY(-8px); }
-.travlink-brand-story__identity-grid article:hover > span { background: linear-gradient(145deg,#1766bd,#0e47a1); color: #fff; transform: translateY(-4px) rotateY(12deg); }
+
+.travlink-brand-story__identity-grid h4 {
+    margin: 27px 0 14px;
+    color: #0e47a1;
+    font: 700 14px/1 Outfit, Inter, sans-serif;
+    letter-spacing: .23em;
+    text-transform: uppercase;
+}
+
+.travlink-brand-story__identity-grid p {
+    margin: 0;
+    color: #627187;
+    font: 400 15px/1.65 Outfit, Inter, sans-serif;
+}
+
+.travlink-brand-story__identity-grid article:hover {
+    border-color: rgba(29, 99, 184, .48);
+    background: #fff;
+    box-shadow: 0 24px 54px rgba(14, 71, 161, .14);
+    transform: translateY(-8px);
+}
+
+.travlink-brand-story__identity-grid article:hover>span {
+    background: linear-gradient(145deg, #1766bd, #0e47a1);
+    color: #fff;
+    transform: translateY(-4px) rotateY(12deg);
+}
+
 .travlink-brand-story__final {
-  position: relative;
-  width: min(100%,950px);
-  margin: clamp(84px,9vw,126px) auto 0;
-  padding: clamp(44px,6vw,72px) 28px;
-  overflow: hidden;
-  border: 1px solid rgba(29,99,184,.14);
-  border-radius: 28px;
-  background: rgba(255,255,255,.9);
-  box-shadow: 0 25px 65px rgba(18,64,104,.11);
-  text-align: center;
+    position: relative;
+    width: min(100%, 950px);
+    margin: clamp(84px, 9vw, 126px) auto 0;
+    padding: clamp(44px, 6vw, 72px) 28px;
+    overflow: hidden;
+    border: 1px solid rgba(29, 99, 184, .14);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 0 25px 65px rgba(18, 64, 104, .11);
+    text-align: center;
 }
-.travlink-brand-story__final::before { position: absolute; inset: -70%; background: radial-gradient(circle,rgba(47,159,230,.12),transparent 40%); content: ""; pointer-events: none; }
-.travlink-brand-story__final::after { position: absolute; right: 18%; bottom: 0; left: 18%; height: 3px; background: linear-gradient(90deg,transparent,#1d63b8,transparent); content: ""; }
-.travlink-brand-story__final > * { position: relative; }
-.travlink-brand-story__final > span { color: #6c7a8e; font: 500 17px/1 "Cormorant Garamond",Georgia,serif; font-style: italic; }
-.travlink-brand-story__final h3 { margin: 13px 0 19px; color: #10233e; font: 500 clamp(38px,5vw,62px)/1 "Cormorant Garamond",Georgia,serif; letter-spacing: -.035em; }
-.travlink-brand-story__final h3 i { padding: 0 8px; color: #2f9fe6; font-style: normal; }
-.travlink-brand-story__final p { margin: 0; color: #617084; font: 400 16px/1.65 Outfit,Inter,sans-serif; }
-[data-story-reveal] { opacity: 0; transform: translateY(24px); transition: opacity .75s ease,transform .8s cubic-bezier(.22,1,.36,1); }
-[data-story-reveal].is-visible { opacity: 1; transform: none; }
+
+.travlink-brand-story__final::before {
+    position: absolute;
+    inset: -70%;
+    background: radial-gradient(circle, rgba(47, 159, 230, .12), transparent 40%);
+    content: "";
+    pointer-events: none;
+}
+
+.travlink-brand-story__final::after {
+    position: absolute;
+    right: 18%;
+    bottom: 0;
+    left: 18%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #1d63b8, transparent);
+    content: "";
+}
+
+.travlink-brand-story__final>* {
+    position: relative;
+}
+
+.travlink-brand-story__final>span {
+    color: #6c7a8e;
+    font: 500 17px/1 "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+}
+
+.travlink-brand-story__final h3 {
+    margin: 13px 0 19px;
+    color: #10233e;
+    font: 500 clamp(38px, 5vw, 62px)/1 "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -.035em;
+}
+
+.travlink-brand-story__final h3 i {
+    padding: 0 8px;
+    color: #2f9fe6;
+    font-style: normal;
+}
+
+.travlink-brand-story__final p {
+    margin: 0;
+    color: #617084;
+    font: 400 16px/1.65 Outfit, Inter, sans-serif;
+}
+
+[data-story-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .75s ease, transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+[data-story-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+}
 
 @media (max-width: 991px) {
-  .travlink-brand-story__opening { grid-template-columns: 1fr; }
-  .travlink-brand-story__illustration { width: min(100%,680px); margin: 0 auto; }
-  .travlink-brand-story__copy { max-width: 720px; margin: 0 auto; }
+    .travlink-brand-story__opening {
+        grid-template-columns: 1fr;
+    }
+
+    .travlink-brand-story__illustration {
+        width: min(100%, 680px);
+        margin: 0 auto;
+    }
+
+    .travlink-brand-story__copy {
+        max-width: 720px;
+        margin: 0 auto;
+    }
 }
+
 @media (max-width: 767px) {
-  .travlink-brand-story { padding: 82px 0; }
-  .travlink-brand-story__header { margin-bottom: 44px; }
-  .travlink-brand-story__header h2 { font-size: clamp(40px,11vw,53px); }
-  .travlink-brand-story__opening { gap: 35px; }
-  .travlink-brand-story__illustration { width: calc(100% + 18px); margin-left: -9px; }
-  .travlink-brand-story__copy p { font-size: 15px; }
-  .travlink-brand-story__connection-grid,.travlink-brand-story__identity-grid { grid-template-columns: 1fr; }
-  .travlink-brand-story__connection-grid article { min-height: 112px; padding: 22px; }
-  .travlink-brand-story__connection-grid p { font-size: 16px; }
-  .travlink-brand-story__identity-grid article { min-height: 0; padding: 34px 24px; }
-  .travlink-brand-story__connections,.travlink-brand-story__identity { margin-top: 76px; }
-  .travlink-brand-story__final { margin-top: 76px; border-radius: 22px; }
-  .travlink-brand-story__final h3 i { padding: 0 3px; }
+    .travlink-brand-story {
+        padding: 82px 0;
+    }
+
+    .travlink-brand-story__header {
+        margin-bottom: 44px;
+    }
+
+    .travlink-brand-story__header h2 {
+        font-size: clamp(40px, 11vw, 53px);
+    }
+
+    .travlink-brand-story__opening {
+        gap: 35px;
+    }
+
+    .travlink-brand-story__illustration {
+        width: calc(100% + 18px);
+        margin-left: -9px;
+    }
+
+    .travlink-brand-story__copy p {
+        font-size: 15px;
+    }
+
+    .travlink-brand-story__connection-grid,
+    .travlink-brand-story__identity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .travlink-brand-story__connection-grid article {
+        min-height: 112px;
+        padding: 22px;
+    }
+
+    .travlink-brand-story__connection-grid p {
+        font-size: 16px;
+    }
+
+    .travlink-brand-story__identity-grid article {
+        min-height: 0;
+        padding: 34px 24px;
+    }
+
+    .travlink-brand-story__connections,
+    .travlink-brand-story__identity {
+        margin-top: 76px;
+    }
+
+    .travlink-brand-story__final {
+        margin-top: 76px;
+        border-radius: 22px;
+    }
+
+    .travlink-brand-story__final h3 i {
+        padding: 0 3px;
+    }
 }
+
 @media (prefers-reduced-motion: reduce) {
-  .travlink-brand-story * { animation: none !important; transition: none !important; }
-  [data-story-reveal] { opacity: 1; transform: none; }
-  .travlink-brand-story__plane { display: none; }
+    .travlink-brand-story * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    [data-story-reveal] {
+        opacity: 1;
+        transform: none;
+    }
+
+    .travlink-brand-story__plane {
+        display: none;
+    }
 }

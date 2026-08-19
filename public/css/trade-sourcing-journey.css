@@ -1,258 +1,248 @@
-/* Trade: editorial sourcing journey from origin to final delivery. */
+/* ============================================================
+   Trade Services — corporate card-grid redesign
+   ============================================================ */
+
+/* Section shell */
 .travlink-trade-services {
   position: relative;
+  padding: clamp(86px, 8.5vw, 124px) 0;
+  background: #f7fafd;
   overflow: hidden;
-  padding: clamp(82px, 8vw, 118px) 0;
-  background: #eef7fd url("/img/service/trade-services-map-background-v1.png") center top / cover no-repeat;
-  isolation: isolate;
 }
 
+/* Subtle decorative top border */
 .travlink-trade-services::before {
   position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(239,248,254,.08) 66%, rgba(229,243,252,.16));
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1766bd 0%, #2f9fe6 50%, #1766bd 100%);
   content: "";
   pointer-events: none;
 }
 
-.travlink-trade-services > .container { position: relative; z-index: 1; }
-
-/* Override the shared transparent-section theme so the Trade artwork renders. */
+/* Reset any override from site-background-theme */
 .travlink-react-page.travlink-trade-page-body .travlink-trade-page .travlink-trade-services {
-  background-color: #eaf5fd !important;
-  background-image: url("/img/service/trade-services-map-background-8k-v2.jpg") !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-size: 100% 100% !important;
+  background: #f7fafd !important;
+  background-image: none !important;
 }
 
-.travlink-trade-journey__masthead {
+/* ── Masthead: 3-column (map | intro | map) ── */
+.travlink-ts-masthead {
   display: grid;
-  grid-template-columns: minmax(180px, 1fr) minmax(480px, 2.1fr) minmax(180px, 1fr);
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: clamp(20px, 3vw, 52px);
   align-items: center;
-  gap: clamp(18px, 3vw, 48px);
+  margin-bottom: clamp(48px, 5vw, 76px);
 }
 
-.travlink-trade-journey__intro { max-width: 700px; margin: 0 auto; text-align: center; }
-.travlink-trade-journey__intro h2 {
-  margin: 18px 0 0;
+/* Map cards */
+.travlink-ts-map {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(14,71,161,.1);
+}
+
+.travlink-ts-map__img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+.travlink-ts-map:hover .travlink-ts-map__img {
+  transform: scale(1.04);
+}
+
+.travlink-ts-map__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 18px 14px;
+  background: linear-gradient(0deg, rgba(8,26,50,.82) 0%, rgba(8,26,50,0) 100%);
+  color: #fff;
+}
+
+.travlink-ts-map__country {
+  display: block;
+  font: 700 13px/1 "Outfit", Inter, sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.travlink-ts-map__cities {
+  display: block;
+  margin-top: 5px;
+  color: rgba(255,255,255,.72);
+  font: 400 11px/1.4 "Outfit", Inter, sans-serif;
+}
+
+/* Center intro block */
+.travlink-ts-intro {
+  text-align: center;
+}
+
+.travlink-ts-intro .travlink-trade-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.travlink-ts-intro .travlink-section-heading {
+  margin: 0 0 18px;
   color: #10233e;
-  font: 500 clamp(44px, 4.2vw, 62px)/.98 "Cormorant Garamond", Georgia, serif;
+  font: 500 clamp(38px, 3.8vw, 56px)/.98 "Cormorant Garamond", Georgia, serif;
   letter-spacing: -.04em;
   text-wrap: balance;
 }
-.travlink-trade-journey__intro h2 em { display: block; color: #0e47a1; }
-.travlink-trade-journey__intro > p {
-  max-width: 660px;
-  margin: 20px auto 0;
-  color: #627187;
-  font: 400 15px/1.7 Outfit, Inter, sans-serif;
-}
 
-.travlink-trade-origin { color: #0e47a1; text-align: center; }
-.travlink-trade-origin__map { height: 148px; visibility: hidden; }
-.travlink-trade-origin__map--vietnam { height: 156px; }
-.travlink-trade-origin__map svg { display: block; width: 100%; height: 100%; overflow: visible; }
-.travlink-trade-origin__map path {
-  fill: rgba(29,99,184,.025);
-  stroke: currentColor;
-  stroke-width: 1.4;
-  vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 8px 15px rgba(14,71,161,.08));
-}
-.travlink-trade-origin__map circle {
-  fill: #e9a936;
-  stroke: #fff;
-  stroke-width: 2;
-  filter: drop-shadow(0 1px 4px rgba(14,71,161,.45));
-}
-.travlink-trade-origin h3 {
-  margin: -3px 0 0;
-  color: #0e47a1;
-  font: 700 15px/1 Outfit, Inter, sans-serif;
-  letter-spacing: .24em;
-  text-transform: uppercase;
-}
-.travlink-trade-origin p { margin: 8px auto 0; color: #6d7d91; font: 400 11px/1.45 Outfit, Inter, sans-serif; }
-
-.travlink-trade-journey { margin-top: 30px; }
-.travlink-trade-journey__viewport { width: 100%; overflow: visible; }
-.travlink-trade-journey__canvas { position: relative; min-height: 670px; }
-.travlink-trade-journey__route {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 650px;
-  overflow: visible;
-  pointer-events: none;
-}
-.travlink-trade-journey__route-base,
-.travlink-trade-journey__route-progress {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-.travlink-trade-journey__route-base { stroke: rgba(14,71,161,.22); stroke-width: 2; stroke-dasharray: 3 7; }
-.travlink-trade-journey__route-progress {
-  stroke: #278bd4;
-  stroke-width: 2.2;
-  stroke-dasharray: 100 100;
-  transition: none;
-  filter: drop-shadow(0 0 4px rgba(47,159,230,.25));
-}
-.travlink-trade-journey__cargo { display: none; }
-
-.travlink-trade-journey__steps {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
-  grid-template-rows: 300px 225px 125px;
-  column-gap: clamp(24px, 4vw, 62px);
-  padding: 52px clamp(8px, 2vw, 28px) 0;
-}
-
-.travlink-trade-step {
-  position: relative;
-  align-self: start;
-  min-width: 0;
-  padding: 0 8px;
-  border: 0;
-  background: transparent;
-  color: #10233e;
-  text-align: center;
-  transition: transform .4s cubic-bezier(.22,1,.36,1);
-}
-.travlink-trade-step:nth-child(5) { grid-column: 4; grid-row: 2; }
-.travlink-trade-step:nth-child(6) { grid-column: 3; grid-row: 2; }
-.travlink-trade-step:nth-child(7) { grid-column: 2; grid-row: 2; }
-.travlink-trade-step__number {
-  position: absolute;
-  z-index: 2;
-  top: -17px;
-  left: calc(50% + 23px);
-  display: grid;
-  place-items: center;
-  width: 35px;
-  height: 35px;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  background: #0e47a1;
-  box-shadow: 0 7px 16px rgba(14,71,161,.2);
-  color: #fff;
-  font: 700 11px/1 Outfit, Inter, sans-serif;
-}
-.travlink-trade-step__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 88px;
-  height: 88px;
-  border: 1px solid rgba(14,71,161,.1);
-  border-radius: 50%;
-  background: rgba(255,255,255,.96);
-  box-shadow: 0 15px 35px rgba(24,73,116,.12);
-  color: #0e47a1;
-  font-size: 28px;
-  transition: color .35s ease, background-color .35s ease, transform .4s cubic-bezier(.22,1,.36,1), box-shadow .35s ease;
-}
-.travlink-trade-step strong {
+.travlink-ts-intro .travlink-section-heading em {
   display: block;
-  margin-top: 17px;
   color: #0e47a1;
-  font: 600 17px/1.2 Outfit, Inter, sans-serif;
+  font-style: italic;
 }
-.travlink-trade-step__description {
-  display: block;
-  max-width: 220px;
-  margin: 9px auto 0;
+
+.travlink-ts-intro > p {
+  margin: 0 auto;
+  max-width: 560px;
   color: #627187;
-  font: 400 12.5px/1.55 Outfit, Inter, sans-serif;
-  opacity: .72;
-  transition: color .35s ease, opacity .35s ease, transform .35s ease;
-}
-.travlink-trade-step:is(:hover,:focus-visible,.is-active) { z-index: 3; outline: 0; transform: translateY(-7px); }
-.travlink-trade-step:is(:hover,:focus-visible,.is-active) .travlink-trade-step__icon {
-  background: #0e47a1;
-  box-shadow: 0 20px 42px rgba(14,71,161,.22);
-  color: #fff;
-  transform: scale(1.07);
-}
-.travlink-trade-step:is(:hover,:focus-visible,.is-active) .travlink-trade-step__description { color: #33465f; opacity: 1; transform: translateY(2px); }
-
-/* Keep the journey entirely static above its illustrated map background. */
-.travlink-trade-services *,
-.travlink-trade-services *::before,
-.travlink-trade-services *::after {
-  animation: none !important;
-  transition: none !important;
+  font: 400 15px/1.72 "Outfit", Inter, sans-serif;
 }
 
-.travlink-trade-services .travlink-trade-step:is(:hover, :focus-visible, .is-active) {
-  transform: none;
-}
-
-.travlink-trade-services .travlink-trade-step:is(:hover, :focus-visible, .is-active) .travlink-trade-step__icon {
-  background: rgba(255,255,255,.96);
-  box-shadow: 0 15px 35px rgba(24,73,116,.12);
-  color: #0e47a1;
-  transform: none;
-}
-
-.travlink-trade-services .travlink-trade-step:is(:hover, :focus-visible, .is-active) .travlink-trade-step__description {
-  color: #627187;
-  opacity: .72;
-  transform: none;
-}
-
-.travlink-trade-delivery {
-  grid-column: 2 / 4;
-  grid-row: 3;
-  align-self: center;
-  justify-self: center;
-  display: flex;
-  align-items: center;
+/* ── 8-card grid: 4 × 2 ── */
+.travlink-ts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
-  width: min(100%, 480px);
-  padding: 18px 24px;
-  border: 1px solid rgba(14,71,161,.11);
-  border-radius: 20px;
-  background: rgba(255,255,255,.96);
-  box-shadow: 0 18px 42px rgba(17,54,91,.13);
-  color: #10233e;
 }
-.travlink-trade-delivery > span {
-  flex: 0 0 66px;
+
+/* Individual card */
+.travlink-ts-card {
+  position: relative;
+  padding: 28px 24px 26px;
+  border: 1px solid #e0eaf5;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(14,71,161,.06);
+  transition:
+    border-color .3s ease,
+    box-shadow .35s ease,
+    transform .38s cubic-bezier(.22,1,.36,1);
+}
+
+.travlink-ts-card:hover {
+  border-color: #9dcef0;
+  box-shadow: 0 14px 38px rgba(14,71,161,.13);
+  transform: translateY(-5px);
+}
+
+/* Blue numbered badge */
+.travlink-ts-card__number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   display: grid;
   place-items: center;
-  width: 66px;
-  height: 66px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: linear-gradient(145deg,#1766bd,#0b3d87);
-  box-shadow: 0 10px 22px rgba(14,71,161,.25);
+  background: #0e47a1;
+  box-shadow: 0 4px 12px rgba(14,71,161,.22);
   color: #fff;
-  font-size: 24px;
+  font: 700 11px/1 "Outfit", Inter, sans-serif;
+  letter-spacing: .02em;
 }
-.travlink-trade-delivery strong { display: block; font: 600 24px/1.05 "Cormorant Garamond", Georgia, serif; }
-.travlink-trade-delivery small { display: block; margin-top: 5px; color: #65758a; font: 400 11.5px/1.45 Outfit, Inter, sans-serif; }
 
-.travlink-trade-trust {
+/* Soft blue circular icon container */
+.travlink-ts-card__icon-wrap {
   display: grid;
-  grid-template-columns: repeat(4,minmax(0,1fr));
-  margin-top: 16px;
-  padding: 22px 18px;
-  border-radius: 18px;
-  background: linear-gradient(110deg,#0b315d,#0e4c93);
-  box-shadow: 0 22px 45px rgba(10,49,91,.18);
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(14,71,161,.08);
+  color: #0e47a1;
+  font-size: 20px;
+  margin-bottom: 18px;
+  transition: background-color .3s ease, color .3s ease, transform .35s cubic-bezier(.22,1,.36,1);
 }
-.travlink-trade-trust > div { display: flex; align-items: center; gap: 14px; padding: 0 20px; border-right: 1px solid rgba(255,255,255,.16); }
-.travlink-trade-trust > div:last-child { border-right: 0; }
-.travlink-trade-trust i { flex: 0 0 34px; color: #fff; font-size: 25px; text-align: center; }
-.travlink-trade-trust span,.travlink-trade-trust strong,.travlink-trade-trust small { display: block; }
-.travlink-trade-trust strong { color: #fff; font: 600 12px/1.3 Outfit, Inter, sans-serif; }
-.travlink-trade-trust small { margin-top: 4px; color: rgba(255,255,255,.72); font: 400 10.5px/1.4 Outfit, Inter, sans-serif; }
+
+.travlink-ts-card:hover .travlink-ts-card__icon-wrap {
+  background: #0e47a1;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.travlink-ts-card__title {
+  margin: 0 0 10px;
+  padding-right: 36px; /* keep clear of number badge */
+  color: #0e47a1;
+  font: 600 17px/1.18 "Outfit", Inter, sans-serif;
+  transition: color .3s ease;
+}
+
+.travlink-ts-card__desc {
+  margin: 0;
+  color: #7a8fa5;
+  font: 400 13px/1.62 "Outfit", Inter, sans-serif;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1199px) {
+  .travlink-ts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .travlink-ts-masthead {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .travlink-ts-intro {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .travlink-ts-map {
+    grid-row: 2;
+  }
+  .travlink-ts-map__img { height: 200px; }
+  .travlink-ts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .travlink-ts-masthead {
+    grid-template-columns: 1fr;
+  }
+  .travlink-ts-intro { grid-column: 1; grid-row: 1; }
+  .travlink-ts-map { grid-row: unset; }
+  .travlink-ts-map__img { height: 180px; }
+  .travlink-ts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .travlink-ts-card {
+    padding: 22px 18px 20px;
+  }
+  .travlink-ts-card__title { font-size: 15.5px; }
+}
+
+@media (max-width: 400px) {
+  .travlink-ts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Shipping Section (preserved unchanged)
+   ============================================================ */
 
 .travlink-shipping {
   position: relative;
@@ -355,80 +345,12 @@
 .travlink-shipping-card:hover .travlink-shipping-card__icon { background: #0e47a1; color: #fff; transform: scale(1.06); }
 
 @media (max-width: 991px) {
-  .travlink-trade-journey__masthead { grid-template-columns: 150px minmax(380px,1fr) 150px; gap: 12px; }
-  .travlink-trade-origin__map { height: 120px; }
-  .travlink-trade-origin__map--vietnam { height: 130px; }
-  .travlink-trade-journey__steps { column-gap: 12px; padding-inline: 0; }
-  .travlink-trade-step strong { font-size: 15px; }
-  .travlink-trade-step__description { font-size: 11.5px; }
-  .travlink-trade-trust > div { padding: 0 12px; }
   .travlink-shipping__shell { grid-template-columns: 1fr; }
   .travlink-shipping__intro { text-align: center; }
   .travlink-shipping__intro h2,.travlink-shipping__intro > p,.travlink-shipping__route { margin-right: auto; margin-left: auto; }
 }
 
 @media (max-width: 767px) {
-  .travlink-trade-services {
-    padding: 72px 0;
-    background-position: 34% top;
-    background-size: auto 100%;
-  }
-
-  .travlink-react-page.travlink-trade-page-body .travlink-trade-page .travlink-trade-services {
-    background-position: center center !important;
-    background-size: 100% 100% !important;
-  }
-  .travlink-trade-journey__masthead { grid-template-columns: 1fr 1fr; }
-  .travlink-trade-journey__intro { grid-column: 1 / -1; grid-row: 1; }
-  .travlink-trade-origin { grid-row: 2; margin-top: 24px; }
-  .travlink-trade-origin__map { height: 105px; }
-  .travlink-trade-origin__map--vietnam { height: 112px; }
-  .travlink-trade-origin h3 { font-size: 12px; }
-  .travlink-trade-origin p { max-width: 145px; font-size: 9.5px; }
-  .travlink-trade-journey__intro h2 { font-size: clamp(39px,11vw,50px); }
-  .travlink-trade-journey__intro > p { font-size: 14px; line-height: 1.65; }
-  .travlink-trade-journey { margin-top: 38px; }
-  .travlink-trade-journey__canvas { min-height: 0; }
-  .travlink-trade-journey__route { display: none; }
-  .travlink-trade-journey__steps {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    padding: 4px 0 12px 58px;
-  }
-  .travlink-trade-journey__steps::before {
-    position: absolute;
-    top: 42px;
-    bottom: 80px;
-    left: 21px;
-    border-left: 2px dotted rgba(14,71,161,.24);
-    content: "";
-  }
-  .travlink-trade-step {
-    display: grid;
-    grid-template-columns: 72px 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 17px;
-    width: 100%;
-    padding: 12px 14px 12px 0;
-    text-align: left;
-  }
-  .travlink-trade-step__number { top: 34px; left: -54px; width: 34px; height: 34px; }
-  .travlink-trade-step__icon { grid-row: 1 / 3; width: 72px; height: 72px; font-size: 22px; }
-  .travlink-trade-step strong { align-self: end; margin: 0 0 5px; font-size: 16px; }
-  .travlink-trade-step__description { align-self: start; max-width: none; margin: 0; font-size: 12px; opacity: .62; }
-  .travlink-trade-step:is(:hover,:focus-visible,.is-active) { transform: translateX(5px); }
-  .travlink-trade-step:is(:hover,:focus-visible,.is-active) .travlink-trade-step__icon { transform: scale(1.04); }
-  .travlink-trade-delivery {
-    width: calc(100% + 18px);
-    margin-left: -18px;
-    padding: 17px 18px;
-  }
-  .travlink-trade-delivery > span { flex-basis: 58px; width: 58px; height: 58px; }
-  .travlink-trade-delivery strong { font-size: 22px; }
-  .travlink-trade-trust { grid-template-columns: 1fr 1fr; gap: 20px 0; margin-top: 28px; padding: 23px 10px; }
-  .travlink-trade-trust > div { align-items: flex-start; padding: 0 13px; }
-  .travlink-trade-trust > div:nth-child(2) { border-right: 0; }
   .travlink-shipping { padding: 70px 0; }
   .travlink-shipping__shell { gap: 36px; }
   .travlink-shipping__intro h2 { font-size: clamp(39px,11vw,50px); }
@@ -439,12 +361,10 @@
   .travlink-shipping-card__number { top: 17px; right: 20px; }
 }
 
-@media (max-width: 480px) {
-  .travlink-trade-trust { grid-template-columns: 1fr; }
-  .travlink-trade-trust > div { border-right: 0; }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .travlink-trade-journey__cargo { display: none; }
-  .travlink-trade-journey__route-progress,.travlink-trade-step,.travlink-trade-step__icon,.travlink-trade-step__description { transition: none; }
+  .travlink-ts-card,
+  .travlink-ts-card__icon-wrap,
+  .travlink-ts-map__img,
+  .travlink-shipping-card,
+  .travlink-shipping-card__icon { transition: none; }
 }

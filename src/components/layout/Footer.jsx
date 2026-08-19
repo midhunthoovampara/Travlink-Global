@@ -16,9 +16,10 @@ export default function Footer() {
         </div>
         <nav className="travlink-footer__column" aria-label="Footer quick links"><h2>Quick Links</h2><ul>{footerNavigation.map((link) => <li key={link.id}><a href={link.href}>{link.label}</a></li>)}</ul></nav>
         <nav className="travlink-footer__column" aria-label="Footer services"><h2>Services</h2><ul><li><a href="/travel/">Travel</a></li><li><a href="/trade/">Trade</a></li></ul></nav>
-        <div className="travlink-footer__column travlink-footer__contact"><h2>Contact &amp; Legal</h2><ul>
+        <div className="travlink-footer__column travlink-footer__contact"><h2>Contact</h2><ul>
           <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-whatsapp" aria-hidden="true" />WhatsApp</a></li>
           <li><a href={`mailto:${CONTACT_EMAIL}`}><i className="fa-regular fa-envelope" aria-hidden="true" />{CONTACT_EMAIL}</a></li>
+          <li><a href="https://www.instagram.com/travlinkglobal?igsh=MTJsZXBidGRzZGVxYQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram" aria-hidden="true" />Instagram</a></li>
         </ul></div>
       </div>
       <div className="travlink-footer__bottom"><p className="travlink-footer__copyright">&copy; 2026 Travlink Global. All rights reserved.</p><nav className="travlink-footer__legal" aria-label="Legal links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></nav></div>

@@ -128,7 +128,7 @@
 
 .travlink-home .travlink-hero__copy {
   max-width: 620px !important;
-  font-size: clamp(14px, 1.1vw, 17px) !important;
+  font-size: clamp(16px, 1.25vw, 19px) !important;
   line-height: 1.65 !important;
 }
 
@@ -389,7 +389,7 @@
   .travlink-home .travlink-hero__copy {
     max-width: none !important;
     margin: 24px 0 0 !important;
-    font-size: clamp(14px, 1.05vw, 17px) !important;
+    font-size: clamp(16px, 1.25vw, 19px) !important;
     white-space: nowrap;
     text-align: left !important;
   }
@@ -432,7 +432,7 @@
   .travlink-home .travlink-hero__copy {
     max-width: none !important;
     margin: 18px 0 0 !important;
-    font-size: clamp(9px, 2.5vw, 11px) !important;
+    font-size: clamp(11px, 3vw, 13px) !important;
     white-space: nowrap;
     text-align: left !important;
   }

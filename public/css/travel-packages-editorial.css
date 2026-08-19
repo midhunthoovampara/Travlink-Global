@@ -400,6 +400,11 @@
   font: 500 clamp(16px, 1.08vw, 20px)/1.45 Outfit, Inter, sans-serif;
 }
 
+.travlink-swipe-cue--luxury {
+  top: 279px;
+  left: 32.7%;
+}
+
 .travlink-luxury-showcase__cards {
   position: absolute;
   top: 150px;
@@ -408,17 +413,28 @@
   display: flex;
   align-items: flex-start;
   gap: 24px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.travlink-luxury-showcase__cards::-webkit-scrollbar {
+  display: none;
 }
 
 .travlink-luxury-card {
   width: clamp(250px, 16vw, 300px);
   flex: 0 0 auto;
+  scroll-snap-align: start;
   color: #435069;
   transition: transform .45s cubic-bezier(.22, 1, .36, 1);
 }
 
 .travlink-luxury-card:nth-child(2),
-.travlink-luxury-card:nth-child(3) { margin-top: 18px; }
+.travlink-luxury-card:nth-child(3),
+.travlink-luxury-card:nth-child(4) { margin-top: 18px; }
 .travlink-luxury-card:nth-child(2) { margin-top: 44px; }
 
 .travlink-luxury-card__number {
@@ -982,6 +998,7 @@
   .travlink-ocean-showcase__intro { width: 100%; max-width: 640px; }
   .travlink-ocean-showcase__intro h3 { white-space: normal; }
   .travlink-ocean-showcase__intro p { margin-left: 0; }
+  .travlink-swipe-cue--luxury,
   .travlink-swipe-cue--ocean {
     position: relative;
     top: auto;
@@ -1106,6 +1123,7 @@
   .travlink-ocean-showcase__intro .travlink-travel-eyebrow { font-size: 10px; }
   .travlink-ocean-showcase__intro h3 { margin-top: 16px; font-size: clamp(48px, 15vw, 66px); }
   .travlink-ocean-showcase__intro p { margin-top: 22px; font-size: 15px; }
+  .travlink-swipe-cue--luxury,
   .travlink-swipe-cue--ocean { margin-top: 28px; }
   .travlink-ocean-showcase__cards {
     width: calc(100% + 24px);
