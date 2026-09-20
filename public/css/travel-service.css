@@ -10,7 +10,7 @@
     align-items: flex-end;
     overflow: hidden;
     padding: 175px 0 82px;
-    background: url("/img/service/travelhero.jpg") center/cover no-repeat;
+    background: url("/img/service/travelhero.webp") center/cover no-repeat;
     isolation: isolate;
 }
 

@@ -15,7 +15,7 @@
     background:
         linear-gradient(rgba(29, 99, 184, .025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(29, 99, 184, .025) 1px, transparent 1px),
-        url("/img/background/abtmap.png") center 62% / min(1100px, 86vw) auto no-repeat;
+        url("/img/background/abtmap.webp") center 62% / min(1100px, 86vw) auto no-repeat;
     background-size: 78px 78px, 78px 78px, min(1100px, 86vw) auto;
     content: "";
     opacity: .075;
@@ -88,7 +88,7 @@
 .travlink-connect__intro {
     max-width: 540px;
     margin: 0 0 28px;
-    color: #405168;
+    color: #020b17;
     font: 400 18px/1.75 Outfit, Inter, sans-serif;
 }
 

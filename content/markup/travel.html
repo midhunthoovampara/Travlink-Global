@@ -7,9 +7,9 @@
                 <div class="ca-logo">
                     <a class="travlink-site-logo" href="/" aria-label="Travlink Global home">
                         <img class="travlink-site-logo__image travlink-site-logo__image--primary"
-                            src="/img/logo/travlink-primary.png" alt="Travlink Global" />
+                            src="/img/logo/travlink-primary.webp" alt="Travlink Global" />
                         <img class="travlink-site-logo__image travlink-site-logo__image--secondary"
-                            src="/img/logo/travlink-secondary.png" alt="" aria-hidden="true" />
+                            src="/img/logo/travlink-secondary.webp" alt="" aria-hidden="true" />
                     </a>
                 </div>
             </div>
@@ -62,7 +62,7 @@
         <div class="ca-offcanvas-header d-flex justify-content-between align-items-center mb-40">
             <div class="ca-offcanvas-logo">
                 <a class="travlink-offcanvas-logo" href="/" aria-label="Travlink Global home">
-                    <img src="/img/logo/travlink-secondary.png" alt="Travlink Global" />
+                    <img src="/img/logo/travlink-secondary.webp" alt="Travlink Global" / loading="lazy" decoding="async">
                 </a>
             </div>
             <div class="ca-offcanvas-close">
@@ -151,585 +151,613 @@
 <div class="ca-offcanvas-overlay"></div>
 <!-- offcanvas end -->
 
-<main class="travlink-travel-page">
-    <section class="travlink-travel-hero" aria-labelledby="travel-hero-title">
+<main class="travlink-travel-page" style="background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 25%, #ffffff 50%, #f0f9ff 75%, #ffffff 100%);">
+    <!-- 01 HERO -->
+    <section class="travlink-travel-hero" aria-labelledby="travel-hero-title"
+        style="background-image: url('/img/service/private jet.webp');">
         <div class="travlink-travel-hero__content container">
             <span class="travlink-travel-hero__label">Travel</span>
             <h1 id="travel-hero-title">
-                Travel, planned around you <span>&mdash;</span><br />from your first
-                visa to your next holiday.
+                Beyond Ordinary Travel
             </h1>
+            <p style="color: #fff; font-size: 1.2rem; max-width: 600px; margin-top: 20px; line-height: 1.5;">
+                Curated journeys, extraordinary experiences and meaningful connections across borders.
+            </p>
+            <a href="#travel-enquiry" class="ca-btn-primary-3 theme-bg-3 text-white br-50"
+                style="margin-top: 30px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">Start
+                Your Journey <span><i class="fa-solid fa-arrow-right"></i></span></a>
         </div>
     </section>
 
-    <section class="travlink-travel-selector" aria-labelledby="travel-service-selector-title">
+    <!-- 02 DISCOVER -->
+    <section class="travlink-discover-section" style="padding: 80px 0;">
         <div class="container">
-            <header class="travlink-travel-selector__header">
-                <span class="travlink-travel-eyebrow">Our Travel Services</span>
-                <h2 class="travlink-section-heading" id="travel-service-selector-title">
-                    Choose the Service <em>You Need</em>
-                </h2>
-                <p>Travel planning and visa support, available in one place.</p>
+            <header class="d-flex justify-content-between align-items-end mb-40">
+                <div>
+                    <span class="travlink-travel-eyebrow"
+                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Discover</span>
+                    <h2 class="travlink-section-heading mb-0" style="font-size: 2.2rem; color: #0b1c3c;">Explore the
+                        World</h2>
+                    <p class="mb-0 mt-2" style="color: #666;">Iconic destinations, curated journeys and experiences
+                        worth travelling for.</p>
+                </div>
+                <!-- <a href="#" class="d-none d-md-flex align-items-center" style="color: #0b1c3c; font-weight: 600;">View
+                    All Destinations <i class="fa-solid fa-arrow-right ms-2"></i></a> -->
             </header>
 
-            <div class="travlink-travel-selector__grid">
-                <a class="travlink-travel-selector__card" href="#travel-packages" aria-label="Explore Travel Packages">
-                    <img class="travlink-travel-selector__bg" src="/img/explore/generated/maldives.png"
-                        alt="Travel Packages" loading="lazy" decoding="async" />
-                    <div class="travlink-travel-selector__overlay"></div>
-                    <div class="travlink-travel-selector__content">
-                        <h3>Travel Packages</h3>
-                        <span class="travlink-travel-selector__arrow">
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                </a>
+            <style>
+                @media (max-width: 767px) {
+                    .travlink-destinations-grid {
+                        grid-template-columns: repeat(2, 1fr) !important;
+                        gap: 15px !important;
+                    }
 
-                <a class="travlink-travel-selector__card" href="#luxury-experiences" aria-label="Explore Luxury Travel">
-                    <img class="travlink-travel-selector__bg" src="/img/explore/generated/luxurytravel.png"
-                        alt="Luxury Travel" loading="lazy" decoding="async" />
-                    <div class="travlink-travel-selector__overlay"></div>
-                    <div class="travlink-travel-selector__content">
-                        <h3>Luxury Travel</h3>
-                        <span class="travlink-travel-selector__arrow">
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                </a>
+                    .travlink-destinations-grid h3 {
+                        font-size: 0.95rem !important;
+                    }
 
-                <a class="travlink-travel-selector__card" href="#visa-assistance" aria-label="Explore Visa Assistance">
-                    <img class="travlink-travel-selector__bg" src="/img/explore/generated/visa ass.png"
-                        alt="Visa Assistance" loading="lazy" decoding="async" />
-                    <div class="travlink-travel-selector__overlay"></div>
-                    <div class="travlink-travel-selector__content">
-                        <h3>Visa Assistance</h3>
-                        <span class="travlink-travel-selector__arrow">
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </span>
+                    .travlink-destinations-grid p {
+                        font-size: 0.8rem !important;
+                    }
+
+                    .travlink-destinations-grid img {
+                        height: 160px !important;
+                    }
+                }
+            </style>
+            <div class="travlink-destinations-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+                <article class="travlink-destination-card">
+                    <img src="/img/service/countries/vietnam.webp" alt="Vietnam"
+                        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;" / loading="lazy" decoding="async">
+                    <h3 style="font-size: 1.1rem; margin-top: 15px; margin-bottom: 5px; font-weight: 700;">Vietnam</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.4; margin-bottom: 0;">Culture. Nature.
+                        Endless Discoveries.</p>
+                </article>
+                <article class="travlink-destination-card">
+                    <img src="/img/service/countries/thailand.webp" alt="Thailand"
+                        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;" / loading="lazy" decoding="async">
+                    <h3 style="font-size: 1.1rem; margin-top: 15px; margin-bottom: 5px; font-weight: 700;">Thailand</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.4; margin-bottom: 0;">Beaches. Islands.
+                        More Than You Imagine.</p>
+                </article>
+                <article class="travlink-destination-card">
+                    <img src="/img/service/countries/china.webp" alt="China"
+                        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;" / loading="lazy" decoding="async">
+                    <h3 style="font-size: 1.1rem; margin-top: 15px; margin-bottom: 5px; font-weight: 700;">China</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.4; margin-bottom: 0;">History. Innovation.
+                        Infinite Possibilities.</p>
+                </article>
+                <article class="travlink-destination-card">
+                    <img src="/img/service/countries/qatar.webp" alt="Sri Lanka"
+                        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;" / loading="lazy" decoding="async">
+                    <h3 style="font-size: 1.1rem; margin-top: 15px; margin-bottom: 5px; font-weight: 700;">Sri Lanka
+                    </h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.4; margin-bottom: 0;">Nature. Wildlife.
+                        Timeless Beauty.</p>
+                </article>
+                <article class="travlink-destination-card">
+                    <img src="/img/service/countries/malaysia.webp" alt="Malaysia"
+                        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;" / loading="lazy" decoding="async">
+                    <h3 style="font-size: 1.1rem; margin-top: 15px; margin-bottom: 5px; font-weight: 700;">Malaysia</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.4; margin-bottom: 0;">Modern Cities.
+                        Tropical Escapes.</p>
+                </article>
+                <article class="travlink-destination-card">
+                    <img src="/img/service/countries/uzbekistan.webp" alt="Central Asia"
+                        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;" / loading="lazy" decoding="async">
+                    <h3 style="font-size: 1.1rem; margin-top: 15px; margin-bottom: 5px; font-weight: 700;">Central Asia
+                    </h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.4; margin-bottom: 0;">Untouched Beauty.
+                        Extraordinary Landscapes.</p>
+                </article>
+                <article class="travlink-destination-card"
+                    style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #f8fafc; border-radius: 12px; padding: 20px; border: 2px dashed #cbd5e1; height: 100%; min-height: 290px;">
+                    <div
+                        style="width: 60px; height: 60px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; color: #0b1c3c;">
+                        <i class="fa-solid fa-earth-americas" style="font-size: 24px;"></i>
                     </div>
-                </a>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 5px; font-weight: 700;">More Destinations</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.4; margin-bottom: 15px;">We provide plenty
+                        of other destinations globally.</p>
+                    <a href="#travel-enquiry" class="ca-btn-primary-3 theme-bg-3 text-white br-50"
+                        style="padding: 10px 20px; font-size: 0.85rem; display: inline-block;">Contact Us</a>
+                </article>
+            </div>
+            <!-- <div class="text-center mt-4 d-md-none">
+                <a href="#" class="ca-btn-primary-3 theme-bg-3 text-white br-50 w-100" style="display: block;">View All
+                    Destinations</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- 03 ADVENTURE -->
+    <section class="travlink-adventure-section" style="padding: 80px 0; background-color: transparent;">
+        <div class="container">
+            <header class="d-flex justify-content-between align-items-end mb-40">
+                <div>
+                    <span class="travlink-travel-eyebrow"
+                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Adventure
+                        Experiences</span>
+                    <h2 class="travlink-section-heading mb-0" style="font-size: 2.2rem; color: #0b1c3c;">Explore the
+                        Extraordinary</h2>
+                    <p class="mb-0 mt-2" style="color: #666;">Adrenaline, nature and unforgettable moments.</p>
+                </div>
+                <!-- <a href="#" class="d-none d-md-flex align-items-center" style="color: #0b1c3c; font-weight: 600;">More
+                    Than a Checklist. A Different You.</a> -->
+            </header>
+
+            <div class="travlink-compact-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 15px;">
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/travel-packages/mountain-with-mountain-background.webp"
+                            style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">Trekking</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/surfing.webp" style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">Surfing</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/kayaking.webp" style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">Kayaking</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/snork.webp" style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">Snorkelling</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/scuba.webp" style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">Scuba Diving</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: linear-gradient(135deg, #e0f2fe, #bae6fd); display: flex; align-items: center; justify-content: center; color: #0284c7;">
+                        <i class="fa-solid fa-parachute-box" style="font-size: 28px;"></i>
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">Paragliding</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: linear-gradient(135deg, #e0f2fe, #bae6fd); display: flex; align-items: center; justify-content: center; color: #0284c7;">
+                        <i class="fa-solid fa-umbrella-beach" style="font-size: 28px;"></i>
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">Parasailing</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: linear-gradient(135deg, #e0f2fe, #bae6fd); display: flex; align-items: center; justify-content: center; color: #0284c7;">
+                        <i class="fa-solid fa-motorcycle" style="font-size: 28px;"></i>
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">ATV Rides</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: linear-gradient(135deg, #e0f2fe, #bae6fd); display: flex; align-items: center; justify-content: center; color: #0284c7;">
+                        <i class="fa-solid fa-person-walking-luggage" style="font-size: 28px;"></i>
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">Ziplining</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: #f8fafc; display: flex; align-items: center; justify-content: center; color: #0f172a;">
+                        <i class="fa-solid fa-ellipsis" style="font-size: 28px;"></i>
+                    </div>
+                    <h4 style="font-size: 0.85rem; margin: 0; font-weight: 600; color: #0b1c3c;">And More</h4>
+                </article>
+            </div>
+
+            <!-- <div class="text-center mt-4 d-md-none">
+                <a href="#" class="ca-btn-primary-3 theme-bg-3 text-white br-50 w-100" style="display: block;">Discover
+                    Adventure <i class="fa-solid fa-arrow-right"></i></a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- 04 LUXURY -->
+    <section class="travlink-luxury-section" style="padding: 80px 0;">
+        <div class="container">
+            <header class="d-flex justify-content-between align-items-end mb-40">
+                <div>
+                    <span class="travlink-travel-eyebrow"
+                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Luxury
+                        Experiences</span>
+                    <h2 class="travlink-section-heading mb-0" style="font-size: 2.2rem; color: #0b1c3c;">Travel Beyond
+                        Ordinary</h2>
+                    <p class="mb-0 mt-2" style="color: #666;">Premium journeys. Exceptional moments.</p>
+                </div>
+                <!-- <a href="#" class="d-none d-md-flex align-items-center"
+                    style="color: #0b1c3c; font-weight: 600;">Extraordinary Access. Unforgettable Perspectives.</a> -->
+            </header>
+
+            <div class="travlink-compact-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px;">
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/private jet.webp" style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.9rem; margin: 0; font-weight: 600; color: #0b1c3c;">Private Jet<br>Charters
+                    </h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: #f8fafc; display: flex; align-items: center; justify-content: center; color: #0b1c3c;">
+                        <i class="fa-solid fa-plane" style="font-size: 32px;"></i>
+                    </div>
+                    <h4 style="font-size: 0.9rem; margin: 0; font-weight: 600; color: #0b1c3c;">Empty Leg<br>Flights
+                    </h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/explore/generated/dubai.webp"
+                            style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.9rem; margin: 0; font-weight: 600; color: #0b1c3c;">
+                        Helicopter<br>Experiences</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/FLIGHT ASSISTANCE.webp"
+                            style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.9rem; margin: 0; font-weight: 600; color: #0b1c3c;">Seaplane<br>Experiences
+                    </h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/yatch.webp" style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.9rem; margin: 0; font-weight: 600; color: #0b1c3c;">Yacht<br>Charters</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/sail boat.webp" style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.9rem; margin: 0; font-weight: 600; color: #0b1c3c;">Luxury<br>Cruises</h4>
+                </article>
+                <article style="text-align: center;">
+                    <div
+                        style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                        <img src="/img/service/sailboat.webp" style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+                    </div>
+                    <h4 style="font-size: 0.9rem; margin: 0; font-weight: 600; color: #0b1c3c;">Sailing<br>Experiences
+                    </h4>
+                </article>
+            </div>
+
+            <!-- <div class="text-center mt-4 d-md-none">
+                <a href="#" class="ca-btn-primary-3 theme-bg-3 text-white br-50 w-100" style="display: block;">Explore
+                    Luxury <i class="fa-solid fa-arrow-right"></i></a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- 05 STRANGERS CAMP -->
+    <section class="travlink-strangers-camp-section"
+        style="position: relative; padding: 100px 0; background-image: url('/img/about/about-travel-round.webp'); background-size: cover; background-position: center; margin: 40px 0;">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);">
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 600px;">
+                <span
+                    style="color: #fff; font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 2px;">Strangers
+                    Camp</span>
+                <h2 style="color: #fff; font-size: 3rem; font-weight: 700; margin: 10px 0;">Travel Together</h2>
+                <h4 style="color: #fff; font-size: 1.5rem; font-weight: 400; margin-bottom: 20px;">Arrive as strangers.
+                    Leave with stories.</h4>
+                <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 30px;">Curated group journeys
+                    bringing new people, places and experiences together.</p>
+                <!-- <a href="#" class="ca-btn-primary-3 bg-white text-dark br-50" style="display: inline-flex;">Explore
+                    Strangers Camps <i class="fa-solid fa-arrow-right"></i></a> -->
             </div>
         </div>
     </section>
 
-    <section class="travlink-travel-features" aria-label="Travel packages and visa assistance">
+    <!-- 06 BUSINESS TRAVEL -->
+    <section class="travlink-business-section" style="padding: 80px 0;">
         <div class="container">
-            <article class="travlink-travel-feature travlink-travel-feature--packages" id="travel-packages"
-                aria-labelledby="travel-packages-title">
-                <header class="travlink-packages-editorial__intro">
-                    <span class="travlink-travel-eyebrow">Travel Packages</span>
-                    <h2 class="travlink-section-heading" id="travel-packages-title">
-                        Holidays, business trips, <em>and everything in between.</em>
-                    </h2>
-                    <p>
-                        Travel, planned around you &mdash; from essential arrangements to
-                        rare experiences across land, sea, and sky.
-                    </p>
-                </header>
+            <header class="mb-40">
+                <span class="travlink-travel-eyebrow"
+                    style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Travel
+                    With a Purpose</span>
+                <h2 class="travlink-section-heading mb-0" style="font-size: 2.2rem; color: #0b1c3c;">Business Travel
+                </h2>
+                <p class="mb-0 mt-2" style="color: #666;">Business trips, exhibitions and international market visits.
+                </p>
+            </header>
 
-                <div class="travlink-package-categories">
-                    <article class="travlink-essential-showcase" data-essential-showcase
-                        aria-labelledby="essential-travel-title">
-                        <div class="travlink-essential-showcase__intro">
-                            <span class="travlink-essential-showcase__index" aria-hidden="true">01</span>
-                            <span class="travlink-essential-showcase__eyebrow">Travel Planning</span>
-                            <h3 class="travlink-section-heading" id="essential-travel-title">Essential Travel</h3>
-                            <p>Travel made simple, considered, and seamless from planning to arrival.</p>
-
-                            <nav class="travlink-essential-showcase__nav" aria-label="Essential Travel services">
-                                <button class="is-active" type="button" data-essential-nav="0"
-                                    aria-pressed="true"><span>01</span>International Tour Packages</button>
-                                <button type="button" data-essential-nav="1" aria-pressed="false"><span>02</span>Flight
-                                    Assistance</button>
-                                <button type="button" data-essential-nav="2" aria-pressed="false"><span>03</span>Hotel
-                                    &amp; Accommodation Assistance</button>
-                                <button type="button" data-essential-nav="3" aria-pressed="false"><span>04</span>Travel
-                                    Insurance</button>
-                                <button type="button" data-essential-nav="4"
-                                    aria-pressed="false"><span>05</span>Business Travel</button>
-                                <button type="button" data-essential-nav="5"
-                                    aria-pressed="false"><span>06</span>Customised Itineraries</button>
-                            </nav>
-
-                            <div class="travlink-essential-showcase__progress" aria-live="polite">
-                                <strong data-essential-progress>01 / 06</strong><span>Essential Travel</span>
-                            </div>
-
-                        </div>
-
-                        <div class="travlink-swipe-cue travlink-swipe-cue--dark travlink-swipe-cue--essential"
-                            aria-hidden="true">
-                            <span>Swipe to explore</span><i></i>
-                        </div>
-
-                        <div class="travlink-essential-showcase__viewport" data-essential-viewport>
-                            <div class="travlink-essential-showcase__track">
-                                <article class="travlink-essential-card is-active" data-essential-card="0" tabindex="0">
-                                    <span class="travlink-essential-card__number">01</span>
-                                    <figure><img src="/img/explore/generated/destination-dubai.jpg"
-                                            alt="Dubai skyline and waterfront" loading="lazy" decoding="async" />
-                                    </figure>
-                                    <h4>International Tour Packages</h4>
-                                </article>
-                                <article class="travlink-essential-card" data-essential-card="1" tabindex="0"
-                                    id="flight-assistance">
-                                    <span class="travlink-essential-card__number">02</span>
-                                    <figure><img src="/img/service/FLIGHT ASSISTANCE.jpg"
-                                            alt="Passenger aircraft flying above the coast" loading="lazy"
-                                            decoding="async" /></figure>
-                                    <h4>Flight Assistance</h4>
-                                </article>
-                                <article class="travlink-essential-card" data-essential-card="2" tabindex="0"
-                                    id="hotel-assistance">
-                                    <span class="travlink-essential-card__number">03</span>
-                                    <figure><img src="/img/service/hotel accomadation.png"
-                                            alt="Premium island resort accommodation" loading="lazy" decoding="async" />
-                                    </figure>
-                                    <h4>Hotel &amp; Accommodation Assistance</h4>
-                                </article>
-                                <article class="travlink-essential-card" data-essential-card="3" tabindex="0">
-                                    <span class="travlink-essential-card__number">04</span>
-                                    <figure><img src="/img/service/travel insurence.png"
-                                            alt="Passport, tickets, and travel documents" loading="lazy"
-                                            decoding="async" /></figure>
-                                    <h4>Travel Insurance</h4>
-                                </article>
-                                <article class="travlink-essential-card" data-essential-card="4" tabindex="0"
-                                    id="business-travel">
-                                    <span class="travlink-essential-card__number">05</span>
-                                    <figure><img src="/img/service/bussiness travel.png"
-                                            alt="Business traveller in a premium airport lounge" loading="lazy"
-                                            decoding="async" /></figure>
-                                    <h4>Business Travel</h4>
-                                </article>
-                                <article class="travlink-essential-card" data-essential-card="5" tabindex="0">
-                                    <span class="travlink-essential-card__number">06</span>
-                                    <figure><img src="/img/service/customized enti.png"
-                                            alt="Map and compass representing a customised itinerary" loading="lazy"
-                                            decoding="async" /></figure>
-                                    <h4>Customised Itineraries</h4>
-                                </article>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="travlink-luxury-showcase" data-luxury-showcase
-                        aria-labelledby="luxury-experiences-title" id="luxury-experiences">
-                        <header class="travlink-luxury-showcase__intro" data-luxury-reveal>
-                            <span class="travlink-travel-eyebrow">Private Access</span>
-                            <h3 class="travlink-section-heading" id="luxury-experiences-title">Luxury Experiences</h3>
-                            <p>Exceptional journeys shaped around privacy, freedom, and effortless movement.</p>
-
-                            <nav class="travlink-showcase-service-nav travlink-showcase-service-nav--luxury"
-                                aria-label="Luxury Experiences services">
-                                <button class="is-active" type="button" data-luxury-nav="0"
-                                    aria-pressed="true"><span>01</span>Private Jet Charter</button>
-                                <button type="button" data-luxury-nav="1" aria-pressed="false"><span>02</span>Yacht
-                                    Charter</button>
-                                <button type="button" data-luxury-nav="1" aria-pressed="false"><span>03</span>Cruise
-                                    Packages</button>
-                                <button type="button" data-luxury-nav="2" aria-pressed="false"><span>04</span>Sailboat
-                                    Experiences</button>
-                            </nav>
-                        </header>
-
-                        <div class="travlink-luxury-showcase__cards" role="list"
-                            aria-label="Luxury Experiences services" data-luxury-viewport>
-                            <article class="travlink-luxury-card is-active" role="listitem" tabindex="0"
-                                data-luxury-card="0" data-luxury-reveal>
-                                <span class="travlink-luxury-card__number" aria-hidden="true">01</span>
-                                <figure>
-                                    <img src="/img/service/private jet.png"
-                                        alt="Private aircraft ready for a luxury journey" loading="lazy"
-                                        decoding="async" />
-                                </figure>
-                                <h4>Private Jet Charter</h4>
-                            </article>
-
-                            <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-card="1"
-                                data-luxury-reveal>
-                                <span class="travlink-luxury-card__number" aria-hidden="true">02</span>
-                                <figure>
-                                    <img src="/img/service/yatch.png"
-                                        alt="Luxury yacht cruising beside a Mediterranean coast" loading="lazy"
-                                        decoding="async" />
-                                </figure>
-                                <h4>Yacht Charter</h4>
-                            </article>
-
-                            <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-card="2"
-                                data-luxury-reveal>
-                                <span class="travlink-luxury-card__number" aria-hidden="true">03</span>
-                                <figure>
-                                    <img src="/img/service/sail boat.png" alt="Sailboat crossing clear coastal water"
-                                        loading="lazy" decoding="async" />
-                                </figure>
-                                <h4>Cruise Packages</h4>
-                            </article>
-                            <article class="travlink-luxury-card" role="listitem" tabindex="0" data-luxury-card="2"
-                                data-luxury-reveal>
-                                <span class="travlink-luxury-card__number" aria-hidden="true">04</span>
-                                <figure>
-                                    <img src="/img/service/sailboat.png" alt="Sailboat crossing clear coastal water"
-                                        loading="lazy" decoding="async" />
-                                </figure>
-                                <h4>Sailboat Experiences</h4>
-                            </article>
-                        </div>
-                    </article>
-
-                    <article class="travlink-ocean-showcase" data-ocean-showcase
-                        aria-labelledby="ocean-experiences-title">
-                        <header class="travlink-ocean-showcase__intro" data-ocean-reveal>
-                            <span class="travlink-travel-eyebrow">Beyond the Shore</span>
-                            <h3 class="travlink-section-heading" id="ocean-experiences-title">Ocean Experiences</h3>
-                            <p>Discover island horizons and clear-water adventures at your own pace.</p>
-
-                            <nav class="travlink-showcase-service-nav travlink-showcase-service-nav--ocean"
-                                aria-label="Ocean Experiences services">
-                                <button class="is-active" type="button" data-ocean-nav="0"
-                                    aria-pressed="true"><span>01</span>Island Hopping</button>
-                                <button type="button" data-ocean-nav="1"
-                                    aria-pressed="false"><span>02</span>Surfing</button>
-                                <button type="button" data-ocean-nav="2"
-                                    aria-pressed="false"><span>03</span>Snorkelling</button>
-                                <button type="button" data-ocean-nav="3"
-                                    aria-pressed="false"><span>04</span>Kayaking</button>
-                                <button type="button" data-ocean-nav="4" aria-pressed="false"><span>05</span>Scuba
-                                    Diving</button>
-                            </nav>
-
-                        </header>
-
-                        <div class="travlink-swipe-cue travlink-swipe-cue--ocean" aria-hidden="true">
-                            <span>Swipe to explore</span><i></i>
-                        </div>
-
-                        <div class="travlink-ocean-showcase__cards" role="list" aria-label="Ocean Experiences services"
-                            data-ocean-viewport>
-                            <article class="travlink-ocean-card is-active" role="listitem" tabindex="0"
-                                data-ocean-card="0" data-ocean-reveal>
-                                <span class="travlink-ocean-card__number" aria-hidden="true">01</span>
-                                <figure><img src="/img/service/islandhop.jpg"
-                                        alt="Tropical islands surrounded by clear turquoise water" loading="lazy"
-                                        decoding="async" /></figure>
-                                <h4>Island Hopping</h4>
-                            </article>
-
-                            <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-card="1"
-                                data-ocean-reveal>
-                                <span class="travlink-ocean-card__number" aria-hidden="true">02</span>
-                                <figure><img src="/img/service/surfing.jpg" alt="Open ocean waves at golden hour"
-                                        loading="lazy" decoding="async" />
-                                </figure>
-                                <h4>Surfing</h4>
-                            </article>
-
-                            <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-card="2"
-                                data-ocean-reveal>
-                                <span class="travlink-ocean-card__number" aria-hidden="true">03</span>
-                                <figure><img src="/img/service/snork.jpg"
-                                        alt="Snorkeller exploring clear shallow coastal water" loading="lazy"
-                                        decoding="async" /></figure>
-                                <h4>Snorkelling</h4>
-                            </article>
-
-                            <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-card="3"
-                                data-ocean-reveal>
-                                <span class="travlink-ocean-card__number" aria-hidden="true">04</span>
-                                <figure><img src="/img/service/kayaking.jpg"
-                                        alt="Kayaker crossing a secluded tropical cove" loading="lazy"
-                                        decoding="async" /></figure>
-                                <h4>Kayaking</h4>
-                            </article>
-
-                            <article class="travlink-ocean-card" role="listitem" tabindex="0" data-ocean-card="4"
-                                data-ocean-reveal>
-                                <span class="travlink-ocean-card__number" aria-hidden="true">05</span>
-                                <figure><img src="/img/service/scuba.jpg" alt="Deep blue ocean viewed from above"
-                                        loading="lazy" decoding="async" />
-                                </figure>
-                                <h4>Scuba Diving</h4>
-                            </article>
-                        </div>
-                    </article>
-
-                    <article class="travlink-adventure-showcase" aria-labelledby="adventure-experiences-title">
-                        <figure class="travlink-adventure-showcase__background">
-                            <img src="/img/service/travel-packages/mountain-with-mountain-background.jpg" width="1672"
-                                height="941" loading="lazy" decoding="async"
-                                alt="Trekker following a high mountain ridge at first light" />
-                        </figure>
-
-                        <div class="travlink-adventure-showcase__content">
-                            <!-- <span class="travlink-adventure-showcase__number" aria-hidden="true">04</span> -->
-                            <span class="travlink-travel-eyebrow">The Path Less Travelled</span>
-                            <h3 class="travlink-section-heading" id="adventure-experiences-title">Adventure Experiences
-                            </h3>
-                            <p>Go further with a carefully considered journey into extraordinary terrain.</p>
-                            <div class="travlink-adventure-showcase__service">
-                                <i class="fa-solid fa-person-hiking" aria-hidden="true"></i>
-                                <h4>Trekking</h4>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </article>
-
-            <article class="travlink-travel-feature travlink-travel-feature--visa" id="visa-assistance"
-                aria-labelledby="visa-title">
-                <div class="travlink-travel-feature__content">
-                    <span class="travlink-travel-eyebrow">Visa Assistance</span>
-                    <h2 class="travlink-section-heading" id="visa-title">
-                        Getting the paperwork right, <em>the first time.</em>
-                    </h2>
-                    <div class="travlink-visa__types">
-                        <article class="travlink-visa-card" id="tourist-visa">
-                            <i class="fa-solid fa-passport" aria-hidden="true"></i>
-                            <h3>Tourist Visa</h3>
-                        </article>
-                        <article class="travlink-visa-card" id="business-visa">
-                            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
-                            <h3>Business Visa</h3>
-                        </article>
-                        <article class="travlink-visa-card" id="transit-visa">
-                            <i class="fa-solid fa-plane-departure" aria-hidden="true"></i>
-                            <h3>Transit Visa</h3>
-                        </article>
-                    </div>
-                    <section class="travlink-country-showcase" aria-labelledby="visa-country-title">
-                        <nav class="travlink-country-index" aria-label="Visa Assistance sections">
-                            <a href="#visa-title">Visa Assistance</a>
-                            <a href="#tourist-visa">Tourist Visa</a>
-                            <a href="#business-visa">Business Visa</a>
-                            <a href="#transit-visa">Transit Visa</a>
-                            <a class="is-active" href="#visa-country-title" aria-current="location">Countries</a>
-                            <!-- <a href="#travel-faq-title">FAQ</a>
-              <a href="#travel-contact">Contact</a> -->
-                        </nav>
-
-                        <h3 class="travlink-section-heading" id="visa-country-title">
-                            Visa Assistance <em>Across Multiple Destinations</em>
-                        </h3>
-
-                        <div class="travlink-country-grid" role="list"
-                            aria-label="Countries supported for visa assistance">
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/qatar.jpg" width="760" height="500" loading="lazy"
-                                    decoding="async" alt="Doha waterfront skyline in Qatar" />
-                                <span>Qatar</span>
-                            </article>
-                            <article class="travlink-destination-tile travlink-destination-tile--image"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/kuwait.jpg" width="760" height="500" loading="lazy"
-                                    decoding="async" alt="The Kuwait Towers in Kuwait City" />
-                                <span>Kuwait</span>
-                            </article>
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--wide"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/china.jpg" width="760" height="500" loading="lazy"
-                                    decoding="async" alt="The Great Wall of China across mountain ridges" />
-                                <span>China</span>
-                            </article>
-                            <div class="travlink-destination-tile travlink-destination-tile--space" data-country-tile
-                                aria-hidden="true"></div>
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/uzbekistan.jpg" width="760" height="500" loading="lazy"
-                                    decoding="async" alt="Historic tiled architecture in Samarkand, Uzbekistan" />
-                                <span>Uzbekistan</span>
-                            </article>
-                            <article class="travlink-destination-tile travlink-destination-tile--image"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/kazakhstan.jpg" width="760" height="500" loading="lazy"
-                                    decoding="async"
-                                    alt="Bayterek Tower and modern architecture in Astana, Kazakhstan" />
-                                <span>Kazakhstan</span>
-                            </article>
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/uae.webp" width="1024" height="1536" loading="lazy"
-                                    decoding="async" alt="Dubai skyline and waterfront in the United Arab Emirates" />
-                                <span>UAE</span>
-                            </article>
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--wide"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/saudi-arabia.webp" width="1024" height="1536"
-                                    loading="lazy" decoding="async"
-                                    alt="Historic desert architecture and palm groves in Saudi Arabia" />
-                                <span>Saudi Arabia</span>
-                            </article>
-                            <article class="travlink-destination-tile travlink-destination-tile--image"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/oman.webp" width="1200" height="800" loading="lazy"
-                                    decoding="async" alt="Muscat waterfront and mountains in Oman" />
-                                <span>Oman</span>
-                            </article>
-                            <article class="travlink-destination-tile travlink-destination-tile--image"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/bahrain.webp" width="1200" height="1200" loading="lazy"
-                                    decoding="async" alt="Manama skyline and traditional boats in Bahrain" />
-                                <span>Bahrain</span>
-                            </article>
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/vietnam.webp" width="1024" height="1536" loading="lazy"
-                                    decoding="async" alt="Lantern-lit heritage street in Hoi An, Vietnam" />
-                                <span>Vietnam</span>
-                            </article>
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--wide"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/thailand.webp" width="1200" height="800" loading="lazy"
-                                    decoding="async" alt="Ornate temple architecture in Bangkok, Thailand" />
-                                <span>Thailand</span>
-                            </article>
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--portrait"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/malaysia.webp" width="1024" height="1536"
-                                    loading="lazy" decoding="async"
-                                    alt="Kuala Lumpur skyline and Petronas Twin Towers in Malaysia" />
-                                <span>Malaysia</span>
-                            </article>
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--image travlink-destination-tile--wide"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/singapore.webp" width="1200" height="800"
-                                    loading="lazy" decoding="async"
-                                    alt="Marina Bay and Gardens by the Bay in Singapore" />
-                                <span>Singapore</span>
-                            </article>
-                            <article class="travlink-destination-tile travlink-destination-tile--image"
-                                data-country-tile role="listitem">
-                                <img src="/img/service/countries/sri-lanka.webp" width="1200" height="800"
-                                    loading="lazy" decoding="async"
-                                    alt="Tea-country train crossing the hills of Sri Lanka" />
-                                <span>Sri Lanka</span>
-                            </article>
-                            <article
-                                class="travlink-destination-tile travlink-destination-tile--text travlink-destination-tile--more"
-                                data-country-tile role="listitem">
-                                <span class="travlink-destination-tile__kicker">And More</span>
-                                <h4>Looking for another destination?</h4>
-                                <a href="/contact/">Contact Us <span aria-hidden="true">&rarr;</span></a>
-                            </article>
-                        </div>
-                    </section>
-                </div>
-            </article>
+            <div class="travlink-destinations-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
+                <article class="travlink-destination-card">
+                    <img src="/img/service/bussiness travel.webp" alt="Business Trips"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px;" / loading="lazy" decoding="async">
+                    <h3
+                        style="font-size: 1.1rem; margin-top: 15px; font-weight: 700; display: flex; justify-content: space-between;">
+                        Business Trips <i class="fa-solid fa-angle-right d-md-none"></i></h3>
+                </article>
+                <article class="travlink-destination-card">
+                    <img src="/img/explore/generated/trade opp.webp" alt="Trade Fair Visits"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px;" / loading="lazy" decoding="async">
+                    <h3
+                        style="font-size: 1.1rem; margin-top: 15px; font-weight: 700; display: flex; justify-content: space-between;">
+                        Trade Fair Visits <i class="fa-solid fa-angle-right d-md-none"></i></h3>
+                </article>
+                <article class="travlink-destination-card">
+                    <img src="/img/explore/generated/tradeee.webp" alt="Exhibition Travel"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px;" / loading="lazy" decoding="async">
+                    <h3
+                        style="font-size: 1.1rem; margin-top: 15px; font-weight: 700; display: flex; justify-content: space-between;">
+                        Exhibition Travel <i class="fa-solid fa-angle-right d-md-none"></i></h3>
+                </article>
+                <article class="travlink-destination-card">
+                    <img src="/img/explore/generated/connection.webp" alt="Factory Visits"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px;" / loading="lazy" decoding="async">
+                    <h3
+                        style="font-size: 1.1rem; margin-top: 15px; font-weight: 700; display: flex; justify-content: space-between;">
+                        Factory Visits <i class="fa-solid fa-angle-right d-md-none"></i></h3>
+                </article>
+                <article class="travlink-destination-card">
+                    <img src="/img/explore/generated/destination-dubai.webp" alt="International Market Visits"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px;" / loading="lazy" decoding="async">
+                    <h3
+                        style="font-size: 1.1rem; margin-top: 15px; font-weight: 700; display: flex; justify-content: space-between;">
+                        International Market Visits <i class="fa-solid fa-angle-right d-md-none"></i></h3>
+                </article>
+            </div>
         </div>
     </section>
-    <section class="travlink-travel-support" aria-label="Travel consultation and frequently asked questions">
+
+    <!-- 07 VISA ASSISTANCE -->
+    <section class="travlink-visa-section" style="padding: 80px 0; background-color: #f9f9fa;">
         <div class="container">
-            <div class="travlink-travel-support__grid">
-                <aside class="travlink-travel-contact" id="travel-contact">
-                    <span class="travlink-travel-eyebrow">Contact Us</span>
-                    <h2>Request Travel <em>Consultation</em></h2>
-                    <form class="travlink-travel-contact__form" action="#">
-                        <input type="text" placeholder="Your Name" aria-label="Your Name" />
-                        <input type="email" placeholder="Email Address" aria-label="Email Address" />
-                        <input type="tel" placeholder="Phone Number" aria-label="Phone Number" />
-                        <textarea rows="5" placeholder="Your Message" aria-label="Your Message"></textarea>
-                        <button class="ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit">
-                            Send Inquiry <span><i class="fa-solid fa-angle-right"></i></span>
-                        </button>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-30 mb-lg-0">
+                    <span class="travlink-travel-eyebrow"
+                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Visa
+                        Assistance</span>
+                    <h2 class="travlink-section-heading mb-0"
+                        style="font-size: 2.2rem; line-height: 1.2; color: #0b1c3c;">Getting the
+                        paperwork right,<br>the first time.</h2>
+                    <p class="mt-3 mb-4" style="color: #666;">Professional support for a smooth and hassle-free visa
+                        process.</p>
+
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div
+                            style="background: #fff; border: 1px solid #eee; padding: 15px 20px; border-radius: 12px; text-align: center; flex: 1; min-width: 100px;">
+                            <i class="fa-solid fa-passport"
+                                style="font-size: 24px; color: #0b1c3c; margin-bottom: 10px;"></i>
+                            <h4 style="font-size: 0.9rem; margin: 0;">Tourist Visa</h4>
+                        </div>
+                        <div
+                            style="background: #fff; border: 1px solid #eee; padding: 15px 20px; border-radius: 12px; text-align: center; flex: 1; min-width: 100px;">
+                            <i class="fa-solid fa-briefcase"
+                                style="font-size: 24px; color: #0b1c3c; margin-bottom: 10px;"></i>
+                            <h4 style="font-size: 0.9rem; margin: 0;">Business Visa</h4>
+                        </div>
+                        <div
+                            style="background: #fff; border: 1px solid #eee; padding: 15px 20px; border-radius: 12px; text-align: center; flex: 1; min-width: 100px;">
+                            <i class="fa-solid fa-plane-departure"
+                                style="font-size: 24px; color: #0b1c3c; margin-bottom: 10px;"></i>
+                            <h4 style="font-size: 0.9rem; margin: 0;">Transit Visa</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offset-lg-1">
+                    <div
+                        style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 20px;">Popular Destinations</h4>
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); gap: 15px; text-align: center;">
+                            <div>
+                                <img src="https://flagcdn.com/w80/cn.png" alt="China"
+                                    style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; margin: 0 auto 10px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" / loading="lazy" decoding="async">
+                                <span style="font-size: 0.85rem; font-weight: 600; color: #0b1c3c;">China</span>
+                            </div>
+                            <div>
+                                <img src="https://flagcdn.com/w80/vn.png" alt="Vietnam"
+                                    style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; margin: 0 auto 10px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" / loading="lazy" decoding="async">
+                                <span style="font-size: 0.85rem; font-weight: 600; color: #0b1c3c;">Vietnam</span>
+                            </div>
+                            <div>
+                                <img src="https://flagcdn.com/w80/th.png" alt="Thailand"
+                                    style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; margin: 0 auto 10px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" / loading="lazy" decoding="async">
+                                <span style="font-size: 0.85rem; font-weight: 600; color: #0b1c3c;">Thailand</span>
+                            </div>
+                            <div>
+                                <img src="https://flagcdn.com/w80/my.png" alt="Malaysia"
+                                    style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; margin: 0 auto 10px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" / loading="lazy" decoding="async">
+                                <span style="font-size: 0.85rem; font-weight: 600; color: #0b1c3c;">Malaysia</span>
+                            </div>
+                            <div>
+                                <img src="https://flagcdn.com/w80/lk.png" alt="Sri Lanka"
+                                    style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; margin: 0 auto 10px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" / loading="lazy" decoding="async">
+                                <span style="font-size: 0.85rem; font-weight: 600; color: #0b1c3c;">Sri Lanka</span>
+                            </div>
+                            <div>
+                                <img src="https://flagcdn.com/w80/jp.png" alt="Japan"
+                                    style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; margin: 0 auto 10px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" / loading="lazy" decoding="async">
+                                <span style="font-size: 0.85rem; font-weight: 600; color: #0b1c3c;">Japan</span>
+                            </div>
+                            <div>
+                                <div
+                                    style="width: 55px; height: 55px; border-radius: 50%; background: #f8fafc; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: #0b1c3c; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                                <span style="font-size: 0.85rem; font-weight: 600; color: #0b1c3c;">More</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-3 text-center" style="border-top: 1px solid #eee;">
+                            <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">Looking for another
+                                destination?</p>
+                            <a href="/contact/" class="ca-btn-primary-3 theme-bg-3 text-white br-50">Contact Us <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08 ENQUIRY -->
+    <section id="travel-enquiry" class="travlink-enquiry-section"
+        style="position: relative; padding: 100px 0; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+            <img src="/img/explore/generated/maldives.webp" alt="Background"
+                style="width: 100%; height: 100%; object-fit: cover;" / loading="lazy" decoding="async">
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 100%);">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <span class="travlink-travel-eyebrow"
+                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Get
+                        in Touch</span>
+                    <h2 class="travlink-section-heading mb-0" style="font-size: 2.5rem; color: #0b1c3c;">Plan Your Next
+                        Journey</h2>
+                    <p class="mt-2 mb-5" style="font-size: 1.1rem; color: #444;">Tell us what you need and our team will
+                        get back to you shortly.</p>
+
+                    <form action="#"
+                        style="background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 15px 50px rgba(0,0,0,0.1);">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="ca-input-box">
+                                    <input type="text" placeholder="First Name*" required
+                                        style="width: 100%; padding: 15px 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc;">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="ca-input-box">
+                                    <input type="text" placeholder="Last Name*" required
+                                        style="width: 100%; padding: 15px 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc;">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="ca-input-box">
+                                    <input type="tel" placeholder="Phone / WhatsApp Number*" required
+                                        style="width: 100%; padding: 15px 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc;">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="ca-input-box">
+                                    <input type="email" placeholder="Email Address*" required
+                                        style="width: 100%; padding: 15px 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc;">
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <label
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; display: block;">What
+                                    can we help you with?*</label>
+                                <select required
+                                    style="width: 100%; padding: 15px 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc; appearance: auto;">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="visa">Visa Assistance</option>
+                                    <option value="holiday">Holiday or Tour Package</option>
+                                    <option value="strangers-camp">Strangers Camp or Group Experiences</option>
+                                    <option value="business">Business Travel</option>
+                                    <option value="premium">Premium Travel & Experiences</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <label
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; display: block;">Tell
+                                    us what you need*</label>
+                                <textarea placeholder="Share a few details about your travel plans..." rows="4" required
+                                    style="width: 100%; padding: 15px 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc;"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="ca-btn-primary-3 theme-bg-3 text-white br-50 w-100">Send
+                                    Enquiry <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                            </div>
+                        </div>
                     </form>
-                    <div class="travlink-travel-contact__socials" aria-label="Social media links">
-                        <a href="https://www.instagram.com/travlinkglobal?igsh=MTJsZXBidGRzZGVxYQ%3D%3D&amp;utm_source=qr"
-                            target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61591932206679&amp;mibextid=wwXIfr&amp;mibextid=wwXIfr"
-                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.threads.com/@travlinkglobal" target="_blank" rel="noopener noreferrer"
-                            aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </aside>
-                <div class="travlink-travel-faq">
-                    <div class="travlink-travel-faq__heading">
-                        <span class="travlink-travel-eyebrow">Travel FAQs</span>
-                        <h2 id="travel-faq-title">Questions, <em>answered clearly.</em></h2>
-                    </div>
-                    <div class="ca-acordion-area travlink-travel-faq__accordion">
-                        <div class="accordion" id="travelFaqAccordion">
-                            <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                <h3 class="ca-accordion-header" id="travelFaqOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#travelFaqOneContent" aria-expanded="true"
-                                        aria-controls="travelFaqOneContent">
-                                        How long does visa processing take?
-                                    </button>
-                                </h3>
-                                <div id="travelFaqOneContent" class="accordion-collapse collapse show"
-                                    aria-labelledby="travelFaqOne" data-bs-parent="#travelFaqAccordion">
-                                    <div class="ca-accordion-body">
-                                        <p>
-                                            It depends on the country and visa type &mdash; we'll give
-                                            you a clear timeline before you apply.
-                                        </p>
-                                    </div>
-                                </div>
+                </div>
+
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div
+                        style="background: #16233b; color: #fff; padding: 40px; border-radius: 16px; height: 100%; display: flex; flex-direction: column;">
+                        <img src="/img/logo/travlink-secondary.webp" alt="Travlink Global"
+                            style="height: 40px; object-fit: contain; object-position: left; margin-bottom: 40px;" loading="lazy" decoding="async">
+
+                        <div style="margin-bottom: 30px; display: flex; gap: 15px;">
+                            <i class="fa-solid fa-bolt" style="font-size: 24px; color: #60a5fa;"></i>
+                            <div>
+                                <h5 style="color: #fff; margin-bottom: 5px; font-size: 1.1rem;">Quick Response</h5>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 0;">We usually reply
+                                    within 24 hours</p>
                             </div>
-                            <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                <h3 class="ca-accordion-header" id="travelFaqTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#travelFaqTwoContent" aria-expanded="false"
-                                        aria-controls="travelFaqTwoContent">
-                                        Do you book flights and hotels together?
-                                    </button>
-                                </h3>
-                                <div id="travelFaqTwoContent" class="accordion-collapse collapse"
-                                    aria-labelledby="travelFaqTwo" data-bs-parent="#travelFaqAccordion">
-                                    <div class="ca-accordion-body">
-                                        <p>Yes, we can handle your full itinerary in one place.</p>
-                                    </div>
-                                </div>
+                        </div>
+
+                        <div style="margin-bottom: 30px; display: flex; gap: 15px;">
+                            <i class="fa-solid fa-shield-halved" style="font-size: 24px; color: #60a5fa;"></i>
+                            <div>
+                                <h5 style="color: #fff; margin-bottom: 5px; font-size: 1.1rem;">Your Information is Safe
+                                </h5>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 0;">We respect your
+                                    privacy</p>
                             </div>
-                            <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                <h3 class="ca-accordion-header" id="travelFaqThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#travelFaqThreeContent" aria-expanded="false"
-                                        aria-controls="travelFaqThreeContent">
-                                        Can you help with last-minute business travel?
-                                    </button>
-                                </h3>
-                                <div id="travelFaqThreeContent" class="accordion-collapse collapse"
-                                    aria-labelledby="travelFaqThree" data-bs-parent="#travelFaqAccordion">
-                                    <div class="ca-accordion-body">
-                                        <p>Yes &mdash; reach out and we'll move quickly.</p>
-                                    </div>
-                                </div>
+                        </div>
+
+                        <div style="margin-bottom: 40px; display: flex; gap: 15px;">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 24px; color: #25D366;"></i>
+                            <div>
+                                <h5 style="color: #fff; margin-bottom: 5px; font-size: 1.1rem;">Prefer WhatsApp?</h5>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 0;">Chat with us
+                                    anytime</p>
+                                <a href="https://wa.me/917907048353" target="_blank" class="mt-2 d-inline-block"
+                                    style="color: #60a5fa; text-decoration: underline;">Message Us &rarr;</a>
                             </div>
-                            <div class="ca-accordion-item ca-accordion-item-2 mb-24">
-                                <h3 class="ca-accordion-header" id="travelFaqFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#travelFaqFourContent" aria-expanded="false"
-                                        aria-controls="travelFaqFourContent">
-                                        Do you offer group travel packages?
-                                    </button>
-                                </h3>
-                                <div id="travelFaqFourContent" class="accordion-collapse collapse"
-                                    aria-labelledby="travelFaqFour" data-bs-parent="#travelFaqAccordion">
-                                    <div class="ca-accordion-body">
-                                        <p>Yes, for families, corporate teams, and small groups.</p>
-                                    </div>
-                                </div>
+                        </div>
+
+                        <div class="mt-auto" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                            <h3
+                                style="font-family: 'Nothing You Could Do', cursive; font-size: 1.8rem; color: #fff; transform: rotate(-5deg); margin-bottom: 20px;">
+                                Travel.<br>Trade.<br>Create Connections.
+                            </h3>
+                            <!-- <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                                <a href="#" style="color: #fff; opacity: 0.7;"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="#" style="color: #fff; opacity: 0.7;"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" style="color: #fff; opacity: 0.7;"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
                             </div>
+                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin: 0;">&copy; 2026 Travlink
+                                Global.</p> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 </main>
 
 <footer class="travlink-footer">
@@ -737,7 +765,7 @@
         <div class="travlink-footer__top">
             <div class="travlink-footer__brand">
                 <a class="travlink-footer__logo" href="/" aria-label="Travlink Global home">
-                    <img src="/img/logo/travlink-secondary.png" alt="Travlink Global" />
+                    <img src="/img/logo/travlink-secondary.webp" alt="Travlink Global" / loading="lazy" decoding="async">
                 </a>
                 <p class="travlink-footer__description">
                     Connecting people and businesses across borders through trusted
@@ -809,18 +837,18 @@
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
 </a>
 
-<script src="/js/jquery-3.7.1.min.js"></script>
-<script src="/js/bootstrap.bundle.min.js"></script>
-<script src="/js/jquery.magnific-popup.min.js"></script>
-<script src="/js/jquery.counterup.min.js"></script>
-<script src="/js/slick.min.js"></script>
-<script src="/js/jquery.nice-select.js"></script>
-<script src="/js/waypoints.min.js"></script>
-<script src="/js/aos.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/scroll-motion.js?v=20260812-text-reveal-2"></script>
-<script src="/js/mobile-navigation.js"></script>
-<script src="/js/travel-country-editorial.js?v=20260812-1"></script>
-<script src="/js/travel-essential-showcase.js?v=20260813-stable-nav-3"></script>
-<script src="/js/travel-luxury-showcase.js?v=20260812-2"></script>
-<script src="/js/travel-ocean-showcase.js?v=20260812-2"></script>
+<script defer src="/js/jquery-3.7.1.min.js"></script>
+<script defer src="/js/bootstrap.bundle.min.js"></script>
+<script defer src="/js/jquery.magnific-popup.min.js"></script>
+<script defer src="/js/jquery.counterup.min.js"></script>
+<script defer src="/js/slick.min.js"></script>
+<script defer src="/js/jquery.nice-select.js"></script>
+<script defer src="/js/waypoints.min.js"></script>
+<script defer src="/js/aos.js"></script>
+<script defer src="/js/main.js"></script>
+<script defer src="/js/scroll-motion.js?v=20260812-text-reveal-2"></script>
+<script defer src="/js/mobile-navigation.js"></script>
+<script defer src="/js/travel-country-editorial.js?v=20260812-1"></script>
+<script defer src="/js/travel-essential-showcase.js?v=20260813-stable-nav-3"></script>
+<script defer src="/js/travel-luxury-showcase.js?v=20260812-2"></script>
+<script defer src="/js/travel-ocean-showcase.js?v=20260812-2"></script>

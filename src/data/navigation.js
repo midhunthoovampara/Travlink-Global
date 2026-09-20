@@ -15,10 +15,10 @@ export const primaryNavigation = [
 
 export const footerNavigation = [
   { id: "home", label: "Home", href: "/" },
-  { id: "about", label: "About", href: "/about/" },
-  { id: "travel", label: "Travel", href: "/travel/" },
-  { id: "trade", label: "Trade", href: "/trade/" },
-  { id: "contact", label: "Contact", href: "/contact/" },
+  { id: "about", label: "About Us", href: "/about/" },
+  { id: "services", label: "Services", href: "/#travlink-services" },
+  { id: "faq", label: "FAQ", href: "/faq/" },
+  { id: "contact", label: "Contact Us", href: "/contact/" },
 ];
 
 export const socialLinks = [

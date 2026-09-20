@@ -248,7 +248,7 @@
   position: relative;
   padding: clamp(76px, 8vw, 112px) 0;
   overflow: hidden;
-  background: #061d31 url("/img/service/SRV2.jpeg") center / cover no-repeat;
+  background: #061d31 url("/img/service/SRV2.webp") center / cover no-repeat;
   isolation: isolate;
 }
 .travlink-shipping::before {

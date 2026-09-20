@@ -7,9 +7,9 @@
                 <div class="ca-logo">
                     <a class="travlink-site-logo" href="/" aria-label="Travlink Global home">
                         <img class="travlink-site-logo__image travlink-site-logo__image--primary"
-                            src="/img/logo/travlink-primary.png" alt="Travlink Global" />
+                            src="/img/logo/travlink-primary.webp" alt="Travlink Global" />
                         <img class="travlink-site-logo__image travlink-site-logo__image--secondary"
-                            src="/img/logo/travlink-secondary.png" alt="" aria-hidden="true" />
+                            src="/img/logo/travlink-secondary.webp" alt="" aria-hidden="true" />
                     </a>
                 </div>
             </div>
@@ -62,7 +62,8 @@
         <div class="ca-offcanvas-header d-flex justify-content-between align-items-center mb-40">
             <div class="ca-offcanvas-logo">
                 <a class="travlink-offcanvas-logo" href="/" aria-label="Travlink Global home">
-                    <img src="/img/logo/travlink-secondary.png" alt="Travlink Global" />
+                    <img src="/img/logo/travlink-secondary.webp" alt="Travlink Global" / loading="lazy"
+                        decoding="async">
                 </a>
             </div>
             <div class="ca-offcanvas-close">
@@ -206,7 +207,7 @@
                     </div>
                     <div class="travlink-benefit__content">
                         <h2 class="travlink-benefit__title">Travel Made Personal</h2>
-                        <p>Journeys planned around your timing, priorities and budget.</p>
+                        <p>Journeys built around your purpose, preferences and budget.</p>
                     </div>
                 </article>
 
@@ -222,7 +223,7 @@
                     </div>
                     <div class="travlink-benefit__content">
                         <h2 class="travlink-benefit__title">Global Trade Connections</h2>
-                        <p>Trusted sourcing links across key international markets.</p>
+                        <p>Trusted sourcing and logistics connections across international markets.</p>
                     </div>
                 </article>
 
@@ -239,26 +240,28 @@
                     </div>
                     <div class="travlink-benefit__content">
                         <h2 class="travlink-benefit__title">Support at Every Step</h2>
-                        <p>Clear guidance from your first enquiry through final delivery.</p>
+                        <p>Connecting people, businesses and opportunities across borders.</p>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
+
     <div class="travlink-story-canvas">
         <!-- service section start -->
-        <section id="travlink-services" class="ca-service-3 travlink-service-section travlink-blue-shade pt-30 pb-70">
+        <section id="travlink-services" class="ca-service-3 travlink-service-section travlink-blue-shade pt-30 pb-70"
+            style="background-color: #000000 !important;">
             <div class="container travlink-services-composition">
-                <div class="ca-portfolio-content-3 ca-sec-content-3 travlink-service-intro text-center mb-60 aos-init aos-animate"
+                <div class="ca-portfolio-content-3 ca-sec-content-3 travlink-service-intro text-center mb-60"
                     data-aos="fade-up" data-aos-duration="800">
                     <span class="travlink-service-intro__eyebrow">
                         <span class=></span>
                         Our Services
                     </span>
                     <h2 class="travlink-section-heading">
-                        <span class="travlink-service-intro__title-lead">One world.</span>
-                        <em class="travlink-service-intro__title-accent">Two ways forward.</em>
+                        <strong>One world,</strong>
+                        <em>Two ways forward.</em>
                     </h2>
                     <p class="travlink-service-intro__copy">
                         From journeys shaped around you to global opportunities thoughtfully connected, choose the path
@@ -266,38 +269,44 @@
                     </p>
                 </div>
                 <div class="travlink-services-editorial">
-                    <div class="row g-4 ca-service-3-cards travlink-service-gateways">
-                        <div class="col-lg-6 col-md-6">
-                            <article class="travlink-service-card" tabindex="0" aria-expanded="false">
-                                <img class="travlink-service-card__image" src="/img/explore/generated/luxurytravel.png"
-                                    alt="Traveler with luggage looking across an airport runway at blue hour" />
-                                <div class="travlink-service-card__content">
-                                    <h2 class="travlink-service-card__title">Travel</h2>
-                                    <!-- <p class="travlink-service-card__teaser">Journeys shaped around you.</p> -->
-                                    <p class="travlink-service-card__description">
-                                        Visas, holidays, and business trips
-                                    </p>
-                                    <a class="travlink-service-card__cta" href="/travel/">Explore<span
-                                            aria-hidden="true">&rarr;</span></a>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <article class="travlink-service-card" tabindex="0" aria-expanded="false">
-                                <img class="travlink-service-card__image" src="/img/explore/generated/trade opp.png"
-                                    alt="Cargo ship at a modern international port during blue hour" />
-                                <div class="travlink-service-card__content">
-                                    <h2 class="travlink-service-card__title">Trade</h2>
-                                    <!-- <p class="travlink-service-card__teaser">Global opportunity, thoughtfully connected.</p> -->
-                                    <p class="travlink-service-card__description">
-                                        Sourcing and supplier connections across China, Vietnam, and
-                                        beyond.
-                                    </p>
-                                    <a class="travlink-service-card__cta" href="/trade/">Explore <span
-                                            aria-hidden="true">&rarr;</span></a>
-                                </div>
-                            </article>
-                        </div>
+                    <div class="travlink-service-gateways">
+                        <article class="travlink-service-card" tabindex="0" aria-expanded="false" data-aos="fade-right"
+                            data-aos-duration="800">
+                            <a href="/travel/"
+                                style="display: block; width: 100%; height: 100%; position: absolute; inset: 0; z-index: 1;">
+                                <img class="travlink-service-card__image" src="/img/explore/generated/luxurytravel.webp"
+                                    alt="Traveler with luggage looking across an airport runway at blue hour"
+                                    loading="lazy" decoding="async">
+                            </a>
+                            <div class="travlink-service-card__content" style="pointer-events: none;">
+                                <h2 class="travlink-service-card__title">Travel</h2>
+                                <p class="travlink-service-card__description">
+                                    Visas, curated journeys & business travel.
+                                </p>
+                                <a class="travlink-hero__explore" href="/travel/" style="pointer-events: auto;">
+                                    Explore more <span aria-hidden="true">&rarr;</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="travlink-service-card" tabindex="0" aria-expanded="false" data-aos="fade-left"
+                            data-aos-duration="800">
+                            <a href="/trade/"
+                                style="display: block; width: 100%; height: 100%; position: absolute; inset: 0; z-index: 1;">
+                                <img class="travlink-service-card__image" src="/img/explore/generated/tradeee.webp"
+                                    alt="Cargo ship at a modern international port during blue hour" loading="lazy"
+                                    decoding="async">
+                            </a>
+                            <div class="travlink-service-card__content" style="pointer-events: none;">
+                                <h2 class="travlink-service-card__title">Trade</h2>
+                                <p class="travlink-service-card__description">
+                                    Sourcing, shipping & global trade support.
+                                </p>
+                                <a class="travlink-hero__explore" href="/trade/" style="pointer-events: auto;">
+                                    Explore more <span aria-hidden="true">&rarr;</span>
+                                </a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -307,238 +316,127 @@
         <!-- why choose us section start -->
         <!-- why choose us section end -->
 
-        <!-- process section start -->
-        <section class="travlink-process" aria-labelledby="travlink-process-title">
+        <!-- destination banner section start -->
+        <section class="travlink-destination-banner" aria-label="Destination Banner">
+            <div class="travlink-destination-banner__bg-wrap">
+                <div class="travlink-destination-banner__bg"
+                    style="background-image: url('/img/process/simplebg.webp');"></div>
+                <div class="travlink-destination-banner__overlay"></div>
+            </div>
+
             <div class="container">
-                <div class="travlink-process__header ca-sec-content-3" data-aos="fade-up" data-aos-duration="700">
-                    <!-- <h5 class="ca-section-subtitle p-relative">Our Process</h5> -->
-                    <h5 class="ca-section-title travlink-section-heading fnw-600" id="travlink-process-title">
-                        A Simple Process, <em>Built Around You</em>
-                    </h5>
+                <div class="travlink-destination-banner__content">
+                    <h2 class="travlink-destination-banner__quote" data-aos="fade-up" data-aos-duration="800"
+                        data-aos-easing="ease-out" data-aos-offset="50">
+                        “Sometimes the destination is only the beginning.”
+                    </h2>
+                    <p class="travlink-destination-banner__tagline" data-aos="fade-up" data-aos-duration="800"
+                        data-aos-delay="100" data-aos-easing="ease-out" data-aos-offset="50">
+                        Travel &bull; Trade &bull; Connect
+                    </p>
                 </div>
 
-                <div class="travlink-process__journey" data-active-step="0">
-                    <div class="travlink-process__route" aria-hidden="true">
-                        <svg viewBox="0 0 1000 54" preserveAspectRatio="none" focusable="false">
-                            <path class="travlink-process__route-base" pathLength="100"
-                                d="M10 27 C170 8 330 46 500 27 S830 8 990 27" />
-                            <path class="travlink-process__route-progress" pathLength="100"
-                                d="M10 27 C170 8 330 46 500 27 S830 8 990 27" />
-                        </svg>
-                        <span class="travlink-process__route-marker"></span>
-                        <span class="travlink-process__route-stop" style="--route-stop: 0%"></span>
-                        <span class="travlink-process__route-stop" style="--route-stop: 33.333%"></span>
-                        <span class="travlink-process__route-stop" style="--route-stop: 66.666%"></span>
-                        <span class="travlink-process__route-stop" style="--route-stop: 100%"></span>
-                    </div>
-
-                    <div class="travlink-process__grid" aria-label="Our four-step process">
-                        <button type="button" id="travlink-process-step-1" class="travlink-process__step is-active"
-                            aria-expanded="true" aria-controls="travlink-process-description-1" data-aos="fade-up"
-                            data-aos-delay="0" data-aos-duration="650">
-                            <figure class="travlink-process__visual" aria-hidden="true">
-                                <img src="/img/process/generated/process-contact.webp" alt="" width="640" height="640"
-                                    loading="lazy" decoding="async" />
-                            </figure>
-                            <span class="travlink-process__number">01</span>
-                            <h3>Contact Us</h3>
-                            <p id="travlink-process-description-1" class="travlink-process__description">Reach out with
-                                what you need &mdash; travel or trade.</p>
-                            <span class="travlink-process__cue" aria-hidden="true">View step <span><i
-                                        class="fa-solid fa-headset"></i></span></span>
-                        </button>
-
-                        <button type="button" id="travlink-process-step-2" class="travlink-process__step"
-                            aria-expanded="false" aria-controls="travlink-process-description-2" data-aos="fade-up"
-                            data-aos-delay="100" data-aos-duration="650">
-                            <figure class="travlink-process__visual" aria-hidden="true">
-                                <img src="/img/process/generated/process-requirements.webp" alt="" width="640"
-                                    height="640" loading="lazy" decoding="async" />
-                            </figure>
-                            <span class="travlink-process__number">02</span>
-                            <h3>Tell Us Your Requirement</h3>
-                            <p id="travlink-process-description-2" class="travlink-process__description">Share the
-                                details. We&rsquo;ll ask the right questions.</p>
-                            <span class="travlink-process__cue" aria-hidden="true">View step <span><i
-                                        class="fa-solid fa-clipboard-list"></i></span></span>
-                        </button>
-
-                        <button type="button" id="travlink-process-step-3" class="travlink-process__step"
-                            aria-expanded="false" aria-controls="travlink-process-description-3" data-aos="fade-up"
-                            data-aos-delay="200" data-aos-duration="650">
-                            <figure class="travlink-process__visual" aria-hidden="true">
-                                <img src="/img/process/generated/process-plan.webp" alt="" width="640" height="640"
-                                    loading="lazy" decoding="async" />
-                            </figure>
-                            <span class="travlink-process__number">03</span>
-                            <h3>We Plan the Best Solution</h3>
-                            <p id="travlink-process-description-3" class="travlink-process__description">A plan built
-                                around your need, not a fixed package.</p>
-                            <span class="travlink-process__cue" aria-hidden="true">View step <span><i
-                                        class="fa-solid fa-route"></i></span></span>
-                        </button>
-
-                        <button type="button" id="travlink-process-step-4" class="travlink-process__step"
-                            aria-expanded="false" aria-controls="travlink-process-description-4" data-aos="fade-up"
-                            data-aos-delay="300" data-aos-duration="650">
-                            <figure class="travlink-process__visual" aria-hidden="true">
-                                <img src="/img/process/generated/process-delivery.webp" alt="" width="640" height="640"
-                                    loading="lazy" decoding="async" />
-                            </figure>
-                            <span class="travlink-process__number">04</span>
-                            <h3>We Deliver the Service</h3>
-                            <p id="travlink-process-description-4" class="travlink-process__description">From first
-                                enquiry to final delivery, we stay involved.</p>
-                            <span class="travlink-process__cue" aria-hidden="true">View step <span><i
-                                        class="fa-solid fa-truck-fast"></i></span></span>
-                        </button>
-                    </div>
-                </div>
+                <a href="#explore-next" class="travlink-destination-banner__scroll" data-aos="fade-up"
+                    data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out" data-aos-offset="50">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    <span>Explore further</span>
+                </a>
             </div>
         </section>
-        <!-- process section end -->
+        <!-- destination banner section end -->
 
-        <!-- explore without borders section start -->
-        <section class="travlink-explore" aria-labelledby="travlink-explore-title">
-            <div class="travlink-explore__air-traffic" aria-hidden="true">
-                <span class="travlink-explore__aircraft travlink-explore__aircraft--one">
-                    <svg viewBox="0 0 64 56" focusable="false">
-                        <path
-                            d="M2 31 24 25 34 5h6l-4 19 21-3c3-.4 5 1.4 5 4.4 0 2.7-2 4.5-5 4.8l-21 2.5 7 17h-6L28 34 8 37Z" />
-                    </svg>
-                </span>
-                <span class="travlink-explore__aircraft travlink-explore__aircraft--two">
-                    <svg viewBox="0 0 64 56" focusable="false">
-                        <path
-                            d="M2 31 24 25 34 5h6l-4 19 21-3c3-.4 5 1.4 5 4.4 0 2.7-2 4.5-5 4.8l-21 2.5 7 17h-6L28 34 8 37Z" />
-                    </svg>
-                </span>
-                <span class="travlink-explore__aircraft travlink-explore__aircraft--three">
-                    <svg viewBox="0 0 64 56" focusable="false">
-                        <path
-                            d="M2 31 24 25 34 5h6l-4 19 21-3c3-.4 5 1.4 5 4.4 0 2.7-2 4.5-5 4.8l-21 2.5 7 17h-6L28 34 8 37Z" />
-                    </svg>
-                </span>
-            </div>
-            <!-- <div class="travlink-explore__background" aria-hidden="true">
-                <video autoplay muted loop playsinline preload="metadata">
-                    <source src="/video/map 2.mp4" type="video/mp4" />
-                </video>
-            </div> -->
+        <!-- possibilities section start -->
+        <section class="travlink-possibilities" aria-labelledby="travlink-possibilities-title" id="explore-next"
+            style="background-color: #F5F7F9 !important;">
             <div class="container">
-                <header class="travlink-explore__header travlink-explore__reveal text-center">
-                    <h2 class="travlink-section-heading" id="travlink-explore-title">Explore <em>Without Borders</em>
+                <header class="travlink-possibilities__header text-center mb-50" data-aos="fade-up"
+                    data-aos-duration="800">
+                    <h2 class="travlink-possibilities__heading" id="travlink-possibilities-title"
+                        style="font-size: 2.5rem;" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                        <strong>One journey,</strong> <em>many possibilities.</em>
                     </h2>
-                    <p>Discover destinations, business opportunities and global experiences with Travlink.</p>
+                    <p class="travlink-possibilities__subheading" data-aos="fade-up" data-aos-delay="200"
+                        data-aos-duration="800">
+                        Travel for an experience. Discover an opportunity. Build a connection that goes beyond borders.
+                    </p>
                 </header>
 
-                <div class="travlink-explore__cards">
-                    <article class="travlink-explore__feature travlink-explore__reveal" aria-roledescription="carousel">
-                        <div class="travlink-explore__feature-slides" aria-live="polite">
-                            <a class="travlink-explore__feature-slide is-active" href="/travel/" data-explore-slide="0">
-                                <div class="travlink-explore__feature-copy">
-                                    <span>Dubai and the UAE</span>
-                                    <h3>Discover Dubai</h3>
-                                    <strong>Learn more <i class="fa-solid fa-arrow-right"
-                                            aria-hidden="true"></i></strong>
-                                </div>
-                                <figure class="travlink-explore__feature-media">
-                                    <img src="/img/explore/generated/dubai.png"
-                                        alt="Dubai skyline and Burj Khalifa at golden hour" width="607" height="760"
-                                        loading="lazy" decoding="async" />
-                                </figure>
-                            </a>
-
-                            <a class="travlink-explore__feature-slide" href="/travel/" data-explore-slide="1"
-                                aria-hidden="true" tabindex="-1">
-                                <div class="travlink-explore__feature-copy">
-                                    <span>Indian Ocean Escapes</span>
-                                    <h3>Experience Maldives</h3>
-                                    <strong>Learn more <i class="fa-solid fa-arrow-right"
-                                            aria-hidden="true"></i></strong>
-                                </div>
-                                <figure class="travlink-explore__feature-media">
-                                    <img src="/img/explore/generated/maldives.png"
-                                        alt="Maldives overwater villas surrounding a turquoise lagoon" width="607"
-                                        height="760" loading="lazy" decoding="async" />
-                                </figure>
-                            </a>
-
-                            <a class="travlink-explore__feature-slide" href="/travel/" data-explore-slide="2"
-                                aria-hidden="true" tabindex="-1">
-                                <div class="travlink-explore__feature-copy">
-                                    <span>Japan in Spring</span>
-                                    <h3>Explore Japan</h3>
-                                    <strong>Learn more <i class="fa-solid fa-arrow-right"
-                                            aria-hidden="true"></i></strong>
-                                </div>
-                                <figure class="travlink-explore__feature-media">
-                                    <img src="/img/explore/generated/china.png"
-                                        alt="Mount Fuji, cherry blossoms and a traditional Japanese pagoda" width="607"
-                                        height="760" loading="lazy" decoding="async" />
-                                </figure>
-                            </a>
-                        </div>
-
-                        <div class="travlink-explore__pagination" aria-label="Choose a featured destination">
-                            <button class="is-active" type="button" data-explore-dot="0" aria-label="Show Dubai"
-                                aria-current="true"></button>
-                            <button type="button" data-explore-dot="1" aria-label="Show Maldives"
-                                aria-current="false"></button>
-                            <button type="button" data-explore-dot="2" aria-label="Show Japan"
-                                aria-current="false"></button>
+                <div class="travlink-possibilities__grid">
+                    <article class="travlink-possibilities__card">
+                        <figure class="travlink-possibilities__media">
+                            <img src="/img/explore/generated/dubai.webp" alt="Discover" loading="lazy" />
+                        </figure>
+                        <div class="travlink-possibilities__content">
+                            <span class="travlink-possibilities__number">01 &mdash; DISCOVER</span>
+                            <h3 class="travlink-possibilities__title">Explore the World</h3>
+                            <div class="travlink-possibilities__reveal">
+                                <p>Destinations, curated journeys and experiences worth travelling for.</p>
+                                <!-- <a href="/travel/" class="travlink-possibilities__link">Explore <i -->
+                                <!-- class="fa-solid fa-arrow-right"></i></a> -->
+                            </div>
                         </div>
                     </article>
 
-                    <div class="travlink-explore__small-grid" aria-label="More Travlink experiences">
-                        <a class="travlink-explore__small-card travlink-explore__reveal" href="/trade/">
-                            <div class="travlink-explore__small-copy">
-                                <span>Trade Opportunities</span>
-                                <!-- <h3>Trade Without Borders</h3> -->
-                                <strong>Learn more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></strong>
+                    <article class="travlink-possibilities__card">
+                        <figure class="travlink-possibilities__media">
+                            <img src="/img/explore/generated/luxurytravel.webp" alt="Experience" loading="lazy" />
+                        </figure>
+                        <div class="travlink-possibilities__content">
+                            <span class="travlink-possibilities__number">02 &mdash; EXPERIENCE</span>
+                            <h3 class="travlink-possibilities__title">Beyond Ordinary Travel</h3>
+                            <div class="travlink-possibilities__reveal">
+                                <p>Sailing, yachts, cruises, seaplanes, adventures and premium experiences.</p>
+                                <!-- <a href="/travel/" class="travlink-possibilities__link">Explore <i class="fa-solid fa-arrow-right"></i></a> -->
                             </div>
-                            <figure><img src="/img/explore/generated/trade opp.png"
-                                    alt="Business professionals reviewing products during a factory visit" width="627"
-                                    height="627" loading="lazy" decoding="async" /></figure>
-                        </a>
+                        </div>
+                    </article>
 
-                        <a class="travlink-explore__small-card travlink-explore__reveal" href="/travel/">
-                            <div class="travlink-explore__small-copy">
-                                <span>Premium Travel</span>
-                                <!-- <h3>Travel Exceptionally</h3> -->
-                                <strong>Learn more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></strong>
+                    <article class="travlink-possibilities__card">
+                        <figure class="travlink-possibilities__media">
+                            <img src="/img/explore/generated/tradeee.webp" alt="Business" loading="lazy" />
+                        </figure>
+                        <div class="travlink-possibilities__content">
+                            <span class="travlink-possibilities__number">03 &mdash; BUSINESS</span>
+                            <h3 class="travlink-possibilities__title">Travel With a Purpose</h3>
+                            <div class="travlink-possibilities__reveal">
+                                <p>Business trips, exhibitions and international market visits.</p>
+                                <!-- <a href="/trade/" class="travlink-possibilities__link">Explore <i class="fa-solid fa-arrow-right"></i></a> -->
                             </div>
-                            <figure><img src="/img/explore/generated/luxurytravel.png"
-                                    alt="Private jet and luxury yacht at a coastal marina" width="627" height="627"
-                                    loading="lazy" decoding="async" /></figure>
-                        </a>
+                        </div>
+                    </article>
 
-                        <a class="travlink-explore__small-card travlink-explore__reveal" href="/shipping/">
-                            <div class="travlink-explore__small-copy">
-                                <span>Visa Assistance</span>
-                                <!-- <h3>Move Across Borders</h3> -->
-                                <strong>Learn more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></strong>
+                    <article class="travlink-possibilities__card">
+                        <figure class="travlink-possibilities__media">
+                            <img src="/img/explore/generated/trade opp.webp" alt="Source" loading="lazy" />
+                        </figure>
+                        <div class="travlink-possibilities__content">
+                            <span class="travlink-possibilities__number">04 &mdash; SOURCE</span>
+                            <h3 class="travlink-possibilities__title">Discover Global Opportunities</h3>
+                            <div class="travlink-possibilities__reveal">
+                                <p>Meet suppliers, visit factories and explore products and markets.</p>
+                                <!-- <a href="/trade/" class="travlink-possibilities__link">Explore <i class="fa-solid fa-arrow-right"></i></a> -->
                             </div>
-                            <figure><img src="/img/explore/generated/visa ass.png"
-                                    alt="Container ship approaching an international cargo port" width="627"
-                                    height="627" loading="lazy" decoding="async" /></figure>
-                        </a>
+                        </div>
+                    </article>
 
-                        <a class="travlink-explore__small-card travlink-explore__reveal" href="/contact/">
-                            <div class="travlink-explore__small-copy">
-                                <span>Global Connections</span>
-                                <!-- <h3>Connect Worldwide</h3> -->
-                                <strong>Learn more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></strong>
+                    <article class="travlink-possibilities__card">
+                        <figure class="travlink-possibilities__media">
+                            <img src="/img/explore/generated/connection.webp" alt="Connect" loading="lazy" />
+                        </figure>
+                        <div class="travlink-possibilities__content">
+                            <span class="travlink-possibilities__number">05 &mdash; CONNECT</span>
+                            <h3 class="travlink-possibilities__title">Turn Meetings Into Partnerships</h3>
+                            <div class="travlink-possibilities__reveal">
+                                <p>Build relationships with people and businesses across borders.</p>
+                                <!-- <a href="/contact/" class="travlink-possibilities__link">Explore <i class="fa-solid fa-arrow-right"></i></a> -->
                             </div>
-                            <figure><img src="/img/explore/generated/connection.png"
-                                    alt="International business leaders shaking hands in a global lounge" width="627"
-                                    height="627" loading="lazy" decoding="async" /></figure>
-                        </a>
-                    </div>
+                        </div>
+                    </article>
                 </div>
+
             </div>
         </section>
-        <!-- explore without borders section end -->
+        <!-- possibilities section end -->
 
         <!-- about section start -->
         <section class="ca-about-3 travlink-about-editorial travlink-about-showcase"
@@ -546,47 +444,53 @@
             <div class="container">
                 <header class="travlink-about-showcase__header text-center">
                     <span class="travlink-about-showcase__eyebrow">About Travlink</span>
-                    <h2 class="travlink-section-heading" id="travlink-about-title">
-                        <strong>Built for journeys, trade,</strong>
-                        <em>and movement across borders.</em>
+                    <h2 class="travlink-section-heading" id="travlink-about-title" style="font-size: 2.5rem;">
+                        <strong>Built around, </strong>
+                        <em style="margin-top: 10px;">a simple idea</em>
                     </h2>
+                    <p class="travlink-possibilities__subheading" style="margin-top: 20px;">
+                        A journey can create an experience.
+                        An experience can reveal an opportunity.
+                        And an opportunity can become a lasting connection.
+                    </p>
                 </header>
 
                 <div class="travlink-about-showcase__stories">
                     <article class="travlink-about-showcase__story" data-aos="fade-up" data-aos-duration="650">
                         <figure class="travlink-about-showcase__visual">
-                            <img src="/img/about/about-travel-round.webp"
-                                alt="Aircraft wing above golden clouds" width="1000"
-                                height="1000" loading="lazy" decoding="async" />
+                            <img src="/img/about/about-travel-round.webp" alt="Aircraft wing above golden clouds"
+                                width="1000" height="1000" loading="lazy" decoding="async" />
                         </figure>
-                        <h3>Travel</h3>
-                        <p>Thoughtful journeys, planned around the way you want to move.</p>
+                        <h3>Journey</h3>
+                        <p>Every journey begins with a purpose.</p>
                     </article>
 
                     <article class="travlink-about-showcase__story" data-aos="fade-up" data-aos-delay="100"
                         data-aos-duration="650">
                         <figure class="travlink-about-showcase__visual">
                             <img src="/img/about/about-trade-round.webp"
-                                alt="Container ship crossing blue coastal water"
-                                width="1000" height="1000" loading="lazy" decoding="async" />
+                                alt="Container ship crossing blue coastal water" width="1000" height="1000"
+                                loading="lazy" decoding="async" />
                         </figure>
-                        <h3>Trade</h3>
-                        <p>Reliable sourcing and trade support across global markets.</p>
+                        <h3>Opportunity</h3>
+                        <p>Sometimes travelling opens doors you weren't looking for.</p>
                     </article>
 
                     <article class="travlink-about-showcase__story" data-aos="fade-up" data-aos-delay="200"
                         data-aos-duration="650">
                         <figure class="travlink-about-showcase__visual">
-                            <img src="/img/about/about-connect-round.webp"
-                                alt="Global business meeting and network" width="1000"
-                                height="1000" loading="lazy" decoding="async" />
+                            <img src="/img/about/about-connect-round.webp" alt="Global business meeting and network"
+                                width="1000" height="1000" loading="lazy" decoding="async" />
                         </figure>
-                        <h3>Connect</h3>
-                        <p>People, ideas, and opportunities brought closer.</p>
+                        <h3>Connection</h3>
+                        <p>The right journey can lead to the right people, ideas and partnerships.</p>
                     </article>
                 </div>
 
                 <div class="travlink-about-showcase__footer text-center">
+                    <p style="margin-bottom: 24px; font-weight: 500; font-size: 1.1rem; color: #333;">
+                        This is the idea behind Travlink Global &mdash; Travel. Trade. Connect.
+                    </p>
                     <a href="/about/" class="travlink-about-showcase__button">
                         About Travlink
                         <span aria-hidden="true"><i class="fa-solid fa-angle-right"></i></span>
@@ -727,11 +631,11 @@
         <div class="travlink-footer__top">
             <div class="travlink-footer__brand">
                 <a class="travlink-footer__logo" href="/" aria-label="Travlink Global home">
-                    <img src="/img/logo/travlink-secondary.png" alt="Travlink Global" />
+                    <img src="/img/logo/travlink-secondary.webp" alt="Travlink Global" / loading="lazy"
+                        decoding="async">
                 </a>
                 <p class="travlink-footer__description">
-                    Connecting people and businesses across borders through trusted
-                    travel and trade solutions.
+                    Connecting people, businesses and opportunities across borders through Travel & Trade.
                 </p>
                 <div class="travlink-footer__socials" aria-label="Social media links">
                     <a href="https://www.instagram.com/travlinkglobal?igsh=MTJsZXBidGRzZGVxYQ%3D%3D&amp;utm_source=qr"
@@ -750,10 +654,10 @@
                 <h2>Quick Links</h2>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/travel/">Travel</a></li>
-                    <li><a href="/trade/">Trade</a></li>
-                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/#travlink-services">Services</a></li>
+                    <li><a href="/faqs/">FAQ</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
                 </ul>
             </nav>
 
@@ -768,15 +672,13 @@
             <div class="travlink-footer__column travlink-footer__contact">
                 <h2>Contact</h2>
                 <ul>
-                    <li>
-                        <a href="https://wa.me/917907048353" target="_blank" rel="noopener noreferrer"><i
-                                class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</a>
-                    </li>
-                    <li>
-                        <a href="mailto:info@travlinkglobal.com"><i class="fa-regular fa-envelope"
-                                aria-hidden="true"></i>info@travlinkglobal.com
-                        </a>
-                    </li>
+                    <li><a href="https://wa.me/917907048353" target="_blank" rel="noopener noreferrer"><i
+                                class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</a></li>
+                    <li><a href="mailto:info@travlinkglobal.com"><i class="fa-regular fa-envelope"
+                                aria-hidden="true"></i>info@travlinkglobal.com</a></li>
+                    <li><a href="https://www.instagram.com/travlinkglobal?igsh=MTJsZXBidGRzZGVxYQ%3D%3D&amp;utm_source=qr"
+                            target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"
+                                aria-hidden="true"></i>Instagram</a></li>
                 </ul>
             </div>
         </div>
@@ -799,17 +701,17 @@
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
 </a>
 
-<script src="/js/jquery-3.7.1.min.js"></script>
-<script src="/js/bootstrap.bundle.min.js"></script>
-<script src="/js/jquery.magnific-popup.min.js"></script>
-<script src="/js/jquery.counterup.min.js"></script>
-<script src="/js/slick.min.js"></script>
-<script src="/js/jquery.nice-select.js"></script>
-<script src="/js/waypoints.min.js"></script>
-<script src="/js/aos.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/scroll-motion.js"></script>
-<script src="/js/mobile-navigation.js"></script>
+<script defer src="/js/jquery-3.7.1.min.js"></script>
+<script defer src="/js/bootstrap.bundle.min.js"></script>
+<script defer src="/js/jquery.magnific-popup.min.js"></script>
+<script defer src="/js/jquery.counterup.min.js"></script>
+<script defer src="/js/slick.min.js"></script>
+<script defer src="/js/jquery.nice-select.js"></script>
+<script defer src="/js/waypoints.min.js"></script>
+<script defer src="/js/aos.js"></script>
+<script defer src="/js/main.js"></script>
+<script defer src="/js/scroll-motion.js"></script>
+<script defer src="/js/mobile-navigation.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -940,7 +842,7 @@
         }
     });
 </script>
-<script src="/js/home-explore-editorial.js?v=20260808-1"></script>
+<script defer src="/js/home-explore-editorial.js?v=20260808-1"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const canvas = document.querySelector(".travlink-story-canvas");

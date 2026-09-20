@@ -11,7 +11,7 @@ export default function Footer() {
           <a className="travlink-footer__logo" href="/" aria-label="Travlink Global home">
             <Image src="/img/logo/travlink-secondary-2026.png" alt="Travlink Global" />
           </a>
-          <p className="travlink-footer__description">Connecting people and businesses across borders through trusted travel and trade solutions.</p>
+          <p className="travlink-footer__description">Connecting people, businesses and opportunities across borders through Travel & Trade.</p>
           <div className="travlink-footer__socials" aria-label="Social media links">{socialLinks.map((link) => <a key={link.id} href={link.href} target={link.href === "#" ? undefined : "_blank"} rel={link.href === "#" ? undefined : "noopener noreferrer"} aria-label={link.label}><i className={link.icon} /></a>)}</div>
         </div>
         <nav className="travlink-footer__column" aria-label="Footer quick links"><h2>Quick Links</h2><ul>{footerNavigation.map((link) => <li key={link.id}><a href={link.href}>{link.label}</a></li>)}</ul></nav>

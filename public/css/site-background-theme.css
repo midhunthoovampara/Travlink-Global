@@ -13,11 +13,14 @@
   background: transparent !important;
 }
 
-.travlink-home .travlink-service-section,
-.travlink-home .travlink-process,
-.travlink-home .travlink-about-showcase,
+.travlink-home .travlink-service-section {
+  background: #FFFFFF !important;
+}
+.travlink-home .travlink-about-showcase {
+  background: #F5F8FA !important;
+}
 .travlink-home .contact-3-area {
-  background: #fbf8f1 !important;
+  background: #F5F7F9 !important;
 }
 
 /* Fixed white navigation for every inner page. */

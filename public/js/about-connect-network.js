@@ -15,12 +15,14 @@
           card.setAttribute("aria-pressed", active ? "true" : "false");
         });
         routes.forEach(function (route) {
-          route.classList.toggle("is-active", route.dataset.connectLine === name);
-          route.classList.toggle("is-muted", route.dataset.connectLine !== name);
+          var isActive = Boolean(route.dataset.connectLine && route.dataset.connectLine.split(" ").indexOf(name) !== -1);
+          route.classList.toggle("is-active", isActive);
+          route.classList.toggle("is-muted", !isActive);
         });
         nodes.forEach(function (node) {
-          node.classList.toggle("is-active", node.dataset.connectNode === name);
-          node.classList.toggle("is-muted", node.dataset.connectNode !== name);
+          var isActive = Boolean(node.dataset.connectNode && node.dataset.connectNode.split(" ").indexOf(name) !== -1);
+          node.classList.toggle("is-active", isActive);
+          node.classList.toggle("is-muted", !isActive);
         });
         if (cardGroup) cardGroup.classList.add("has-active");
       }

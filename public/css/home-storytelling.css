@@ -393,64 +393,7 @@
   filter: saturate(1);
 }
 
-/* Contact keeps its form and details, with premium focus and surface treatment. */
-.travlink-story-canvas .contact-3-area .ca-contact-from,
-.travlink-story-canvas .contact-3-area .ca-location-icbox {
-  border: 1px solid rgba(24, 84, 142, .12);
-  background: rgba(255, 255, 255, .84) !important;
-  box-shadow: 0 22px 60px rgba(13, 55, 96, .09);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
 
-.travlink-story-canvas .contact-3-area .ca-location-icbox:hover,
-.travlink-story-canvas .contact-3-area .ca-location-icbox:focus-visible {
-  border-color: rgba(93, 176, 236, .62);
-  background: linear-gradient(135deg, #0e47a1 0%, #1769b2 100%) !important;
-  box-shadow: 0 24px 58px rgba(14, 71, 161, .24);
-  color: #fff;
-  outline: none;
-  transform: translateY(-3px);
-}
-
-.travlink-story-canvas .contact-3-area .ca-location-icbox:hover .ca-location-icbox-img span,
-.travlink-story-canvas .contact-3-area .ca-location-icbox:focus-visible .ca-location-icbox-img span {
-  background: rgba(255, 255, 255, .14);
-}
-
-.travlink-story-canvas .contact-3-area .ca-location-icbox:is(:hover, :focus-visible) .ca-location-icbox-text :is(.ca-title, p, a, .travlink-whatsapp-card__copy) {
-  color: #fff !important;
-  opacity: .92;
-}
-
-.travlink-story-canvas .contact-3-area .ca-location-icbox:is(:hover, :focus-visible) .ca-location-icbox-text .ca-title {
-  opacity: 1;
-}
-
-.travlink-story-canvas .contact-3-area .ca-contact-from {
-  position: relative;
-}
-
-.travlink-story-canvas .contact-3-area .ca-contact-from::before {
-  display: none;
-  content: none;
-}
-
-.travlink-story-canvas .contact-3-area :is(input, textarea, select):focus {
-  border-color: #2476c5 !important;
-  box-shadow: 0 0 0 4px rgba(36, 118, 197, .1);
-  outline: none;
-}
-
-.travlink-story-canvas .contact-3-area .ca-btn-primary-3,
-.travlink-story-canvas .travlink-about-showcase__button {
-  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
-}
-
-.travlink-story-canvas .contact-3-area .ca-btn-primary-3:hover,
-.travlink-story-canvas .travlink-about-showcase__button:hover {
-  transform: translateY(-2px);
-}
 
 /* Shared progressive reveal: content stays visible when scripting is unavailable. */
 .story-motion-ready .story-reveal {

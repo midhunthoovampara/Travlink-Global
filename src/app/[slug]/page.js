@@ -18,3 +18,5 @@ export default async function StaticContentPage({ params }) {
   if (!pageKeys.includes(slug)) notFound();
   return <ContentPage pageKey={slug} />;
 }
+
+console.log('StaticContentPage loaded');
