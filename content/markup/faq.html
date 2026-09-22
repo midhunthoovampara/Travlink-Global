@@ -152,8 +152,8 @@
 <!-- offcanvas end -->
 
 <main>
-    <!-- breadcrumb area start -->
-    <!-- breadcrumb area end -->
+    <!-- Spacer for sticky header -->
+    <div style="height: 100px;" aria-hidden="true"></div>
 
     <!-- <div class="ca-faq-inner pt-100 pb-70">
     <div class="container">
@@ -292,6 +292,12 @@
     </div>
     </div> -->
 
+    <style>
+        .ca-iner-accordion-item .accordion-button {
+            font-weight: 700 !important;
+        }
+    </style>
+
     <section class="ca-faq-iner2 pt-100 pb-70">
         <div class="container">
             <div class="ca-about-content-3 ca-sec-content-3 text-center mb-60">
@@ -308,76 +314,148 @@
                     <div class="ca-faq-acc">
                         <div class="ca-accordion" id="accordionExample1">
                             <div class="row">
+                                <!-- Left Column: FAQs 1–4 -->
                                 <div class="col-lg-6">
                                     <div class="accordion" id="accordionExample2">
-                                        <!-- single acordion item -->
-                                        <div class="ca-iner-accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    Do you arrange private jet charters, luxury yachts,
-                                                    and sailing experiences?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordionExample1">
-                                                <div class="accordion-body">
-                                                    <p>
-                                                        Yes. We can arrange private jet charters, luxury
-                                                        yacht charters, and exclusive sailing experiences
-                                                        based on your destination and travel requirements.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single acordion item -->
+
+                                        <!-- FAQ 1 -->
                                         <div class="ca-iner-accordion-item">
                                             <h2 class="accordion-header">
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseOne" aria-expanded="true"
-                                                    aria-controls="collapseOne">
-                                                    Can I customize my travel itinerary?
+                                                    data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                                                    What services does Travlink Global offer?
                                                 </button>
                                             </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                                data-bs-parent="#accordionExample1">
+                                            <div id="faqOne" class="accordion-collapse collapse show"
+                                                data-bs-parent="#accordionExample2">
                                                 <div class="accordion-body">
-                                                    <p>
-                                                        Absolutely. Every itinerary can be tailored to your
-                                                        budget, travel dates, interests, and preferred
-                                                        experiences.
-                                                    </p>
+                                                    <p>Travlink Global provides travel, visa assistance, business travel, product sourcing, shipping, customs clearance, and premium travel experiences. We help individuals and businesses manage their travel and international business requirements through one platform.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="accordion" id="accordionExample3">
-                                        <!-- single acordion item -->
+
+                                        <!-- FAQ 2 -->
                                         <div class="ca-iner-accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                                    aria-expanded="false" aria-controls="collapseFive">
-                                                    How can I get a quotation?
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                                                    Do you guarantee visa approval?
                                                 </button>
                                             </h2>
-                                            <div id="collapseFive" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordionExample3">
+                                            <div id="faqTwo" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExample2">
                                                 <div class="accordion-body">
-                                                    <p>
-                                                        Simply contact us via WhatsApp, phone, email, or
-                                                        Instagram DM with your requirements. Our team will
-                                                        review your request and provide a personalized
-                                                        quotation based on your travel or business needs.
-                                                    </p>
+                                                    <p>No. Visa approval is solely at the discretion of the respective embassy or immigration authority. We ensure your application is prepared accurately and professionally to help minimize errors and improve the quality of your application.</p>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- FAQ 3 -->
+                                        <div class="ca-iner-accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                                                    Which countries do you provide visa assistance for?
+                                                </button>
+                                            </h2>
+                                            <div id="faqThree" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <p>We assist with visa applications for multiple destinations, depending on your nationality, travel purpose, and eligibility. Contact us with your requirements and our team will advise you on the available options.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 4 -->
+                                        <div class="ca-iner-accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                                                    Can you arrange business trips and trade fair visits?
+                                                </button>
+                                            </h2>
+                                            <div id="faqFour" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <p>Yes. We arrange business travel and trade fair visits, including visa assistance, flights, accommodation, local transportation, factory visits, and access to major international exhibitions such as the Canton Fair.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
+
+                                <!-- Right Column: FAQs 5–8 -->
+                                <div class="col-lg-6">
+                                    <div class="accordion" id="accordionExample3">
+
+                                        <!-- FAQ 5 -->
+                                        <div class="ca-iner-accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#faqFive" aria-expanded="true" aria-controls="faqFive">
+                                                    Can Travlink Global help me source products internationally?
+                                                </button>
+                                            </h2>
+                                            <div id="faqFive" class="accordion-collapse collapse show"
+                                                data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>Yes. We assist businesses with product sourcing, supplier identification, manufacturer communication, supplier verification, procurement coordination, and related international trade requirements, particularly in markets such as China and Vietnam.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 6 -->
+                                        <div class="ca-iner-accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#faqSix" aria-expanded="false" aria-controls="faqSix">
+                                                    Do you provide shipping and customs clearance?
+                                                </button>
+                                            </h2>
+                                            <div id="faqSix" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>Yes. We provide international shipping, freight forwarding, customs clearance, and logistics support for import and export shipments, helping coordinate the process from supplier to destination.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 7 -->
+                                        <div class="ca-iner-accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#faqSeven" aria-expanded="false" aria-controls="faqSeven">
+                                                    Can you arrange private jets, luxury yachts, and customized travel experiences?
+                                                </button>
+                                            </h2>
+                                            <div id="faqSeven" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>Yes. We can arrange private jet charters, luxury yacht charters, sailing experiences, and other premium travel experiences. Travel itineraries can also be customized according to your destination, dates, interests, and budget.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 8 -->
+                                        <div class="ca-iner-accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#faqEight" aria-expanded="false" aria-controls="faqEight">
+                                                    How can I get a quotation or start planning?
+                                                </button>
+                                            </h2>
+                                            <div id="faqEight" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>Simply contact Travlink Global through WhatsApp, phone, email, or Instagram with your travel or business requirements. Our team will review your request and provide a personalized quotation or recommend the next steps.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

@@ -250,64 +250,60 @@
 
     <div class="travlink-story-canvas">
         <!-- service section start -->
-        <section id="travlink-services" class="ca-service-3 travlink-service-section travlink-blue-shade pt-30 pb-70"
-            style="background-color: #000000 !important;">
-            <div class="container travlink-services-composition">
-                <div class="ca-portfolio-content-3 ca-sec-content-3 travlink-service-intro text-center mb-60"
-                    data-aos="fade-up" data-aos-duration="800">
-                    <span class="travlink-service-intro__eyebrow">
-                        <span class=></span>
-                        Our Services
-                    </span>
-                    <h2 class="travlink-section-heading">
-                        <strong>One world,</strong>
+        <section id="travlink-services" class="travlink-services-redesign">
+            <!-- Map Background -->
+            <div class="travlink-services-redesign__map" style="background-image: url('/img/services/bgg.png');"></div>
+
+            <div class="container">
+                <div class="travlink-services-redesign__header" data-aos="fade-up" data-aos-duration="800">
+                    <div class="travlink-services-redesign__eyebrow">&mdash; OUR SERVICES</div>
+                    <h2 class="travlink-services-redesign__title">
+                        One world,<br>
                         <em>Two ways forward.</em>
                     </h2>
-                    <p class="travlink-service-intro__copy">
-                        From journeys shaped around you to global opportunities thoughtfully connected, choose the path
-                        that moves you forward.
+                    <p class="travlink-services-redesign__copy" style="max-width: 700px;">
+                        From journeys shaped around you to global opportunities thoughtfully connected,
+                        choose the path that moves you forward.
                     </p>
                 </div>
-                <div class="travlink-services-editorial">
-                    <div class="travlink-service-gateways">
-                        <article class="travlink-service-card" tabindex="0" aria-expanded="false" data-aos="fade-right"
-                            data-aos-duration="800">
-                            <a href="/travel/"
-                                style="display: block; width: 100%; height: 100%; position: absolute; inset: 0; z-index: 1;">
-                                <img class="travlink-service-card__image" src="/img/explore/generated/luxurytravel.webp"
-                                    alt="Traveler with luggage looking across an airport runway at blue hour"
-                                    loading="lazy" decoding="async">
-                            </a>
-                            <div class="travlink-service-card__content" style="pointer-events: none;">
-                                <h2 class="travlink-service-card__title">Travel</h2>
-                                <p class="travlink-service-card__description">
-                                    Visas, curated journeys & business travel.
-                                </p>
-                                <a class="travlink-hero__explore" href="/travel/" style="pointer-events: auto;">
-                                    Explore more <span aria-hidden="true">&rarr;</span>
-                                </a>
-                            </div>
-                        </article>
 
-                        <article class="travlink-service-card" tabindex="0" aria-expanded="false" data-aos="fade-left"
-                            data-aos-duration="800">
-                            <a href="/trade/"
-                                style="display: block; width: 100%; height: 100%; position: absolute; inset: 0; z-index: 1;">
-                                <img class="travlink-service-card__image" src="/img/explore/generated/tradeee.webp"
-                                    alt="Cargo ship at a modern international port during blue hour" loading="lazy"
-                                    decoding="async">
-                            </a>
-                            <div class="travlink-service-card__content" style="pointer-events: none;">
-                                <h2 class="travlink-service-card__title">Trade</h2>
-                                <p class="travlink-service-card__description">
-                                    Sourcing, shipping & global trade support.
-                                </p>
-                                <a class="travlink-hero__explore" href="/trade/" style="pointer-events: auto;">
-                                    Explore more <span aria-hidden="true">&rarr;</span>
-                                </a>
+                <div class="travlink-services-redesign__grid">
+                    <!-- Travel Card -->
+                    <a href="/travel/" class="travlink-service-rcard" data-aos="fade-right" data-aos-duration="800">
+                        <div class="travlink-service-rcard__bg"
+                            style="background-image: url('/img/services/travel.png');"></div>
+                        <div class="travlink-service-rcard__overlay"></div>
+                        <div class="travlink-service-rcard__content">
+                            <div class="travlink-service-rcard__number">&mdash; 01</div>
+                            <div class="travlink-service-rcard__icon">
+                                <i class="fa-solid fa-plane-up"></i>
                             </div>
-                        </article>
-                    </div>
+                            <h3 class="travlink-service-rcard__title">TRAVEL</h3>
+                            <p class="travlink-service-rcard__desc">Visas, curated journeys &amp; business travel.</p>
+                        </div>
+                        <div class="travlink-service-rcard__arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Trade Card -->
+                    <a href="/trade/" class="travlink-service-rcard" data-aos="fade-left" data-aos-duration="800"
+                        data-aos-delay="100">
+                        <div class="travlink-service-rcard__bg"
+                            style="background-image: url('/img/services/trade.png');"></div>
+                        <div class="travlink-service-rcard__overlay"></div>
+                        <div class="travlink-service-rcard__content">
+                            <div class="travlink-service-rcard__number">&mdash; 02</div>
+                            <div class="travlink-service-rcard__icon">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <h3 class="travlink-service-rcard__title">TRADE</h3>
+                            <p class="travlink-service-rcard__desc">Sourcing, shipping &amp; global trade support.</p>
+                        </div>
+                        <div class="travlink-service-rcard__arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -317,32 +313,27 @@
         <!-- why choose us section end -->
 
         <!-- destination banner section start -->
-        <section class="travlink-destination-banner" aria-label="Destination Banner">
-            <div class="travlink-destination-banner__bg-wrap">
-                <div class="travlink-destination-banner__bg"
-                    style="background-image: url('/img/process/simplebg.webp');"></div>
-                <div class="travlink-destination-banner__overlay"></div>
-            </div>
-
+        <div class="travlink-destination-banner" style="background-color: #f0f8ff; background-image: url('/img/process/01-BANNER.png'); background-size: cover; background-position: center;">
             <div class="container">
                 <div class="travlink-destination-banner__content">
                     <h2 class="travlink-destination-banner__quote" data-aos="fade-up" data-aos-duration="800"
-                        data-aos-easing="ease-out" data-aos-offset="50">
-                        “Sometimes the destination is only the beginning.”
+                        data-aos-delay="100" data-aos-easing="ease-out" data-aos-offset="50">
+                        &ldquo;Sometimes the destination is only the<br>
+                        <em>beginning.</em>&rdquo;
                     </h2>
                     <p class="travlink-destination-banner__tagline" data-aos="fade-up" data-aos-duration="800"
-                        data-aos-delay="100" data-aos-easing="ease-out" data-aos-offset="50">
-                        Travel &bull; Trade &bull; Connect
+                        data-aos-delay="200" data-aos-easing="ease-out" data-aos-offset="50">
+                        TRAVEL &bull; TRADE &bull; CONNECT
                     </p>
                 </div>
 
                 <a href="#explore-next" class="travlink-destination-banner__scroll" data-aos="fade-up"
-                    data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out" data-aos-offset="50">
+                    data-aos-duration="800" data-aos-delay="300" data-aos-easing="ease-out" data-aos-offset="50">
                     <i class="fa-solid fa-arrow-down"></i>
                     <span>Explore further</span>
                 </a>
             </div>
-        </section>
+        </div>
         <!-- destination banner section end -->
 
         <!-- possibilities section start -->
@@ -517,7 +508,7 @@
                     </h2>
                 </div>
                 <div class="row align-items-center">
-                    <div class="col-xl-6 mb-30">
+                    <div class="col-xl-8 col-lg-7 mb-30">
                         <div class="ca-contact-from w-bg ca-contact-from-3 aos-init aos-animate" data-aos="fade-right"
                             data-aos-duration="1200">
                             <div class="ca-contact-content-3">
@@ -533,58 +524,53 @@
                             <form action="#">
                                 <div class="row">
                                     <div class="col-md-6 mb-20">
-                                        <input type="text" placeholder="First Name" />
+                                        <input type="text" placeholder="First Name*" />
                                     </div>
                                     <div class="col-md-6 mb-20">
-                                        <input type="text" placeholder="Last Name" />
+                                        <input type="text" placeholder="Last Name*" />
                                     </div>
                                     <div class="col-md-6 mb-20">
-                                        <input type="tel" placeholder="Phone Number" />
+                                        <input type="tel" placeholder="Phone / WhatsApp Number*" />
                                     </div>
                                     <div class="col-md-6 mb-20">
-                                        <input type="email" placeholder="Email Address" />
+                                        <input type="email" placeholder="Email Address*" />
                                     </div>
-                                    <div class="col-md-12 mb-20">
-                                        <select class="nice-select wide ca-select">
-                                            <option value="1">Travel</option>
-                                            <option value="2">Trade</option>
-                                            <option value="3">Shipping</option>
+                                    <div class="col-md-12 mb-20 text-start">
+                                        <label>What can we help you with?</label>
+                                        <select class="nice-select ca-select">
+                                            <option value="" disabled selected hidden>Select an option</option>
+                                            <option value="Visa Assistance">Visa Assistance</option>
+                                            <option value="Holiday / Tour Package">Holiday / Tour Package</option>
+                                            <option value="Strangers Camp / Group Experiences">Strangers Camp / Group
+                                                Experiences</option>
+                                            <option value="Business Travel">Business Travel</option>
+                                            <option value="Premium Travel & Experiences">Premium Travel & Experiences
+                                            </option>
+                                            <option value="Product Sourcing">Product Sourcing</option>
+                                            <option value="Shipping & Logistics">Shipping & Logistics</option>
+                                            <option value="Customs Clearance">Customs Clearance</option>
+                                            <option value="Other">Other</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-12 mb-20">
-                                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                                    <div class="col-md-12 mb-20 text-start">
+                                        <label>Tell us what you need*</label>
+                                        <textarea name="message" id="message"
+                                            placeholder="Share a few details about your travel plans..."></textarea>
                                     </div>
-                                    <div class="submit-btn">
-                                        <button class="ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit"
-                                            value="submit">
-                                            Send Message<span><i class="fa-solid fa-angle-right"></i></span>
+                                    <div class="col-md-12 submit-btn mt-10">
+                                        <button
+                                            class="ca-btn-primary-3 theme-bg-3 text-white br-50 w-100 justify-content-center"
+                                            type="submit" value="submit">
+                                            Send Enquiry <span><i class="fa-solid fa-arrow-right"></i></span>
                                         </button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <div class="col-xl-6 mb-30">
+                    <div class="col-xl-4 col-lg-5 mb-30">
                         <div class="ca-form-loca-3 ml-50 aos-init aos-animate" data-aos="fade-left"
                             data-aos-duration="1400">
-                            <!-- single box item -->
-                            <div class="ca-location-3 mb-20">
-                                <div class="ca-location-icbox">
-                                    <div class="ca-location-icbox-img">
-                                        <span><img src="/img/icon/ca-location3.1.svg" alt="" /></span>
-                                    </div>
-                                    <div class="ca-location-icbox-text">
-                                        <h4 class="ca-title fnw-600 theme-black-3 pb-12">
-                                            Contact Us
-                                        </h4>
-                                        <p>
-                                            Room No. III/54, Chandappura to Eriyad Road, Near Eriyad
-                                            Block Office, Eriyad P O, Kodungallur, THRISSUR, KERALA,
-                                            680666
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                             <!-- single box item -->
                             <div class="ca-location-3 mb-20">
                                 <a class="ca-location-icbox travlink-whatsapp-card" href="https://wa.me/917907048353"
@@ -594,10 +580,11 @@
                                         <span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
                                     </div>
                                     <div class="ca-location-icbox-text">
-                                        <h4 class="ca-title fnw-600 theme-black-3 pb-12">
-                                            Chat on WhatsApp
+                                        <h4 class="ca-title fnw-600 theme-black-3 pb-12"
+                                            style="text-transform: uppercase;">
+                                            WHATSAPP
                                         </h4>
-                                        <span class="travlink-whatsapp-card__copy">Message us directly</span>
+                                        <span class="travlink-whatsapp-card__copy">Chat with our team &rarr;</span>
                                     </div>
                                 </a>
                             </div>
@@ -605,14 +592,15 @@
                             <div class="ca-location-3 mb-20">
                                 <div class="ca-location-icbox">
                                     <div class="ca-location-icbox-img">
-                                        <span><img src="/img/icon/ca-location3.3.svg" alt="" /></span>
+                                        <span><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
                                     </div>
                                     <div class="ca-location-icbox-text">
-                                        <h4 class="ca-title fnw-600 theme-black-3 pb-12">
-                                            Send Email
+                                        <h4 class="ca-title fnw-600 theme-black-3 pb-12"
+                                            style="text-transform: uppercase;">
+                                            EMAIL
                                         </h4>
                                         <a href="mailto:info@travlinkglobal.com">
-                                            info@travlinkglobal.com</a>
+                                            Send us an enquiry &rarr;</a>
                                     </div>
                                 </div>
                             </div>

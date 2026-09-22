@@ -46,7 +46,7 @@ img { max-width: 100%; height: auto; }
     .ca-service-3-cards { display: flex; flex-wrap: nowrap; gap: 16px; margin-right: -20px; margin-left: -20px; padding: 8px max(20px, calc((100% - min(78vw, 300px)) / 2)) 22px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-behavior: smooth; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
     .ca-service-3-cards::-webkit-scrollbar, .travlink-trade-services__list::-webkit-scrollbar, .travlink-shipping-services__list::-webkit-scrollbar { display: none; }
     .ca-service-3-cards > [class*="col-"] { flex: 0 0 min(78vw, 300px); width: min(78vw, 300px); padding: 0; scroll-snap-align: center; }
-    .travlink-service-card, .travlink-service-card__content { min-height: 570px !important; height: 570px; }
+    .travlink-service-card, .travlink-service-card__content { min-height: 420px !important; height: 420px; }
     .travlink-service-card__content { padding: 26px 24px; }
     .travlink-service-card__title { font-size: 42px; }
     .travlink-service-card__description { font-size: 14px; line-height: 1.55; }

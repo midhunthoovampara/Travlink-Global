@@ -10,16 +10,9 @@
   overflow: hidden;
 }
 
-/* Subtle decorative top border */
+/* Subtle decorative top border — removed */
 .travlink-trade-services::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #1766bd 0%, #2f9fe6 50%, #1766bd 100%);
-  content: "";
-  pointer-events: none;
+  display: none;
 }
 
 /* Reset any override from site-background-theme */
