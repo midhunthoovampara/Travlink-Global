@@ -6478,12 +6478,14 @@ body main section:not(.travlink-hero) {
 }
 
 /* Mobile responsive */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .travlink-destination-banner {
-        min-height: 32vh;
-        /* Slightly taller to fit everything */
-        padding: 30px 16px 55px;
-        /* More padding at bottom to prevent overlap */
+        min-height: auto;
+        aspect-ratio: 16/7;
+        padding: 15px 16px 45px;
+        background-image: url('/img/process/01-BANNER-mobile.png') !important;
+        background-size: cover;
+        background-position: center;
     }
 
     .travlink-destination-banner__bg {
@@ -6495,65 +6497,74 @@ body main section:not(.travlink-hero) {
         background-position: center;
     }
 
+    .travlink-destination-banner .container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 100% !important;
+        width: 100% !important;
+    }
+
     .travlink-destination-banner__content {
-        max-width: 100%;
-        padding: 0 8px;
-    }
-
-    .travlink-destination-banner__eyebrow {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-        margin-bottom: 8px;
-    }
-
-    .travlink-destination-banner__eyebrow::before,
-    .travlink-destination-banner__eyebrow::after {
-        width: 16px;
+        display: contents !important;
     }
 
     .travlink-destination-banner__quote {
-        font-size: clamp(12px, 3.5vw, 16px);
-        margin-bottom: 6px;
-    }
-
-    .travlink-destination-banner__tagline {
-        font-size: 8px;
-        letter-spacing: 0.15em;
+        order: 1 !important;
+        font-size: clamp(12px, 3.5vw, 16px) !important;
+        line-height: 1.15 !important;
+        max-width: 95% !important;
+        text-align: center !important;
+        margin: 0 auto 4px !important;
+        white-space: normal !important;
     }
 
     .travlink-destination-banner__scroll {
-        position: absolute;
-        bottom: 15px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        gap: 4px;
-        font-size: 9px;
+        order: 2 !important;
+        position: static !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2px !important;
+        font-size: 8px !important;
+        margin: 0 auto 4px !important;
+        transform: none !important;
+        bottom: auto !important;
     }
 
     .travlink-destination-banner__scroll i {
-        width: 24px;
-        height: 24px;
-        font-size: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        width: 18px !important;
+        height: 18px !important;
+        font-size: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .travlink-destination-banner__tagline {
+        order: 3 !important;
+        font-size: 7px !important;
+        letter-spacing: 0.15em !important;
+        text-align: center !important;
+        margin: 0 !important;
+        width: 100% !important;
     }
 }
 
 /* Circular scroll button */
 .travlink-destination-banner__scroll {
     position: absolute;
-    bottom: 36px;
+    bottom: 10px;
     left: 0;
     right: 0;
     margin: 0 auto;
     width: max-content;
     z-index: 3;
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 8px;
     color: rgba(255, 255, 255, 0.85);
