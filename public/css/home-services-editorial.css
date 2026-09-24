@@ -193,6 +193,19 @@
         padding: 60px 0;
     }
 
+    .travlink-services-redesign__header {
+        margin-bottom: 30px;
+    }
+
+    .travlink-services-redesign__title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .travlink-services-redesign__copy {
+        font-size: 14px;
+    }
+
     .travlink-service-rcard {
         min-height: 200px;
         padding: 30px;

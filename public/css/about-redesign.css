@@ -22,9 +22,8 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
-    padding: 140px 20px 60px;
-    /* Added top padding for header overlap, reduced overall */
+    align-items: flex-end;
+    padding: 175px 20px 82px;
     z-index: 1;
 }
 
