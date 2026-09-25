@@ -539,24 +539,24 @@
 @media (max-width: 767px) {
     .travlink-home .travlink-hero__content {
         min-height: calc(100svh - 72px) !important;
-        align-items: flex-start;
+        align-items: center;
         justify-content: flex-end;
         padding: 0 14px 82px !important;
-        text-align: left !important;
+        text-align: center !important;
     }
 
     .travlink-home .travlink-hero__title {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
         padding: 0;
         font-size: clamp(32px, 9vw, 42px) !important;
         line-height: .96 !important;
-        text-align: left !important;
+        text-align: center !important;
     }
 
     .travlink-home .travlink-hero__title .title-blue {
-        text-align: left;
+        text-align: center;
     }
 
     .travlink-home .travlink-hero__title-lead,
@@ -692,5 +692,23 @@
 
     .travlink-home .contact-design-element {
         margin-bottom: 0 !important;
+    }
+}
+
+/* === MOBILE HERO META CENTERING FIX === */
+@media (max-width: 767px) {
+    .travlink-home .travlink-hero__meta {
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 16px !important;
+        align-items: center !important;
+    }
+    .travlink-home .travlink-hero__meta .travlink-hero__copy {
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+    .travlink-home .travlink-hero__explore {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }

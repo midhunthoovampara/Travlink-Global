@@ -6703,11 +6703,7 @@ body main section:not(.travlink-hero) {
         animation: mobileBgZoom 15s ease-in-out infinite alternate;
     }
 
-    .travlink-possibilities__reveal {
-        max-height: 300px;
-        opacity: 1;
-        margin-top: 15px;
-    }
+
 
     .travlink-about-showcase__footer {
         flex-direction: column;
