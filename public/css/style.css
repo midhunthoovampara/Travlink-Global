@@ -146,6 +146,220 @@ html {
     overflow-x: hidden;
 }
 
+/* Travel page: region discovery cards */
+.travlink-discover-section {
+    padding: 72px 0;
+    background: #f1f8fd;
+}
+
+.travlink-regions-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.travlink-regions-eyebrow {
+    display: block;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.travlink-regions-header h2 {
+    margin: 0;
+    color: #0b1c3c;
+    font-size: 2.2rem;
+}
+
+.travlink-regions-header p {
+    color: #666;
+}
+
+.travlink-regions-link {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 9px;
+    padding-bottom: 4px;
+    color: #0b1c3c;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.travlink-regions-link:hover {
+    color: #2365cf;
+}
+
+.travlink-regions-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.travlink-region-card {
+    transition: transform .3s ease;
+}
+
+.travlink-region-card:not(.travlink-region-card--more):hover {
+    transform: translateY(-5px);
+}
+
+.travlink-region-card__media {
+    height: 150px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(18, 51, 81, .1);
+}
+
+.travlink-region-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s ease;
+}
+
+.travlink-region-card:hover .travlink-region-card__media img {
+    transform: scale(1.045);
+}
+
+.travlink-region-card__content {
+    min-height: 86px;
+    padding: 15px 0 0;
+}
+
+.travlink-region-card__content h3,
+.travlink-region-card--more h3 {
+    margin: 0 0 6px;
+    color: #0b1c3c;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.travlink-region-card__content p,
+.travlink-region-card--more p {
+    margin: 0;
+    color: #666;
+    font-size: .9rem;
+    line-height: 1.4;
+}
+
+.travlink-region-card__content p span {
+    padding: 0 2px;
+    color: #93a2b1;
+}
+
+.travlink-region-card--more {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 24px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .72);
+    box-shadow: 0 5px 20px rgba(18, 51, 81, .04);
+}
+
+.travlink-region-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #e5f0f8;
+    color: #0b2d57;
+    font-size: 19px;
+}
+
+.travlink-region-card__more-copy h3 {
+    margin-bottom: 2px;
+}
+
+.travlink-region-card--more > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 11px 20px;
+    border-radius: 50px;
+    background: #0b2d57;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.travlink-region-card--more > a:hover {
+    background: #2365cf;
+    color: #fff;
+}
+
+@media (max-width: 1199.98px) {
+    .travlink-regions-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .travlink-discover-section {
+        padding: 52px 0;
+    }
+
+    .travlink-regions-header {
+        align-items: flex-start;
+    }
+
+    .travlink-regions-header p {
+        max-width: 285px;
+    }
+
+    .travlink-regions-link {
+        padding-top: 4px;
+        font-size: 0;
+    }
+
+    .travlink-regions-link i {
+        font-size: 15px;
+    }
+
+    .travlink-regions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .travlink-region-card__media {
+        height: 130px;
+    }
+
+    .travlink-region-card__content {
+        min-height: 92px;
+        padding: 12px 0 0;
+    }
+
+    .travlink-region-card--more {
+        grid-template-columns: auto 1fr;
+        gap: 14px;
+        padding: 18px;
+    }
+
+    .travlink-region-card--more > a {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .travlink-region-card__media {
+        height: 112px;
+    }
+}
+
 
 /* ============================================
                    Header Style 1
@@ -6227,7 +6441,7 @@ header.header-4 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: #000;
+    background-color: #e8eef3;
 }
 
 .travlink-possibilities__media {
@@ -6242,7 +6456,7 @@ header.header-4 {
 
 .travlink-possibilities__media img {
     width: 100%;
-    height: 90%;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -6250,21 +6464,14 @@ header.header-4 {
 .travlink-possibilities__card::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.95) 100%);
+    inset: 0;
     z-index: 2;
-    transition: background 0.4s ease;
+    background: rgba(7, 24, 43, 0.32);
+    pointer-events: none;
 }
 
 .travlink-possibilities__card:hover .travlink-possibilities__media img {
     transform: scale(1.05);
-}
-
-.travlink-possibilities__card:hover::after {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
 .travlink-possibilities__content {
@@ -6274,6 +6481,7 @@ header.header-4 {
     color: #fff;
     display: flex;
     flex-direction: column;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 .travlink-possibilities__number {
@@ -6681,8 +6889,9 @@ body main section:not(.travlink-hero) {
 @media (min-width: 768px) {
     .travlink-possibilities__grid {
         display: grid !important;
-        grid-template-columns: repeat(5, 1fr) !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
         gap: 15px !important;
+        align-items: stretch;
     }
 
     .travlink-possibilities__card {
