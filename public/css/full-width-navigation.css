@@ -6,8 +6,8 @@
   right: 0;
   left: 0;
   width: 100%;
-  height: 78px !important;
-  min-height: 78px !important;
+  height: 82px !important;
+  min-height: 82px !important;
   padding: 0 !important;
   border-radius: 0 !important;
   animation: none !important;
@@ -20,11 +20,11 @@
   display: flex;
   align-items: center;
   width: 100% !important;
-  height: 78px !important;
-  min-height: 78px !important;
+  height: 82px !important;
+  min-height: 82px !important;
   max-width: none !important;
   margin: 0 !important;
-  padding: 9px clamp(20px, 4vw, 64px) !important;
+  padding: 8px clamp(12px, 2.5vw, 40px) !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
@@ -35,15 +35,17 @@
   display: flex;
   align-items: center !important;
   width: 100%;
-  min-height: 60px;
+  min-height: 64px;
   margin: 0;
 }
 
 .travlink-react-page .header-area-3 .ca-logo {
   display: flex;
-  height: 60px;
+  height: 68px;
   align-items: center;
+  justify-content: flex-start;
   margin: 0;
+  margin-left: -8px;
   transform: none !important;
 }
 
@@ -64,14 +66,24 @@
 }
 
 .travlink-react-page .header-area-3 .travlink-site-logo {
-  width: min(205px, 100%) !important;
-  height: 60px !important;
+  width: min(245px, 100%) !important;
+  height: 68px !important;
+}
+
+.travlink-home .header-area-3 .ca-logo {
+  margin-left: -12px;
+}
+
+.travlink-home .header-area-3 .travlink-site-logo {
+  width: min(255px, 100%) !important;
+  height: 70px !important;
 }
 
 .travlink-react-page .header-area-3 .travlink-site-logo__image {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: left center;
 }
 
 .travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo__image--primary,
@@ -150,27 +162,57 @@
 @media (max-width: 767px) {
   .travlink-react-page .header-area-3.stiky,
   .travlink-react-page .header-area-3.stiky.scroll-header {
-    height: 64px !important;
-    min-height: 64px !important;
+    height: 70px !important;
+    min-height: 70px !important;
   }
 
   .travlink-react-page .header-area-3 > .container.fluid-header-3 {
-    height: 64px !important;
-    min-height: 64px !important;
-    padding: 7px 18px !important;
+    height: 70px !important;
+    min-height: 70px !important;
+    padding: 6px 14px !important;
   }
 
   .travlink-react-page .header-area-3 > .container.fluid-header-3 > .row {
-    min-height: 50px;
+    min-height: 56px;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .travlink-react-page .header-area-3 > .container.fluid-header-3 > .row > div:first-child {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    max-width: calc(100% - 56px) !important;
+    padding-left: 2px !important;
+    padding-right: 0 !important;
+  }
+
+  .travlink-react-page .header-area-3 > .container.fluid-header-3 > .row > div:last-child {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    margin-left: auto !important;
+    padding-right: 2px !important;
+    padding-left: 0 !important;
   }
 
   .travlink-react-page .header-area-3 .ca-logo {
-    height: 50px;
+    height: 58px;
+    justify-content: flex-start;
+    margin-left: -4px;
   }
 
   .travlink-react-page .header-area-3 .travlink-site-logo {
-    width: min(168px, 100%) !important;
-    height: 50px !important;
+    width: min(205px, 100%) !important;
+    height: 58px !important;
+  }
+
+  .travlink-home .header-area-3 .ca-logo {
+    margin-left: -6px;
+  }
+
+  .travlink-home .header-area-3 .travlink-site-logo {
+    width: min(218px, 100%) !important;
+    height: 60px !important;
   }
 
   .travlink-react-page .header-area-3 .ca-offcanvas-toogle {
@@ -194,27 +236,31 @@
   }
 
   .travlink-react-page .ca-offcanvas {
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: 12px;
     left: auto;
-    z-index: 1100;
+    z-index: 1300 !important;
     display: block;
-    width: min(calc(100% - 20px), 410px);
-    height: calc(100dvh - 20px);
-    max-height: none;
-    padding: 24px 22px 22px;
+    width: min(calc(100% - 24px), 360px);
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: calc(100dvh - 24px) !important;
+    padding: 20px 18px 20px;
     overflow-x: hidden;
     overflow-y: auto;
-    border: 1px solid rgba(151, 205, 255, .2);
-    border-radius: 26px;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid rgba(175, 215, 255, 0.7);
+    border-radius: 24px;
     background:
-      radial-gradient(circle at 88% 4%, rgba(72, 157, 232, .22), transparent 31%),
-      linear-gradient(160deg, #102b49 0%, #081827 58%, #06111e 100%) !important;
-    box-shadow: 0 30px 80px rgba(0, 8, 20, .42);
+      radial-gradient(ellipse at 88% 0%, rgba(162, 212, 255, 0.45), transparent 50%),
+      linear-gradient(170deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 247, 255, 0.98) 45%, rgba(222, 238, 255, 0.99) 100%) !important;
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    box-shadow: 0 20px 50px rgba(12, 38, 76, 0.16), 0 4px 16px rgba(12, 38, 76, 0.08), inset 0 1px 1px rgba(255, 255, 255, 1);
     opacity: 0;
     visibility: hidden;
     transform: translateX(calc(100% + 28px));
-    transition: transform .42s cubic-bezier(.22, 1, .36, 1), opacity .24s ease, visibility .42s;
+    transition: transform .38s cubic-bezier(.22, 1, .36, 1), opacity .25s ease, visibility .38s;
   }
 
   .travlink-react-page .ca-offcanvas.ca-offcanvas-open {
@@ -225,19 +271,20 @@
 
   .travlink-react-page .ca-offcanvas-wrapper {
     display: flex;
-    min-height: 100%;
+    min-height: 0 !important;
+    height: auto !important;
     flex-direction: column;
   }
 
   .travlink-react-page .ca-offcanvas-header {
-    margin-bottom: 26px !important;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    margin-bottom: 20px !important;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(180, 215, 250, 0.5);
   }
 
   .travlink-react-page .travlink-offcanvas-logo {
     display: block;
-    width: 156px;
+    width: 142px;
   }
 
   .travlink-react-page .travlink-offcanvas-logo img {
@@ -248,73 +295,106 @@
 
   .travlink-react-page .ca-offcanvas-close-toggle {
     display: inline-flex;
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
     align-items: center;
     justify-content: center;
     padding: 0;
-    border: 1px solid rgba(255, 255, 255, .16);
+    border: 1px solid rgba(170, 210, 250, 0.7);
     border-radius: 50%;
-    background: rgba(255, 255, 255, .08);
-    color: #fff;
-    font-size: 20px;
-    transition: background-color .25s ease, transform .25s ease;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #0e2a4a;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(14, 42, 74, 0.08);
+    transition: all .22s ease;
   }
 
+  .travlink-react-page .ca-offcanvas-close-toggle:hover,
   .travlink-react-page .ca-offcanvas-close-toggle:active {
-    background: rgba(255, 255, 255, .16);
-    transform: scale(.95);
+    background: #e3efff;
+    color: #0c5fc2;
+    border-color: #9eccf8;
+    transform: rotate(90deg) scale(0.95);
   }
 
   .travlink-react-page .ca-offcanvas-menu-3 {
-    margin-bottom: 28px !important;
+    margin-bottom: 0 !important;
   }
 
   .travlink-react-page .ca-offcanvas-menu-3 ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
 
   .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li {
     position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    border: none !important;
+    border-bottom: none !important;
+    margin: 0 !important;
   }
 
   .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a {
     display: flex;
-    min-height: 58px;
+    min-height: 46px;
     align-items: center;
-    padding: 14px 48px 14px 4px;
-    border: 0 !important;
-    color: rgba(255, 255, 255, .92) !important;
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    letter-spacing: -.01em;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border: 1px solid transparent !important;
+    border-radius: 12px;
+    background: transparent;
+    color: #0e2a4a !important;
+    font-size: 16px !important;
+    font-weight: 550 !important;
+    letter-spacing: -0.01em;
     text-decoration: none;
-    transition: color .22s ease, padding-left .22s ease;
+    transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease, box-shadow .2s ease;
   }
 
   .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a::before {
-    width: 0;
-    height: 2px;
-    margin-right: 0;
-    border-radius: 999px;
-    background: #79c7ff;
-    content: "";
-    opacity: 0;
-    transition: width .22s ease, margin-right .22s ease, opacity .22s ease;
+    display: none !important;
+    content: none !important;
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a::after {
+    content: "›";
+    font-size: 19px;
+    line-height: 1;
+    font-weight: 300;
+    color: rgba(14, 42, 74, 0.35);
+    margin-left: auto;
+    transition: transform .2s ease, color .2s ease;
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a:hover,
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a:active {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #0c5fc2 !important;
+    border-color: rgba(180, 215, 248, 0.6) !important;
+    box-shadow: 0 4px 12px rgba(14, 42, 74, 0.06);
+    transform: translateX(3px);
+  }
+
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a:hover::after,
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a:active::after {
+    color: #0c5fc2;
+    transform: translateX(2px);
   }
 
   .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li:is(.active, :focus-within) > a {
-    color: #9ed8ff !important;
-    padding-left: 2px;
+    background: linear-gradient(90deg, rgba(215, 235, 255, 0.95) 0%, rgba(235, 245, 255, 0.85) 100%) !important;
+    color: #0a52aa !important;
+    border-color: rgba(155, 205, 255, 0.7) !important;
+    font-weight: 600 !important;
   }
 
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li:is(.active, :focus-within) > a::before {
-    width: 18px;
-    margin-right: 10px;
-    opacity: 1;
+  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li:is(.active, :focus-within) > a::after {
+    color: #0a52aa;
   }
 
   .travlink-react-page .ca-offcanvas-menu-3 .ca-menu-close3 {
@@ -322,62 +402,97 @@
     right: 0;
     width: 38px;
     height: 38px;
-    border: 1px solid rgba(255, 255, 255, .14);
+    border: 1px solid rgba(180, 215, 250, 0.6);
     border-radius: 50%;
-    background: rgba(255, 255, 255, .07);
-    color: #cceaff;
+    background: #ffffff;
+    color: #0e2a4a;
     line-height: 38px;
   }
 
   .travlink-react-page .ca-offcanvas-menu-3 ul li .sub-menu {
-    margin: 0 0 12px;
-    padding: 4px 0 8px 18px;
-    border-left: 1px solid rgba(121, 199, 255, .28);
+    margin: 0 0 10px;
+    padding: 4px 0 6px 14px;
+    border-left: 2px solid #288de8;
+    background: rgba(240, 247, 255, 0.95);
+    border-radius: 0 8px 8px 0;
   }
 
   .travlink-react-page .ca-offcanvas-menu-3 ul li .sub-menu a {
-    padding: 10px 12px;
+    padding: 8px 12px;
     border: 0 !important;
-    color: rgba(222, 240, 255, .72) !important;
-    font-size: 15px !important;
+    color: #12365e !important;
+    font-size: 14.5px !important;
   }
 
   .travlink-react-page .ca-offcanvas-contact {
     display: block !important;
-    margin: auto 0 0 !important;
-    padding-top: 20px;
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+    padding-top: 12px;
+    border-top: 1px solid rgba(180, 215, 250, 0.5);
+  }
+
+  .travlink-react-page .ca-offcanvas-contact-info,
+  .travlink-react-page .ca-offcanvas-social {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .travlink-react-page .ca-offcanvas-contact .ca-btn-primary-3 {
     display: flex;
     width: 100%;
-    min-height: 52px;
+    min-height: 46px;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 12px 20px;
-    border: 1px solid rgba(255, 255, 255, .2);
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 999px;
-    background: linear-gradient(135deg, #2f8ede, #1769b2) !important;
-    box-shadow: 0 16px 34px rgba(7, 73, 135, .32);
+    background: linear-gradient(135deg, #1d7ae4 0%, #0d54a8 100%) !important;
+    box-shadow: 0 10px 24px rgba(13, 84, 168, 0.32), inset 0 1px 1px rgba(255, 255, 255, 0.35);
     color: #fff !important;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+
+  .travlink-react-page .ca-offcanvas-contact .ca-btn-primary-3:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 14px rgba(13, 84, 168, 0.4);
+  }
+
+  .travlink-react-page .ca-offcanvas-contact .ca-btn-primary-3 span {
+    display: inline-flex;
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 10px;
+    transition: transform .2s ease;
+  }
+
+  .travlink-react-page .ca-offcanvas-contact .ca-btn-primary-3:hover span {
+    transform: translateX(2px);
   }
 
   .travlink-react-page .ca-offcanvas-overlay {
     position: fixed;
     inset: 0;
-    z-index: 1090;
+    z-index: 1290 !important;
     display: block;
     width: 100%;
     height: 100%;
-    background: rgba(2, 10, 20, .58);
+    background: rgba(10, 28, 54, 0.45);
     opacity: 0;
     visibility: hidden;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     transition: opacity .3s ease, visibility .3s;
   }
 
@@ -388,13 +503,33 @@
 }
 
 @media (max-width: 380px) {
+  .travlink-react-page .header-area-3 > .container.fluid-header-3 {
+    padding: 6px 10px !important;
+  }
+
+  .travlink-react-page .header-area-3 .ca-logo {
+    margin-left: -4px;
+  }
+
+  .travlink-react-page .header-area-3 .travlink-site-logo {
+    width: min(182px, 100%) !important;
+    height: 52px !important;
+  }
+
+  .travlink-home .header-area-3 .travlink-site-logo {
+    width: min(190px, 100%) !important;
+    height: 54px !important;
+  }
+
   .travlink-react-page .ca-offcanvas {
-    top: 7px;
-    right: 7px;
-    width: calc(100% - 14px);
-    height: calc(100dvh - 14px);
-    padding: 20px 18px;
-    border-radius: 22px;
+    top: 8px;
+    right: 8px;
+    width: calc(100% - 16px);
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: calc(100dvh - 16px) !important;
+    padding: 16px 14px 16px;
+    border-radius: 20px;
   }
 }
 

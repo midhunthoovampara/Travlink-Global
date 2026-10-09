@@ -11,7 +11,7 @@ export default function MobileMenu({ isOpen, onClose }) {
           <div className="ca-offcanvas-header d-flex justify-content-between align-items-center mb-40">
             <div className="ca-offcanvas-logo">
               <a className="travlink-offcanvas-logo" href="/" aria-label="Travlink Global home">
-                <Image src="/img/logo/travlink-secondary-2026.png" alt="Travlink Global" />
+                <Image src="/img/logo/travlink-primary-2026.png" alt="Travlink Global" />
               </a>
             </div>
             <div className="ca-offcanvas-close">
@@ -20,7 +20,7 @@ export default function MobileMenu({ isOpen, onClose }) {
               </button>
             </div>
           </div>
-          <div className="ca-offcanvas-menu-3 mb-40">
+          <div className="ca-offcanvas-menu-3">
             <nav aria-label="Mobile navigation">
               <ul>
                 {primaryNavigation.flatMap((item) => item.children || [item]).map((item) => (
@@ -29,7 +29,7 @@ export default function MobileMenu({ isOpen, onClose }) {
               </ul>
             </nav>
           </div>
-          <div className="ca-offcanvas-contact mb-40">
+          <div className="ca-offcanvas-contact">
             <a href="/contact/" className="ca-btn-primary-3 theme-bg-3 text-white br-50">Get A Quote <span><i className="fa-solid fa-angle-right" /></span></a>
           </div>
           <div className="ca-offcanvas-contact-info mb-40">

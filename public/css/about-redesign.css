@@ -31,7 +31,12 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(16, 35, 63, 0.85) 0%, rgba(16, 35, 63, 0.4) 100%);
+    background: linear-gradient(
+        to right,
+        rgba(10, 24, 46, 0.82) 0%,
+        rgba(10, 24, 46, 0.48) 45%,
+        rgba(10, 24, 46, 0.12) 100%
+    );
     z-index: -1;
 }
 
@@ -176,6 +181,20 @@ body {
     justify-content: center;
     font-size: 24px;
     flex-shrink: 0;
+}
+
+.about-core-icon svg,
+.about-core-icon img {
+    max-width: 36px;
+    max-height: 36px;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.about-core-card:hover .about-core-icon svg,
+.about-core-card:hover .about-core-icon img {
+    transform: scale(1.1);
 }
 
 .about-core-list {

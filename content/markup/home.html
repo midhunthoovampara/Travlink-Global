@@ -156,14 +156,19 @@
     <!-- hero start -->
     <section class="travlink-hero">
         <div class="travlink-hero__media" aria-hidden="true">
-            <video class="travlink-hero__video" autoplay muted loop playsinline preload="metadata">
-                <source src="/video/globalhero.mp4" type="video/mp4" />
-            </video>
+            <picture class="travlink-hero__picture">
+                <source media="(max-width: 767.98px)" srcset="/img/hero/home-hero-mobile.webp" type="image/webp">
+                <source media="(max-width: 767.98px)" srcset="/img/hero/home-hero-mobile.jpg" type="image/jpeg">
+                <source media="(min-width: 768px)" srcset="/img/hero/home-hero-desktop.webp" type="image/webp">
+                <source media="(min-width: 768px)" srcset="/img/hero/home-hero-desktop.jpg" type="image/jpeg">
+                <img src="/img/hero/home-hero-desktop.webp" alt="Travlink Global Hero" class="travlink-hero__image" fetchpriority="high" decoding="async">
+            </picture>
+            <div class="travlink-hero__overlay"></div>
         </div>
         <div class="travlink-hero__inner">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10 col-lg-11">
+                <div class="row">
+                    <div class="col-12">
                         <div class="travlink-hero__content">
                             <!-- <div class="travlink-hero__badge">
                 <span class="travlink-hero__badge-dot"></span>
@@ -276,7 +281,7 @@
                         <div class="travlink-service-rcard__content">
                             <div class="travlink-service-rcard__number">&mdash; 01</div>
                             <div class="travlink-service-rcard__icon">
-                                <i class="fa-solid fa-plane-up"></i>
+                                <img src="/img/services/service-travel-icon.svg" alt="Travel" class="travlink-service-rcard__icon-svg--travel" />
                             </div>
                             <h3 class="travlink-service-rcard__title">TRAVEL</h3>
                             <p class="travlink-service-rcard__desc">Visas, curated journeys &amp; business travel.</p>
@@ -295,7 +300,7 @@
                         <div class="travlink-service-rcard__content">
                             <div class="travlink-service-rcard__number">&mdash; 02</div>
                             <div class="travlink-service-rcard__icon">
-                                <i class="fa-solid fa-globe"></i>
+                                <img src="/img/services/service-trade-icon.svg" alt="Trade" class="travlink-service-rcard__icon-svg--trade" />
                             </div>
                             <h3 class="travlink-service-rcard__title">TRADE</h3>
                             <p class="travlink-service-rcard__desc">Sourcing, shipping &amp; global trade support.</p>

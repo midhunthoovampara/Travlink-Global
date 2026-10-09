@@ -300,7 +300,15 @@ html {
     color: #fff;
 }
 
-@media (max-width: 1199.98px) {
+.travlink-region-card--central-asia {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .travlink-region-card--central-asia {
+        display: block !important;
+    }
+
     .travlink-regions-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }

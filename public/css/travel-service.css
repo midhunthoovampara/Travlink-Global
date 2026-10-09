@@ -1724,14 +1724,14 @@ html {
 .travlink-travel-page .travlink-travel-hero {
     min-height: 80vh !important;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: 70% center !important;
     display: flex !important;
     align-items: center !important;
     padding: 100px 20px !important;
     position: relative !important;
 }
 .travlink-travel-hero::after {
-    background: linear-gradient(to right, rgba(16, 35, 63, 0.85) 0%, rgba(16, 35, 63, 0.4) 100%) !important;
+    background: linear-gradient(to right, rgba(11, 28, 60, 0.85) 0%, rgba(11, 28, 60, 0.55) 45%, rgba(11, 28, 60, 0.15) 100%) !important;
 }
 .travlink-travel-hero__content {
     max-width: 800px !important;
@@ -1767,11 +1767,17 @@ html {
     color: #fff !important;
     max-width: 800px !important;
 }
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
     .travlink-travel-hero,
     .travlink-travel-page .travlink-travel-hero {
-        min-height: 60vh !important;
+        background-image: url('/img/service/travel-hero-sailboat-mobile.webp') !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        min-height: 75vh !important;
         padding: 120px 20px 60px !important;
+    }
+    .travlink-travel-hero::after {
+        background: linear-gradient(180deg, rgba(11, 28, 60, 0.2) 0%, rgba(11, 28, 60, 0.45) 35%, rgba(11, 28, 60, 0.88) 100%) !important;
     }
 }
 
@@ -1830,4 +1836,175 @@ html {
     color: #ffffff !important;
     margin-bottom: 0 !important;
     font-family: 'Outfit', sans-serif !important;
+}
+
+/* ==========================================================================
+   Minimal Travel Services Section (Visa & Explore The World)
+   ========================================================================== */
+
+.travlink-travel-minimal {
+    position: relative;
+    padding: 40px 0 45px;
+    background: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.travlink-minimal-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.travlink-minimal-eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #2365cf;
+    margin-bottom: 10px;
+    background: rgba(35, 101, 207, 0.08);
+    padding: 4px 14px;
+    border-radius: 50px;
+}
+
+.travlink-minimal-title {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(24px, 3.2vw, 32px);
+    font-weight: 700;
+    color: #0b1c3c;
+    margin: 0 0 8px;
+    letter-spacing: -0.4px;
+    line-height: 1.25;
+}
+
+.travlink-minimal-subtitle {
+    font-size: clamp(0.9rem, 1.5vw, 0.98rem);
+    color: #64748b;
+    margin: 0 auto;
+    max-width: 560px;
+    line-height: 1.5;
+}
+
+.travlink-minimal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.travlink-minimal-card {
+    position: relative;
+    height: 160px;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(11, 28, 60, 0.08);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.travlink-minimal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(11, 28, 60, 0.16);
+}
+
+.travlink-minimal-card__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+.travlink-minimal-card:hover .travlink-minimal-card__bg {
+    transform: scale(1.05);
+}
+
+.travlink-minimal-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 28, 60, 0.15) 0%, rgba(11, 28, 60, 0.72) 100%);
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.travlink-minimal-card:hover .travlink-minimal-card__overlay {
+    background: linear-gradient(180deg, rgba(11, 28, 60, 0.1) 0%, rgba(11, 28, 60, 0.8) 100%);
+}
+
+.travlink-minimal-card__content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.travlink-minimal-card__title {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.travlink-minimal-card__arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 13px;
+    flex-shrink: 0;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.travlink-minimal-card:hover .travlink-minimal-card__arrow {
+    background: #ffffff;
+    color: #0b1c3c;
+    transform: translateX(4px);
+}
+
+@media (max-width: 767px) {
+    .travlink-travel-minimal {
+        padding: 30px 0 35px;
+    }
+
+    .travlink-minimal-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .travlink-minimal-card {
+        height: 140px;
+    }
+
+    .travlink-minimal-card__title {
+        font-size: 18px;
+    }
+
+    .travlink-minimal-card__content {
+        padding: 14px 18px;
+    }
+
+    .travlink-minimal-card__arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
 }

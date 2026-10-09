@@ -132,6 +132,33 @@
     font-size: 32px;
     color: #fff;
     margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.travlink-service-rcard__icon svg,
+.travlink-service-rcard__icon img {
+    height: 42px;
+    width: auto;
+    max-width: 70px;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.travlink-service-rcard__icon-svg--travel {
+    height: 42px;
+    width: 42px;
+}
+
+.travlink-service-rcard__icon-svg--trade {
+    height: 38px;
+    width: 65px;
+}
+
+.travlink-service-rcard:hover .travlink-service-rcard__icon svg,
+.travlink-service-rcard:hover .travlink-service-rcard__icon img {
+    transform: translateY(-2px) scale(1.05);
 }
 
 .travlink-service-rcard__title {
