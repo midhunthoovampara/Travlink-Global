@@ -256,8 +256,21 @@
     <div class="travlink-story-canvas">
         <!-- service section start -->
         <section id="travlink-services" class="travlink-services-redesign">
-            <!-- Map Background -->
-            <div class="travlink-services-redesign__map" style="background-image: url('/img/services/bgg.png');"></div>
+            <!-- Background Video -->
+            <div class="travlink-services-redesign__video-wrap" aria-hidden="true">
+                <video
+                    class="travlink-services-redesign__video"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    preload="auto"
+                    poster="/img/services/bgg.png"
+                >
+                    <source src="/video/Create_motion_graphics_with_image_20261014165329.mp4" type="video/mp4">
+                </video>
+                <div class="travlink-services-redesign__video-overlay"></div>
+            </div>
 
             <div class="container">
                 <div class="travlink-services-redesign__header" data-aos="fade-up" data-aos-duration="800">
@@ -1101,5 +1114,21 @@
             processIsVisible = true;
             startProcessAutoplay();
         }
+
+        // Services Background Video Autoplay Assurance
+        (function () {
+            var serviceVideo = document.querySelector(".travlink-services-redesign__video");
+            if (!serviceVideo) return;
+            var ensurePlay = function () {
+                var promise = serviceVideo.play();
+                if (promise !== undefined) {
+                    promise.catch(function () {});
+                }
+            };
+            ensurePlay();
+            ["click", "touchstart", "scroll"].forEach(function (evt) {
+                window.addEventListener(evt, ensurePlay, { once: true, passive: true });
+            });
+        })();
     });
 </script>

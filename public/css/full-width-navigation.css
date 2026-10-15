@@ -16,7 +16,7 @@
   box-shadow: 0 9px 28px rgba(15, 36, 61, .1) !important;
 }
 
-.travlink-react-page .header-area-3 > .container.fluid-header-3 {
+.travlink-react-page .header-area-3>.container.fluid-header-3 {
   display: flex;
   align-items: center;
   width: 100% !important;
@@ -31,7 +31,7 @@
   box-shadow: none !important;
 }
 
-.travlink-react-page .header-area-3 > .container.fluid-header-3 > .row {
+.travlink-react-page .header-area-3>.container.fluid-header-3>.row {
   display: flex;
   align-items: center !important;
   width: 100%;
@@ -50,7 +50,7 @@
 }
 
 .travlink-react-page .header-area-3 .ca-main-menu-3,
-.travlink-react-page .header-area-3 .ca-main-menu-3 > nav {
+.travlink-react-page .header-area-3 .ca-main-menu-3>nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@
   min-height: 60px;
 }
 
-.travlink-react-page .header-area-3 .ca-main-menu-3 > nav > ul {
+.travlink-react-page .header-area-3 .ca-main-menu-3>nav>ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,90 +96,57 @@
   opacity: 0 !important;
 }
 
-.travlink-react-page:not(.travlink-home) .header-area-3 :is(
-  .ca-main-menu-3 > nav > ul > li > a,
-  .ca-offcanvas-toogle
-),
-.travlink-home .header-area-3 :is(
-  .ca-main-menu-3 > nav > ul > li > a,
-  .ca-offcanvas-toogle
-) {
+.travlink-react-page:not(.travlink-home) .header-area-3 :is(.ca-main-menu-3 > nav > ul > li > a,
+  .ca-offcanvas-toogle),
+.travlink-home .header-area-3 :is(.ca-main-menu-3 > nav > ul > li > a,
+  .ca-offcanvas-toogle) {
   color: #102f55 !important;
 }
 
 /* Override legacy image-hero rules that made first-load links white. */
-.travlink-react-page.travlink-react-page
-  .header-area-3.stiky:not(.scroll-header)
-  .travlink-site-logo__image--primary,
-.travlink-react-page.travlink-react-page
-  .header-area-3.stiky.scroll-header
-  .travlink-site-logo__image--primary {
+.travlink-react-page.travlink-react-page .header-area-3.stiky:not(.scroll-header) .travlink-site-logo__image--primary,
+.travlink-react-page.travlink-react-page .header-area-3.stiky.scroll-header .travlink-site-logo__image--primary {
   opacity: 1 !important;
 }
 
-.travlink-react-page.travlink-react-page
-  .header-area-3.stiky:not(.scroll-header)
-  .travlink-site-logo__image--secondary,
-.travlink-react-page.travlink-react-page
-  .header-area-3.stiky.scroll-header
-  .travlink-site-logo__image--secondary {
+.travlink-react-page.travlink-react-page .header-area-3.stiky:not(.scroll-header) .travlink-site-logo__image--secondary,
+.travlink-react-page.travlink-react-page .header-area-3.stiky.scroll-header .travlink-site-logo__image--secondary {
   opacity: 0 !important;
 }
 
-.travlink-react-page.travlink-react-page
-  .header-area-3.stiky:not(.scroll-header)
-  .ca-main-menu-3
-  > nav
-  > ul
-  > li
-  > a,
-.travlink-react-page.travlink-react-page
-  .header-area-3.stiky:not(.scroll-header)
-  .ca-offcanvas-toogle,
-.travlink-react-page.travlink-react-page
-  .header-area-3.stiky.scroll-header
-  .ca-main-menu-3
-  > nav
-  > ul
-  > li
-  > a,
-.travlink-react-page.travlink-react-page
-  .header-area-3.stiky.scroll-header
-  .ca-offcanvas-toogle {
+.travlink-react-page.travlink-react-page .header-area-3.stiky:not(.scroll-header) .ca-main-menu-3>nav>ul>li>a,
+.travlink-react-page.travlink-react-page .header-area-3.stiky:not(.scroll-header) .ca-offcanvas-toogle,
+.travlink-react-page.travlink-react-page .header-area-3.stiky.scroll-header .ca-main-menu-3>nav>ul>li>a,
+.travlink-react-page.travlink-react-page .header-area-3.stiky.scroll-header .ca-offcanvas-toogle {
   color: #102f55 !important;
 }
 
-.travlink-react-page.travlink-react-page
-  .header-area-3
-  .ca-main-menu-3
-  > nav
-  > ul
-  > li:hover
-  > a {
+.travlink-react-page.travlink-react-page .header-area-3 .ca-main-menu-3>nav>ul>li:hover>a {
   color: #0e47a1 !important;
 }
 
 @media (max-width: 767px) {
+
   .travlink-react-page .header-area-3.stiky,
   .travlink-react-page .header-area-3.stiky.scroll-header {
     height: 70px !important;
     min-height: 70px !important;
   }
 
-  .travlink-react-page .header-area-3 > .container.fluid-header-3 {
+  .travlink-react-page .header-area-3>.container.fluid-header-3 {
     height: 70px !important;
     min-height: 70px !important;
     padding: 6px 14px !important;
   }
 
-  .travlink-react-page .header-area-3 > .container.fluid-header-3 > .row {
+  .travlink-react-page .header-area-3>.container.fluid-header-3>.row {
     min-height: 56px;
     justify-content: space-between !important;
     align-items: center !important;
     flex-wrap: nowrap !important;
   }
 
-  .travlink-react-page .header-area-3 > .container.fluid-header-3 > .row > div:first-child {
+  .travlink-react-page .header-area-3>.container.fluid-header-3>.row>div:first-child {
     flex: 1 1 auto !important;
     width: auto !important;
     max-width: calc(100% - 56px) !important;
@@ -187,7 +154,7 @@
     padding-right: 0 !important;
   }
 
-  .travlink-react-page .header-area-3 > .container.fluid-header-3 > .row > div:last-child {
+  .travlink-react-page .header-area-3>.container.fluid-header-3>.row>div:last-child {
     flex: 0 0 auto !important;
     width: auto !important;
     margin-left: auto !important;
@@ -332,14 +299,14 @@
     gap: 3px;
   }
 
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li {
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li {
     position: relative;
     border: none !important;
     border-bottom: none !important;
     margin: 0 !important;
   }
 
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a {
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li>a {
     display: flex;
     min-height: 46px;
     align-items: center;
@@ -356,12 +323,12 @@
     transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease, box-shadow .2s ease;
   }
 
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a::before {
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li>a::before {
     display: none !important;
     content: none !important;
   }
 
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a::after {
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li>a::after {
     content: "›";
     font-size: 19px;
     line-height: 1;
@@ -371,8 +338,8 @@
     transition: transform .2s ease, color .2s ease;
   }
 
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a:hover,
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a:active {
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li>a:hover,
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li>a:active {
     background: rgba(255, 255, 255, 0.9) !important;
     color: #0c5fc2 !important;
     border-color: rgba(180, 215, 248, 0.6) !important;
@@ -380,20 +347,20 @@
     transform: translateX(3px);
   }
 
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a:hover::after,
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li > a:active::after {
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li>a:hover::after,
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li>a:active::after {
     color: #0c5fc2;
     transform: translateX(2px);
   }
 
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li:is(.active, :focus-within) > a {
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li:is(.active, :focus-within)>a {
     background: linear-gradient(90deg, rgba(215, 235, 255, 0.95) 0%, rgba(235, 245, 255, 0.85) 100%) !important;
     color: #0a52aa !important;
     border-color: rgba(155, 205, 255, 0.7) !important;
     font-weight: 600 !important;
   }
 
-  .travlink-react-page .ca-offcanvas-menu-3 > nav > ul > li:is(.active, :focus-within) > a::after {
+  .travlink-react-page .ca-offcanvas-menu-3>nav>ul>li:is(.active, :focus-within)>a::after {
     color: #0a52aa;
   }
 
@@ -503,7 +470,7 @@
 }
 
 @media (max-width: 380px) {
-  .travlink-react-page .header-area-3 > .container.fluid-header-3 {
+  .travlink-react-page .header-area-3>.container.fluid-header-3 {
     padding: 6px 10px !important;
   }
 
@@ -534,6 +501,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .travlink-react-page .ca-offcanvas,
   .travlink-react-page .ca-offcanvas-overlay {
     transition: none;
