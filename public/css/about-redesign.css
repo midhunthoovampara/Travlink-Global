@@ -19,6 +19,8 @@ body {
     position: relative;
     width: 100%;
     min-height: 80vh;
+    background-image: url('/img/hero/about-hero.png');
+    background-image: url('/img/hero/about-hero.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -398,13 +400,31 @@ body {
     color: var(--about-cyan);
 }
 
+/* ==========================================================================
+   RESPONSIVE DESIGN & MOBILE TEXT ALIGNMENT REFINEMENTS
+   ========================================================================== */
+
 @media (max-width: 991px) {
+    .about-hero {
+        min-height: 70vh;
+        padding: 140px 24px 60px;
+    }
+
     .about-core-grid {
         grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 36px auto 0;
+        gap: 26px;
     }
 
     .about-connect-container {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .about-connect-content {
+        max-width: 600px;
+        margin: 0 auto;
         text-align: center;
     }
 
@@ -413,9 +433,9 @@ body {
         right: auto;
         transform: none;
         width: 100%;
-        max-width: 500px;
-        height: 500px;
-        margin-top: 40px;
+        max-width: 420px;
+        height: 420px;
+        margin: 32px auto 0;
     }
 
     .about-connect-globe {
@@ -424,30 +444,334 @@ body {
     }
 
     .about-network-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px 16px;
+        max-width: 700px;
+        margin: 44px auto 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* HERO SECTION */
+    .about-hero {
+        background-image: url('/img/hero/mobile_hero_80_percent.png') !important;
+        background-image: url('/img/hero/about-hero-mobile.webp') !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        min-height: 68vh;
+        padding: 96px 18px 44px;
+        align-items: flex-end;
+    }
+
+    .about-hero::before {
+        background: linear-gradient(
+            to bottom,
+            rgba(10, 24, 46, 0.45) 0%,
+            rgba(10, 24, 46, 0.72) 40%,
+            rgba(10, 24, 46, 0.92) 100%
+        );
+    }
+
+    .about-hero-content {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .about-eyebrow {
+        font-size: 11.5px;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+    }
+
+    .about-eyebrow::before {
+        width: 24px;
+        margin-right: 10px;
+    }
+
+    .about-hero-title {
+        font-size: clamp(25px, 7.2vw, 36px);
+        line-height: 1.18;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+        text-wrap: balance;
+    }
+
+    .about-hero-title br {
+        display: none;
+    }
+
+    .about-hero-subtitle {
+        font-size: clamp(14px, 4vw, 17px);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    /* STORY SECTION */
+    .about-story {
+        padding: 56px 18px 44px;
+        text-align: center;
+    }
+
+    .about-eyebrow-center {
+        font-size: 11.5px;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .about-eyebrow-center::before,
+    .about-eyebrow-center::after {
+        width: 20px;
+        margin: 0 10px;
+    }
+
+    .about-story-text {
+        font-size: clamp(17px, 4.6vw, 21px);
+        line-height: 1.55;
+        font-weight: 500;
+        text-align: center;
+        max-width: 580px;
+        margin: 0 auto;
+        text-wrap: balance;
+    }
+
+    /* CORE AREAS SECTION */
+    .about-core {
+        padding: 30px 16px 64px;
+        text-align: center;
+    }
+
+    .about-core-grid {
+        max-width: 100%;
+        margin: 28px auto 0;
+        gap: 22px;
+    }
+
+    .about-core-card {
+        border-radius: 16px;
+        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.06);
+    }
+
+    .about-core-img-wrapper {
+        height: 190px;
+    }
+
+    .about-core-img-title {
+        bottom: 16px;
+        left: 18px;
+        font-size: 28px;
+        line-height: 1;
+    }
+
+    .about-core-content {
+        padding: 20px 16px 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 14px;
+    }
+
+    .about-core-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+
+    .about-core-icon svg,
+    .about-core-icon img {
+        max-width: 28px;
+        max-height: 28px;
+    }
+
+    .about-core-list {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px 12px;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .about-core-list li {
+        position: relative;
+        padding-left: 14px;
+        font-size: 13.5px;
+        font-weight: 500;
+        line-height: 1.35;
+        color: var(--about-navy);
+        text-align: left;
+        display: block;
+    }
+
+    .about-core-list li::after {
+        display: none !important;
+    }
+
+    .about-core-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--about-cyan);
+    }
+
+    /* CONNECT SECTION */
+    .about-connect {
+        padding: 56px 18px;
+        text-align: center;
+    }
+
+    .about-connect-container {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about-connect-content {
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-connect-eyebrow {
+        font-size: 11.5px;
+        letter-spacing: 1.5px;
+        margin-bottom: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-connect-eyebrow::before,
+    .about-connect-eyebrow::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 1px;
+        background: var(--about-cyan);
+        margin: 0 10px;
+    }
+
+    .about-connect-title {
+        font-size: clamp(24px, 6.2vw, 32px);
+        line-height: 1.25;
+        margin-bottom: 14px;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .about-connect-copy {
+        font-size: clamp(14.5px, 3.8vw, 16.5px);
+        line-height: 1.65;
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+        text-wrap: balance;
+    }
+
+    /* GLOBAL NETWORK SECTION */
+    .about-network {
+        padding: 56px 18px 50px;
+        text-align: center;
+    }
+
+    .about-network-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 12px;
+        max-width: 440px;
+        margin: 32px auto 26px;
     }
 
     .about-network-item:last-child {
         grid-column: 1 / -1;
-    }
-}
-
-@media (max-width: 575px) {
-    .about-network-grid {
-        grid-template-columns: 1fr;
+        max-width: 200px;
+        margin: 0 auto;
     }
 
-    .about-core-content {
-        flex-direction: column;
-        align-items: center;
+    .about-network-item {
+        gap: 10px;
         text-align: center;
     }
 
-    .about-core-list {
-        justify-content: center;
+    .about-network-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
     }
 
-    .about-core-list li::after {
-        display: none;
+    .about-network-label {
+        font-size: 13.5px;
+        font-weight: 500;
+        line-height: 1.35;
+        text-align: center;
+    }
+
+    .about-network-tagline {
+        font-size: clamp(13.5px, 3.8vw, 15px);
+        line-height: 1.5;
+        text-align: center;
+        margin-top: 24px;
+        padding: 0 8px;
+        text-wrap: balance;
+    }
+
+    /* FOOTER CTA SECTION */
+    .about-cta {
+        padding: 50px 18px;
+        text-align: center;
+    }
+
+    .about-cta-title {
+        font-size: clamp(20px, 5.5vw, 26px);
+        line-height: 1.35;
+        margin-bottom: 8px;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .about-cta-subtitle {
+        font-size: clamp(20px, 5.5vw, 26px);
+        line-height: 1.35;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .about-hero {
+        padding: 85px 14px 36px;
+    }
+
+    .about-hero-title {
+        font-size: 23px;
+    }
+
+    .about-core-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .about-network-grid {
+        gap: 16px 8px;
+    }
+
+    .about-network-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 19px;
+    }
+
+    .about-network-label {
+        font-size: 12.5px;
     }
 }

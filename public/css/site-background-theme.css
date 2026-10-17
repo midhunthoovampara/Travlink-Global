@@ -32,7 +32,7 @@
   left: 0;
   z-index: 1000;
   width: 100%;
-  padding: 10px 0 !important;
+  padding: 0 !important;
   border-bottom: 1px solid rgba(15, 36, 61, .08);
   background: rgba(255, 255, 255, .96) !important;
   box-shadow: 0 10px 32px rgba(15, 36, 61, .1) !important;
@@ -131,7 +131,7 @@
 @media (max-width: 767px) {
   .travlink-react-page:not(.travlink-home) .header-area-3.stiky,
   .travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header {
-    min-height: 68px;
-    padding: 12px 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
   }
 }

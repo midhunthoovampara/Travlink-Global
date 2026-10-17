@@ -1,13 +1,12 @@
-/* Full-width navigation shell shared by every Travlink Global page. */
-.travlink-react-page .header-area-3.stiky,
-.travlink-react-page .header-area-3.stiky.scroll-header {
+/* Full-width sticky navigation shell on inner pages */
+.travlink-react-page:not(.travlink-home) .header-area-3.stiky,
+.travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header {
   position: fixed !important;
   top: 0 !important;
   right: 0;
   left: 0;
+  z-index: 1000;
   width: 100%;
-  height: 82px !important;
-  min-height: 82px !important;
   padding: 0 !important;
   border-radius: 0 !important;
   animation: none !important;
@@ -20,11 +19,8 @@
   display: flex;
   align-items: center;
   width: 100% !important;
-  height: 82px !important;
-  min-height: 82px !important;
   max-width: none !important;
   margin: 0 !important;
-  padding: 8px clamp(12px, 2.5vw, 40px) !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
@@ -35,27 +31,128 @@
   display: flex;
   align-items: center !important;
   width: 100%;
-  min-height: 64px;
   margin: 0;
 }
 
-.travlink-react-page .header-area-3 .ca-logo {
+/* Home page: Non-sticky navigation that stays at the top of the hero and scrolls away naturally */
+.travlink-home .header-area-3.stiky,
+.travlink-home .header-area-3.stiky.scroll-header {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000;
+  width: 100%;
+  height: 82px !important;
+  min-height: 82px !important;
+  padding: 0 !important;
+  border: none !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+.travlink-home .header-area-3>.container.fluid-header-3 {
+  height: 82px !important;
+  min-height: 82px !important;
+  padding: 8px clamp(12px, 2.5vw, 40px) !important;
+}
+
+.travlink-home .header-area-3>.container.fluid-header-3>.row {
+  min-height: 64px;
+}
+
+.travlink-home .header-area-3 .ca-logo {
   display: flex;
   height: 68px;
   align-items: center;
   justify-content: flex-start;
   margin: 0;
-  margin-left: -8px;
+  margin-left: -12px;
   transform: none !important;
 }
 
-.travlink-react-page .header-area-3 .ca-main-menu-3,
-.travlink-react-page .header-area-3 .ca-main-menu-3>nav {
+.travlink-home .header-area-3 .travlink-site-logo {
+  width: min(255px, 100%) !important;
+  height: 70px !important;
+}
+
+.travlink-home .header-area-3 .ca-main-menu-3,
+.travlink-home .header-area-3 .ca-main-menu-3>nav {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   min-height: 60px;
+}
+
+/* Reduced height sticky navigation on all pages EXCEPT home page (Desktop) */
+.travlink-react-page:not(.travlink-home) .header-area-3.stiky,
+.travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header {
+  height: 42px !important;
+  min-height: 42px !important;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3>.container.fluid-header-3 {
+  height: 42px !important;
+  min-height: 42px !important;
+  padding: 0 clamp(16px, 2.5vw, 40px) !important;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3>.container.fluid-header-3>.row {
+  min-height: 42px !important;
+  height: 42px !important;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3 .ca-logo {
+  display: flex !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: auto !important;
+  max-width: 130px !important;
+  height: 30px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3 .ca-main-menu-3,
+.travlink-react-page:not(.travlink-home) .header-area-3 .ca-main-menu-3>nav {
+  min-height: 42px !important;
+  height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3 .ca-main-menu-3>nav>ul>li {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 42px !important;
+  margin: 0 !important;
+}
+
+.travlink-react-page:not(.travlink-home) .header-area-3 .ca-main-menu-3>nav>ul>li>a {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 13.5px !important;
+  font-weight: 550 !important;
+  padding: 0 11px !important;
+  height: 42px !important;
+  line-height: 42px !important;
 }
 
 .travlink-react-page .header-area-3 .ca-main-menu-3>nav>ul {
@@ -65,20 +162,6 @@
   margin: 0;
 }
 
-.travlink-react-page .header-area-3 .travlink-site-logo {
-  width: min(245px, 100%) !important;
-  height: 68px !important;
-}
-
-.travlink-home .header-area-3 .ca-logo {
-  margin-left: -12px;
-}
-
-.travlink-home .header-area-3 .travlink-site-logo {
-  width: min(255px, 100%) !important;
-  height: 70px !important;
-}
-
 .travlink-react-page .header-area-3 .travlink-site-logo__image {
   width: 100%;
   height: 100%;
@@ -86,38 +169,48 @@
   object-position: left center;
 }
 
-.travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo__image--primary,
-.travlink-home .header-area-3 .travlink-site-logo__image--primary {
+.travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo__image--primary {
   opacity: 1 !important;
 }
 
-.travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo__image--secondary,
-.travlink-home .header-area-3 .travlink-site-logo__image--secondary {
+.travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo__image--secondary {
   opacity: 0 !important;
 }
 
 .travlink-react-page:not(.travlink-home) .header-area-3 :is(.ca-main-menu-3 > nav > ul > li > a,
-  .ca-offcanvas-toogle),
-.travlink-home .header-area-3 :is(.ca-main-menu-3 > nav > ul > li > a,
   .ca-offcanvas-toogle) {
   color: #102f55 !important;
 }
 
-/* Override legacy image-hero rules that made first-load links white. */
-.travlink-react-page.travlink-react-page .header-area-3.stiky:not(.scroll-header) .travlink-site-logo__image--primary,
-.travlink-react-page.travlink-react-page .header-area-3.stiky.scroll-header .travlink-site-logo__image--primary {
-  opacity: 1 !important;
-}
-
-.travlink-react-page.travlink-react-page .header-area-3.stiky:not(.scroll-header) .travlink-site-logo__image--secondary,
-.travlink-react-page.travlink-react-page .header-area-3.stiky.scroll-header .travlink-site-logo__image--secondary {
+/* Home page keeps transparent navigation, white secondary logo, and white links */
+.travlink-home .header-area-3 .travlink-site-logo__image--primary {
   opacity: 0 !important;
 }
 
-.travlink-react-page.travlink-react-page .header-area-3.stiky:not(.scroll-header) .ca-main-menu-3>nav>ul>li>a,
-.travlink-react-page.travlink-react-page .header-area-3.stiky:not(.scroll-header) .ca-offcanvas-toogle,
-.travlink-react-page.travlink-react-page .header-area-3.stiky.scroll-header .ca-main-menu-3>nav>ul>li>a,
-.travlink-react-page.travlink-react-page .header-area-3.stiky.scroll-header .ca-offcanvas-toogle {
+.travlink-home .header-area-3 .travlink-site-logo__image--secondary {
+  opacity: 1 !important;
+}
+
+.travlink-home .header-area-3 :is(.ca-main-menu-3 > nav > ul > li > a,
+  .ca-offcanvas-toogle) {
+  color: #fff !important;
+}
+
+/* Override legacy image-hero rules that made first-load links white on inner pages */
+.travlink-react-page.travlink-react-page:not(.travlink-home) .header-area-3.stiky:not(.scroll-header) .travlink-site-logo__image--primary,
+.travlink-react-page.travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header .travlink-site-logo__image--primary {
+  opacity: 1 !important;
+}
+
+.travlink-react-page.travlink-react-page:not(.travlink-home) .header-area-3.stiky:not(.scroll-header) .travlink-site-logo__image--secondary,
+.travlink-react-page.travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header .travlink-site-logo__image--secondary {
+  opacity: 0 !important;
+}
+
+.travlink-react-page.travlink-react-page:not(.travlink-home) .header-area-3.stiky:not(.scroll-header) .ca-main-menu-3>nav>ul>li>a,
+.travlink-react-page.travlink-react-page:not(.travlink-home) .header-area-3.stiky:not(.scroll-header) .ca-offcanvas-toogle,
+.travlink-react-page.travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header .ca-main-menu-3>nav>ul>li>a,
+.travlink-react-page.travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header .ca-offcanvas-toogle {
   color: #102f55 !important;
 }
 
@@ -127,20 +220,83 @@
 
 @media (max-width: 767px) {
 
-  .travlink-react-page .header-area-3.stiky,
-  .travlink-react-page .header-area-3.stiky.scroll-header {
+  /* Home page keeps original navigation height & scrolls away naturally (Mobile) */
+  .travlink-home .header-area-3.stiky,
+  .travlink-home .header-area-3.stiky.scroll-header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     height: 70px !important;
     min-height: 70px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
   }
 
-  .travlink-react-page .header-area-3>.container.fluid-header-3 {
+  .travlink-home .header-area-3>.container.fluid-header-3 {
     height: 70px !important;
     min-height: 70px !important;
     padding: 6px 14px !important;
   }
 
-  .travlink-react-page .header-area-3>.container.fluid-header-3>.row {
+  .travlink-home .header-area-3>.container.fluid-header-3>.row {
     min-height: 56px;
+  }
+
+  .travlink-home .header-area-3 .ca-logo {
+    height: 58px;
+  }
+
+  .travlink-home .header-area-3 .travlink-site-logo {
+    width: min(205px, 100%) !important;
+    height: 58px !important;
+  }
+
+  /* Reduced height sticky navigation on all pages EXCEPT home page (Mobile) */
+  .travlink-react-page:not(.travlink-home) .header-area-3.stiky,
+  .travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header {
+    height: 38px !important;
+    min-height: 38px !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3>.container.fluid-header-3 {
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 0 14px !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3>.container.fluid-header-3>.row {
+    min-height: 38px !important;
+    height: 38px !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3 .ca-logo {
+    height: 26px !important;
+    min-height: 26px !important;
+    margin: 0 !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo {
+    width: auto !important;
+    max-width: 105px !important;
+    height: 24px !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3 .ca-offcanvas-toogle {
+    height: 30px !important;
+    width: 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3 .ca-offcanvas-toogle svg {
+    width: 22px !important;
+    height: 12px !important;
+  }
+
+  .travlink-react-page .header-area-3>.container.fluid-header-3>.row {
     justify-content: space-between !important;
     align-items: center !important;
     flex-wrap: nowrap !important;
@@ -163,14 +319,7 @@
   }
 
   .travlink-react-page .header-area-3 .ca-logo {
-    height: 58px;
     justify-content: flex-start;
-    margin-left: -4px;
-  }
-
-  .travlink-react-page .header-area-3 .travlink-site-logo {
-    width: min(205px, 100%) !important;
-    height: 58px !important;
   }
 
   .travlink-home .header-area-3 .ca-logo {
@@ -470,22 +619,52 @@
 }
 
 @media (max-width: 380px) {
-  .travlink-react-page .header-area-3>.container.fluid-header-3 {
+  .travlink-home .header-area-3>.container.fluid-header-3 {
     padding: 6px 10px !important;
   }
 
-  .travlink-react-page .header-area-3 .ca-logo {
+  .travlink-home .header-area-3 .ca-logo {
     margin-left: -4px;
-  }
-
-  .travlink-react-page .header-area-3 .travlink-site-logo {
-    width: min(182px, 100%) !important;
-    height: 52px !important;
   }
 
   .travlink-home .header-area-3 .travlink-site-logo {
     width: min(190px, 100%) !important;
     height: 54px !important;
+  }
+
+  /* Reduced height for extra-small mobile (<380px) on inner pages */
+  .travlink-react-page:not(.travlink-home) .header-area-3.stiky,
+  .travlink-react-page:not(.travlink-home) .header-area-3.stiky.scroll-header {
+    height: 34px !important;
+    min-height: 34px !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3>.container.fluid-header-3 {
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 0 10px !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3>.container.fluid-header-3>.row {
+    height: 34px !important;
+    min-height: 34px !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3 .ca-logo {
+    height: 22px !important;
+    min-height: 22px !important;
+    margin: 0 !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3 .travlink-site-logo {
+    width: auto !important;
+    max-width: 95px !important;
+    height: 22px !important;
+  }
+
+  .travlink-react-page:not(.travlink-home) .header-area-3 .ca-offcanvas-toogle {
+    height: 26px !important;
+    width: 26px !important;
   }
 
   .travlink-react-page .ca-offcanvas {

@@ -1,8 +1,9 @@
 <!-- Header Area Start-->
 <style id="travlink-shared-navigation-style">
-    .travlink-react-page .travlink-shared-nav.header-area-3.stiky,
-    .travlink-react-page .travlink-shared-nav.header-area-3.stiky.scroll-header {
-        position: absolute !important;
+    /* Full-width sticky navigation shell on inner pages */
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3.stiky,
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3.stiky.scroll-header {
+        position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
@@ -10,14 +11,12 @@
         z-index: 1000 !important;
         width: 100% !important;
         max-width: none !important;
-        height: 78px !important;
-        min-height: 78px !important;
         padding: 0 !important;
         border: none !important;
         border-radius: 0 !important;
-        background: rgba(255, 255, 255, 0.95) !important;
+        background: rgba(255, 255, 255, 0.98) !important;
         backdrop-filter: blur(10px) !important;
-        box-shadow: 0 4px 20px rgba(15, 36, 61, 0.08) !important;
+        box-shadow: 0 4px 16px rgba(15, 36, 61, 0.08) !important;
         animation: none !important;
     }
 
@@ -26,10 +25,7 @@
         align-items: center !important;
         width: 100% !important;
         max-width: none !important;
-        height: 78px !important;
-        min-height: 78px !important;
         margin: 0 !important;
-        padding: 9px clamp(20px, 4vw, 64px) !important;
         border: 0 !important;
         border-radius: 0 !important;
         background: transparent !important;
@@ -40,33 +36,72 @@
         display: flex !important;
         align-items: center !important;
         width: 100% !important;
-        min-height: 60px !important;
         margin: 0 !important;
     }
 
-    .travlink-react-page .travlink-shared-nav .ca-logo {
-        display: flex !important;
-        height: 60px !important;
-        align-items: center !important;
-        margin: 0 !important;
-        transform: none !important;
-    }
-
-    .travlink-react-page .travlink-shared-nav .travlink-site-logo {
-        width: min(205px, 100%) !important;
-        height: 60px !important;
-    }
-
-    .travlink-react-page .travlink-shared-nav .travlink-site-logo__image--primary {
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .travlink-site-logo__image--primary {
         opacity: 1 !important;
     }
 
-    .travlink-react-page .travlink-shared-nav .travlink-site-logo__image--secondary {
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .travlink-site-logo__image--secondary {
         opacity: 0 !important;
     }
 
-    .travlink-react-page .travlink-shared-nav .ca-main-menu-3,
-    .travlink-react-page .travlink-shared-nav .ca-main-menu-3>nav {
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav :is(.ca-main-menu-3 > nav > ul > li > a,
+        .ca-offcanvas-toogle) {
+        color: #102f55 !important;
+    }
+
+    /* Home page: Non-sticky navigation that stays at the top of the hero and scrolls away naturally */
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky,
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky.scroll-header {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+        z-index: 1000 !important;
+        width: 100% !important;
+        max-width: none !important;
+        height: 82px !important;
+        min-height: 82px !important;
+        padding: 0 !important;
+        border: none !important;
+        border-bottom: none !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        animation: none !important;
+    }
+
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3>.container.fluid-header-3 {
+        height: 82px !important;
+        min-height: 82px !important;
+        padding: 8px clamp(12px, 2.5vw, 40px) !important;
+    }
+
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3>.container.fluid-header-3>.row {
+        min-height: 64px !important;
+    }
+
+    .travlink-react-page.travlink-home .travlink-shared-nav .ca-logo {
+        display: flex !important;
+        height: 68px !important;
+        align-items: center !important;
+        margin: 0 !important;
+        margin-left: -12px !important;
+        transform: none !important;
+    }
+
+    .travlink-react-page.travlink-home .travlink-shared-nav .travlink-site-logo {
+        width: min(255px, 100%) !important;
+        height: 70px !important;
+    }
+
+    .travlink-react-page.travlink-home .travlink-shared-nav .ca-main-menu-3,
+    .travlink-react-page.travlink-home .travlink-shared-nav .ca-main-menu-3>nav {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -74,57 +109,223 @@
         min-height: 60px !important;
     }
 
-    .travlink-react-page .travlink-shared-nav .ca-main-menu-3>nav>ul {
+    .travlink-react-page.travlink-home .travlink-shared-nav .ca-main-menu-3>nav>ul {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         margin: 0 !important;
     }
 
-    .travlink-react-page .travlink-shared-nav :is(.ca-main-menu-3 > nav > ul > li > a,
-        .ca-offcanvas-toogle) {
-        color: #102f55 !important;
+    /* Inner pages: Reduced height sticky navigation with minimal white space (Desktop) */
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3.stiky,
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3.stiky.scroll-header {
+        height: 42px !important;
+        min-height: 42px !important;
+        border-bottom: 1px solid rgba(15, 36, 61, 0.08) !important;
+    }
+
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3>.container.fluid-header-3 {
+        height: 42px !important;
+        min-height: 42px !important;
+        padding: 0 clamp(16px, 2.5vw, 40px) !important;
+    }
+
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3>.container.fluid-header-3>.row {
+        height: 42px !important;
+        min-height: 42px !important;
+    }
+
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-logo {
+        display: flex !important;
+        height: 30px !important;
+        min-height: 30px !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+    }
+
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .travlink-site-logo {
+        display: inline-flex !important;
+        align-items: center !important;
+        width: auto !important;
+        max-width: 130px !important;
+        height: 30px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .travlink-site-logo__image {
+        height: 100% !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: left center !important;
+    }
+
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-main-menu-3,
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-main-menu-3>nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: 42px !important;
+        min-height: 42px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-main-menu-3>nav>ul {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 42px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-main-menu-3>nav>ul>li {
+        display: inline-flex !important;
+        align-items: center !important;
+        height: 42px !important;
+        margin: 0 !important;
+    }
+
+    .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-main-menu-3>nav>ul>li>a {
+        display: inline-flex !important;
+        align-items: center !important;
+        height: 42px !important;
+        line-height: 42px !important;
+        font-size: 13.5px !important;
+        font-weight: 550 !important;
+        padding: 0 11px !important;
     }
 
     @media (max-width: 767px) {
-
-        .travlink-react-page .travlink-shared-nav.header-area-3.stiky,
-        .travlink-react-page .travlink-shared-nav.header-area-3.stiky.scroll-header {
-            height: 64px !important;
-            min-height: 64px !important;
+        /* Home page keeps original navigation height & scrolls away naturally (Mobile) */
+        .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky,
+        .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky.scroll-header {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            height: 70px !important;
+            min-height: 70px !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
         }
 
-        .travlink-react-page .travlink-shared-nav.header-area-3>.container.fluid-header-3 {
-            height: 64px !important;
-            min-height: 64px !important;
-            padding: 7px 18px !important;
+        .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3>.container.fluid-header-3 {
+            height: 70px !important;
+            min-height: 70px !important;
+            padding: 6px 14px !important;
         }
 
-        .travlink-react-page .travlink-shared-nav.header-area-3>.container.fluid-header-3>.row {
-            min-height: 50px !important;
+        .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3>.container.fluid-header-3>.row {
+            min-height: 56px !important;
         }
 
-        .travlink-react-page .travlink-shared-nav .ca-logo,
-        .travlink-react-page .travlink-shared-nav .travlink-site-logo {
-            height: 50px !important;
+        .travlink-react-page.travlink-home .travlink-shared-nav .ca-logo {
+            height: 58px !important;
+            margin-left: -6px !important;
         }
 
-        .travlink-react-page .travlink-shared-nav .travlink-site-logo {
-            width: min(168px, 100%) !important;
+        .travlink-react-page.travlink-home .travlink-shared-nav .travlink-site-logo {
+            width: min(205px, 100%) !important;
+            height: 58px !important;
+        }
+
+        /* Inner pages: Reduced height sticky navigation with minimal white space (Mobile) */
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3.stiky,
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3.stiky.scroll-header {
+            height: 38px !important;
+            min-height: 38px !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3>.container.fluid-header-3 {
+            height: 38px !important;
+            min-height: 38px !important;
+            padding: 0 14px !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3>.container.fluid-header-3>.row {
+            height: 38px !important;
+            min-height: 38px !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-logo {
+            height: 26px !important;
+            min-height: 26px !important;
+            margin: 0 !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav .travlink-site-logo {
+            height: 24px !important;
+            width: auto !important;
+            max-width: 105px !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-offcanvas-toogle {
+            height: 30px !important;
+            width: 30px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-offcanvas-toogle svg {
+            width: 22px !important;
+            height: 12px !important;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3.stiky,
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3.stiky.scroll-header {
+            height: 34px !important;
+            min-height: 34px !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3>.container.fluid-header-3 {
+            height: 34px !important;
+            min-height: 34px !important;
+            padding: 0 10px !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav.header-area-3>.container.fluid-header-3>.row {
+            height: 34px !important;
+            min-height: 34px !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-logo,
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav .travlink-site-logo {
+            height: 22px !important;
+        }
+
+        .travlink-react-page:not(.travlink-home) .travlink-shared-nav .ca-offcanvas-toogle {
+            height: 26px !important;
+            width: 26px !important;
         }
     }
 </style>
 <style id="travlink-home-shutter-navigation-style">
-    /* Home hero: transparent navigation at top, transitions to floating pill on scroll. */
-    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky:not(.scroll-header) {
+    /* Home hero: transparent navigation that stays at the top of the hero and scrolls away with content (no sticky bar on scroll) */
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3,
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky,
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.scroll-header {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
         border-color: transparent !important;
         background: transparent !important;
         box-shadow: none !important;
         backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        animation: none !important;
     }
 
-    /* The ::before shutter animation is no longer needed because the nav becomes a floating pill on scroll */
-    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky::before {
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3::before {
         display: none !important;
     }
 
@@ -133,44 +334,31 @@
         z-index: 1;
     }
 
-    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky:not(.scroll-header) .ca-logo {
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3 .ca-logo {
         transform: translateY(6px) !important;
     }
 
-    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky:not(.scroll-header) .travlink-site-logo__image--primary {
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3 .travlink-site-logo__image--primary {
         opacity: 0 !important;
     }
 
-    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky:not(.scroll-header) .travlink-site-logo__image--secondary {
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3 .travlink-site-logo__image--secondary {
         opacity: 1 !important;
     }
 
-    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky:not(.scroll-header) :is(.ca-main-menu-3 > nav > ul > li > a,
+    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3 :is(.ca-main-menu-3 > nav > ul > li > a,
         .ca-offcanvas-toogle) {
         color: #fff !important;
     }
 
-    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky.scroll-header .travlink-site-logo__image--primary {
-        opacity: 1 !important;
-    }
-
-    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky.scroll-header .travlink-site-logo__image--secondary {
-        opacity: 0 !important;
-    }
-
-    .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky.scroll-header :is(.ca-main-menu-3 > nav > ul > li > a,
-        .ca-offcanvas-toogle) {
-        color: #102f55 !important;
-    }
-
     @media (prefers-reduced-motion: reduce) {
-        .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky::before {
+        .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3::before {
             transition: none;
         }
     }
 
     @media (max-width: 767px) {
-        .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3.stiky:not(.scroll-header) .ca-logo {
+        .travlink-react-page.travlink-home .travlink-shared-nav.header-area-3 .ca-logo {
             transform: translateY(5px) !important;
         }
     }

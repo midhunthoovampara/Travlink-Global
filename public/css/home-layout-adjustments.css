@@ -52,11 +52,8 @@
 }
 
 .travlink-home .travlink-hero__overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background: linear-gradient(180deg, rgba(11, 28, 60, 0.42) 0%, rgba(11, 28, 60, 0.22) 45%, rgba(11, 28, 60, 0.6) 100%);
+    display: none !important;
+    background: transparent !important;
 }
 
 @media (max-width: 767.98px) {
@@ -65,7 +62,8 @@
     }
 
     .travlink-home .travlink-hero__overlay {
-        background: linear-gradient(180deg, rgba(11, 28, 60, 0.35) 0%, rgba(11, 28, 60, 0.45) 45%, rgba(11, 28, 60, 0.8) 100%);
+        display: none !important;
+        background: transparent !important;
     }
 }
 

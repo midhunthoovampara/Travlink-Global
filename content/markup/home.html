@@ -157,13 +157,13 @@
     <section class="travlink-hero">
         <div class="travlink-hero__media" aria-hidden="true">
             <picture class="travlink-hero__picture">
-                <source media="(max-width: 767.98px)" srcset="/img/hero/home-hero-mobile.webp" type="image/webp">
-                <source media="(max-width: 767.98px)" srcset="/img/hero/home-hero-mobile.jpg" type="image/jpeg">
-                <source media="(min-width: 768px)" srcset="/img/hero/home-hero-desktop.webp" type="image/webp">
-                <source media="(min-width: 768px)" srcset="/img/hero/home-hero-desktop.jpg" type="image/jpeg">
-                <img src="/img/hero/home-hero-desktop.webp" alt="Travlink Global Hero" class="travlink-hero__image" fetchpriority="high" decoding="async">
+                <source media="(max-width: 767.98px)" srcset="/img/hero/herofinalmob.webp" type="image/webp">
+                <source media="(max-width: 767.98px)" srcset="/img/hero/herofinalmob.png" type="image/png">
+                <source media="(min-width: 768px)" srcset="/img/hero/herofinal.webp" type="image/webp">
+                <source media="(min-width: 768px)" srcset="/img/hero/herofinal.png" type="image/png">
+                <img src="/img/hero/herofinal.png" alt="Travlink Global Hero" class="travlink-hero__image"
+                    fetchpriority="high" decoding="async">
             </picture>
-            <div class="travlink-hero__overlay"></div>
         </div>
         <div class="travlink-hero__inner">
             <div class="container">
@@ -256,21 +256,8 @@
     <div class="travlink-story-canvas">
         <!-- service section start -->
         <section id="travlink-services" class="travlink-services-redesign">
-            <!-- Background Video -->
-            <div class="travlink-services-redesign__video-wrap" aria-hidden="true">
-                <video
-                    class="travlink-services-redesign__video"
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    preload="auto"
-                    poster="/img/services/bgg.png"
-                >
-                    <source src="/video/Create_motion_graphics_with_image_20261014165329.mp4" type="video/mp4">
-                </video>
-                <div class="travlink-services-redesign__video-overlay"></div>
-            </div>
+            <!-- Map Background -->
+            <div class="travlink-services-redesign__map" style="background-image: url('/img/services/bgg.png');"></div>
 
             <div class="container">
                 <div class="travlink-services-redesign__header" data-aos="fade-up" data-aos-duration="800">
@@ -294,7 +281,8 @@
                         <div class="travlink-service-rcard__content">
                             <div class="travlink-service-rcard__number">&mdash; 01</div>
                             <div class="travlink-service-rcard__icon">
-                                <img src="/img/services/service-travel-icon.svg" alt="Travel" class="travlink-service-rcard__icon-svg--travel" />
+                                <img src="/img/services/service-travel-icon.svg" alt="Travel"
+                                    class="travlink-service-rcard__icon-svg--travel" />
                             </div>
                             <h3 class="travlink-service-rcard__title">TRAVEL</h3>
                             <p class="travlink-service-rcard__desc">Visas, curated journeys &amp; business travel.</p>
@@ -313,7 +301,8 @@
                         <div class="travlink-service-rcard__content">
                             <div class="travlink-service-rcard__number">&mdash; 02</div>
                             <div class="travlink-service-rcard__icon">
-                                <img src="/img/services/service-trade-icon.svg" alt="Trade" class="travlink-service-rcard__icon-svg--trade" />
+                                <img src="/img/services/service-trade-icon.svg" alt="Trade"
+                                    class="travlink-service-rcard__icon-svg--trade" />
                             </div>
                             <h3 class="travlink-service-rcard__title">TRADE</h3>
                             <p class="travlink-service-rcard__desc">Sourcing, shipping &amp; global trade support.</p>
@@ -1115,20 +1104,6 @@
             startProcessAutoplay();
         }
 
-        // Services Background Video Autoplay Assurance
-        (function () {
-            var serviceVideo = document.querySelector(".travlink-services-redesign__video");
-            if (!serviceVideo) return;
-            var ensurePlay = function () {
-                var promise = serviceVideo.play();
-                if (promise !== undefined) {
-                    promise.catch(function () {});
-                }
-            };
-            ensurePlay();
-            ["click", "touchstart", "scroll"].forEach(function (evt) {
-                window.addEventListener(evt, ensurePlay, { once: true, passive: true });
-            });
-        })();
+
     });
 </script>
