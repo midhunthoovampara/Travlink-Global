@@ -257,7 +257,91 @@
         <!-- service section start -->
         <section id="travlink-services" class="travlink-services-redesign">
             <!-- Map Background -->
-            <div class="travlink-services-redesign__map" style="background-image: url('/img/services/bgg.png');"></div>
+            <div class="travlink-services-redesign__map" style="background-image: url('/img/services/bgg1.png');"></div>
+
+            <!-- Flight Routes Background Animation -->
+            <div class="travlink-flight-routes" aria-hidden="true">
+                <svg class="travlink-flight-routes__svg" viewBox="0 0 1440 680" fill="none"
+                    preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="route-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
+                            <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.6" />
+                            <stop offset="70%" stop-color="#0284c7" stop-opacity="0.6" />
+                            <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1" />
+                        </linearGradient>
+                        <linearGradient id="route-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#2563eb" stop-opacity="0.1" />
+                            <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.55" />
+                            <stop offset="100%" stop-color="#2563eb" stop-opacity="0.1" />
+                        </linearGradient>
+                        <linearGradient id="route-grad-3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#0284c7" stop-opacity="0.08" />
+                            <stop offset="45%" stop-color="#38bdf8" stop-opacity="0.5" />
+                            <stop offset="100%" stop-color="#0284c7" stop-opacity="0.08" />
+                        </linearGradient>
+
+                        <!-- Flight Path 1: Northern Arc -->
+                        <path id="flight-path-1" d="M 180,45 C 500,-15 880,25 1180,95 C 1300,122 1395,178 1470,235" />
+
+                        <!-- Flight Path 2: Eastern Diagonal Curve -->
+                        <path id="flight-path-2"
+                            d="M 680,110 C 920,85 1160,165 1290,290 C 1380,380 1420,490 1460,570" />
+
+                        <!-- Flight Path 3: Southern Horizon Arc -->
+                        <path id="flight-path-3" d="M -30,520 C 200,470 480,550 740,590 C 1000,630 1240,580 1470,500" />
+                    </defs>
+
+                    <!-- Visual dashed route lines -->
+                    <path d="M 180,45 C 500,-15 880,25 1180,95 C 1300,122 1395,178 1470,235"
+                        class="travlink-flight-route travlink-flight-route--1" stroke="url(#route-grad-1)"
+                        stroke-width="1.4" stroke-dasharray="5, 7" />
+
+                    <path d="M 680,110 C 920,85 1160,165 1290,290 C 1380,380 1420,490 1460,570"
+                        class="travlink-flight-route travlink-flight-route--2" stroke="url(#route-grad-2)"
+                        stroke-width="1.4" stroke-dasharray="5, 7" />
+
+                    <path d="M -30,520 C 200,470 480,550 740,590 C 1000,630 1240,580 1470,500"
+                        class="travlink-flight-route travlink-flight-route--3" stroke="url(#route-grad-3)"
+                        stroke-width="1.4" stroke-dasharray="5, 7" />
+
+                    <!-- Plane 1 -->
+                    <g class="travlink-flight-plane travlink-flight-plane--1">
+                        <path
+                            d="M12 0 C12 -0.8 10 -1.8 7 -2 L1 -9 C0.5 -9.6 -0.5 -9.6 -0.8 -9 L-2 -9 C-2.4 -9 -2.5 -8.5 -2.2 -8.2 L1 -2 L-6 -2 L-8 -5 C-8.3 -5.4 -8.8 -5.4 -9 -5 L-10 -5 C-10.3 -5 -10.4 -4.6 -10.2 -4.3 L-8.5 0 L-10.2 4.3 C-10.4 4.6 -10.3 5 -10 5 L-9 5 C-8.8 5 -8.3 5.4 -8 5 L-6 2 L1 2 L-2 8.2 C-2.5 8.5 -2.4 9 -2 9 L-0.8 9 C-0.5 9.6 0.5 9.6 1 9 L7 2 C10 1.8 12 0.8 12 0 Z"
+                            fill="#1e40af" transform="scale(0.85)" />
+                        <animateMotion dur="11s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#flight-path-1" />
+                        </animateMotion>
+                        <animate attributeName="opacity" values="0; 0; 0.95; 0.95; 0" keyTimes="0; 0.04; 0.10; 0.92; 1"
+                            dur="11s" repeatCount="indefinite" />
+                    </g>
+
+                    <!-- Plane 2 -->
+                    <g class="travlink-flight-plane travlink-flight-plane--2">
+                        <path
+                            d="M12 0 C12 -0.8 10 -1.8 7 -2 L1 -9 C0.5 -9.6 -0.5 -9.6 -0.8 -9 L-2 -9 C-2.4 -9 -2.5 -8.5 -2.2 -8.2 L1 -2 L-6 -2 L-8 -5 C-8.3 -5.4 -8.8 -5.4 -9 -5 L-10 -5 C-10.3 -5 -10.4 -4.6 -10.2 -4.3 L-8.5 0 L-10.2 4.3 C-10.4 4.6 -10.3 5 -10 5 L-9 5 C-8.8 5 -8.3 5.4 -8 5 L-6 2 L1 2 L-2 8.2 C-2.5 8.5 -2.4 9 -2 9 L-0.8 9 C-0.5 9.6 0.5 9.6 1 9 L7 2 C10 1.8 12 0.8 12 0 Z"
+                            fill="#2563eb" transform="scale(0.8)" />
+                        <animateMotion dur="14s" begin="-6s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#flight-path-2" />
+                        </animateMotion>
+                        <animate attributeName="opacity" values="0; 0; 0.95; 0.95; 0" keyTimes="0; 0.04; 0.10; 0.92; 1"
+                            dur="14s" begin="-6s" repeatCount="indefinite" />
+                    </g>
+
+                    <!-- Plane 3 -->
+                    <g class="travlink-flight-plane travlink-flight-plane--3">
+                        <path
+                            d="M12 0 C12 -0.8 10 -1.8 7 -2 L1 -9 C0.5 -9.6 -0.5 -9.6 -0.8 -9 L-2 -9 C-2.4 -9 -2.5 -8.5 -2.2 -8.2 L1 -2 L-6 -2 L-8 -5 C-8.3 -5.4 -8.8 -5.4 -9 -5 L-10 -5 C-10.3 -5 -10.4 -4.6 -10.2 -4.3 L-8.5 0 L-10.2 4.3 C-10.4 4.6 -10.3 5 -10 5 L-9 5 C-8.8 5 -8.3 5.4 -8 5 L-6 2 L1 2 L-2 8.2 C-2.5 8.5 -2.4 9 -2 9 L-0.8 9 C-0.5 9.6 0.5 9.6 1 9 L7 2 C10 1.8 12 0.8 12 0 Z"
+                            fill="#0284c7" transform="scale(0.75)" />
+                        <animateMotion dur="12s" begin="-3s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#flight-path-3" />
+                        </animateMotion>
+                        <animate attributeName="opacity" values="0; 0; 0.95; 0.95; 0" keyTimes="0; 0.04; 0.10; 0.92; 1"
+                            dur="12s" begin="-3s" repeatCount="indefinite" />
+                    </g>
+                </svg>
+            </div>
 
             <div class="container">
                 <div class="travlink-services-redesign__header" data-aos="fade-up" data-aos-duration="800">
