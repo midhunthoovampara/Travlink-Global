@@ -231,7 +231,7 @@
 
             <div class="travlink-trade-hero-cards" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
                 <div class="travlink-ts-map travlink-ts-map--china">
-                    <img src="/img/service/CHINA.png" alt="China sourcing hubs" class="travlink-ts-map__img"
+                    <img src="/img/service/VIETNAM.png" alt="China sourcing hubs" class="travlink-ts-map__img"
                         loading="lazy" decoding="async" />
                     <div class="travlink-ts-map__label">
                         <span class="travlink-ts-map__country">CHINA</span>
@@ -240,7 +240,7 @@
                     </div>
                 </div>
                 <div class="travlink-ts-map travlink-ts-map--vietnam">
-                    <img src="/img/service/VIETNAM.png" alt="Vietnam sourcing hubs" class="travlink-ts-map__img"
+                    <img src="/img/service/CHINA.png" alt="Vietnam sourcing hubs" class="travlink-ts-map__img"
                         loading="lazy" decoding="async" />
                     <div class="travlink-ts-map__label">
                         <span class="travlink-ts-map__country">VIETNAM</span>
@@ -596,9 +596,33 @@
                         customs to final destination.
                     </p>
                     <div class="travlink-shipping__route" aria-hidden="true">
-                        <span class="travlink-shipping__port"><i class="fa-solid fa-boxes-stacked"></i></span>
-                        <span class="travlink-shipping__line"><i class="fa-solid fa-ship"></i></span>
-                        <span class="travlink-shipping__port"><i class="fa-solid fa-location-dot"></i></span>
+                        <span class="travlink-shipping__port" title="Dispatch / Origin">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L3 7L12 12L21 7L12 2Z" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M3 7V17L12 22V12" stroke="#e0f2fe" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M21 7V17L12 22" stroke="#bae6fd" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M7.5 4.5L16.5 9.5" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span class="travlink-shipping__line">
+                            <span class="travlink-shipping__vessel" title="Ocean Transit / Container Freight Vessel">
+                                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="8" width="4" height="4.5" rx="0.5" fill="rgba(56, 189, 248, 0.25)" stroke="#38bdf8" stroke-width="1.3"/>
+                                    <rect x="10" y="8" width="4" height="4.5" rx="0.5" fill="rgba(56, 189, 248, 0.25)" stroke="#38bdf8" stroke-width="1.3"/>
+                                    <rect x="7.5" y="4" width="4" height="4" rx="0.5" fill="rgba(56, 189, 248, 0.4)" stroke="#38bdf8" stroke-width="1.3"/>
+                                    <path d="M15.5 6H18.5V12.5H15.5V6Z" stroke="#e0f2fe" stroke-width="1.3"/>
+                                    <line x1="17" y1="4" x2="17" y2="6" stroke="#38bdf8" stroke-width="1.3"/>
+                                    <path d="M2.5 12.5H21.5L19 17.5H5L2.5 12.5Z" fill="rgba(14, 48, 80, 0.9)" stroke="#e0f2fe" stroke-width="1.7" stroke-linejoin="round"/>
+                                    <path d="M1.5 20C3 20 4 19.2 5.5 19.2C7 19.2 8 20 9.5 20C11 20 12 19.2 13.5 19.2C15 19.2 16 20 17.5 20C19 20 20 19.2 21.5 19.2" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="travlink-shipping__port" title="Final Destination">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8.134 2 5 5.134 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.134 15.866 2 12 2Z" stroke="#e0f2fe" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="rgba(6, 30, 51, 0.5)"/>
+                                <path d="M9 9L11 11L15 7" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
                     </div>
                 </header>
 
@@ -676,11 +700,34 @@
         </div>
     </section>
 
-    <section class="travlink-trade-support" aria-label="Trade FAQ and Enquiry" style="padding: 100px 0;">
+    <style>
+        .travlink-trade-support {
+            padding: clamp(36px, 4.5vw, 56px) 0 !important;
+        }
+        .travlink-trade-support .travlink-trade-faq__heading {
+            margin: 0 0 20px;
+        }
+        .travlink-trade-support .ca-accordion-item {
+            margin-bottom: 10px;
+        }
+        .travlink-trade-support .ca-accordion-item:last-child {
+            margin-bottom: 0;
+        }
+        .travlink-trade-support .accordion-button {
+            padding: 12px 14px;
+        }
+        .travlink-trade-support .ca-accordion-body {
+            padding: 4px 14px 10px;
+        }
+        .travlink-trade-support .ca-accordion-body p {
+            margin-bottom: 0;
+        }
+    </style>
+    <section class="travlink-trade-support" aria-label="Trade FAQ and Enquiry" style="padding: clamp(36px, 4.5vw, 56px) 0;">
         <div class="container">
             <div class="row align-items-center">
                 <!-- FAQ Left -->
-                <div class="col-lg-7 mb-40 mb-lg-0">
+                <div class="col-lg-7 mb-24 mb-lg-0">
                     <div class="travlink-trade-faq" data-aos="fade-right" data-aos-duration="1200">
                         <div class="travlink-trade-faq__heading">
                             <span class="travlink-trade-eyebrow">Trade FAQs</span>
@@ -688,7 +735,7 @@
                         </div>
                         <div class="ca-acordion-area travlink-trade-faq__accordion">
                             <div class="accordion" id="tradeFaqAccordion">
-                                <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                                <div class="ca-accordion-item ca-accordion-item-2">
                                     <h3 class="ca-accordion-header" id="tradeFaqOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#tradeFaqOneContent" aria-expanded="true"
@@ -709,7 +756,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                                <div class="ca-accordion-item ca-accordion-item-2">
                                     <h3 class="ca-accordion-header" id="tradeFaqTwo">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#tradeFaqTwoContent"
@@ -728,7 +775,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                                <div class="ca-accordion-item ca-accordion-item-2">
                                     <h3 class="ca-accordion-header" id="tradeFaqThree">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#tradeFaqThreeContent"
@@ -747,7 +794,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="ca-accordion-item ca-accordion-item-2 mb-24">
+                                <div class="ca-accordion-item ca-accordion-item-2">
                                     <h3 class="ca-accordion-header" id="tradeFaqFour">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#tradeFaqFourContent"
@@ -773,10 +820,10 @@
                 <!-- CTA Right -->
                 <div class="col-lg-4 offset-lg-1">
                     <div
-                        style="background: rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 40px; text-align: left; box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
-                        <h2 style="font-size: 2rem; color: #0b1c3c; font-weight: 700; margin-bottom: 15px;">Have a
+                        style="background: #ffffff; border-radius: 16px; padding: clamp(24px, 3.2vw, 32px); text-align: left; box-shadow: 0 10px 40px rgba(0,0,0,0.04);">
+                        <h2 style="font-size: clamp(1.45rem, 2.2vw, 1.8rem); color: #0b1c3c; font-weight: 700; margin-bottom: 10px; line-height: 1.25;">Have a
                             product in mind?</h2>
-                        <p style="font-size: 1.05rem; color: #444; line-height: 1.5; margin-bottom: 30px;">Tell us what
+                        <p style="font-size: 0.98rem; color: #555; line-height: 1.5; margin-bottom: 20px;">Tell us what
                             you're looking for and we'll help you find the right sourcing route.</p>
                         <a href="/contact/" class="ca-btn-primary-3 theme-bg-3 text-white br-50 w-100 text-center"
                             style="display: block;">Start a Sourcing Enquiry <i

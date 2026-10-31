@@ -280,24 +280,37 @@
 .travlink-shipping__port {
   display: grid;
   place-items: center;
-  flex: 0 0 42px;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255,255,255,.28);
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid rgba(143, 207, 255, 0.35);
   border-radius: 50%;
-  background: rgba(6,30,51,.72);
-  box-shadow: 0 9px 22px rgba(0,0,0,.18);
+  background: linear-gradient(135deg, rgba(14, 48, 80, 0.85), rgba(7, 26, 44, 0.85));
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 12px rgba(56, 189, 248, 0.15);
+  transition: all 0.3s ease;
 }
-.travlink-shipping__line { position: relative; flex: 1; height: 2px; border-top: 2px dashed rgba(168,217,255,.55); }
+.travlink-shipping__port:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+}
+.travlink-shipping__line { position: relative; flex: 1; height: 2px; border-top: 2px dashed rgba(56, 189, 248, 0.55); }
+.travlink-shipping__vessel,
 .travlink-shipping__line i {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 6px 10px;
-  background: #092b49;
-  color: #a8d9ff;
-  font-size: 17px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(14, 48, 80, 0.98), rgba(7, 26, 44, 0.98));
+  border: 1.5px solid #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.4), 0 4px 15px rgba(0, 0, 0, 0.4);
   transform: translate(-50%,-50%);
+  backdrop-filter: blur(8px);
 }
 .travlink-shipping__services { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
 .travlink-shipping-card {

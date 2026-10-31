@@ -235,11 +235,31 @@
 }
 
 .travlink-trade-faq__heading {
-    margin: 0 0 40px;
+    margin: 0 0 20px;
 }
 
 .travlink-trade-faq__accordion {
     max-width: none;
+}
+
+.travlink-trade-support .ca-accordion-item {
+    margin-bottom: 10px;
+}
+
+.travlink-trade-support .ca-accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.travlink-trade-support .accordion-button {
+    padding: 12px 14px;
+}
+
+.travlink-trade-support .ca-accordion-body {
+    padding: 4px 14px 10px;
+}
+
+.travlink-trade-support .ca-accordion-body p {
+    margin-bottom: 0;
 }
 
 @media(max-width:991px) {
