@@ -2340,3 +2340,27 @@ html {
         font-size: 0.71rem !important;
     }
 }
+
+/* Compact spacing between Luxury Experiences and Business Travel sections */
+.travlink-luxury-section {
+    padding-top: 70px;
+    padding-bottom: 20px !important;
+}
+
+.travlink-business-section {
+    padding-top: 20px !important;
+    padding-bottom: 70px;
+}
+
+@media (max-width: 767px) {
+    .travlink-luxury-section {
+        padding-top: 45px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .travlink-business-section {
+        padding-top: 15px !important;
+        padding-bottom: 45px !important;
+    }
+}
+
