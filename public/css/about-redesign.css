@@ -15,17 +15,18 @@ body {
 }
 
 /* HERO SECTION */
+body main .about-hero,
 .about-hero {
     position: relative;
     width: 100%;
-    min-height: 80vh;
-    background-image: url('/img/hero/about-hero.png');
-    background-image: url('/img/hero/about-hero.webp');
+    min-height: 80vh !important;
+    background-image: url('/img/about/hero.png');
+    background-image: url('/img/about/hero.png');
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: flex-end;
-    padding: 175px 20px 82px;
+    align-items: flex-start;
+    padding: 155px 20px 82px !important;
     z-index: 1;
 }
 
@@ -33,12 +34,12 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to right,
-        rgba(10, 24, 46, 0.82) 0%,
-        rgba(10, 24, 46, 0.48) 45%,
-        rgba(10, 24, 46, 0.12) 100%
-    );
+    background:
+        linear-gradient(to bottom, rgba(7, 19, 33, 0.45) 0%, transparent 40%),
+        linear-gradient(to right,
+            rgba(10, 24, 46, 0.85) 0%,
+            rgba(10, 24, 46, 0.52) 48%,
+            rgba(10, 24, 46, 0.12) 100%);
     z-index: -1;
 }
 
@@ -82,8 +83,10 @@ body {
 }
 
 /* STORY SECTION */
+body main .about-story,
 .about-story {
-    padding: 100px 20px;
+    padding: 28px 20px 20px !important;
+    margin: 0 !important;
     text-align: center;
     background-color: var(--about-bg);
 }
@@ -95,7 +98,7 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
     color: var(--about-cyan);
 }
 
@@ -120,8 +123,10 @@ body {
 }
 
 /* CORE AREAS SECTION */
+body main .about-core,
 .about-core {
-    padding: 40px 20px 100px;
+    padding: 16px 20px 30px !important;
+    margin: 0 !important;
     background-color: var(--about-bg);
     text-align: center;
 }
@@ -129,22 +134,22 @@ body {
 .about-core-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
     max-width: 1200px;
-    margin: 40px auto 0;
+    margin: 18px auto 0;
     text-align: left;
 }
 
 .about-core-card {
     background: #fff;
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .about-core-img-wrapper {
     position: relative;
-    height: 250px;
+    height: 195px;
 }
 
 .about-core-img {
@@ -155,10 +160,10 @@ body {
 
 .about-core-img-title {
     position: absolute;
-    bottom: 24px;
-    left: 24px;
+    bottom: 18px;
+    left: 20px;
     color: #fff;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     font-family: "Outfit", sans-serif;
     margin: 0;
@@ -166,22 +171,22 @@ body {
 }
 
 .about-core-content {
-    padding: 30px;
+    padding: 18px 22px;
     display: flex;
     align-items: flex-start;
-    gap: 24px;
+    gap: 18px;
 }
 
 .about-core-icon {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: rgba(41, 182, 246, 0.1);
     color: var(--about-cyan);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
     flex-shrink: 0;
 }
 
@@ -227,8 +232,10 @@ body {
 }
 
 /* CONNECT SECTION */
+body main .about-connect,
 .about-connect {
-    padding: 100px 20px;
+    padding: 32px 20px !important;
+    margin: 0 !important;
     background-color: var(--about-gray-bg);
     overflow: hidden;
 }
@@ -255,7 +262,7 @@ body {
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .about-connect-eyebrow::before {
@@ -267,12 +274,12 @@ body {
 }
 
 .about-connect-title {
-    font-size: clamp(36px, 4vw, 48px);
+    font-size: clamp(34px, 3.8vw, 44px);
     font-weight: 700;
     color: var(--about-navy);
     line-height: 1.2;
     font-family: "Outfit", sans-serif;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
 .about-connect-title span {
@@ -321,8 +328,10 @@ body {
 }
 
 /* GLOBAL NETWORK SECTION */
+body main .about-network,
 .about-network {
-    padding: 100px 20px;
+    padding: 28px 20px 30px !important;
+    margin: 0 !important;
     background-color: var(--about-bg);
     text-align: center;
 }
@@ -330,47 +339,49 @@ body {
 .about-network-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    gap: 16px;
     max-width: 1200px;
-    margin: 60px auto 40px;
+    margin: 20px auto 16px;
 }
 
 .about-network-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
 }
 
 .about-network-icon {
-    width: 80px;
-    height: 80px;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
     border: 2px solid rgba(41, 182, 246, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 22px;
     color: var(--about-cyan);
 }
 
 .about-network-label {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--about-navy);
 }
 
 .about-network-tagline {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--about-text-light);
     font-style: italic;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 /* CTA SECTION */
+body main .about-cta,
 .about-cta {
     position: relative;
-    padding: 80px 20px;
+    padding: 34px 20px !important;
+    margin: 0 !important;
     text-align: center;
     background-size: cover;
     background-position: center;
@@ -387,10 +398,10 @@ body {
 }
 
 .about-cta-title {
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(26px, 3.8vw, 38px);
     font-weight: 600;
     font-family: "Outfit", sans-serif;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 }
 
 .about-cta-subtitle {
@@ -405,16 +416,18 @@ body {
    ========================================================================== */
 
 @media (max-width: 991px) {
+    body main .about-hero,
     .about-hero {
-        min-height: 70vh;
-        padding: 140px 24px 60px;
+        min-height: 70vh !important;
+        padding: 135px 24px 60px !important;
+        align-items: flex-start;
     }
 
     .about-core-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
-        margin: 36px auto 0;
-        gap: 26px;
+        margin: 16px auto 0;
+        gap: 18px;
     }
 
     .about-connect-container {
@@ -433,9 +446,9 @@ body {
         right: auto;
         transform: none;
         width: 100%;
-        max-width: 420px;
-        height: 420px;
-        margin: 32px auto 0;
+        max-width: 360px;
+        height: 360px;
+        margin: 20px auto 0;
     }
 
     .about-connect-globe {
@@ -445,38 +458,39 @@ body {
 
     .about-network-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 24px 16px;
+        gap: 16px 12px;
         max-width: 700px;
-        margin: 44px auto 30px;
+        margin: 18px auto 14px;
     }
 }
 
 @media (max-width: 767.98px) {
+
     /* HERO SECTION */
+    body main .about-hero,
     .about-hero {
         background-image: url('/img/hero/mobile_hero_80_percent.png') !important;
         background-image: url('/img/hero/about-hero-mobile.webp') !important;
         background-position: center center !important;
         background-size: cover !important;
         background-repeat: no-repeat !important;
-        min-height: 68vh;
-        padding: 96px 18px 44px;
-        align-items: flex-end;
+        min-height: 68vh !important;
+        padding: 105px 18px 44px !important;
+        align-items: flex-start;
     }
 
     .about-hero::before {
-        background: linear-gradient(
-            to bottom,
-            rgba(10, 24, 46, 0.45) 0%,
-            rgba(10, 24, 46, 0.72) 40%,
-            rgba(10, 24, 46, 0.92) 100%
-        );
+        background: linear-gradient(to bottom,
+                rgba(10, 24, 46, 0.62) 0%,
+                rgba(10, 24, 46, 0.32) 48%,
+                rgba(10, 24, 46, 0.12) 100%);
     }
 
     .about-hero-content {
         width: 100%;
         max-width: 100%;
         text-align: left;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
     }
 
     .about-eyebrow {
@@ -509,15 +523,16 @@ body {
     }
 
     /* STORY SECTION */
+    body main .about-story,
     .about-story {
-        padding: 56px 18px 44px;
+        padding: 22px 16px 16px !important;
         text-align: center;
     }
 
     .about-eyebrow-center {
         font-size: 11.5px;
         letter-spacing: 1.5px;
-        margin-bottom: 20px;
+        margin-bottom: 8px;
         justify-content: center;
     }
 
@@ -528,8 +543,8 @@ body {
     }
 
     .about-story-text {
-        font-size: clamp(17px, 4.6vw, 21px);
-        line-height: 1.55;
+        font-size: clamp(16px, 4.2vw, 19px);
+        line-height: 1.5;
         font-weight: 500;
         text-align: center;
         max-width: 580px;
@@ -538,59 +553,60 @@ body {
     }
 
     /* CORE AREAS SECTION */
+    body main .about-core,
     .about-core {
-        padding: 30px 16px 64px;
+        padding: 14px 16px 24px !important;
         text-align: center;
     }
 
     .about-core-grid {
         max-width: 100%;
-        margin: 28px auto 0;
-        gap: 22px;
+        margin: 14px auto 0;
+        gap: 14px;
     }
 
     .about-core-card {
-        border-radius: 16px;
-        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.06);
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     }
 
     .about-core-img-wrapper {
-        height: 190px;
+        height: 150px;
     }
 
     .about-core-img-title {
-        bottom: 16px;
-        left: 18px;
-        font-size: 28px;
+        bottom: 12px;
+        left: 14px;
+        font-size: 24px;
         line-height: 1;
     }
 
     .about-core-content {
-        padding: 20px 16px 22px;
+        padding: 12px 14px 14px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
-        gap: 14px;
+        gap: 10px;
     }
 
     .about-core-icon {
-        width: 48px;
-        height: 48px;
-        font-size: 20px;
-        margin-bottom: 2px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin-bottom: 0px;
     }
 
     .about-core-icon svg,
     .about-core-icon img {
-        max-width: 28px;
-        max-height: 28px;
+        max-width: 24px;
+        max-height: 24px;
     }
 
     .about-core-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px 12px;
+        gap: 8px 10px;
         width: 100%;
         text-align: left;
         margin: 0;
@@ -600,10 +616,10 @@ body {
 
     .about-core-list li {
         position: relative;
-        padding-left: 14px;
-        font-size: 13.5px;
+        padding-left: 12px;
+        font-size: 13px;
         font-weight: 500;
-        line-height: 1.35;
+        line-height: 1.3;
         color: var(--about-navy);
         text-align: left;
         display: block;
@@ -617,7 +633,7 @@ body {
         content: "";
         position: absolute;
         left: 0;
-        top: 6px;
+        top: 5px;
         width: 5px;
         height: 5px;
         border-radius: 50%;
@@ -625,8 +641,9 @@ body {
     }
 
     /* CONNECT SECTION */
+    body main .about-connect,
     .about-connect {
-        padding: 56px 18px;
+        padding: 24px 16px !important;
         text-align: center;
     }
 
@@ -646,7 +663,7 @@ body {
     .about-connect-eyebrow {
         font-size: 11.5px;
         letter-spacing: 1.5px;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -663,16 +680,16 @@ body {
     }
 
     .about-connect-title {
-        font-size: clamp(24px, 6.2vw, 32px);
+        font-size: clamp(22px, 5.8vw, 28px);
         line-height: 1.25;
-        margin-bottom: 14px;
+        margin-bottom: 8px;
         text-align: center;
         text-wrap: balance;
     }
 
     .about-connect-copy {
-        font-size: clamp(14.5px, 3.8vw, 16.5px);
-        line-height: 1.65;
+        font-size: clamp(14px, 3.6vw, 15.5px);
+        line-height: 1.55;
         text-align: center;
         max-width: 500px;
         margin: 0 auto;
@@ -680,17 +697,18 @@ body {
     }
 
     /* GLOBAL NETWORK SECTION */
+    body main .about-network,
     .about-network {
-        padding: 56px 18px 50px;
+        padding: 22px 16px 20px !important;
         text-align: center;
     }
 
     .about-network-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px 12px;
+        gap: 14px 10px;
         max-width: 440px;
-        margin: 32px auto 26px;
+        margin: 16px auto 12px;
     }
 
     .about-network-item:last-child {
@@ -700,56 +718,57 @@ body {
     }
 
     .about-network-item {
-        gap: 10px;
+        gap: 8px;
         text-align: center;
     }
 
     .about-network-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 22px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
     }
 
     .about-network-label {
-        font-size: 13.5px;
+        font-size: 13px;
         font-weight: 500;
-        line-height: 1.35;
+        line-height: 1.3;
         text-align: center;
     }
 
     .about-network-tagline {
-        font-size: clamp(13.5px, 3.8vw, 15px);
-        line-height: 1.5;
+        font-size: clamp(13px, 3.6vw, 14.5px);
+        line-height: 1.45;
         text-align: center;
-        margin-top: 24px;
+        margin-top: 10px;
         padding: 0 8px;
         text-wrap: balance;
     }
 
     /* FOOTER CTA SECTION */
+    body main .about-cta,
     .about-cta {
-        padding: 50px 18px;
+        padding: 22px 16px !important;
         text-align: center;
     }
 
     .about-cta-title {
-        font-size: clamp(20px, 5.5vw, 26px);
-        line-height: 1.35;
-        margin-bottom: 8px;
+        font-size: clamp(18px, 5vw, 24px);
+        line-height: 1.3;
+        margin-bottom: 6px;
         text-align: center;
         text-wrap: balance;
     }
 
     .about-cta-subtitle {
-        font-size: clamp(20px, 5.5vw, 26px);
-        line-height: 1.35;
+        font-size: clamp(18px, 5vw, 24px);
+        line-height: 1.3;
         text-align: center;
     }
 }
 
 @media (max-width: 380px) {
     .about-hero {
-        padding: 85px 14px 36px;
+        padding: 95px 14px 36px;
     }
 
     .about-hero-title {
